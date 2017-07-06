@@ -1,9 +1,9 @@
-// Tron
+// Tron Grid
 
 // -------------- ** -------------- //
-//
+// 
 // define grid class names, breakpoints, and general spacing
-//
+// 
 // -------------- ** -------------- //
 
 $class-names: (container: 'container', rows: 'row', columns: 'column');
@@ -22,16 +22,16 @@ $column-gutter-bottom: true;
 
 $columns: 12;
 $default-space: 16px;
-$container-width: 768px;
+$container-width: 1400px;
 $column-gutter-space: $default-space / 2;
 $column-bottom-space: $default-space;
 
 $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakpoints.";
 
 // -------------- ** -------------- //
-//
+// 
 // breakpoints
-//
+// 
 // -------------- ** -------------- //
 
 // breakpoint up
@@ -81,13 +81,13 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
 }
 
 // -------------- ** -------------- //
-//
+// 
 // Container, row, & column general styling
-//
+// 
 // -------------- ** -------------- //
 
 .#{map-get($class-names, container)} {
-  margin: 3rem auto;
+  margin: 0 auto;
 
   @if $container-max-width == true {
     max-width: $container-width;
@@ -135,9 +135,9 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
 }
 
 // -------------- ** -------------- //
-//
+// 
 // grid + offset generator
-//
+// 
 // -------------- ** -------------- //
 
 @each $break in $breakpoints {
