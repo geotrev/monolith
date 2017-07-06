@@ -1,0 +1,154 @@
+// Tron
+
+// -------------- ** -------------- //
+//
+// define grid class names, breakpoints, and general spacing
+//
+// -------------- ** -------------- //
+
+$class-names: (container: 'container', rows: 'row', columns: 'column');
+
+$breakpoints: (
+  xsmall: 0,
+  small: 576px,
+  medium: 768px,
+  large: 992px,
+  xlarge: 1200px
+) !default;
+
+$container-max-width: true;
+$column-gutter: true;
+$column-gutter-bottom: true;
+
+$columns: 12;
+$default-space: 16px;
+$container-width: 768px;
+$column-gutter-space: $default-space / 2;
+$column-bottom-space: $default-space;
+
+$breakpoint-error: "One or more of your arguments wasn't a valid key for $breakpoints.";
+
+// -------------- ** -------------- //
+//
+// breakpoints
+//
+// -------------- ** -------------- //
+
+// breakpoint up
+
+@mixin breakpoint-up($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media screen and (min-width: #{map-get($breakpoints, $size)}) {
+      @content;
+    }
+  } @else {
+    @content;
+    @error $breakpoint-error;
+  }
+}
+
+// breakpoint down
+
+@mixin breakpoint-down($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media screen and (max-width: #{map-get($breakpoints, $size) - 1}) {
+      @content;
+    }
+  } @else {
+    @content;
+    @error $breakpoint-error;
+  }
+} // "-1" prevents overlap of 1px against next breakpoint
+
+// breakpoint between
+
+@mixin breakpoint-only($size-min, $size-max) {
+  @if map-has-key($breakpoints, $size-min) {
+    @media screen and (min-width: #{map-get($breakpoints, $size-min)}) {
+      @if map-has-key($breakpoints, $size-max) {
+        @media screen and (max-width: #{map-get($breakpoints, $size-max) - 1}) {
+          @content;
+        } // "-1" prevents overlap of 1px against next breakpoint
+      } @else {
+        @content;
+        @error $breakpoint-error;
+      }
+    }
+  } @else {
+    @content;
+    @error $breakpoint-error;
+  }
+}
+
+// -------------- ** -------------- //
+//
+// Container, row, & column general styling
+//
+// -------------- ** -------------- //
+
+.#{map-get($class-names, container)} {
+  margin: 3rem auto;
+
+  @if $container-max-width == true {
+    max-width: $container-width;
+  }
+
+  &.fluid {
+    max-width: 100%;
+  }
+}
+
+.#{map-get($class-names, container)} .#{map-get($class-names, rows)}::before,
+.#{map-get($class-names, container)} .#{map-get($class-names, rows)}::after {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+.#{map-get($class-names, rows)} {
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+.#{map-get($class-names, columns)}s, .#{map-get($class-names, columns)} {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  width: 100%;
+  flex-flow: row wrap;
+  min-height: 1px;
+
+  @if $column-gutter == true {
+    padding-left: $column-gutter-space;
+    padding-right: $column-gutter-space;
+  }
+
+  @if $column-gutter-bottom == true {
+    padding-bottom: $column-bottom-space;
+  }
+
+  &.collapsed {
+    padding: 0;
+  }
+}
+
+// -------------- ** -------------- //
+//
+// grid + offset generator
+//
+// -------------- ** -------------- //
+
+@each $break in $breakpoints {
+  $name: nth($break, 1); // take only the name of the breakpoint, NOT its value.
+  @include breakpoint-up($name) {
+    @for $i from 1 through $columns {
+      // width names
+      .#{$name}-#{$i} {
+        flex: 0 0 auto;
+        width: percentage($i / $columns);
+      }
+    }
+  }
+}
