@@ -1,7 +1,3 @@
-## TODO
-- [ ] Make a github page
-- [ ] Think of a better project name
-
 # Tron CSS Grid Framework
 A CSS grid with none of the cruft of larger frameworks like Foundation, Bootstrap, etc.
 
