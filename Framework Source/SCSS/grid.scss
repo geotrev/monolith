@@ -1,21 +1,21 @@
 // Switch CSS
 
 // -------------- ** -------------- //
-// 
+//
 // define grid class names, breakpoints, and general spacing
-// 
+//
 // -------------- ** -------------- //
 
 $class-names: (
-  container: 'container', 
-  rows: 'row', 
+  container: 'container',
+  rows: 'row',
   columns: 'column'
 );
 
 $breakpoints: (
   xsmall: 0,
   small: 576px,
-  medium: 768px, 
+  medium: 768px,
   large: 992px,
   xlarge: 1200px
 ) !default;
@@ -38,9 +38,9 @@ $column-bottom-space: $default-space;
 $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakpoints.";
 
 // -------------- ** -------------- //
-// 
+//
 // breakpoints
-// 
+//
 // -------------- ** -------------- //
 
 // breakpoint up
@@ -90,14 +90,14 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
 }
 
 // -------------- ** -------------- //
-// 
+//
 // Container, row, & column general styling
-// 
+//
 // -------------- ** -------------- //
 
 .#{map-get($class-names, container)} {
   margin: 0 auto;
-  
+
   @if $container-padding == true {
     padding-left: $container-space;
     padding-right: $container-space;
@@ -108,6 +108,13 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
   }
 
   &.fluid { max-width: 100%; }
+
+  &.section {
+    margin: 48px auto;
+    
+    &.medium { margin: 96px auto; }
+    &.large  { margin: 128px auto; }
+  }
 }
 
 .#{map-get($class-names, container)} .#{map-get($class-names, rows)}::before,
@@ -146,9 +153,9 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
 }
 
 // -------------- ** -------------- //
-// 
+//
 // grid + offset generator
-// 
+//
 // -------------- ** -------------- //
 
 @each $break in $breakpoints {
@@ -180,7 +187,7 @@ html, body {
   font-size: 14px;
   width: 100%;
   background: linear-gradient( 124deg, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #ff2400, #e81d1d, #e8b71d );
-  background-size: 1800% 1800%; 
+  background-size: 1800% 1800%;
   animation: rainbow 36s ease infinite;
 
   .xlarge {
@@ -212,3 +219,4 @@ html, body {
 }
 
 // rainbow effect politely stolen from Milan Nohejl: https://codepen.io/nohoid
+
