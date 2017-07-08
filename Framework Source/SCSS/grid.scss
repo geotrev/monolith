@@ -20,12 +20,6 @@ $breakpoints: (
   xlarge: 1200px
 );
 
-$containers: (
-  narrow: 768px,
-  default: 992px,
-  wide: 1200px
-);
-
 $columns: 12;
 $default-space: 16px;
 
@@ -33,6 +27,7 @@ $container-padding: true;
 $column-gutter: true;
 $column-gutter-bottom: true;
 
+$container-default-width: 992px;
 $container-space: 16px;
 $column-gutter-space: $default-space / 2;
 $column-bottom-space: $default-space;
@@ -97,25 +92,25 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
 //
 // -------------- ** -------------- //
 
-@each $name, $width in $containers {
-  .#{$name}-#{map-get($class-names, container)} {
-    margin: 0 auto;
-    position: relative;
-    max-width: $width;
+.#{map-get($class-names, container)} {
+  margin: 0 auto;
+  position: relative;
+  max-width: $container-default-width;
 
-    @if $container-padding == true {
-      padding-left: $container-space;
-      padding-right: $container-space;
-    }
+  @if $container-padding == true {
+    padding-left: $container-space;
+    padding-right: $container-space;
+  }
 
-    &.fluid { max-width: 100%; }
+  &.fluid { max-width: 100%; }
+  &.narrow { max-width: 768px; }
+  &.wide { max-width: 1200px; }
 
-    &.section {
-      margin: ($container-space * 3) auto;
+  &.section {
+    margin: ($container-space * 3) auto;
 
-      &.medium { margin: ($container-space * 6) auto; }
-      &.large  { margin: ($container-space * 9) auto; }
-    }
+    &.medium { margin: ($container-space * 6) auto; }
+    &.large  { margin: ($container-space * 9) auto; }
   }
 }
 
