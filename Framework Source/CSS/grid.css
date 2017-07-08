@@ -5,6 +5,15 @@
 .container.fluid {
   max-width: 100%;
 }
+.container.section {
+  margin: 48px auto;
+}
+.container.section.medium {
+  margin: 96px auto;
+}
+.container.section.large {
+  margin: 128px auto;
+}
 
 .container .row::before,
 .container .row::after {
