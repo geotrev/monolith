@@ -7,11 +7,13 @@ See the [codepen example](https://codepen.io/geotrev/pen/PWEYaB) to see it in ac
 
 ## Features & Options
 
+• Specify names for container, row and column elements
+
 • Fluid & fixed-width containers
 
 • Optional container padding
 
-• Optional container section classes for focused content
+• Use classes `section container` for focused section content; add `medium` and `large` for more space.
 
 • Optional column gutters (sides and bottom)
 
