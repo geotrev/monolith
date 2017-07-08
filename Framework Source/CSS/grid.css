@@ -42,6 +42,9 @@
 .columns.collapsed, .column.collapsed {
   padding: 0;
 }
+.columns.centered, .column.centered {
+  margin: 0 auto;
+}
 
 @media screen and (min-width: 0) {
   .xsmall-1 {
