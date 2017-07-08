@@ -14,16 +14,18 @@
 .container.wide {
   max-width: 1200px;
 }
-.container.section {
+.container.small-section {
   margin: 48px auto;
 }
-.container.section.medium {
+.container.medium-section {
   margin: 96px auto;
 }
-.container.section.large {
+.container.large-section {
   margin: 144px auto;
 }
 
+.container::before,
+.container::after,
 .container .row::before,
 .container .row::after {
   display: block;
@@ -61,9 +63,6 @@
 }
 .columns.collapsed, .column.collapsed {
   padding: 0;
-}
-.columns.centered, .column.centered {
-  margin: 0 auto;
 }
 
 @media screen and (min-width: 0) {
