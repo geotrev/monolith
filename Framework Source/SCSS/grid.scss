@@ -1,4 +1,4 @@
-// Tron Grid
+// Switch CSS
 
 // -------------- ** -------------- //
 // 
@@ -6,23 +6,32 @@
 // 
 // -------------- ** -------------- //
 
-$class-names: (container: 'container', rows: 'row', columns: 'column');
+$class-names: (
+  container: 'container', 
+  rows: 'row', 
+  columns: 'column'
+);
 
 $breakpoints: (
   xsmall: 0,
   small: 576px,
-  medium: 768px,
+  medium: 768px, 
   large: 992px,
   xlarge: 1200px
 ) !default;
 
+$columns: 12;
+
+$default-space: 16px;
+
 $container-max-width: true;
+$container-padding: false;
 $column-gutter: true;
 $column-gutter-bottom: true;
 
-$columns: 12;
-$default-space: 16px;
+
 $container-width: 1400px;
+$container-space: 16px;
 $column-gutter-space: $default-space / 2;
 $column-bottom-space: $default-space;
 
@@ -88,14 +97,17 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
 
 .#{map-get($class-names, container)} {
   margin: 0 auto;
+  
+  @if $container-padding == true {
+    padding-left: $container-space;
+    padding-right: $container-space;
+  }
 
   @if $container-max-width == true {
     max-width: $container-width;
   }
 
-  &.fluid {
-    max-width: 100%;
-  }
+  &.fluid { max-width: 100%; }
 }
 
 .#{map-get($class-names, container)} .#{map-get($class-names, rows)}::before,
@@ -129,9 +141,8 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
     padding-bottom: $column-bottom-space;
   }
 
-  &.collapsed {
-    padding: 0;
-  }
+  &.collapsed { padding: 0; }
+  &.centered { margin: 0 auto; }
 }
 
 // -------------- ** -------------- //
@@ -152,3 +163,52 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
     }
   }
 }
+
+// layout
+
+h1 { text-align: center; }
+html, body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.content {
+  color: white;
+  padding: 16px 0;
+  text-align: center;
+  font-size: 14px;
+  width: 100%;
+  background: linear-gradient( 124deg, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3, #ff2400, #e81d1d, #e8b71d );
+  background-size: 1800% 1800%; 
+  animation: rainbow 36s ease infinite;
+
+  .xlarge {
+    display: none;
+    @include breakpoint-up(xlarge) { display: block; }
+  }
+  .large {
+    display: none;
+    @include breakpoint-only(large, xlarge) { display: block; }
+  }
+  .medium {
+    display: none;
+    @include breakpoint-only(medium, large) { display: block; }
+  }
+  .small {
+    display: none;
+    @include breakpoint-only(small, medium) { display: block; }
+  }
+  .xsmall {
+    display: none;
+    @include breakpoint-down(small) { display: block; }
+  }
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 82%; }
+  50% { background-position: 100% 19%; }
+  100% { background-position: 0% 82%; }
+}
+
+// rainbow effect politely stolen from Milan Nohejl: https://codepen.io/nohoid
