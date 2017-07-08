@@ -106,14 +106,13 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
   &.narrow { max-width: 768px; }
   &.wide { max-width: 1200px; }
 
-  &.section {
-    margin: ($container-space * 3) auto;
-
-    &.medium { margin: ($container-space * 6) auto; }
-    &.large  { margin: ($container-space * 9) auto; }
-  }
+  &.small-section { margin: ($container-space * 3) auto; }
+  &.medium-section { margin: ($container-space * 6) auto; }
+  &.large-section  { margin: ($container-space * 9) auto; }
 }
 
+.#{map-get($class-names, container)}::before,
+.#{map-get($class-names, container)}::after,
 .#{map-get($class-names, container)} .#{map-get($class-names, rows)}::before,
 .#{map-get($class-names, container)} .#{map-get($class-names, rows)}::after {
   display: block;
@@ -148,7 +147,6 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
   }
 
   &.collapsed { padding: 0; }
-  &.centered { margin: 0 auto; }
 }
 
 // -------------- ** -------------- //
