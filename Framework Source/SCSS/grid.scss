@@ -1,4 +1,4 @@
-// Switch CSS
+// Switch CSS – Just the grid. All the power.
 
 // -------------- ** -------------- //
 //
@@ -20,6 +20,18 @@ $breakpoints: (
   xlarge: 1200px
 );
 
+$container-width-names: (
+  fluid: 100%,
+  narrow: 768px,
+  wide: 1200px
+);
+
+$container-section-names: (
+  small: 48px,
+  medium: 96px,
+  large: 144px
+);
+
 $columns: 12;
 $default-space: 16px;
 
@@ -28,7 +40,7 @@ $column-gutter: true;
 $column-gutter-bottom: true;
 
 $container-default-width: 992px;
-$container-space: 16px;
+$container-space: $default-space;
 $column-gutter-space: $default-space / 2;
 $column-bottom-space: $default-space;
 
@@ -95,20 +107,20 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
 .#{map-get($class-names, container)} {
   margin: 0 auto;
   position: relative;
-  max-width: $container-default-width;
+  max-width: $container-default-width; 
 
   @if $container-padding == true {
     padding-left: $container-space;
     padding-right: $container-space;
   }
-
-  &.fluid { max-width: 100%; }
-  &.narrow { max-width: 768px; }
-  &.wide { max-width: 1200px; }
-
-  &.small-section { margin: ($container-space * 3) auto; }
-  &.medium-section { margin: ($container-space * 6) auto; }
-  &.large-section  { margin: ($container-space * 9) auto; }
+  
+  @each $name, $width in $container-width-names {
+    &.#{$name} { max-width: $width; }
+  }
+  
+  @each $name, $spacing in $container-section-names {
+    &.#{$name}-section { padding-top: $spacing; padding-bottom: $spacing; }
+  }
 }
 
 .#{map-get($class-names, container)}::before,
@@ -131,6 +143,7 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
 
 .#{map-get($class-names, columns)}s, .#{map-get($class-names, columns)} {
   box-sizing: border-box;
+  display: flex;
   flex: 1 0 auto;
   flex-flow: row wrap;
   min-height: 1px;
