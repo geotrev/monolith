@@ -19,4 +19,4 @@ See the [codepen example](https://codepen.io/geotrev/pen/PWEYaB) to see it in ac
 
 • Five default breakpoints to choose from: `xsmall`, `small`, `medium`, `large`, `xlarge`
 
-• Breakpoint `@mixin`s for up, down, and between
+• Breakpoint `@mixin`s for `up`, `down`, and `only`
