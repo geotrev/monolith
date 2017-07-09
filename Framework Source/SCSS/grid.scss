@@ -36,6 +36,7 @@ $columns: 12;
 $default-space: 16px;
 
 $container-padding: true;
+$column-order-classes: true;
 $column-gutter: true;
 $column-gutter-bottom: true;
 
@@ -148,6 +149,14 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
   min-height: 1px;
   position: relative;
   width: 100%;
+  
+  @if $column-order-classes == true {
+    order: ($columns + 1);
+    
+    @for $i from 1 through $columns {
+      &.order-#{$i} { order: $i; }
+    }
+  }
 
   @if $column-gutter == true {
     padding-left: $column-gutter-space;
