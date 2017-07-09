@@ -143,7 +143,6 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
 
 .#{map-get($class-names, columns)}s, .#{map-get($class-names, columns)} {
   box-sizing: border-box;
-  display: flex;
   flex: 1 0 auto;
   flex-flow: row wrap;
   min-height: 1px;
