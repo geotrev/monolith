@@ -15,7 +15,7 @@ See the [codepen example](https://codepen.io/geotrev/pen/PWEYaB) to see it in ac
 
 • Use section classes for focused content: `.small-section`, `.medium-section`, `.large-section`
 
-• Collapse column padding with `.collapse`
+• Collapse column padding with `.collapsed`
 
 • Five default breakpoints to choose from: `xsmall`, `small`, `medium`, `large`, `xlarge`
 
