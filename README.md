@@ -9,13 +9,11 @@ See the [codepen example](https://codepen.io/geotrev/pen/PWEYaB) to see it in ac
 
 • Specify names for container, row and column elements
 
-• Fluid & fixed-width containers at multiple sizes
+• Define gutters and spacing for containers and columns
 
-• Optional container padding
+• Fluid & fixed-width containers at multiple sizes: `.narrow`, `.default`, `.large`
 
 • Use section classes for focused content: `.small-section`, `.medium-section`, `.large-section`
-
-• Optional column gutters (sides and bottom)
 
 • Collapse column padding with `.collapse`
 
