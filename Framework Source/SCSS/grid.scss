@@ -20,13 +20,13 @@ $breakpoints: (
   xlarge: 1200px
 );
 
-$container-width-names: (
+$container-widths: (
   fluid: 100%,
   narrow: 768px,
   wide: 1200px
 );
 
-$container-section-names: (
+$container-sections: (
   small: 48px,
   medium: 96px,
   large: 144px
@@ -107,18 +107,18 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
 .#{map-get($class-names, container)} {
   margin: 0 auto;
   position: relative;
-  max-width: $container-default-width; 
+  max-width: $container-default-width;
 
   @if $container-padding == true {
     padding-left: $container-space;
     padding-right: $container-space;
   }
-  
-  @each $name, $width in $container-width-names {
+
+  @each $name, $width in $container-widths {
     &.#{$name} { max-width: $width; }
   }
-  
-  @each $name, $spacing in $container-section-names {
+
+  @each $name, $spacing in $container-sections {
     &.#{$name}-section { padding-top: $spacing; padding-bottom: $spacing; }
   }
 }
