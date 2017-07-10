@@ -2,7 +2,7 @@
 
 // -------------- ** -------------- //
 //
-// define grid class names, breakpoints, and general spacing
+// Choose class names. Defaults: .container | .row | .column
 //
 // -------------- ** -------------- //
 
@@ -12,6 +12,13 @@ $class-names: (
   columns: 'column'
 );
 
+// -------------- ** -------------- //
+//
+// Choose breakpoint names and values. 
+// *** NOTE: They are shared with breakpoint @mixin utilities & the grid generator.
+//
+// -------------- ** -------------- //
+
 $breakpoints: (
   xsmall: 0,
   small: 576px,
@@ -20,11 +27,25 @@ $breakpoints: (
   xlarge: 1200px
 );
 
+// -------------- ** -------------- //
+//
+// Choose container width modifier classes and their values
+// Ex. class="narrow container"
+//
+// -------------- ** -------------- //
+
 $container-widths: (
   fluid: 100%,
   narrow: 768px,
   wide: 1200px
 );
+
+// -------------- ** -------------- //
+//
+// Choose section names and padding for extra vertical space to focus content
+// Ex. class="small-section wide container"
+//
+// -------------- ** -------------- //
 
 $container-sections: (
   small: 48px,
@@ -32,13 +53,31 @@ $container-sections: (
   large: 144px
 );
 
+// -------------- ** -------------- //
+//
+// Define column count and default spacing values for gutters
+//
+// -------------- ** -------------- //
+
 $columns: 12;
 $default-space: 16px;
 
+// -------------- ** -------------- //
+//
+// Container and column spacing options + column flex order utility classes
+//
+// -------------- ** -------------- //
+
 $container-padding: true;
-$column-order-classes: true;
 $column-gutter: true;
 $column-gutter-bottom: true;
+$column-order-classes: true;
+
+// -------------- ** -------------- //
+//
+// Default width for container + spacing for container and columns (if enabled)
+//
+// -------------- ** -------------- //
 
 $container-default-width: 992px;
 $container-space: $default-space;
@@ -49,11 +88,15 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
 
 // -------------- ** -------------- //
 //
-// breakpoints
+// Breakpoint Mixins
+// Use in your css for custom breakpoint behavior.
+// *** NOTE: changes your breakpoint names will change your mixin arguments
 //
 // -------------- ** -------------- //
 
-// breakpoint up
+// Breakpoint Up
+// Ex. @include breakpoint-up(small) { ... }
+//      ^-- applies styles to all sizes above "small" breakpoint
 
 @mixin breakpoint-up($size) {
   @if map-has-key($breakpoints, $size) {
@@ -66,7 +109,9 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
   }
 }
 
-// breakpoint down
+// Breakpoint Down
+// Ex. @include breakpoint-down(medium) { ... }
+//      ^-- applies styles to all sizes below "medium" breakpoint
 
 @mixin breakpoint-down($size) {
   @if map-has-key($breakpoints, $size) {
@@ -79,7 +124,9 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
   }
 } // "-1" prevents overlap of 1px against next breakpoint
 
-// breakpoint between
+// Breakpoint Only
+// Ex. @include breakpoint-only(small, xsmall) { ... }
+//      ^-- applies styles only to "small" through "xsmall" breakpoints
 
 @mixin breakpoint-only($size-min, $size-max) {
   @if map-has-key($breakpoints, $size-min) {
@@ -109,16 +156,16 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
   margin: 0 auto;
   position: relative;
   max-width: $container-default-width;
-
+  
   @if $container-padding == true {
-    padding-left: $container-space;
-    padding-right: $container-space;
+    @include breakpoint-up(medium) {
+      padding-left: $container-space;
+      padding-right: $container-space;
+    }
   }
-
   @each $name, $width in $container-widths {
     &.#{$name} { max-width: $width; }
   }
-
   @each $name, $spacing in $container-sections {
     &.#{$name}-section { padding-top: $spacing; padding-bottom: $spacing; }
   }
@@ -151,23 +198,22 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
   width: 100%;
   
   @if $column-order-classes == true {
+    // all columns are given an order # by default
     order: ($columns + 1);
     
     @for $i from 1 through $columns {
       &.order-#{$i} { order: $i; }
     }
   }
-
   @if $column-gutter == true {
     padding-left: $column-gutter-space;
     padding-right: $column-gutter-space;
   }
-
   @if $column-gutter-bottom == true {
     padding-bottom: $column-bottom-space;
   }
 
-  &.collapsed { padding: 0; }
+  &.collapsed { padding-left: 0; padding-right: 0; padding-bottom: 0; }
 }
 
 // -------------- ** -------------- //
