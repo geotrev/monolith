@@ -15,6 +15,8 @@ See the [codepen example](https://codepen.io/geotrev/pen/PWEYaB) to see it in ac
 
 • Use section classes for focused content: `.small-section`, `.medium-section`, `.large-section`
 
+• Order columns with a flex utility class: `.order-#'
+
 • Collapse column padding with `.collapsed`
 
 • Five default breakpoints to choose from: `xsmall`, `small`, `medium`, `large`, `xlarge`
