@@ -1,10 +1,8 @@
 // Switch CSS – Just the grid. All the power.
 
-// -------------- ** -------------- //
 //
 // Choose class names. Defaults: .container | .row | .column
 //
-// -------------- ** -------------- //
 
 $class-names: (
   container: 'container',
@@ -12,12 +10,10 @@ $class-names: (
   columns: 'column'
 );
 
-// -------------- ** -------------- //
 //
 // Choose breakpoint names and values. 
 // *** NOTE: They are shared with breakpoint @mixin utilities & the grid generator
 //
-// -------------- ** -------------- //
 
 $breakpoints: (
   xsmall: 0,
@@ -27,12 +23,10 @@ $breakpoints: (
   xlarge: 1200px
 );
 
-// -------------- ** -------------- //
 //
 // Choose container width modifier classes and their values
 // Ex. class="narrow container"
 //
-// -------------- ** -------------- //
 
 $container-widths: (
   fluid: 100%,
@@ -40,12 +34,10 @@ $container-widths: (
   wide: 1200px
 );
 
-// -------------- ** -------------- //
 //
 // Choose section names and padding for extra vertical space to focus content
 // Ex. class="small-section wide container"
 //
-// -------------- ** -------------- //
 
 $container-sections: (
   small: 48px,
@@ -53,31 +45,25 @@ $container-sections: (
   large: 144px
 );
 
-// -------------- ** -------------- //
 //
 // Define column count and default spacing values for gutters
 //
-// -------------- ** -------------- //
 
 $columns: 12;
 $default-space: 16px;
 
-// -------------- ** -------------- //
 //
 // Container and column spacing options + column flex order utility classes
 //
-// -------------- ** -------------- //
 
 $container-padding: true;
 $column-gutter: true;
 $column-gutter-bottom: true;
 $column-order-classes: true;
 
-// -------------- ** -------------- //
 //
 // Default width for container + spacing for container and columns (if enabled)
 //
-// -------------- ** -------------- //
 
 $container-default-width: 992px;
 $container-space: $default-space;
@@ -86,13 +72,11 @@ $column-bottom-space: $default-space;
 
 $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakpoints.";
 
-// -------------- ** -------------- //
 //
 // Breakpoint Mixins
 // Use in your css for custom breakpoint behavior.
 // *** NOTE: changes your breakpoint names will change your mixin arguments
 //
-// -------------- ** -------------- //
 
 // Breakpoint Up
 // Ex. @include breakpoint-up(small) { ... }
@@ -146,11 +130,9 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
   }
 }
 
-// -------------- ** -------------- //
 //
 // Container, row, & column general styling
 //
-// -------------- ** -------------- //
 
 .#{map-get($class-names, container)} {
   margin: 0 auto;
@@ -216,11 +198,9 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
   &.collapsed { padding-left: 0; padding-right: 0; padding-bottom: 0; }
 }
 
-// -------------- ** -------------- //
 //
 // grid + offset generator
 //
-// -------------- ** -------------- //
 
 @each $break in $breakpoints {
   $name: nth($break, 1); // take only the name of the breakpoint, NOT its value.
