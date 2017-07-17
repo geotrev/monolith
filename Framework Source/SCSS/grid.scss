@@ -140,7 +140,7 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
   max-width: $container-default-width;
   
   @if $container-padding == true {
-    @include breakpoint-up(medium) {
+    @include breakpoint-up(small) {
       padding-left: $container-space;
       padding-right: $container-space;
     }
@@ -148,8 +148,8 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
   @each $name, $width in $container-widths {
     &.#{$name} { max-width: $width; }
   }
-  @each $name, $spacing in $container-sections {
-    &.#{$name}-section { padding-top: $spacing; padding-bottom: $spacing; }
+  @each $name, $padding-top in $container-sections {
+    &.#{$name}-section { padding-top: $padding-top; padding-bottom: $padding-top; }
   }
 }
 
@@ -176,6 +176,8 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
   flex: 1 0 auto;
   flex-flow: row wrap;
   min-height: 1px;
+  min-width: 0;
+  word-wrap: break-word;
   position: relative;
   width: 100%;
   
