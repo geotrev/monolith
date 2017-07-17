@@ -3,7 +3,7 @@
   position: relative;
   max-width: 992px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 576px) {
   .container {
     padding-left: 16px;
     padding-right: 16px;
@@ -62,6 +62,8 @@
   -ms-flex-flow: row wrap;
       flex-flow: row wrap;
   min-height: 1px;
+  min-width: 0;
+  word-wrap: break-word;
   position: relative;
   width: 100%;
   -webkit-box-ordinal-group: 14;
@@ -132,7 +134,9 @@
           order: 12;
 }
 .columns.collapsed, .column.collapsed {
-  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
 }
 
 @media screen and (min-width: 0) {
