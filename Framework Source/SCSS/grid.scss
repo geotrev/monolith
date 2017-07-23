@@ -11,7 +11,7 @@ $class-names: (
 );
 
 //
-// Choose breakpoint names and values. 
+// Choose breakpoint names and values.
 // *** NOTE: They are shared with breakpoint @mixin utilities & the grid generator
 //
 
@@ -70,8 +70,6 @@ $container-space: $default-space;
 $column-gutter-space: $default-space / 2;
 $column-bottom-space: $default-space;
 
-$breakpoint-error: "One or more of your arguments wasn't a valid key for $breakpoints.";
-
 //
 // Breakpoint Mixins
 // Use in your css for custom breakpoint behavior.
@@ -83,13 +81,8 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
 //      ^-- applies styles to all sizes above "small" breakpoint
 
 @mixin breakpoint-up($size) {
-  @if map-has-key($breakpoints, $size) {
-    @media screen and (min-width: #{map-get($breakpoints, $size)}) {
-      @content;
-    }
-  } @else {
+  @media screen and (min-width: #{map-get($breakpoints, $size)}) {
     @content;
-    @error $breakpoint-error;
   }
 }
 
@@ -98,13 +91,8 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
 //      ^-- applies styles to all sizes below "medium" breakpoint
 
 @mixin breakpoint-down($size) {
-  @if map-has-key($breakpoints, $size) {
-    @media screen and (max-width: #{map-get($breakpoints, $size) - 1}) {
-      @content;
-    }
-  } @else {
+  @media screen and (max-width: #{map-get($breakpoints, $size) - 1}) {
     @content;
-    @error $breakpoint-error;
   }
 } // "-1" prevents overlap of 1px against next breakpoint
 
@@ -113,21 +101,11 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
 //      ^-- applies styles only to "small" through "xsmall" breakpoints
 
 @mixin breakpoint-only($size-min, $size-max) {
-  @if map-has-key($breakpoints, $size-min) {
-    @media screen and (min-width: #{map-get($breakpoints, $size-min)}) {
-      @if map-has-key($breakpoints, $size-max) {
-        @media screen and (max-width: #{map-get($breakpoints, $size-max) - 1}) {
-          @content;
-        } // "-1" prevents overlap of 1px against next breakpoint
-      } @else {
-        @content;
-        @error $breakpoint-error;
-      }
-    }
-  } @else {
-    @content;
-    @error $breakpoint-error;
-  }
+  @media screen
+    and (min-width: #{map-get($breakpoints, $size-min)})
+    and (max-width: #{map-get($breakpoints, $size-max) - 1}) {
+      @content;
+  } // "-1" prevents overlap of 1px against next breakpoint
 }
 
 //
@@ -138,7 +116,7 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
   margin: 0 auto;
   position: relative;
   max-width: $container-default-width;
-  
+
   @if $container-padding == true {
     @include breakpoint-up(small) {
       padding-left: $container-space;
@@ -180,11 +158,11 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
   word-wrap: break-word;
   position: relative;
   width: 100%;
-  
+
   @if $column-order-classes == true {
     // all columns are given an order # by default
     order: ($columns + 1);
-    
+
     @for $i from 1 through $columns {
       &.order-#{$i} { order: $i; }
     }
@@ -208,10 +186,8 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
   $name: nth($break, 1); // take only the name of the breakpoint, NOT its value.
   @include breakpoint-up($name) {
     @for $i from 1 through $columns {
-      // width names
       .#{$name}-#{$i} {
-        flex: 0 0 auto;
-        width: percentage($i / $columns);
+        flex: 0 0 percentage($i / $columns);
         max-width: percentage($i / $columns);
       }
     }
