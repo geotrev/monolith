@@ -17,9 +17,9 @@ $class-names: (
 
 $breakpoints: (
   xsmall: 0,
-  small: 576px,
+   small: 576px,
   medium: 768px,
-  large: 992px,
+   large: 992px,
   xlarge: 1200px
 );
 
@@ -29,9 +29,9 @@ $breakpoints: (
 //
 
 $container-widths: (
-  fluid: 100%,
+   fluid: 100%,
   narrow: 768px,
-  wide: 1200px
+    wide: 1200px
 );
 
 //
@@ -40,9 +40,9 @@ $container-widths: (
 //
 
 $container-sections: (
-  small: 48px,
+   small: 48px,
   medium: 96px,
-  large: 144px
+   large: 144px
 );
 
 //
@@ -56,19 +56,19 @@ $default-space: 16px;
 // Container and column spacing options + column flex order utility classes
 //
 
-$container-padding: true;
-$column-gutter: true;
-$column-gutter-bottom: true;
-$column-order-classes: true;
+$container-padding:     true;
+$column-gutter:         true;
+$column-bottom-padding: true;
+$column-order-classes:  true;
 
 //
 // Default width for container + spacing for container and columns (if enabled)
 //
 
-$container-default-width: 992px;
-$container-space: $default-space;
-$column-gutter-space: $default-space / 2;
-$column-bottom-space: $default-space;
+$container-default-width:     992px;
+$container-space:             $default-space;
+$column-gutter-space:         $default-space / 2;
+$column-bottom-padding-space: $default-space;
 
 //
 // Breakpoint Mixins
@@ -109,10 +109,30 @@ $column-bottom-space: $default-space;
 }
 
 //
-// Container, row, & column general styling
+// Containers, rows, and columns
 //
 
-.#{map-get($class-names, container)} {
+// Helpers
+
+$container: map-get($class-names, container);
+$row: map-get($class-names, row);
+$column: map-get($class-names, column);
+
+// ::after and ::before resets for older browsers
+
+.#{$container}::before,
+.#{$container}::after,
+.#{$container} .#{$row}::before,
+.#{$container} .#{$row}::after {
+  display: block;
+  padding: 0;
+  margin: 0;
+  height: 0;
+}
+
+// Container
+
+.#{$container} {
   margin: 0 auto;
   position: relative;
   max-width: $container-default-width;
@@ -123,25 +143,19 @@ $column-bottom-space: $default-space;
       padding-right: $container-space;
     }
   }
+
   @each $name, $width in $container-widths {
     &.#{$name} { max-width: $width; }
   }
-  @each $name, $padding-top in $container-sections {
-    &.#{$name}-section { padding-top: $padding-top; padding-bottom: $padding-top; }
+
+  @each $name, $padding in $container-sections {
+    &.#{$name}-section { padding-top: $padding; padding-bottom: $padding; }
   }
 }
 
-.#{map-get($class-names, container)}::before,
-.#{map-get($class-names, container)}::after,
-.#{map-get($class-names, container)} .#{map-get($class-names, row)}::before,
-.#{map-get($class-names, container)} .#{map-get($class-names, row)}::after {
-  display: block;
-  padding: 0;
-  margin: 0;
-  height: 0;
-}
+// Row
 
-.#{map-get($class-names, row)} {
+.#{$row} {
   display: flex;
   flex-flow: row wrap;
   position: relative;
@@ -149,7 +163,9 @@ $column-bottom-space: $default-space;
   width: 100%;
 }
 
-.#{map-get($class-names, column)}s, .#{map-get($class-names, column)} {
+// Column
+
+.#{$column}s, .#{$column} {
   box-sizing: border-box;
   flex: 1 0 auto;
   flex-flow: row wrap;
@@ -167,19 +183,35 @@ $column-bottom-space: $default-space;
       &.order-#{$i} { order: $i; }
     }
   }
+
   @if $column-gutter == true {
     padding-left: $column-gutter-space;
     padding-right: $column-gutter-space;
   }
-  @if $column-gutter-bottom == true {
-    padding-bottom: $column-bottom-space;
+
+  @if $column-bottom-padding == true {
+    padding-bottom: $column-bottom-padding-space;
   }
 
-  &.collapsed { padding-left: 0; padding-right: 0; padding-bottom: 0; }
+}
+
+// Column utility classes
+
+.#{$column}s, .#{$column} {
+  &.auto-fill {
+    width: auto;
+    flex-shrink: 1;
+  }
+
+  &.collapsed {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
 }
 
 //
-// grid generator
+// Grid generator
 //
 
 @each $break in $breakpoints {
