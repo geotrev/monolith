@@ -6,8 +6,8 @@
 
 $class-names: (
   container: 'container',
-  rows: 'row',
-  columns: 'column'
+  row: 'row',
+  column: 'column'
 );
 
 //
@@ -155,15 +155,15 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
 
 .#{map-get($class-names, container)}::before,
 .#{map-get($class-names, container)}::after,
-.#{map-get($class-names, container)} .#{map-get($class-names, rows)}::before,
-.#{map-get($class-names, container)} .#{map-get($class-names, rows)}::after {
+.#{map-get($class-names, container)} .#{map-get($class-names, row)}::before,
+.#{map-get($class-names, container)} .#{map-get($class-names, row)}::after {
   display: block;
   padding: 0;
   margin: 0;
   height: 0;
 }
 
-.#{map-get($class-names, rows)} {
+.#{map-get($class-names, row)} {
   display: flex;
   flex-flow: row wrap;
   position: relative;
@@ -171,7 +171,7 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
   width: 100%;
 }
 
-.#{map-get($class-names, columns)}s, .#{map-get($class-names, columns)} {
+.#{map-get($class-names, column)}s, .#{map-get($class-names, column)} {
   box-sizing: border-box;
   flex: 1 0 auto;
   flex-flow: row wrap;
@@ -201,7 +201,7 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
 }
 
 //
-// grid + offset generator
+// grid generator
 //
 
 @each $break in $breakpoints {
@@ -210,7 +210,7 @@ $breakpoint-error: "One or more of your arguments wasn't a valid key for $breakp
     @for $i from 1 through $columns {
       // width names
       .#{$name}-#{$i} {
-        flex: 0 0 percentage($i / $columns);
+        flex: 0 0 auto;
         width: percentage($i / $columns);
         max-width: percentage($i / $columns);
       }
