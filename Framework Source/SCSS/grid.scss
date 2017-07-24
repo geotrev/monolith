@@ -125,9 +125,8 @@ $column: map-get($class-names, column);
 .#{$container} .#{$row}::before,
 .#{$container} .#{$row}::after {
   display: block;
-  padding: 0;
-  margin: 0;
-  height: 0;
+  padding: 0; margin: 0;
+  height: 0; width: 0;
 }
 
 // Container
@@ -142,16 +141,17 @@ $column: map-get($class-names, column);
       padding-left: $container-space;
       padding-right: $container-space;
     }
-  }
+  } // end @if
 
   @each $name, $width in $container-widths {
     &.#{$name} { max-width: $width; }
-  }
+  } // end @each
 
   @each $name, $padding in $container-sections {
     &.#{$name}-section { padding-top: $padding; padding-bottom: $padding; }
-  }
-}
+  } // end @each
+
+} // end container
 
 // Row
 
@@ -167,13 +167,11 @@ $column: map-get($class-names, column);
 
 .#{$column}s, .#{$column} {
   box-sizing: border-box;
-  flex: 1 0 auto;
-  flex-flow: row wrap;
+  flex: 1 0 100%;
   min-height: 1px;
   min-width: 0;
   word-wrap: break-word;
-  position: relative;
-  width: 100%;
+  max-width: 100%;
 
   @if $column-order-classes == true {
     // all columns are given an order # by default
@@ -182,25 +180,25 @@ $column: map-get($class-names, column);
     @for $i from 1 through $columns {
       &.order-#{$i} { order: $i; }
     }
-  }
+  } // end @if
 
   @if $column-gutter == true {
     padding-left: $column-gutter-space;
     padding-right: $column-gutter-space;
-  }
+  } // end @if
 
   @if $column-bottom-padding == true {
     padding-bottom: $column-bottom-padding-space;
-  }
+  } // end @if
 
-}
+} // end column
 
 // Column utility classes
 
 .#{$column}s, .#{$column} {
   &.auto-fill {
     width: auto;
-    flex-shrink: 1;
+    flex: 1 1 auto;
   }
 
   &.collapsed {
@@ -222,6 +220,6 @@ $column: map-get($class-names, column);
         flex: 0 0 percentage($i / $columns);
         max-width: percentage($i / $columns);
       }
-    }
-  }
-}
+    } // end @for
+  } // end @include
+} // end @each
