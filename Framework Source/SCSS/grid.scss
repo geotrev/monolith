@@ -161,7 +161,7 @@ $column: map-get($class-names, column);
   position: relative;
   flex: 1 0 auto;
   width: 100%;
-
+  
   &.collapsed {
     .#{$column}s, .#{$column} {
       padding-left: 0;
@@ -180,7 +180,7 @@ $column: map-get($class-names, column);
   min-width: 0;
   word-wrap: break-word;
   max-width: 100%;
-
+  
   @if $column-order-classes == true {
     order: 999;
   }
@@ -204,17 +204,15 @@ $column: map-get($class-names, column);
   $name: nth($break, 1); // take only the name of the breakpoint, NOT its value.
   @include breakpoint-up($name) {
     @for $i from 1 through $columns {
-
+      
       .#{$name}-#{$i} {
         flex: 0 0 percentage($i / $columns);
         max-width: percentage($i / $columns);
       }
       @if $column-order-classes == true {
-        .#{$column}s, .#{$column} {
-          &.#{$name}-order-#{$i} { order: $i; }
-        }
+        .#{$name}-order-#{$i} { order: $i; }
       }
-
+    
     } // end @for
   } // end @include
 } // end @each
