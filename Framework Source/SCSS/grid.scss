@@ -161,6 +161,14 @@ $column: map-get($class-names, column);
   position: relative;
   flex: 1 0 auto;
   width: 100%;
+
+  &.collapsed {
+    .#{$column}s, .#{$column} {
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+    }
+  }
 }
 
 // Column
@@ -192,21 +200,6 @@ $column: map-get($class-names, column);
   } // end @if
 
 } // end column
-
-// Column utility classes
-
-.#{$column}s, .#{$column} {
-  &.auto-fill {
-    width: auto;
-    flex: 1 1 auto;
-  }
-
-  &.collapsed {
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-  }
-}
 
 //
 // Grid generator
