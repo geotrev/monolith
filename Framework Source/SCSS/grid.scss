@@ -125,7 +125,6 @@ $column: map-get($class-names, column);
 .#{$container}::after,
 .#{$container} .#{$row}::before,
 .#{$container} .#{$row}::after {
-  display: block;
   padding: 0; margin: 0;
   height: 0; width: 0;
 }
@@ -212,8 +211,8 @@ $column: map-get($class-names, column);
       }
     }
 
-    @for $j from 1 through $order-threshold {
-      @if $column-order-classes == true {
+    @if $column-order-classes == true {
+      @for $j from 1 through $order-threshold {
         .#{$name}-order-#{$j} { order: $j; }
       }
     }
