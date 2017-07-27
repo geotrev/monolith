@@ -51,6 +51,7 @@ $container-sections: (
 
 $columns: 12;
 $default-space: 16px;
+$order-threshold: 20;
 
 //
 // Container and column spacing options + column flex order utility classes
@@ -161,7 +162,7 @@ $column: map-get($class-names, column);
   position: relative;
   flex: 1 0 auto;
   width: 100%;
-  
+
   &.collapsed {
     .#{$column}s, .#{$column} {
       padding-left: 0;
@@ -180,7 +181,7 @@ $column: map-get($class-names, column);
   min-width: 0;
   word-wrap: break-word;
   max-width: 100%;
-  
+
   @if $column-order-classes == true {
     order: 999;
   }
@@ -203,16 +204,19 @@ $column: map-get($class-names, column);
 @each $break in $breakpoints {
   $name: nth($break, 1); // take only the name of the breakpoint, NOT its value.
   @include breakpoint-up($name) {
+
     @for $i from 1 through $columns {
-      
       .#{$name}-#{$i} {
         flex: 0 0 percentage($i / $columns);
         max-width: percentage($i / $columns);
       }
+    }
+
+    @for $j from 1 through $order-threshold {
       @if $column-order-classes == true {
-        .#{$name}-order-#{$i} { order: $i; }
+        .#{$name}-order-#{$j} { order: $j; }
       }
-    
-    } // end @for
+    }
+
   } // end @include
 } // end @each
