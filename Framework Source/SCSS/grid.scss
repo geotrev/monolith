@@ -139,10 +139,8 @@ $column: map-get($class-names, column);
   max-width: $container-default-width;
 
   @if $container-padding == true {
-    @include breakpoint-up(small) {
-      padding-left: $container-space;
-      padding-right: $container-space;
-    }
+    padding-left: $container-space;
+    padding-right: $container-space;
   } // end @if
 
   @each $name, $width in $container-widths {

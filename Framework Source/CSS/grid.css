@@ -13,12 +13,8 @@
   margin: 0 auto;
   position: relative;
   max-width: 992px;
-}
-@media screen and (min-width: 576px) {
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
+  padding-left: 16px;
+  padding-right: 16px;
 }
 .container.fluid {
   max-width: 100%;
