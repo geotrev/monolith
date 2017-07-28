@@ -1,4 +1,4 @@
-# Switch CSS Grid
+# Monolith CSS Layout
 A CSS grid with none of the cruft of larger frameworks like Foundation, Bootstrap, etc.
 
 Copy and paste the SCSS or pull the raw CSS.
