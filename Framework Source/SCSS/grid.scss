@@ -1,4 +1,4 @@
-// Switch CSS – Just the grid. All the power.
+// Monolith CSS – A super-powered CSS grid built for any page layout imagineable.
 
 //
 // Choose class names. Defaults: .container | .row | .column
@@ -61,9 +61,10 @@ $container-padding:     true;
 $column-gutter:         true;
 $column-bottom-padding: true;
 $column-order-classes:  true;
+$column-offset-classes: true;
 
 //
-// Default width for container + spacing for container and columns (if enabled)
+// Default width for container + spacing (if enabled)
 //
 
 $container-default-width:     992px;
@@ -101,10 +102,10 @@ $column-bottom-padding-space: $default-space;
 // Ex. @include breakpoint-only(small, xsmall) { ... }
 //      ^-- applies styles only to "small" through "xsmall" breakpoints
 
-@mixin breakpoint-only($size-min, $size-max) {
+@mixin breakpoint-only($min, $max) {
   @media screen
-    and (min-width: #{map-get($breakpoints, $size-min)})
-    and (max-width: #{map-get($breakpoints, $size-max) - 1}) {
+    and (min-width: #{map-get($breakpoints, $min)})
+    and (max-width: #{map-get($breakpoints, $max) - 1}) {
       @content;
   } // "-1" prevents overlap of 1px against next breakpoint
 }
@@ -125,6 +126,7 @@ $column: map-get($class-names, column);
 .#{$container}::after,
 .#{$container} .#{$row}::before,
 .#{$container} .#{$row}::after {
+  display: block;
   padding: 0; margin: 0;
   height: 0; width: 0;
 }
@@ -197,25 +199,27 @@ $column: map-get($class-names, column);
 } // end column
 
 //
-// Grid generator
+// Grid, offset, and order classes generator
 //
 
 @each $break in $breakpoints {
   $name: nth($break, 1); // take only the name of the breakpoint, NOT its value.
   @include breakpoint-up($name) {
-
     @for $i from 1 through $columns {
+
       .#{$name}-#{$i} {
         flex: 0 0 percentage($i / $columns);
         max-width: percentage($i / $columns);
       }
-    }
-
-    @if $column-order-classes == true {
-      @for $j from 1 through $order-threshold {
-        .#{$name}-order-#{$j} { order: $j; }
+      @if $column-offset-classes == true {
+        .#{$name}-offset-#{$i} {
+          margin-left: percentage($i / $columns);
+        }
       }
-    }
+      @if $column-order-classes == true {
+        .#{$name}-order-#{$i} { order: $i; }
+      }
 
+    } // end @for
   } // end @include
 } // end @each
