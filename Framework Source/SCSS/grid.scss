@@ -1,14 +1,20 @@
 // Monolith CSS – A super-powered CSS grid built for any page layout imagineable.
 
 //
-// Choose class names. Defaults: .container | .row | .column
+// Prefix grid classes to prevent class collisions. Useful for adding
+// Monolith to existing projects!
 //
 
+$scope: '' !default; 
+
+//
+// Choose class names. Defaults: .container | .row | .column
+// 
+
 $class-names: (
-  container: 'container',
-  row: 'row',
-  column: 'column'
-);
+  container: $scope + 'container',
+  column: $scope + 'column'
+) !default;
 
 //
 // Choose breakpoint names and values.
@@ -16,12 +22,12 @@ $class-names: (
 //
 
 $breakpoints: (
-  xsmall: 0,
-   small: 576px,
-  medium: 768px,
-   large: 992px,
-  xlarge: 1200px
-);
+  $scope + xsmall: 0,
+   $scope + small: 576px,
+  $scope + medium: 768px,
+   $scope + large: 992px,
+  $scope + xlarge: 1200px
+) !default;
 
 //
 // Choose container width modifier classes and their values
@@ -29,21 +35,21 @@ $breakpoints: (
 //
 
 $container-widths: (
-   fluid: 100%,
-  narrow: 768px,
-    wide: 1200px
-);
+   $scope + fluid: 100%,
+  $scope + narrow: 768px,
+    $scope + wide: 1200px
+) !default;
 
 //
 // Choose section names and padding for extra vertical space to focus content
-// Ex. class="small-section wide container"
+// Ex. class="small-section container"
 //
 
 $container-sections: (
-   small: 48px,
-  medium: 96px,
-   large: 144px
-);
+   $scope + small: 48px,
+  $scope + medium: 96px,
+   $scope + large: 144px
+) !default;
 
 //
 // Define column count and default spacing values for gutters
@@ -151,6 +157,18 @@ $column: map-get($class-names, column);
     &.#{$name}-section { padding-top: $padding; padding-bottom: $padding; }
   } // end @each
 
+  &.#{$scope}fullscreen {
+    width: 100vw;
+    height: 100vh;
+    max-width: unset;
+    
+    .#{$row} { flex: 1 1 auto; }
+
+    &.#{$scope}align-top    { align-content: flex-start; }
+    &.#{$scope}align-middle { align-content: center;  }
+    &.#{$scope}align-bottom { align-content: flex-end; }
+  } // end fullscreen
+
 } // end container
 
 // Row
@@ -162,7 +180,7 @@ $column: map-get($class-names, column);
   flex: 1 0 auto;
   width: 100%;
 
-  &.collapsed {
+  &.#{$scope}collapsed {
     .#{$column}s, .#{$column} {
       padding-left: 0;
       padding-right: 0;
