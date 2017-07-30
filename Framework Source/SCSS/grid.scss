@@ -13,6 +13,7 @@ $scope: '' !default;
 
 $class-names: (
   container: $scope + 'container',
+  row: $scope + 'row',
   column: $scope + 'column'
 ) !default;
 
