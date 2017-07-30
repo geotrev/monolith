@@ -1,7 +1,9 @@
 .container::before,
 .container::after,
 .container .row::before,
-.container .row::after {
+.container .row::after,
+.row .column::before, .row .column::after,
+.row .columns::before, .row .columns::after {
   display: block;
   padding: 0;
   margin: 0;
@@ -10,6 +12,10 @@
 }
 
 .container {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0 auto;
   position: relative;
   max-width: 992px;
@@ -36,6 +42,29 @@
 .container.large-section {
   padding-top: 144px;
   padding-bottom: 144px;
+}
+.container.fullscreen {
+  box-sizing: border-box;
+  height: 100vh;
+  max-width: unset;
+  width: 100vw;
+}
+.container.fullscreen .row {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+.container.fullscreen .row.align-top {
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+.container.fullscreen .row.align-middle {
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.container.fullscreen .row.align-bottom {
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
 }
 
 .row {
