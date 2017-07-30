@@ -1,0 +1,50 @@
+// ------------------------------ *
+// Utilities:
+// 1. Container widths
+// 2. Container sections
+// 3. Container fullscreen
+// 4. Column collapsing
+// ------------------------------ *
+
+.#{$container} {
+
+  // 1. Container widths
+
+  @each $name, $width in $container-widths {
+    &.#{$name} { max-width: $width; }
+  }
+
+  // 2. Container sections
+
+  @each $name, $padding in $container-sections {
+    &.#{$name}-section { padding-top: $padding; padding-bottom: $padding; }
+  }
+
+  // 3. Container fullscreen and align classes
+
+  .#{$scope}fullscreen {
+    box-sizing: border-box;
+    height: 100vh;
+    max-width: unset;
+    width: 100vw;
+
+    .#{$row} { flex: 1 1 auto; }
+
+    .#{$row} {
+      &.#{$scope}align-top    { align-content: flex-start; }
+      &.#{$scope}align-middle { align-content: center;  }
+      &.#{$scope}align-bottom { align-content: flex-end; }
+    }
+  }
+
+}
+
+// 4. Column collapse
+
+#{$row}.#{$scope}collapsed {
+  .#{$column}s, .#{$column} {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+}

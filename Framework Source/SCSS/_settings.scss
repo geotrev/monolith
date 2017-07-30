@@ -1,0 +1,88 @@
+// Monolith CSS
+// A super-powered CSS grid built for any page layout imagineable.
+
+// ---------------------------------- * -------------------------------------//
+
+// Define optional scope for Monolith classes. Useful for adding Monolith to
+// existing projects as a stand-alone component.
+//
+// Example scope using "mono-": <div class="mono-container"></div>
+// Example with no scope: <div class="container"></div>
+
+$scope: '' !default;
+
+// ---------------------------------- * -------------------------------------//
+
+// Define names of container, row, and column classes.
+
+$class-names: (
+  container: $scope + 'container',
+        row: $scope + 'row',
+     column: $scope + 'column'
+) !default;
+
+// ---------------------------------- * -------------------------------------//
+
+// Define names of grid breakpoints. These are used in grid classes
+// and mixin arguments in _helpers and  _grid.scss, respectively.
+
+$breakpoints: (
+  $scope + xsmall: 0,
+   $scope + small: 576px,
+  $scope + medium: 768px,
+   $scope + large: 992px,
+  $scope + xlarge: 1200px
+) !default;
+
+// ---------------------------------- * -------------------------------------//
+
+// Define custom container widths. They are always centered.
+
+$container-widths: (
+   $scope + fluid: 100%,
+  $scope + narrow: 768px,
+    $scope + wide: 1200px
+) !default;
+
+// ---------------------------------- * -------------------------------------//
+
+// Define focused container names. The px value modifies a container
+// by adding padding-top and padding-bottom.
+
+$container-sections: (
+   $scope + small: 48px,
+  $scope + medium: 96px,
+   $scope + large: 144px
+) !default;
+
+// ---------------------------------- * -------------------------------------//
+
+// Define grid columns, default spacing, and order threshold.
+
+$columns: 12 !default;
+$default-space: 16px !default;
+$order-threshold: 20 !default;
+$container-default-width: 992px;
+
+// ---------------------------------- * -------------------------------------//
+
+// Switches for spacing.
+
+$container-padding:     true;
+$column-gutter:         true;
+$column-bottom-padding: true;
+
+// ---------------------------------- * -------------------------------------//
+
+// Switches for offset and order classes.
+
+$column-order-classes:  true;
+$column-offset-classes: true;
+
+// ---------------------------------- * -------------------------------------//
+
+// Switches for spacing.
+
+$container-space: $default-space;
+$column-gutter-space: $default-space / 2;
+$column-bottom-padding-space: $default-space;

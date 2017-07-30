@@ -1,0 +1,8 @@
+// Adjust Monolith styling under _settings.scss
+//
+// Happy designing! - George
+
+@include 'settings';
+@include 'monolith/helpers';
+@include 'monolith/grid';
+@include 'monolith/utilities';
