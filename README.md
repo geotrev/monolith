@@ -15,6 +15,8 @@ See the [codepen example](https://codepen.io/geotrev/pen/PWEYaB) to see it in ac
 
 • Use section classes for focused content: `.small-section`, `.medium-section`, `.large-section`
 
+• Offset columns with breakpoint utility classes: e.g., `.small-offset-3`, `.large-offset-5`
+
 • Order columns with breakpoint utility classes: e.g., `.small-order-3`, `.large-order-5`
 
 • Collapse column padding with `.collapsed`
