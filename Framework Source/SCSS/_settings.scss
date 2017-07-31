@@ -23,6 +23,38 @@ $class-names: (
 
 // ---------------------------------- * -------------------------------------//
 
+// Switches for spacing.
+
+$container-padding:     true;
+$column-gutter:         true;
+$column-bottom-padding: true;
+
+// ---------------------------------- * -------------------------------------//
+
+// Switches for offset and order classes.
+
+$column-order-classes:  true;
+$column-offset-classes: true;
+
+// ---------------------------------- * -------------------------------------//
+
+// Define grid columns, default spacing, and order threshold.
+
+$columns: 12 !default;
+$default-space: 16px !default;
+$order-threshold: 20 !default;
+$container-default-width: 992px;
+
+// ---------------------------------- * -------------------------------------//
+
+// Defines grid spacing.
+
+$container-space: $default-space;
+$column-gutter-space: $default-space / 2;
+$column-bottom-padding-space: $default-space;
+
+// ---------------------------------- * -------------------------------------//
+
 // Define names of grid breakpoints. These are used in grid classes
 // and mixin arguments in _helpers and  _grid.scss, respectively.
 
@@ -54,35 +86,3 @@ $container-sections: (
   $scope + medium: 96px,
    $scope + large: 144px
 ) !default;
-
-// ---------------------------------- * -------------------------------------//
-
-// Define grid columns, default spacing, and order threshold.
-
-$columns: 12 !default;
-$default-space: 16px !default;
-$order-threshold: 20 !default;
-$container-default-width: 992px;
-
-// ---------------------------------- * -------------------------------------//
-
-// Switches for spacing.
-
-$container-padding:     true;
-$column-gutter:         true;
-$column-bottom-padding: true;
-
-// ---------------------------------- * -------------------------------------//
-
-// Switches for offset and order classes.
-
-$column-order-classes:  true;
-$column-offset-classes: true;
-
-// ---------------------------------- * -------------------------------------//
-
-// Switches for spacing.
-
-$container-space: $default-space;
-$column-gutter-space: $default-space / 2;
-$column-bottom-padding-space: $default-space;
