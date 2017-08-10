@@ -1,5 +1,6 @@
-# Monolith CSS Grid
-A CSS grid with none of the cruft of larger frameworks like Foundation, Bootstrap, etc.
+# Monolith
+noun – mono·lith – \ˈmä-nə-ˌlith\ 
+"An organized system that acts as a single, unified framework."
 
 Copy and paste the SCSS or pull the raw CSS.
 
