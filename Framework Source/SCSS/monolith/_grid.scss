@@ -78,11 +78,13 @@ $column: map-get($class-names, column);
         flex: 0 0 percentage($i / $columns);
         max-width: percentage($i / $columns);
       }
+
       @if $column-offset-classes == true {
         .#{$break}-offset-#{$i} {
           margin-left: percentage($i / $columns);
         }
       }
+
       @if $column-order-classes == true {
         .#{$break}-order-#{$i} { order: $i; }
       }
