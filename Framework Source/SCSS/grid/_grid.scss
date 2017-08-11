@@ -23,11 +23,8 @@ $column: map-get($class-names, column);
   margin: 0 auto;
   position: relative;
   max-width: $container-default-width;
-
-  @if $container-padding == true {
-    padding-left: $container-space;
-    padding-right: $container-space;
-  } // end @if
+  padding-left: $container-space;
+  padding-right: $container-space;
 }
 
 // Row
@@ -49,24 +46,20 @@ $column: map-get($class-names, column);
   min-width: 0;
   word-wrap: break-word;
   max-width: 100%;
+  padding-left: $column-gutter-space;
+  padding-right: $column-gutter-space;
+  padding-bottom: $column-bottom-padding-space;
 
   @if $column-order-classes == true {
     order: 999;
-  }
-
-  @if $column-gutter == true {
-    padding-left: $column-gutter-space;
-    padding-right: $column-gutter-space;
-  }
-
-  @if $column-bottom-padding == true {
-    padding-bottom: $column-bottom-padding-space;
   }
 }
 
 //
 // Grid, offset, and order classes generator
 //
+
+@import 'helpers';
 
 @each $name in $breakpoints {
   $break: nth($name, 1); // take only the name of the breakpoint, NOT its value.
@@ -92,3 +85,5 @@ $column: map-get($class-names, column);
     } // end @for
   } // end @include
 } // end @each
+
+@import 'utilities';

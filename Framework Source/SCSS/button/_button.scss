@@ -1,0 +1,18 @@
+@import 'helpers';
+
+.#{$scope}button {
+  padding: $button-padding;
+  font-size: $button-font-size;
+  font-family: $button-font;
+  background-color: $button-background-color;
+  color: $button-text-color;
+  border: $button-border;
+  border-radius: $button-border-radius;
+  display: inline-block;
+  text-decoration: none;
+  margin: 0;
+
+  &:hover, &:focus { background: darken(lightgray, 10%); }
+}
+
+@import 'utilities';
