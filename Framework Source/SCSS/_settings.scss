@@ -5,12 +5,12 @@
 // 2. Grid
 // 3. Buttons
 
-// project global classes
+// 1. Global Settings
 
 $default-space: 16px !default;
 $project-font: inherit;
 
-// grid
+// 2. Grid
 
 $scope: '' !default;
 
@@ -25,7 +25,7 @@ $container-space: $default-space;
 $column-gutter-space: $default-space / 2;
 $column-bottom-padding-space: $default-space;
 
-$class-names: (
+$grid-classes: (
   container: $scope + 'container',
         row: $scope + 'row',
      column: $scope + 'column'
@@ -51,31 +51,33 @@ $container-sections: (
    $scope + large: 144px
 ) !default;
 
-// buttons
+//
+// 3. Buttons
+//
 
-$button-border: 0px;
+$button-border: 0;
 $button-border-radius: 0;
 $button-background-color: lightgray;
 $button-font: $project-font;
 $button-font-size: 16px;
-$button-padding: 12px 16px;
+$button-padding: 12px $default-space;
 $button-text-color: inherit;
 
 $buttons: (
-  small: (
+  $scope + small: (
     padding: 10px 14px,
     font-size: 14px
   ),
-  medium: (
+  $scope + medium: (
     padding: 12px 16px,
     font-size: 16px
   ),
-  large: (
+  $scope + large: (
     padding: 16px 20px,
     font-size: 20px
   ),
-  huge: (
+  $scope + huge: (
     padding: 22px 28px,
     font-size: 24px
   )
-);
+) !default;

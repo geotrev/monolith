@@ -1,8 +1,8 @@
 // Selector variables
 
-$container: map-get($class-names, container);
-$row: map-get($class-names, row);
-$column: map-get($class-names, column);
+$container: map-get($grid-classes, container);
+$row: map-get($grid-classes, row);
+$column: map-get($grid-classes, column);
 
 // Container
 
@@ -58,8 +58,6 @@ $column: map-get($class-names, column);
 //
 // Grid, offset, and order classes generator
 //
-
-@import 'helpers';
 
 @each $name in $breakpoints {
   $break: nth($name, 1); // take only the name of the breakpoint, NOT its value.

@@ -1,7 +1,10 @@
 // Adjust Monolith's styling under _settings.scss
 //
-// Happy designing! - George
+// Happy building!
 
 @import 'settings';
-@import 'monolith/grid';
-@import 'monolith/button';
+@import 'helpers/functions';
+@import 'helpers/mixins';
+
+@import 'components/grid/grid';
+@import 'components/button/button';
