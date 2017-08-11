@@ -5,12 +5,18 @@
 // 2. Grid
 // 3. Buttons
 
+// -------------------------- * -------------------------- //
+
+//
 // 1. Global Settings
+//
 
 $default-space: 16px !default;
-$project-font: inherit;
+$default-font: inherit;
 
+//
 // 2. Grid
+//
 
 $scope: '' !default;
 
@@ -58,7 +64,7 @@ $container-sections: (
 $button-border: 0;
 $button-border-radius: 0;
 $button-background-color: lightgray;
-$button-font: $project-font;
+$button-font: $default-font;
 $button-font-size: 16px;
 $button-padding: 12px $default-space;
 $button-text-color: inherit;
