@@ -13,7 +13,9 @@
 
   display: inline-block;
 
-  &:hover, &:focus { background: darken($button-background-light, 10%); }
+  &:hover, &:focus {
+    background: darken($button-background-light, 10%);
+  }
 }
 
 @import 'utilities';
