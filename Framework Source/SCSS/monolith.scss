@@ -1,7 +1,14 @@
 // Adjust Monolith's styling under _settings.scss
 
+// Settings – Configure components.
+
 @import 'settings';
+
+// Helpers – Functions, mixins, and the like to power the framework.
+
 @import 'helpers/helpers';
+
+// Components – Choose what to use in Monolith.
 
 @import 'components/grid/grid';
 @import 'components/button/button';

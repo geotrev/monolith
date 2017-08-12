@@ -13,18 +13,18 @@ $column: map-get($grid-classes, column);
 .#{$row} .#{$column}::before, .#{$row} .#{$column}::after,
 .#{$row} .#{$column}s::before, .#{$row} .#{$column}s::after {
   display: block;
-  padding: 0; margin: 0;
   height: 0; width: 0;
+  padding: 0; margin: 0;
 }
 
 .#{$container} {
   box-sizing: border-box;
   display: flex;
   margin: 0 auto;
-  position: relative;
   max-width: $container-default-width;
   padding-left: $container-space;
   padding-right: $container-space;
+  position: relative;
 }
 
 // Row
@@ -32,8 +32,8 @@ $column: map-get($grid-classes, column);
 .#{$row} {
   display: flex;
   flex-flow: row wrap;
-  position: relative;
   flex: 1 0 auto;
+  position: relative;
   width: 100%;
 }
 
@@ -42,13 +42,13 @@ $column: map-get($grid-classes, column);
 .#{$column}s, .#{$column} {
   box-sizing: border-box;
   flex: 1 0 100%;
+  max-width: 100%;
   min-height: 1px;
   min-width: 0;
-  word-wrap: break-word;
-  max-width: 100%;
+  padding-bottom: $column-bottom-padding-space;
   padding-left: $column-gutter-space;
   padding-right: $column-gutter-space;
-  padding-bottom: $column-bottom-padding-space;
+  word-wrap: break-word;
 
   @if $column-order-classes == true {
     order: 999;

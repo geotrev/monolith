@@ -37,9 +37,9 @@
     // 4. Container fullscreen align classes
 
     .#{$row} {
-      &.#{$scope}align-top    { align-content: flex-start; }
-      &.#{$scope}align-middle { align-content: center;  }
       &.#{$scope}align-bottom { align-content: flex-end; }
+      &.#{$scope}align-middle { align-content: center;  }
+      &.#{$scope}align-top    { align-content: flex-start; }
     }
   }
 
@@ -49,8 +49,8 @@
 
 #{$row}.#{$scope}collapsed {
   .#{$column}s, .#{$column} {
+    padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 0;
   }
 }
