@@ -4,6 +4,7 @@
 // 1. Global settings
 // 2. Grid
 // 3. Buttons
+// 4. Avatars
 
 // -------------------------- * -------------------------- //
 
@@ -94,3 +95,26 @@ $buttons: (
     font-size: 24px
   )
 ) !default;
+
+//
+// 4. Avatars
+//
+
+$avatar-sizes: (
+  small: 2.5rem,
+  medium: 3.75rem,
+  large: 5rem
+);
+
+$badge-sizes: (
+  small: 0.9375rem,
+  medium: 1.15rem,
+  large: 1.5rem
+);
+
+$badge-colors: (
+  bronze: sienna,
+  silver: silver,
+  gold: gold,
+  platinum: ghostwhite
+);

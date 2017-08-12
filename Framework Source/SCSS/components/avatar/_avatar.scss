@@ -1,0 +1,40 @@
+.avatar {
+  background-color: gray;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.badge {
+  position: relative;
+  &::after {
+    background: white;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    content: '';
+    display: block;
+    position: absolute;
+  }
+}
+
+@each $name, $size in $avatar-sizes {
+  .#{$name} {
+    height: $size;
+    width: $size;
+  }
+}
+
+@each $name, $size in $badge-sizes {
+  .#{$name}::after {
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+    right: -0.1rem;
+    bottom: -0.1rem;
+  }
+}
+
+@each $name, $color in $badge-colors {
+  .#{$name}::after { background: $color; }
+}
