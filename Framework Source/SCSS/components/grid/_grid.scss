@@ -62,7 +62,7 @@ $column: $scope + map-get($grid-names, column);
 //
 
 @each $break in $breakpoints {
-  $size: nth($name, 1); // take only the name of the breakpoint, NOT its value.
+  $size: nth($break, 1); // take only the name of the breakpoint, NOT its value.
 
   @include breakpoint-up($size) {
     @for $i from 1 through $columns {
