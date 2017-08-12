@@ -23,9 +23,9 @@ $column: $scope + map-get($grid-names, column);
   box-sizing: border-box;
   display: flex;
   margin: 0 auto;
-  max-width: $grid-default-width;
-  padding-left: $grid-space;
-  padding-right: $grid-space;
+  max-width: $grid-width;
+  padding-left: $grid-gutter;
+  padding-right: $grid-gutter;
   position: relative;
 }
 
@@ -47,9 +47,9 @@ $column: $scope + map-get($grid-names, column);
   max-width: 100%;
   min-height: 1px;
   min-width: 0;
-  padding-bottom: $column-bottom-padding-space;
-  padding-left: $column-gutter-space;
-  padding-right: $column-gutter-space;
+  padding-bottom: $column-bottom-padding;
+  padding-left: $column-gutter;
+  padding-right: $column-gutter;
   word-wrap: break-word;
 
   @if $column-order-classes == true {
@@ -61,25 +61,25 @@ $column: $scope + map-get($grid-names, column);
 // Grid, offset, and order classes generator
 //
 
-@each $name in $breakpoints {
-  $break: nth($name, 1); // take only the name of the breakpoint, NOT its value.
+@each $break in $breakpoints {
+  $size: nth($name, 1); // take only the name of the breakpoint, NOT its value.
 
-  @include breakpoint-up($break) {
+  @include breakpoint-up($size) {
     @for $i from 1 through $columns {
 
-      .#{$break}-#{$i} {
+      .#{$size}-#{$i} {
         flex: 0 0 percentage($i / $columns);
         max-width: percentage($i / $columns);
       }
 
       @if $column-offset-classes == true {
-        .#{$break}-offset-#{$i} {
+        .#{$size}-offset-#{$i} {
           margin-left: percentage($i / $columns);
         }
       }
 
       @if $column-order-classes == true {
-        .#{$break}-order-#{$i} {
+        .#{$size}-order-#{$i} {
           order: $i;
         }
       }

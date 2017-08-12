@@ -52,12 +52,12 @@ $column-offset-classes: true;
 $column-order-classes: true;
 
 $columns: 12 !default;
-$grid-default-width: 992px !default;
+$grid-width: 992px !default;
 $order-threshold: 20 !default;
 
-$column-bottom-padding-space: $default-space;
-$column-gutter-space: $default-space / 2;
-$grid-space: $default-space;
+$column-padding-bottom: $default-space;
+$column-gutter: $default-space / 2;
+$grid-gutter: $default-space;
 
 //
 // 3. Buttons
