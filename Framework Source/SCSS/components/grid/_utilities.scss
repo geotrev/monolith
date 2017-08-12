@@ -15,7 +15,7 @@
   // 1. Grid widths
 
   @each $name, $width in $grid-widths {
-    &.#{$name} {
+    &.#{$scope}#{$name} {
       max-width: $width;
     }
   }
@@ -23,7 +23,7 @@
   // 2. Grid sections
 
   @each $name, $padding in $grid-sections {
-    &.#{$name}-section {
+    &.#{$scope}#{$name}-section {
       padding-top: $padding;
       padding-bottom: $padding;
     }
