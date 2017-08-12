@@ -11,8 +11,8 @@
 // 1. Global Settings
 //
 
-$default-space: 16px !default;
 $default-font: inherit;
+$default-space: 16px !default;
 
 //
 // 2. Grid
@@ -20,16 +20,16 @@ $default-font: inherit;
 
 $scope: '' !default;
 
-$column-order-classes: true;
 $column-offset-classes: true;
+$column-order-classes: true;
 
 $columns: 12 !default;
-$order-threshold: 20 !default;
 $container-default-width: 992px !default;
+$order-threshold: 20 !default;
 
-$container-space: $default-space;
-$column-gutter-space: $default-space / 2;
 $column-bottom-padding-space: $default-space;
+$column-gutter-space: $default-space / 2;
+$container-space: $default-space;
 
 $grid-classes: (
   container: $scope + 'container',
@@ -61,13 +61,19 @@ $container-sections: (
 // 3. Buttons
 //
 
-$button-border: 0;
+$button-background-dark: gray;
+$button-background-light: lightgray;
+$button-border-color: none;
 $button-border-radius: 0;
-$button-background-color: lightgray;
-$button-font: $default-font;
+$button-border-style: solid;
+$button-border-width: 0;
+$button-box-shadow: none;
 $button-font-size: 16px;
+$button-font: 16px;
+$button-margin: 0;
 $button-padding: 12px $default-space;
 $button-text-color: inherit;
+$button-text-decoration: none;
 
 $buttons: (
   $scope + small: (

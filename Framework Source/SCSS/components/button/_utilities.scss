@@ -1,6 +1,6 @@
 .#{$scope}button {
 
-  // sizes
+  // Sizes
 
   @each $name in $buttons {
     $size: nth($name, 1);
@@ -10,16 +10,18 @@
     }
   }
 
-  // inverted
+  // Inverted
 
   &.#{$scope}inverted {
     color: white;
-    background-color: gray;
+    background-color: $button-background-dark;
 
-    &:hover, &:focus { background-color: lighten(gray, 10%); }
+    &:hover, &:focus {
+      background-color: lighten($button-background-dark, 10%);
+    }
   }
 
-  // wide
+  // Wide
 
   &.#{$scope}wide {
     display: block;
