@@ -1,8 +1,8 @@
 // Selector variables
 
-$grid: map-get($grid-classes, grid);
-$row: map-get($grid-classes, row);
-$column: map-get($grid-classes, column);
+$grid: $scope + map-get($grid-names, grid);
+$row: $scope + map-get($grid-names, row);
+$column: $scope + map-get($grid-names, column);
 
 // Grid
 
