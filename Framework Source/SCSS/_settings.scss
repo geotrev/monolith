@@ -14,6 +14,7 @@
 
 $default-font: inherit;
 $default-space: 16px !default;
+$default-font-size: 16px;
 
 //
 // 2. Grid
@@ -21,42 +22,42 @@ $default-space: 16px !default;
 
 $scope: '' !default;
 
-$column-offset-classes: true;
-$column-order-classes: true;
-
-$columns: 12 !default;
-$container-default-width: 992px !default;
-$order-threshold: 20 !default;
-
-$column-bottom-padding-space: $default-space;
-$column-gutter-space: $default-space / 2;
-$container-space: $default-space;
-
 $grid-classes: (
-  container: $scope + 'container',
-        row: $scope + 'row',
-     column: $scope + 'column'
+  grid: 'grid',
+  row: 'row',
+  column: 'column'
+) !default;
+
+$grid-widths: (
+  fluid: 100%,
+  narrow: 768px,
+  wide: 1200px
+) !default;
+
+$grid-sections: (
+  small: 48px,
+  medium: 96px,
+  large: 144px
 ) !default;
 
 $breakpoints: (
   $scope + xsmall: 0,
-   $scope + small: 576px,
+  $scope + small: 576px,
   $scope + medium: 768px,
-   $scope + large: 992px,
+  $scope + large: 992px,
   $scope + xlarge: 1200px
 ) !default;
 
-$container-widths: (
-   $scope + fluid: 100%,
-  $scope + narrow: 768px,
-    $scope + wide: 1200px
-) !default;
+$column-offset-classes: true;
+$column-order-classes: true;
 
-$container-sections: (
-   $scope + small: 48px,
-  $scope + medium: 96px,
-   $scope + large: 144px
-) !default;
+$columns: 12 !default;
+$grid-width: 992px !default;
+$order-threshold: 20 !default;
+
+$column-padding-bottom: $default-space;
+$column-gutter: $default-space / 2;
+$grid-gutter: $default-space;
 
 //
 // 3. Buttons
@@ -69,28 +70,28 @@ $button-border-radius: 0;
 $button-border-style: solid;
 $button-border-width: 0;
 $button-box-shadow: none;
-$button-font-size: 16px;
-$button-font: 16px;
+$button-font-size: $default-font-size;
+$button-font: $default-font;
 $button-letter-spacing: 0;
 $button-margin: 0;
 $button-padding: 12px $default-space;
 $button-text-color: inherit;
 $button-text-decoration: none;
 
-$buttons: (
-  $scope + small: (
+$button-sizes: (
+  small: (
     padding: 10px 14px,
     font-size: 14px
   ),
-  $scope + medium: (
+  medium: (
     padding: 12px 16px,
     font-size: 16px
   ),
-  $scope + large: (
+  large: (
     padding: 16px 20px,
     font-size: 20px
   ),
-  $scope + huge: (
+  huge: (
     padding: 22px 28px,
     font-size: 24px
   )
@@ -101,14 +102,14 @@ $buttons: (
 //
 
 $avatar-sizes: (
-  small: 2.5rem,
-  medium: 3.75rem,
-  large: 5r
+  small: 40px,
+  medium: 54px,
+  large: 80px
 
 $avatar-badge-sizes: (
-  small: 0.9375rem,
-  medium: 1.15rem,
-  large: 1.5rem
+  small: 15px,
+  medium: 18px,
+  large: 24px
 );
 
 $avatar-badge-colors: (

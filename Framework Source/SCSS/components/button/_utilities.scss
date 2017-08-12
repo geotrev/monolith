@@ -2,7 +2,7 @@
 
   // Sizes
 
-  @each $name in $buttons {
+  @each $name in $button-sizes {
     $size: nth($name, 1);
     &.#{$scope}#{$size} {
       padding: map-deep-get($buttons, $size, padding);

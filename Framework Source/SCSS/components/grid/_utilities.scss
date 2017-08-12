@@ -2,34 +2,34 @@
 //
 // Utilities
 //
-// 1. Container widths
-// 2. Container sections
-// 3. Container fullscreen
-// 4. Container fullscreen align classes
+// 1. Grid widths
+// 2. Grid sections
+// 3. Grid fullscreen
+// 4. Grid fullscreen align classes
 // 5. Column collapsing
 //
 // ------------------------------ *
 
-.#{$container} {
+.#{$grid} {
 
-  // 1. Container widths
+  // 1. Grid widths
 
-  @each $name, $width in $container-widths {
-    &.#{$name} {
+  @each $name, $width in $grid-widths {
+    &.#{$scope}#{$name} {
       max-width: $width;
     }
   }
 
-  // 2. Container sections
+  // 2. Grid sections
 
-  @each $name, $padding in $container-sections {
-    &.#{$name}-section {
+  @each $name, $padding in $grid-sections {
+    &.#{$scope}#{$name}-section {
       padding-top: $padding;
-      padding-bottom: $padding; 
+      padding-bottom: $padding;
     }
   }
 
-  // 3. Container fullscreen and align classes
+  // 3. Grid fullscreen and align classes
 
   .#{$scope}fullscreen {
     box-sizing: border-box;
@@ -41,7 +41,7 @@
       flex: 1 1 auto;
     }
 
-    // 4. Container fullscreen align classes
+    // 4. Grid fullscreen align classes
 
     .#{$row} {
       &.#{$scope}align-bottom {

@@ -1,15 +1,15 @@
 // Selector variables
 
-$container: map-get($grid-classes, container);
-$row: map-get($grid-classes, row);
-$column: map-get($grid-classes, column);
+$grid: $scope + map-get($grid-names, grid);
+$row: $scope + map-get($grid-names, row);
+$column: $scope + map-get($grid-names, column);
 
-// Container
+// Grid
 
-.#{$container}::before,
-.#{$container}::after,
-.#{$container} .#{$row}::before,
-.#{$container} .#{$row}::after,
+.#{$grid}::before,
+.#{$grid}::after,
+.#{$grid} .#{$row}::before,
+.#{$grid} .#{$row}::after,
 .#{$row} .#{$column}::before, .#{$row} .#{$column}::after,
 .#{$row} .#{$column}s::before, .#{$row} .#{$column}s::after {
   display: block;
@@ -19,13 +19,13 @@ $column: map-get($grid-classes, column);
   margin: 0;
 }
 
-.#{$container} {
+.#{$grid} {
   box-sizing: border-box;
   display: flex;
   margin: 0 auto;
-  max-width: $container-default-width;
-  padding-left: $container-space;
-  padding-right: $container-space;
+  max-width: $grid-width;
+  padding-left: $grid-gutter;
+  padding-right: $grid-gutter;
   position: relative;
 }
 
@@ -47,9 +47,9 @@ $column: map-get($grid-classes, column);
   max-width: 100%;
   min-height: 1px;
   min-width: 0;
-  padding-bottom: $column-bottom-padding-space;
-  padding-left: $column-gutter-space;
-  padding-right: $column-gutter-space;
+  padding-bottom: $column-bottom-padding;
+  padding-left: $column-gutter;
+  padding-right: $column-gutter;
   word-wrap: break-word;
 
   @if $column-order-classes == true {
@@ -61,25 +61,25 @@ $column: map-get($grid-classes, column);
 // Grid, offset, and order classes generator
 //
 
-@each $name in $breakpoints {
-  $break: nth($name, 1); // take only the name of the breakpoint, NOT its value.
+@each $break in $breakpoints {
+  $size: nth($break, 1); // take only the name of the breakpoint, NOT its value.
 
-  @include breakpoint-up($break) {
+  @include breakpoint-up($size) {
     @for $i from 1 through $columns {
 
-      .#{$break}-#{$i} {
+      .#{$size}-#{$i} {
         flex: 0 0 percentage($i / $columns);
         max-width: percentage($i / $columns);
       }
 
       @if $column-offset-classes == true {
-        .#{$break}-offset-#{$i} {
+        .#{$size}-offset-#{$i} {
           margin-left: percentage($i / $columns);
         }
       }
 
       @if $column-order-classes == true {
-        .#{$break}-order-#{$i} {
+        .#{$size}-order-#{$i} {
           order: $i;
         }
       }
