@@ -1,9 +1,13 @@
 // ------------------------------ *
-// Utilities:
+//
+// Utilities
+//
 // 1. Container widths
 // 2. Container sections
 // 3. Container fullscreen
-// 4. Column collapsing
+// 4. Container fullscreen align classes
+// 5. Column collapsing
+//
 // ------------------------------ *
 
 .#{$container} {
@@ -30,21 +34,23 @@
 
     .#{$row} { flex: 1 1 auto; }
 
+    // 4. Container fullscreen align classes
+
     .#{$row} {
-      &.#{$scope}align-top    { align-content: flex-start; }
-      &.#{$scope}align-middle { align-content: center;  }
       &.#{$scope}align-bottom { align-content: flex-end; }
+      &.#{$scope}align-middle { align-content: center;  }
+      &.#{$scope}align-top    { align-content: flex-start; }
     }
   }
 
 }
 
-// 4. Column collapse
+// 5. Column collapse
 
 #{$row}.#{$scope}collapsed {
   .#{$column}s, .#{$column} {
+    padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 0;
   }
 }

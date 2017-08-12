@@ -1,0 +1,31 @@
+.#{$scope}button {
+
+  // Sizes
+
+  @each $name in $buttons {
+    $size: nth($name, 1);
+    &.#{$scope}#{$size} {
+      padding: map-deep-get($buttons, $size, padding);
+      font-size: map-deep-get($buttons, $size, font-size);
+    }
+  }
+
+  // Inverted
+
+  &.#{$scope}inverted {
+    color: white;
+    background-color: $button-background-dark;
+
+    &:hover, &:focus {
+      background-color: lighten($button-background-dark, 10%);
+    }
+  }
+
+  // Wide
+
+  &.#{$scope}wide {
+    display: block;
+    text-align: center;
+  }
+
+}

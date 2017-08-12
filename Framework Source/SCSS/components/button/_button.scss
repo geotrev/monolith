@@ -1,0 +1,19 @@
+.#{$scope}button {
+  background-color: $button-background-light;
+  border-radius: $button-border-radius;
+  border: $button-border-width $button-border-color $button-border-style;
+  box-shadow: $button-box-shadow;
+  color: $button-text-color;
+  font-family: $button-font;
+  font-size: $button-font-size;
+  letter-spacing: $button-letter-spacing;
+  margin: $button-margin;
+  padding: $button-padding;
+  text-decoration: $button-text-decoration;
+
+  display: inline-block;
+
+  &:hover, &:focus { background: darken($button-background-light, 10%); }
+}
+
+@import 'utilities';

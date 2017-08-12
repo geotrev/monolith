@@ -1,62 +1,41 @@
 // Monolith CSS
 // A super-powered CSS grid built for any page layout imagineable.
 
-// ---------------------------------- * -------------------------------------//
+// 1. Global settings
+// 2. Grid
+// 3. Buttons
 
-// Define optional scope for Monolith classes. Useful for adding Monolith to
-// existing projects as a stand-alone component.
+// -------------------------- * -------------------------- //
+
 //
-// Example scope using "mono-": <div class="mono-container"></div>
-// Example with no scope: <div class="container"></div>
+// 1. Global Settings
+//
+
+$default-font: inherit;
+$default-space: 16px !default;
+
+//
+// 2. Grid
+//
 
 $scope: '' !default;
 
-// ---------------------------------- * -------------------------------------//
+$column-offset-classes: true;
+$column-order-classes: true;
 
-// Define names of container, row, and column classes.
+$columns: 12 !default;
+$container-default-width: 992px !default;
+$order-threshold: 20 !default;
 
-$class-names: (
+$column-bottom-padding-space: $default-space;
+$column-gutter-space: $default-space / 2;
+$container-space: $default-space;
+
+$grid-classes: (
   container: $scope + 'container',
         row: $scope + 'row',
      column: $scope + 'column'
 ) !default;
-
-// ---------------------------------- * -------------------------------------//
-
-// Switches for spacing.
-
-$container-padding:     true;
-$column-gutter:         true;
-$column-bottom-padding: true;
-
-// ---------------------------------- * -------------------------------------//
-
-// Switches for offset and order classes.
-
-$column-order-classes:  true;
-$column-offset-classes: true;
-
-// ---------------------------------- * -------------------------------------//
-
-// Define grid columns, default spacing, and order threshold.
-
-$columns: 12 !default;
-$default-space: 16px !default;
-$order-threshold: 20 !default;
-$container-default-width: 992px;
-
-// ---------------------------------- * -------------------------------------//
-
-// Defines grid spacing.
-
-$container-space: $default-space;
-$column-gutter-space: $default-space / 2;
-$column-bottom-padding-space: $default-space;
-
-// ---------------------------------- * -------------------------------------//
-
-// Define names of grid breakpoints. These are used in grid classes
-// and mixin arguments in _helpers and  _grid.scss, respectively.
 
 $breakpoints: (
   $scope + xsmall: 0,
@@ -66,23 +45,52 @@ $breakpoints: (
   $scope + xlarge: 1200px
 ) !default;
 
-// ---------------------------------- * -------------------------------------//
-
-// Define custom container widths. They are always centered.
-
 $container-widths: (
    $scope + fluid: 100%,
   $scope + narrow: 768px,
     $scope + wide: 1200px
 ) !default;
 
-// ---------------------------------- * -------------------------------------//
-
-// Define focused container names. The px value modifies a container
-// by adding padding-top and padding-bottom.
-
 $container-sections: (
    $scope + small: 48px,
   $scope + medium: 96px,
    $scope + large: 144px
+) !default;
+
+//
+// 3. Buttons
+//
+
+$button-background-dark: gray;
+$button-background-light: lightgray;
+$button-border-color: none;
+$button-border-radius: 0;
+$button-border-style: solid;
+$button-border-width: 0;
+$button-box-shadow: none;
+$button-font-size: 16px;
+$button-font: 16px;
+$button-letter-spacing: 0;
+$button-margin: 0;
+$button-padding: 12px $default-space;
+$button-text-color: inherit;
+$button-text-decoration: none;
+
+$buttons: (
+  $scope + small: (
+    padding: 10px 14px,
+    font-size: 14px
+  ),
+  $scope + medium: (
+    padding: 12px 16px,
+    font-size: 16px
+  ),
+  $scope + large: (
+    padding: 16px 20px,
+    font-size: 20px
+  ),
+  $scope + huge: (
+    padding: 22px 28px,
+    font-size: 24px
+  )
 ) !default;

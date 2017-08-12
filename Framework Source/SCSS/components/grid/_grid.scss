@@ -1,8 +1,8 @@
 // Selector variables
 
-$container: map-get($class-names, container);
-$row: map-get($class-names, row);
-$column: map-get($class-names, column);
+$container: map-get($grid-classes, container);
+$row: map-get($grid-classes, row);
+$column: map-get($grid-classes, column);
 
 // Container
 
@@ -13,21 +13,18 @@ $column: map-get($class-names, column);
 .#{$row} .#{$column}::before, .#{$row} .#{$column}::after,
 .#{$row} .#{$column}s::before, .#{$row} .#{$column}s::after {
   display: block;
-  padding: 0; margin: 0;
   height: 0; width: 0;
+  padding: 0; margin: 0;
 }
 
 .#{$container} {
   box-sizing: border-box;
   display: flex;
   margin: 0 auto;
-  position: relative;
   max-width: $container-default-width;
-
-  @if $container-padding == true {
-    padding-left: $container-space;
-    padding-right: $container-space;
-  } // end @if
+  padding-left: $container-space;
+  padding-right: $container-space;
+  position: relative;
 }
 
 // Row
@@ -35,8 +32,8 @@ $column: map-get($class-names, column);
 .#{$row} {
   display: flex;
   flex-flow: row wrap;
-  position: relative;
   flex: 1 0 auto;
+  position: relative;
   width: 100%;
 }
 
@@ -45,22 +42,16 @@ $column: map-get($class-names, column);
 .#{$column}s, .#{$column} {
   box-sizing: border-box;
   flex: 1 0 100%;
+  max-width: 100%;
   min-height: 1px;
   min-width: 0;
+  padding-bottom: $column-bottom-padding-space;
+  padding-left: $column-gutter-space;
+  padding-right: $column-gutter-space;
   word-wrap: break-word;
-  max-width: 100%;
 
   @if $column-order-classes == true {
     order: 999;
-  }
-
-  @if $column-gutter == true {
-    padding-left: $column-gutter-space;
-    padding-right: $column-gutter-space;
-  }
-
-  @if $column-bottom-padding == true {
-    padding-bottom: $column-bottom-padding-space;
   }
 }
 
@@ -92,3 +83,5 @@ $column: map-get($class-names, column);
     } // end @for
   } // end @include
 } // end @each
+
+@import 'utilities';
