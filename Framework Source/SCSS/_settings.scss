@@ -23,9 +23,9 @@ $default-font-size: 16px;
 $scope: '' !default;
 
 $grid-classes: (
-  grid: $scope + 'grid',
-  row: $scope + 'row',
-  column: $scope + 'column'
+  grid: 'grid',
+  row: 'row',
+  column: 'column'
 ) !default;
 
 $grid-widths: (
