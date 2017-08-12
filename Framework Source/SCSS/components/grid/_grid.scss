@@ -13,8 +13,10 @@ $column: map-get($grid-classes, column);
 .#{$row} .#{$column}::before, .#{$row} .#{$column}::after,
 .#{$row} .#{$column}s::before, .#{$row} .#{$column}s::after {
   display: block;
-  height: 0; width: 0;
-  padding: 0; margin: 0;
+  height: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
 }
 
 .#{$container} {
@@ -77,7 +79,9 @@ $column: map-get($grid-classes, column);
       }
 
       @if $column-order-classes == true {
-        .#{$break}-order-#{$i} { order: $i; }
+        .#{$break}-order-#{$i} {
+          order: $i;
+        }
       }
 
     } // end @for
