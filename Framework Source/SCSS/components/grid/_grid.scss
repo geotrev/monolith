@@ -1,15 +1,15 @@
 // Selector variables
 
-$container: map-get($grid-classes, container);
+$grid: map-get($grid-classes, grid);
 $row: map-get($grid-classes, row);
 $column: map-get($grid-classes, column);
 
-// Container
+// Grid
 
-.#{$container}::before,
-.#{$container}::after,
-.#{$container} .#{$row}::before,
-.#{$container} .#{$row}::after,
+.#{$grid}::before,
+.#{$grid}::after,
+.#{$grid} .#{$row}::before,
+.#{$grid} .#{$row}::after,
 .#{$row} .#{$column}::before, .#{$row} .#{$column}::after,
 .#{$row} .#{$column}s::before, .#{$row} .#{$column}s::after {
   display: block;
@@ -19,13 +19,13 @@ $column: map-get($grid-classes, column);
   margin: 0;
 }
 
-.#{$container} {
+.#{$grid} {
   box-sizing: border-box;
   display: flex;
   margin: 0 auto;
-  max-width: $container-default-width;
-  padding-left: $container-space;
-  padding-right: $container-space;
+  max-width: $grid-default-width;
+  padding-left: $grid-space;
+  padding-right: $grid-space;
   position: relative;
 }
 

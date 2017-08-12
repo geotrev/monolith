@@ -25,17 +25,17 @@ $column-offset-classes: true;
 $column-order-classes: true;
 
 $columns: 12 !default;
-$container-default-width: 992px !default;
+$grid-default-width: 992px !default;
 $order-threshold: 20 !default;
 
 $column-bottom-padding-space: $default-space;
 $column-gutter-space: $default-space / 2;
-$container-space: $default-space;
+$grid-space: $default-space;
 
 $grid-classes: (
-  container: $scope + 'container',
-        row: $scope + 'row',
-     column: $scope + 'column'
+    grid: $scope + 'grid',
+     row: $scope + 'row',
+  column: $scope + 'column'
 ) !default;
 
 $breakpoints: (
@@ -46,13 +46,13 @@ $breakpoints: (
   $scope + xlarge: 1200px
 ) !default;
 
-$container-widths: (
+$grid-widths: (
    $scope + fluid: 100%,
   $scope + narrow: 768px,
     $scope + wide: 1200px
 ) !default;
 
-$container-sections: (
+$grid-sections: (
    $scope + small: 48px,
   $scope + medium: 96px,
    $scope + large: 144px
