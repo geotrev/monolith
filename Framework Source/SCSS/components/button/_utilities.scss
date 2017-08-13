@@ -5,8 +5,8 @@
   @each $name in $button-sizes {
     $size: nth($name, 1);
     &.#{$scope}#{$size} {
-      padding: map-deep-get($buttons, $size, padding);
-      font-size: map-deep-get($buttons, $size, font-size);
+      padding: map-deep-get($button-sizes, $size, padding);
+      font-size: map-deep-get($button-sizes, $size, font-size);
     }
   }
 

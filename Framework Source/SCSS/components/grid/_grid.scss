@@ -1,8 +1,8 @@
 // Selector variables
 
-$grid: $scope + map-get($grid-names, grid);
-$row: $scope + map-get($grid-names, row);
-$column: $scope + map-get($grid-names, column);
+$grid: $scope + map-get($grid-classes, grid);
+$row: $scope + map-get($grid-classes, row);
+$column: $scope + map-get($grid-classes, column);
 
 // Grid
 
@@ -47,7 +47,7 @@ $column: $scope + map-get($grid-names, column);
   max-width: 100%;
   min-height: 1px;
   min-width: 0;
-  padding-bottom: $column-bottom-padding;
+  padding-bottom: $column-padding-bottom;
   padding-left: $column-gutter;
   padding-right: $column-gutter;
   word-wrap: break-word;
