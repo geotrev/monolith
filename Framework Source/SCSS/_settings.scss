@@ -96,25 +96,3 @@ $button-sizes: (
     font-size: 24px
   )
 ) !default;
-
-//
-// 4. Avatars
-//
-
-$avatar-sizes: (
-  small: 40px,
-  medium: 54px,
-  large: 80px
-
-$avatar-badge-sizes: (
-  small: 15px,
-  medium: 18px,
-  large: 24px
-);
-
-$avatar-badge-colors: (
-  bronze: sienna,
-  silver: silver,
-  gold: gold,
-  platinum: ghostwhite
-);
