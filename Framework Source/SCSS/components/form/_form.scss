@@ -33,7 +33,7 @@ input[type=text],
 textarea, input[type=text],
 .text-area { resize: $input-text-area-resize; }
 
-input[type=button], input[type=submit], button, a,
+input[type=button], input[type=submit], button,
 .button {
   background: $input-button-background;
   border-radius: $input-button-border-radius;
@@ -41,6 +41,7 @@ input[type=button], input[type=submit], button, a,
   color: $input-button-color;
   cursor: pointer;
   display: flex;
+  font-family: $input-button-font-family;
   font-size: $input-button-font-size;
   padding: $input-button-padding;
 
