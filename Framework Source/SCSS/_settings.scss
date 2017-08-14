@@ -69,21 +69,20 @@ $form-font-family: sans-serif;
 // 3. Forms
 //
 
+// label styling
+
+$input-label-padding-bottom: 8px;
+
 // general input styling
 
-$input-font-size: 16px;
-$input-font-family: $form-font-family;
-$input-box-shadow: none;
-$input-border: 1px solid darkgray;
-$input-padding: 12px;
-$input-margin: 0 1px 16px 1px;
-$input-border-radius: 4px;
 $input-background: white;
-
-// inline form elements
-
-$input-inline-margin-right: 16px;
-$input-inline-margin-bottom: 16px;
+$input-border-radius: 4px;
+$input-border: 1px solid darkgray;
+$input-box-shadow: none;
+$input-font-family: $form-font-family;
+$input-font-size: 16px;
+$input-margin: 0 1px 16px 1px;
+$input-padding: 12px;
 
 // textarea resize
 

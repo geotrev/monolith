@@ -14,7 +14,7 @@ form,
 
 .label-text {
   font-family: $form-font-family;
-  padding-bottom: 8px;
+  padding-bottom: $input-label-padding-bottom;
 }
 
 input[type=text],
