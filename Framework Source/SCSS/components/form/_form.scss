@@ -1,0 +1,123 @@
+form,
+.form {
+  background: $form-background;
+  border: $form-border;
+  box-shadow: $form-box-shadow;
+  margin: $form-margin;
+  padding: $form-padding;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-text {
+  font-family: $form-font-family;
+  padding-bottom: 8px;
+}
+
+input[type=text],
+.text-field, .text-area {
+  background: $input-background;
+  border-radius: $input-border-radius;
+  border: $input-border;
+  box-shadow: $input-box-shadow;
+  display: flex;
+  font-family: $input-font-family;
+  font-size: $input-font-size;
+  margin: $input-margin;
+  padding: $input-padding;
+}
+
+textarea, input[type=text],
+.text-area { resize: $input-text-area-resize; }
+
+input[type=button], input[type=submit], button, a,
+.button {
+  background: $input-button-background;
+  border-radius: $input-button-border-radius;
+  border: $input-button-border;
+  color: $input-button-color;
+  cursor: pointer;
+  display: flex;
+  font-size: $input-button-font-size;
+  padding: $input-button-padding;
+
+  &:hover, &:focus { background-color: $input-button-focus; }
+
+  &.stretched {
+    text-align: center;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+input[type=radio], input[type=checkbox],
+.radio, .checkbox {
+  cursor: pointer;
+  display: inline-flex;
+}
+
+input[type=radio],
+.radio {
+  margin: $input-radio-margin;
+  padding: $input-radio-padding;
+}
+
+input[type=checkbox],
+.checkbox {
+  margin: $input-checkbox-margin;
+  padding: $input-checkbox-padding;
+}
+
+label,
+.radio-label, .checkbox-label { font-family: $form-font-family; }
+
+.radio-label { margin-right: $input-radio-label-margin-right; }
+.checkbox-label { margin-right: $input-checkbox-label-margin-right; }
+
+fieldset,
+.fieldset {
+  background: $fieldset-background;
+  border-radius: $fieldset-border-radius;
+  border: $fieldset-border;
+  box-shadow: $fieldset-box-shadow;
+  display: flex;
+  margin: $fieldset-margin;
+  padding: $fieldset-padding;
+
+  legend,
+  .legend {
+    background: $fieldset-legend-background;
+    border-radius: $fieldset-legend-border-radius;
+    border: $fieldset-legend-border;
+    box-shadow: $fieldset-legend-box-shadow;
+    color: $fieldset-legend-color;
+    font-family: $fieldset-legend-font-family;
+    font-size: $fieldset-legend-font-size;
+    padding: $fieldset-legend-padding;
+  }
+}
+
+// disabled
+
+input[type=text]:disabled, button:disabled,
+.text-field:disabled, .text-area:disabled,
+.button:disabled,
+.disabled {
+  background: $input-disabled-background;
+  border: $input-disabled-border;
+  color: $input-disabled-color;
+  cursor: not-allowed;
+  resize: $input-disabled-resize;
+
+  &:hover {
+    background: $input-disabled-background;
+    border: $input-disabled-border;
+    color: $input-disabled-color;
+  }
+}
+
+@import 'utilities';

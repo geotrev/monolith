@@ -3,8 +3,7 @@
 
 // 1. Global settings
 // 2. Grid
-// 3. Buttons
-// 4. Avatars
+// 3. Forms
 
 // -------------------------- * -------------------------- //
 
@@ -58,3 +57,87 @@ $order-threshold: 20 !default;
 $column-padding-bottom: $default-space;
 $column-gutter: $default-space / 2;
 $grid-gutter: $default-space;
+
+$form-margin: 0 0 25px 0;
+$form-padding: 16px;
+$form-background: transparent;
+$form-box-shadow: none;
+$form-border: none;
+$form-font-family: sans-serif;
+
+//
+// 3. Forms
+//
+
+// general input styling
+
+$input-font-size: 16px;
+$input-font-family: $form-font-family;
+$input-box-shadow: none;
+$input-border: 1px solid darkgray;
+$input-padding: 12px;
+$input-margin: 0 0 16px 0;
+$input-border-radius: 4px;
+$input-background: white;
+
+// inline form elements
+
+$input-inline-margin-right: 16px;
+$input-inline-margin-bottom: 16px;
+
+// textarea resize
+
+$input-text-area-resize: vertical;
+
+// input button: type="button" or <button>
+
+$input-button-padding: $input-padding; // keeps inline elements the same height
+$input-button-border-radius: $input-border-radius;
+$input-button-font-size: $input-font-size;
+$input-button-background: gray;
+$input-button-border: 1px solid transparent;
+$input-button-box-shadow: 0 0 0 1px gray;
+$input-button-color: white;
+$input-button-hover: lighten(gray, 10%);
+$input-button-focus: lighten(gray, 10%);
+
+// radio button
+
+$input-radio-row-padding-bottom: 16px;
+$input-radio-padding: 0;
+$input-radio-margin: 0 12px 0 0;
+$input-radio-label-margin-right: 16px;
+
+// checkbox
+
+$input-checkbox-row-padding-bottom: 16px;
+$input-checkbox-padding: 0;
+$input-checkbox-margin: 0 12px 0 0;
+$input-checkbox-label-margin-right: 16px;
+
+// disabled
+
+$input-disabled-background: lightgray;
+$input-disabled-color: gray;
+$input-disabled-border: none;
+$input-disabled-resize: none;
+
+// fieldset
+
+$fieldset-border: 1px solid black;
+$fieldset-border-radius: 4px;
+$fieldset-box-shadow: none;
+$fieldset-background: transparent;
+$fieldset-margin: 0;
+$fieldset-padding: 32px;
+
+// fieldset legend text
+
+$fieldset-legend-font-family: $form-font-family;
+$fieldset-legend-font-size: 16px;
+$fieldset-legend-padding: 8px;
+$fieldset-legend-color: white;
+$fieldset-legend-background: black;
+$fieldset-legend-box-shadow: none;
+$fieldset-legend-border: none;
+$fieldset-legend-border-radius: 4px;
