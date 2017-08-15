@@ -155,8 +155,7 @@ input[type=tel], input[type=search],
 input[type=time], input[type=url],
 input[type=week], button,
 input[type=submit], input[type=file],
-input[type=file], input[type=reset],
-.text-field, .text-area, .button {
+input[type=reset], .text-field, .text-area, .button {
   &:disabled {
     background: $input-disabled-background;
     border: $input-disabled-border;
