@@ -11,11 +11,4 @@
 // Components – Choose what to use in Monolith.
 
 @import 'components/grid/grid';
-@import 'components/form/form_with_tags';
-@import 'components/form/form_classes_only';
-
-@if $tags-enabled == true {
-  @include form_with_tags;
-} @else {
-  @include form_classes_only;
-}
+@import 'components/form/form';
