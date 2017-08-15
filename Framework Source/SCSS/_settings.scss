@@ -15,6 +15,9 @@ $default-font: inherit;
 $default-space: 16px;
 $default-font-size: 16px;
 
+// Set to "false" to isolate Monolith to classes only.
+$tags-enabled: true;
+
 //
 // 2. Grid
 //
@@ -62,8 +65,8 @@ $grid-gutter: $default-space;
 // 3. Forms
 //
 
-$form-margin: 0 0 25px 0;
-$form-padding: 16px;
+$form-margin: 0 0 0 0;
+$form-padding: 0;
 $form-background: transparent;
 $form-box-shadow: none;
 $form-border: none;
@@ -71,12 +74,12 @@ $form-font-family: sans-serif;
 
 // inputs
 
-$input-font-size: 16px;
+$input-font-size: $default-font-size;
 $input-font-family: $form-font-family;
 $input-box-shadow: none;
 $input-border: 1px solid darkgray;
 $input-padding: 12px;
-$input-margin: 8px 0 16px 0;
+$input-margin: 8px 0 $default-space 0;
 $input-border-radius: 4px;
 $input-background: white;
 
@@ -99,11 +102,11 @@ $input-button-focus: lighten(gray, 10%);
 
 // radio and checkbox
 
-$input-option-row-padding-bottom: 16px;
+$input-option-row-padding-bottom: $default-space;
 $input-option-padding: 0;
 $input-option-margin: 0 12px 0 0;
 $input-option-label-margin-right: 12px;
-$input-option-label-margin-bottom: 16px;
+$input-option-label-margin-bottom: $default-space;
 $input-option-margin-top: 8px;
 
 // disabled
@@ -120,13 +123,13 @@ $fieldset-border-radius: 4px;
 $fieldset-box-shadow: none;
 $fieldset-background: transparent;
 $fieldset-margin: 0;
-$fieldset-padding: 32px;
+$fieldset-padding: $default-space * 2;
 
 // fieldset legend
 
 $fieldset-legend-font-family: $form-font-family;
-$fieldset-legend-font-size: 16px;
-$fieldset-legend-padding: 8px;
+$fieldset-legend-font-size: $default-font-size;
+$fieldset-legend-padding: $default-space / 2;
 $fieldset-legend-color: white;
 $fieldset-legend-background: black;
 $fieldset-legend-box-shadow: none;

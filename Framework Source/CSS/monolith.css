@@ -677,8 +677,8 @@ form,
   background: transparent;
   border: none;
   box-shadow: none;
-  margin: 0 0 25px 0;
-  padding: 16px; }
+  margin: 0 0 0 0;
+  padding: 0; }
 
 label,
 .label {
@@ -741,8 +741,8 @@ input[type=radio], input[type=checkbox],
   font-family: sans-serif; }
 
 input[type=checkbox],
-.checkbox,
 input[type=radio],
+.checkbox,
 .radio {
   margin: 0 12px 0 0;
   padding: 0; }
@@ -768,12 +768,12 @@ input[type=radio],
 .radio-row, .checkbox-row {
   flex-direction: row; }
 
-.radio-row .radio,
-.radio-row input[type=radio] {
+.radio-row input[type=radio],
+.radio-row .radio {
   margin-right: 12px; }
 
-.checkbox-row .checkbox,
-.checkbox-row input[type=checkbox] {
+.checkbox-row input[type=checkbox],
+.checkbox-row .checkbox {
   margin-right: 12px; }
 
 .radio-column label,
@@ -814,8 +814,7 @@ input[type=tel]:disabled, input[type=search]:disabled,
 input[type=time]:disabled, input[type=url]:disabled,
 input[type=week]:disabled, button:disabled,
 input[type=submit]:disabled, input[type=file]:disabled,
-input[type=file]:disabled, input[type=reset]:disabled,
-.text-field:disabled, .text-area:disabled, .button:disabled {
+input[type=reset]:disabled, .text-field:disabled, .text-area:disabled, .button:disabled {
   background: lightgray;
   border: none;
   color: gray;
@@ -829,8 +828,7 @@ input[type=file]:disabled, input[type=reset]:disabled,
   input[type=time]:disabled:hover, input[type=url]:disabled:hover,
   input[type=week]:disabled:hover, button:disabled:hover,
   input[type=submit]:disabled:hover, input[type=file]:disabled:hover,
-  input[type=file]:disabled:hover, input[type=reset]:disabled:hover,
-  .text-field:disabled:hover, .text-area:disabled:hover, .button:disabled:hover {
+  input[type=reset]:disabled:hover, .text-field:disabled:hover, .text-area:disabled:hover, .button:disabled:hover {
     background: lightgray;
     border: none;
     color: gray; }
