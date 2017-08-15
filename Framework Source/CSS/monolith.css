@@ -725,12 +725,29 @@ input[type=button], input[type=submit], button,
     width: 100%;
     max-width: 100%; }
 
+input[type=radio], input[type=checkbox],
+.radio, .checkbox {
+  cursor: pointer;
+  font-family: sans-serif; }
+
+input[type=checkbox],
+.checkbox,
+input[type=radio],
+.radio {
+  padding: 0;
+  margin: 0 12px 0 0; }
+
 .radio-row, .checkbox-row,
 .radio-column, .checkbox-column {
   display: flex;
   margin-top: 8px; }
-  .radio-row label, .checkbox-row label,
-  .radio-column label, .checkbox-column label {
+  .radio-row label,
+  .radio-row .radio-label, .radio-row .checkbox-label, .checkbox-row label,
+  .checkbox-row .radio-label, .checkbox-row .checkbox-label,
+  .radio-column label,
+  .radio-column .radio-label,
+  .radio-column .checkbox-label, .checkbox-column label,
+  .checkbox-column .radio-label, .checkbox-column .checkbox-label {
     margin-right: 12px;
     align-items: center;
     flex-direction: row; }
@@ -741,29 +758,21 @@ input[type=button], input[type=submit], button,
 .radio-row, .checkbox-row {
   flex-direction: row; }
 
-.radio-row .radio {
+.radio-row .radio,
+.radio-row input[type=radio] {
   margin-right: 12px; }
 
-.checkbox-row .checkbox {
+.checkbox-row .checkbox,
+.checkbox-row input[type=checkbox] {
   margin-right: 12px; }
 
-.radio-column label {
+.radio-column label,
+.radio-column .radio-label {
   margin-bottom: 16px; }
 
-.checkbox-column label {
+.checkbox-column label,
+.checkbox-column .checkbox-label {
   margin-bottom: 16px; }
-
-input[type=radio], input[type=checkbox],
-.radio, .checkbox {
-  cursor: pointer;
-  font-family: sans-serif; }
-
-input[type=radio],
-.radio,
-input[type=checkbox],
-.checkbox {
-  padding: 0;
-  margin: 0 12px 0 0; }
 
 fieldset,
 .fieldset {

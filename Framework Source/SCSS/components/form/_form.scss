@@ -7,12 +7,16 @@ form,
   border: $form-border;
 }
 
+// labels
+
 label,
 .label {
   display: flex;
   flex-direction: column;
   font-family: $form-font-family;
 }
+
+// input fields
 
 input[type=text],
 .text-field, .text-area {
@@ -29,6 +33,8 @@ input[type=text],
 
 textarea, input[type=text],
 .text-area { resize: $input-resize; }
+
+// input buttons
 
 input[type=button], input[type=submit], button,
 .button {
@@ -55,12 +61,27 @@ input[type=button], input[type=submit], button,
 
 // radio & checkbox
 
+input[type=radio], input[type=checkbox],
+.radio, .checkbox {
+  cursor: pointer;
+  font-family: $form-font-family;
+}
+
+input[type=checkbox],
+.checkbox,
+input[type=radio],
+.radio {
+  padding: $input-option-padding;
+  margin: $input-option-margin;
+}
+
 .radio-row, .checkbox-row,
 .radio-column, .checkbox-column {
   display: flex;
   margin-top: $input-option-margin-top;
 
-  label {
+  label,
+  .radio-label, .checkbox-label {
     margin-right: $input-option-label-margin-right;
     align-items: center;
     flex-direction: row;
@@ -74,24 +95,22 @@ input[type=button], input[type=submit], button,
   flex-direction: row;
 }
 
-.radio-row .radio { margin-right: $input-option-label-margin-right; }
-.checkbox-row .checkbox { margin-right: $input-option-label-margin-right; }
-
-.radio-column label { margin-bottom: $input-option-label-margin-bottom; }
-.checkbox-column label { margin-bottom: $input-option-label-margin-bottom; }
-
-input[type=radio], input[type=checkbox],
-.radio, .checkbox {
-  cursor: pointer;
-  font-family: $form-font-family;
+.radio-row .radio,
+.radio-row input[type=radio] {
+  margin-right: $input-option-label-margin-right;
+}
+.checkbox-row .checkbox,
+.checkbox-row input[type=checkbox] {
+  margin-right: $input-option-label-margin-right;
 }
 
-input[type=radio],
-.radio,
-input[type=checkbox],
-.checkbox {
-  padding: $input-option-padding;
-  margin: $input-option-margin;
+.radio-column label,
+.radio-column .radio-label {
+  margin-bottom: $input-option-label-margin-bottom;
+}
+.checkbox-column label,
+.checkbox-column .checkbox-label {
+  margin-bottom: $input-option-label-margin-bottom;
 }
 
 // fieldset
