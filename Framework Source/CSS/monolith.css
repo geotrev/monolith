@@ -674,111 +674,126 @@
 
 form,
 .form {
-  background: transparent;
-  border: none;
-  box-shadow: none;
   margin: 0 0 25px 0;
-  padding: 16px; }
+  padding: 16px;
+  background: transparent;
+  box-shadow: none;
+  border: none; }
 
+label,
 .label {
   display: flex;
-  flex-direction: column; }
-
-.label-text {
-  font-family: sans-serif;
-  padding-bottom: 8px; }
+  flex-direction: column;
+  font-family: sans-serif; }
 
 input[type=text],
 .text-field, .text-area {
-  background: white;
-  border-radius: 4px;
-  border: 1px solid darkgray;
-  box-shadow: none;
-  display: flex;
-  font-family: sans-serif;
   font-size: 16px;
-  margin: 0 0 16px 0;
-  padding: 12px; }
+  font-family: sans-serif;
+  display: flex;
+  box-shadow: none;
+  border: 1px solid darkgray;
+  padding: 12px;
+  margin: 8px 0 16px 0;
+  border-radius: 4px;
+  background: white; }
 
 textarea, input[type=text],
 .text-area {
   resize: vertical; }
 
-input[type=button], input[type=submit], button, a,
+input[type=button], input[type=submit], button,
 .button {
-  background: gray;
-  border-radius: 4px;
-  border: 1px solid transparent;
-  color: white;
-  cursor: pointer;
   display: flex;
+  font-family: sans-serif;
+  padding: 12px;
+  border-radius: 4px;
   font-size: 16px;
-  padding: 12px; }
-  input[type=button]:hover, input[type=button]:focus, input[type=submit]:hover, input[type=submit]:focus, button:hover, button:focus, a:hover, a:focus,
+  background: gray;
+  border: none;
+  box-shadow: none;
+  color: white;
+  cursor: pointer; }
+  input[type=button]:hover, input[type=button]:focus, input[type=submit]:hover, input[type=submit]:focus, button:hover, button:focus,
   .button:hover,
   .button:focus {
     background-color: #9a9a9a; }
-  input[type=button].stretched, input[type=submit].stretched, button.stretched, a.stretched,
+  input[type=button].stretched, input[type=submit].stretched, button.stretched,
   .button.stretched {
     text-align: center;
     display: block;
     width: 100%;
     max-width: 100%; }
 
+.radio-row, .checkbox-row,
+.radio-column, .checkbox-column {
+  display: flex;
+  margin-top: 8px; }
+  .radio-row label, .checkbox-row label,
+  .radio-column label, .checkbox-column label {
+    margin-right: 12px;
+    align-items: center;
+    flex-direction: row; }
+
+.radio-column, .checkbox-column {
+  flex-direction: column; }
+
+.radio-row, .checkbox-row {
+  flex-direction: row; }
+
+.radio-row .radio {
+  margin-right: 12px; }
+
+.checkbox-row .checkbox {
+  margin-right: 12px; }
+
+.radio-column label {
+  margin-bottom: 16px; }
+
+.checkbox-column label {
+  margin-bottom: 16px; }
+
 input[type=radio], input[type=checkbox],
 .radio, .checkbox {
   cursor: pointer;
-  display: inline-flex; }
-
-input[type=radio],
-.radio {
-  margin: 0 12px 0 0;
-  padding: 0; }
-
-input[type=checkbox],
-.checkbox {
-  margin: 0 12px 0 0;
-  padding: 0; }
-
-label,
-.radio-label, .checkbox-label {
   font-family: sans-serif; }
 
-.radio-label {
-  margin-right: 16px; }
-
-.checkbox-label {
-  margin-right: 16px; }
+input[type=radio],
+.radio,
+input[type=checkbox],
+.checkbox {
+  padding: 0;
+  margin: 0 12px 0 0; }
 
 fieldset,
 .fieldset {
-  background: transparent;
-  border-radius: 4px;
-  border: 1px solid black;
-  box-shadow: none;
   display: flex;
   margin: 0;
-  padding: 32px; }
+  padding: 32px;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: none;
+  background: transparent; }
   fieldset legend,
   fieldset .legend,
   .fieldset legend,
   .fieldset .legend {
-    background: black;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 8px;
+    color: white;
     border-radius: 4px;
     border: none;
     box-shadow: none;
-    color: white;
-    font-family: sans-serif;
-    font-size: 16px;
-    padding: 8px; }
+    background: black; }
 
 input[type=text]:disabled, button:disabled,
 .text-field:disabled, .text-area:disabled,
 .button:disabled,
 .disabled {
   background: lightgray;
-  border: none;
   color: gray;
+  border: none;
   cursor: not-allowed;
   resize: none; }
   input[type=text]:disabled:hover, button:disabled:hover,
@@ -786,12 +801,7 @@ input[type=text]:disabled, button:disabled,
   .button:disabled:hover,
   .disabled:hover {
     background: lightgray;
-    border: none;
-    color: gray; }
-
-input[type=button].wide, input[type=submit].wide,
-.button.wide {
-  flex: 1 0 100%;
-  max-width: 100%; }
+    color: gray;
+    border: none; }
 
 /*# sourceMappingURL=monolith.css.map */

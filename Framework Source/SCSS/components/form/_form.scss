@@ -63,23 +63,15 @@ input[type=button], input[type=submit], button,
   label {
     margin-right: $input-option-label-margin-right;
     align-items: center;
+    flex-direction: row;
   }
 }
 
 .radio-column, .checkbox-column {
   flex-direction: column;
-
-  label {
-    flex-direction: row;
-  }
 }
-
 .radio-row, .checkbox-row {
   flex-direction: row;
-
-  label {
-    align-items: center;
-  }
 }
 
 .radio-row .radio { margin-right: $input-option-label-margin-right; }
@@ -95,23 +87,11 @@ input[type=radio], input[type=checkbox],
 }
 
 input[type=radio],
-.radio {
-  padding: $input-option-padding;
-  margin: $input-option-margin;
-}
-
+.radio,
 input[type=checkbox],
 .checkbox {
   padding: $input-option-padding;
   margin: $input-option-margin;
-}
-
-.radio-column, .checkbox-colum,
-.radio-row, .checkbox-row {
-  label {
-    display: flex;
-    flex-direction: row;
-  }
 }
 
 // fieldset
