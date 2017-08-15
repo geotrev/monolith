@@ -62,46 +62,49 @@ $grid-gutter: $default-space;
 // 3. Forms
 //
 
-// form wrapper styling
-
 $form-margin: 0 0 25px 0;
 $form-padding: 16px;
 $form-background: transparent;
 $form-box-shadow: none;
 $form-border: none;
-$form-font-family: inherit;
+$form-font-family: sans-serif;
 
-// label styling
+// inputs
 
-$input-label-padding-bottom: 8px;
-
-// general input styling
-
-$input-background: white;
-$input-border-radius: 4px;
-$input-border: 1px solid darkgray;
-$input-box-shadow: none;
-$input-font-family: $form-font-family;
 $input-font-size: 16px;
-$input-margin: 0 0 16px 0;
+$input-font-family: $form-font-family;
+$input-box-shadow: none;
+$input-border: 1px solid darkgray;
 $input-padding: 12px;
+$input-margin: 8px 0 16px 0;
+$input-border-radius: 4px;
+$input-background: white;
 
 // textarea resize
 
-$input-text-area-resize: vertical;
+$input-resize: vertical;
 
 // input button: type="button" or <button>
 
 $input-button-padding: $input-padding; // keeps inline elements the same height
 $input-button-border-radius: $input-border-radius;
-$input-button-font-family: $form-font-family;
 $input-button-font-size: $input-font-size;
+$input-button-font-family: $form-font-family;
 $input-button-background: gray;
-$input-button-border: 1px solid transparent;
+$input-button-border: none;
 $input-button-box-shadow: none;
 $input-button-color: white;
 $input-button-hover: lighten(gray, 10%);
 $input-button-focus: lighten(gray, 10%);
+
+// radio and checkbox
+
+$input-option-row-padding-bottom: 16px;
+$input-option-padding: 0;
+$input-option-margin: 0 12px 0 0;
+$input-option-label-margin-right: 12px;
+$input-option-label-margin-bottom: 16px;
+$input-option-margin-top: 8px;
 
 // disabled
 
@@ -109,20 +112,6 @@ $input-disabled-background: lightgray;
 $input-disabled-color: gray;
 $input-disabled-border: none;
 $input-disabled-resize: none;
-
-// radio button
-
-$input-radio-row-padding-bottom: 16px;
-$input-radio-padding: 0;
-$input-radio-margin: 0 12px 0 0;
-$input-radio-label-margin-right: 16px;
-
-// checkbox
-
-$input-checkbox-row-padding-bottom: 16px;
-$input-checkbox-padding: 0;
-$input-checkbox-margin: 0 12px 0 0;
-$input-checkbox-label-margin-right: 16px;
 
 // fieldset
 
@@ -133,7 +122,7 @@ $fieldset-background: transparent;
 $fieldset-margin: 0;
 $fieldset-padding: 32px;
 
-// fieldset legend text
+// fieldset legend
 
 $fieldset-legend-font-family: $form-font-family;
 $fieldset-legend-font-size: 16px;

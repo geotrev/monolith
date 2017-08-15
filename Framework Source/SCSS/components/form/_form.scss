@@ -1,49 +1,47 @@
 form,
 .form {
-  background: $form-background;
-  border: $form-border;
-  box-shadow: $form-box-shadow;
   margin: $form-margin;
   padding: $form-padding;
+  background: $form-background;
+  box-shadow: $form-box-shadow;
+  border: $form-border;
 }
 
+label,
 .label {
   display: flex;
   flex-direction: column;
-}
-
-.label-text {
   font-family: $form-font-family;
-  padding-bottom: $input-label-padding-bottom;
 }
 
 input[type=text],
 .text-field, .text-area {
-  background: $input-background;
-  border-radius: $input-border-radius;
-  border: $input-border;
-  box-shadow: $input-box-shadow;
-  display: flex;
-  font-family: $input-font-family;
   font-size: $input-font-size;
-  margin: $input-margin;
+  font-family: $input-font-family;
+  display: flex;
+  box-shadow: $input-box-shadow;
+  border: $input-border;
   padding: $input-padding;
+  margin: $input-margin;
+  border-radius: $input-border-radius;
+  background: $input-background;
 }
 
 textarea, input[type=text],
-.text-area { resize: $input-text-area-resize; }
+.text-area { resize: $input-resize; }
 
 input[type=button], input[type=submit], button,
 .button {
-  background: $input-button-background;
-  border-radius: $input-button-border-radius;
-  border: $input-button-border;
-  color: $input-button-color;
-  cursor: pointer;
   display: flex;
   font-family: $input-button-font-family;
-  font-size: $input-button-font-size;
   padding: $input-button-padding;
+  border-radius: $input-button-border-radius;
+  font-size: $input-button-font-size;
+  background: $input-button-background;
+  border: $input-button-border;
+  box-shadow: $input-button-box-shadow;
+  color: $input-button-color;
+  cursor: pointer;
 
   &:hover, &:focus { background-color: $input-button-focus; }
 
@@ -55,50 +53,89 @@ input[type=button], input[type=submit], button,
   }
 }
 
+// radio & checkbox
+
+.radio-row, .checkbox-row,
+.radio-column, .checkbox-column {
+  display: flex;
+  margin-top: $input-option-margin-top;
+
+  label {
+    margin-right: $input-option-label-margin-right;
+    align-items: center;
+  }
+}
+
+.radio-column, .checkbox-column {
+  flex-direction: column;
+
+  label {
+    flex-direction: row;
+  }
+}
+
+.radio-row, .checkbox-row {
+  flex-direction: row;
+
+  label {
+    align-items: center;
+  }
+}
+
+.radio-row .radio { margin-right: $input-option-label-margin-right; }
+.checkbox-row .checkbox { margin-right: $input-option-label-margin-right; }
+
+.radio-column label { margin-bottom: $input-option-label-margin-bottom; }
+.checkbox-column label { margin-bottom: $input-option-label-margin-bottom; }
+
 input[type=radio], input[type=checkbox],
 .radio, .checkbox {
   cursor: pointer;
-  display: inline-flex;
+  font-family: $form-font-family;
 }
 
 input[type=radio],
 .radio {
-  margin: $input-radio-margin;
-  padding: $input-radio-padding;
+  padding: $input-option-padding;
+  margin: $input-option-margin;
 }
 
 input[type=checkbox],
 .checkbox {
-  margin: $input-checkbox-margin;
-  padding: $input-checkbox-padding;
+  padding: $input-option-padding;
+  margin: $input-option-margin;
 }
 
-label,
-.radio-label, .checkbox-label { font-family: $form-font-family; }
+.radio-column, .checkbox-colum,
+.radio-row, .checkbox-row {
+  label {
+    display: flex;
+    flex-direction: row;
+  }
+}
 
-.radio-label { margin-right: $input-radio-label-margin-right; }
-.checkbox-label { margin-right: $input-checkbox-label-margin-right; }
+// fieldset
 
 fieldset,
 .fieldset {
-  background: $fieldset-background;
-  border-radius: $fieldset-border-radius;
-  border: $fieldset-border;
-  box-shadow: $fieldset-box-shadow;
   display: flex;
   margin: $fieldset-margin;
   padding: $fieldset-padding;
+  border: $fieldset-border;
+  border-radius: $fieldset-border-radius;
+  box-shadow: $fieldset-box-shadow;
+  background: $fieldset-background;
 
   legend,
   .legend {
-    background: $fieldset-legend-background;
-    border-radius: $fieldset-legend-border-radius;
-    border: $fieldset-legend-border;
-    box-shadow: $fieldset-legend-box-shadow;
-    color: $fieldset-legend-color;
     font-family: $fieldset-legend-font-family;
     font-size: $fieldset-legend-font-size;
     padding: $fieldset-legend-padding;
+    color: $fieldset-legend-color;
+    border-radius: $fieldset-legend-border-radius;
+    border: $fieldset-legend-border;
+    box-shadow: $fieldset-legend-box-shadow;
+    background: $fieldset-legend-background;
   }
 }
 
@@ -109,16 +146,14 @@ input[type=text]:disabled, button:disabled,
 .button:disabled,
 .disabled {
   background: $input-disabled-background;
-  border: $input-disabled-border;
   color: $input-disabled-color;
+  border: $input-disabled-border;
   cursor: not-allowed;
   resize: $input-disabled-resize;
 
   &:hover {
     background: $input-disabled-background;
-    border: $input-disabled-border;
     color: $input-disabled-color;
+    border: $input-disabled-border;
   }
 }
-
-@import 'utilities';
