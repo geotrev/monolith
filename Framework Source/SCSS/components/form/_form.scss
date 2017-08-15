@@ -1,10 +1,10 @@
 form,
 .form {
+  background: $form-background;
+  border: $form-border;
+  box-shadow: $form-box-shadow;
   margin: $form-margin;
   padding: $form-padding;
-  background: $form-background;
-  box-shadow: $form-box-shadow;
-  border: $form-border;
 }
 
 // labels
@@ -20,15 +20,15 @@ label,
 
 input[type=text],
 .text-field, .text-area {
-  font-size: $input-font-size;
-  font-family: $input-font-family;
-  display: flex;
-  box-shadow: $input-box-shadow;
-  border: $input-border;
-  padding: $input-padding;
-  margin: $input-margin;
-  border-radius: $input-border-radius;
   background: $input-background;
+  border-radius: $input-border-radius;
+  border: $input-border;
+  box-shadow: $input-box-shadow;
+  display: flex;
+  font-family: $input-font-family;
+  font-size: $input-font-size;
+  margin: $input-margin;
+  padding: $input-padding;
 }
 
 textarea, input[type=text],
@@ -38,24 +38,24 @@ textarea, input[type=text],
 
 input[type=button], input[type=submit], button,
 .button {
-  display: flex;
-  font-family: $input-button-font-family;
-  padding: $input-button-padding;
-  border-radius: $input-button-border-radius;
-  font-size: $input-button-font-size;
   background: $input-button-background;
+  border-radius: $input-button-border-radius;
   border: $input-button-border;
   box-shadow: $input-button-box-shadow;
   color: $input-button-color;
   cursor: pointer;
+  display: flex;
+  font-family: $input-button-font-family;
+  font-size: $input-button-font-size;
+  padding: $input-button-padding;
 
   &:hover, &:focus { background-color: $input-button-focus; }
 
   &.stretched {
-    text-align: center;
     display: block;
-    width: 100%;
     max-width: 100%;
+    text-align: center;
+    width: 100%;
   }
 }
 
@@ -71,20 +71,20 @@ input[type=checkbox],
 .checkbox,
 input[type=radio],
 .radio {
-  padding: $input-option-padding;
   margin: $input-option-margin;
+  padding: $input-option-padding;
 }
 
 .radio-row, .checkbox-row,
 .radio-column, .checkbox-column {
-  display: flex;
   margin-top: $input-option-margin-top;
+  display: flex;
 
   label,
   .radio-label, .checkbox-label {
-    margin-right: $input-option-label-margin-right;
     align-items: center;
     flex-direction: row;
+    margin-right: $input-option-label-margin-right;
   }
 }
 
@@ -117,24 +117,24 @@ input[type=radio],
 
 fieldset,
 .fieldset {
+  background: $fieldset-background;
+  border-radius: $fieldset-border-radius;
+  border: $fieldset-border;
+  box-shadow: $fieldset-box-shadow;
   display: flex;
   margin: $fieldset-margin;
   padding: $fieldset-padding;
-  border: $fieldset-border;
-  border-radius: $fieldset-border-radius;
-  box-shadow: $fieldset-box-shadow;
-  background: $fieldset-background;
 
   legend,
   .legend {
-    font-family: $fieldset-legend-font-family;
-    font-size: $fieldset-legend-font-size;
-    padding: $fieldset-legend-padding;
-    color: $fieldset-legend-color;
+    background: $fieldset-legend-background;
     border-radius: $fieldset-legend-border-radius;
     border: $fieldset-legend-border;
     box-shadow: $fieldset-legend-box-shadow;
-    background: $fieldset-legend-background;
+    color: $fieldset-legend-color;
+    font-family: $fieldset-legend-font-family;
+    font-size: $fieldset-legend-font-size;
+    padding: $fieldset-legend-padding;
   }
 }
 
@@ -145,14 +145,14 @@ input[type=text]:disabled, button:disabled,
 .button:disabled,
 .disabled {
   background: $input-disabled-background;
-  color: $input-disabled-color;
   border: $input-disabled-border;
+  color: $input-disabled-color;
   cursor: not-allowed;
   resize: $input-disabled-resize;
 
   &:hover {
     background: $input-disabled-background;
-    color: $input-disabled-color;
     border: $input-disabled-border;
+    color: $input-disabled-color;
   }
 }
