@@ -1,127 +1,71 @@
-@mixin form_classes_only {
+@import 'form_styles';
 
+@mixin form_classes_only {
   .form {
-    background: $form-background;
-    border: $form-border;
-    box-shadow: $form-box-shadow;
-    margin: $form-margin;
-    padding: $form-padding;
+    @extend %form;
   }
 
   // labels
 
   .label {
-    display: flex;
-    flex-direction: column;
-    font-family: $form-font-family;
+    @extend %label;
   }
 
   // input fields
 
   .text-field, .text-area {
-    background: $input-background;
-    border-radius: $input-border-radius;
-    border: $input-border;
-    box-shadow: $input-box-shadow;
-    display: flex;
-    font-family: $input-font-family;
-    font-size: $input-font-size;
-    margin: $input-margin;
-    padding: $input-padding;
+    @extend %field;
   }
 
-  .text-area { resize: $input-resize; }
+  .text-area {
+    @extend %textarea;
+  }
 
   // input buttons
 
   .button {
-    background: $input-button-background;
-    border-radius: $input-button-border-radius;
-    border: $input-button-border;
-    box-shadow: $input-button-box-shadow;
-    color: $input-button-color;
-    cursor: pointer;
-    display: flex;
-    font-family: $input-button-font-family;
-    font-size: $input-button-font-size;
-    padding: $input-button-padding;
-
-    &:hover, &:focus { background-color: $input-button-focus; }
-
-    &.stretched {
-      display: block;
-      max-width: 100%;
-      text-align: center;
-      width: 100%;
-    }
+    @extend %button;
   }
 
   // radio & checkbox
 
   .radio, .checkbox {
-    cursor: pointer;
-    font-family: $form-font-family;
-  }
-
-  .checkbox,
-  .radio {
-    margin: $input-option-margin;
-    padding: $input-option-padding;
+    @extend %option;
   }
 
   .radio-row, .checkbox-row,
   .radio-column, .checkbox-column {
-    margin-top: $input-option-margin-top;
-    display: flex;
+    @extend %option_layout;
 
     .radio-label, .checkbox-label {
-      align-items: center;
-      flex-direction: row;
-      margin-right: $input-option-label-margin-right;
+      @extend @option_layout_label;
     }
   }
 
   .radio-column, .checkbox-column {
-    flex-direction: column;
+    @extend %option_column;
   }
   .radio-row, .checkbox-row {
-    flex-direction: row;
+    @extend %option_row;
   }
 
-  .radio-row .radio{
-    margin-right: $input-option-label-margin-right;
-  }
+  .radio-row .radio,
   .checkbox-row .checkbox {
-    margin-right: $input-option-label-margin-right;
+    @extend %option_row_margin;
   }
 
-  .radio-column .radio-label {
-    margin-bottom: $input-option-label-margin-bottom;
-  }
+  .radio-column .radio-label,
   .checkbox-column .checkbox-label {
-    margin-bottom: $input-option-label-margin-bottom;
+    @extend %option_column_margin;
   }
 
   // fieldset
 
   .fieldset {
-    background: $fieldset-background;
-    border-radius: $fieldset-border-radius;
-    border: $fieldset-border;
-    box-shadow: $fieldset-box-shadow;
-    display: flex;
-    margin: $fieldset-margin;
-    padding: $fieldset-padding;
+    @extend %fieldset;
 
     .legend {
-      background: $fieldset-legend-background;
-      border-radius: $fieldset-legend-border-radius;
-      border: $fieldset-legend-border;
-      box-shadow: $fieldset-legend-box-shadow;
-      color: $fieldset-legend-color;
-      font-family: $fieldset-legend-font-family;
-      font-size: $fieldset-legend-font-size;
-      padding: $fieldset-legend-padding;
+      @extend %legend;
     }
   }
 
@@ -129,17 +73,7 @@
 
   .text-field, .text-area, .button {
     &:disabled {
-      background: $input-disabled-background;
-      border: $input-disabled-border;
-      color: $input-disabled-color;
-      cursor: not-allowed;
-      resize: $input-disabled-resize;
-
-      &:hover {
-        background: $input-disabled-background;
-        border: $input-disabled-border;
-        color: $input-disabled-color;
-      }
+      @extend %disabled_state;
     }
   }
 }

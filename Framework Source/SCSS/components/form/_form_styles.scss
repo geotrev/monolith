@@ -1,0 +1,120 @@
+%form {
+  background: $form-background;
+  border: $form-border;
+  box-shadow: $form-box-shadow;
+  margin: $form-margin;
+  padding: $form-padding;
+}
+
+%label {
+  display: flex;
+  flex-direction: column;
+  font-family: $form-font-family;
+}
+
+%field {
+  background: $input-background;
+  border-radius: $input-border-radius;
+  border: $input-border;
+  box-shadow: $input-box-shadow;
+  display: flex;
+  font-family: $input-font-family;
+  font-size: $input-font-size;
+  margin: $input-margin;
+  padding: $input-padding;
+}
+
+%textarea {
+  resize: $input-resize;
+}
+
+%button {
+  background: $input-button-background;
+  border-radius: $input-button-border-radius;
+  border: $input-button-border;
+  box-shadow: $input-button-box-shadow;
+  color: $input-button-color;
+  cursor: pointer;
+  display: flex;
+  font-family: $input-button-font-family;
+  font-size: $input-button-font-size;
+  padding: $input-button-padding;
+
+  &:hover, &:focus { background-color: $input-button-focus; }
+
+  &.stretched {
+    display: block;
+    max-width: 100%;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+%option {
+  cursor: pointer;
+  font-family: $form-font-family;
+  margin: $input-option-margin;
+  padding: $input-option-padding;
+}
+
+%option_layout {
+  margin-top: $input-option-margin-top;
+  display: flex;
+}
+
+%option_layout_label {
+  align-items: center;
+  flex-direction: row;
+  margin-right: $input-option-label-margin-right;
+}
+
+%option_row {
+  flex-direction: row;
+}
+
+%option_column {
+  flex-direction: column;
+}
+
+%option_row_margin {
+  margin-right: $input-option-label-margin-right;
+}
+
+%option_column_margin {
+  margin-bottom: $input-option-label-margin-bottom;
+}
+
+%fieldset {
+  background: $fieldset-background;
+  border-radius: $fieldset-border-radius;
+  border: $fieldset-border;
+  box-shadow: $fieldset-box-shadow;
+  display: flex;
+  margin: $fieldset-margin;
+  padding: $fieldset-padding;
+}
+
+%legend {
+  background: $fieldset-legend-background;
+  border-radius: $fieldset-legend-border-radius;
+  border: $fieldset-legend-border;
+  box-shadow: $fieldset-legend-box-shadow;
+  color: $fieldset-legend-color;
+  font-family: $fieldset-legend-font-family;
+  font-size: $fieldset-legend-font-size;
+  padding: $fieldset-legend-padding;
+}
+
+%disabled_state {
+  background: $input-disabled-background;
+  border: $input-disabled-border;
+  color: $input-disabled-color;
+  cursor: not-allowed;
+  resize: $input-disabled-resize;
+
+  &:hover {
+    background: $input-disabled-background;
+    border: $input-disabled-border;
+    color: $input-disabled-color;
+  }
+}
