@@ -3,8 +3,7 @@
 
 // 1. Global settings
 // 2. Grid
-// 3. Buttons
-// 4. Avatars
+// 3. Forms
 
 // -------------------------- * -------------------------- //
 
@@ -15,6 +14,9 @@
 $default-font: inherit;
 $default-space: 16px;
 $default-font-size: 16px;
+
+// Set to "false" to isolate Monolith to classes only.
+$tags-enabled: true;
 
 //
 // 2. Grid
@@ -58,3 +60,78 @@ $order-threshold: 20 !default;
 $column-padding-bottom: $default-space;
 $column-gutter: $default-space / 2;
 $grid-gutter: $default-space;
+
+//
+// 3. Forms
+//
+
+$form-margin: 0 0 0 0;
+$form-padding: 0;
+$form-background: transparent;
+$form-box-shadow: none;
+$form-border: none;
+$form-font-family: sans-serif;
+
+// inputs
+
+$input-font-size: $default-font-size;
+$input-font-family: $form-font-family;
+$input-box-shadow: none;
+$input-border: 1px solid darkgray;
+$input-padding: 12px;
+$input-margin: 8px 0 $default-space 0;
+$input-border-radius: 4px;
+$input-background: white;
+
+// textarea resize
+
+$input-resize: vertical;
+
+// input button: type="button" or <button>
+
+$input-button-padding: $input-padding; // keeps inline elements the same height
+$input-button-border-radius: $input-border-radius;
+$input-button-font-size: $input-font-size;
+$input-button-font-family: $form-font-family;
+$input-button-background: gray;
+$input-button-border: none;
+$input-button-box-shadow: none;
+$input-button-color: white;
+$input-button-hover: lighten(gray, 10%);
+$input-button-focus: lighten(gray, 10%);
+
+// radio and checkbox
+
+$input-option-row-padding-bottom: $default-space;
+$input-option-padding: 0;
+$input-option-margin: 0 12px 0 0;
+$input-option-label-margin-right: 12px;
+$input-option-label-margin-bottom: $default-space;
+$input-option-margin-top: 8px;
+
+// disabled
+
+$input-disabled-background: lightgray;
+$input-disabled-color: gray;
+$input-disabled-border: none;
+$input-disabled-resize: none;
+
+// fieldset
+
+$fieldset-border: 1px solid black;
+$fieldset-border-radius: 4px;
+$fieldset-box-shadow: none;
+$fieldset-background: transparent;
+$fieldset-margin: 0;
+$fieldset-padding: $default-space * 2;
+
+// fieldset legend
+
+$fieldset-legend-font-family: $form-font-family;
+$fieldset-legend-font-size: $default-font-size;
+$fieldset-legend-padding: $default-space / 2;
+$fieldset-legend-color: white;
+$fieldset-legend-background: black;
+$fieldset-legend-box-shadow: none;
+$fieldset-legend-border: none;
+$fieldset-legend-border-radius: 4px;

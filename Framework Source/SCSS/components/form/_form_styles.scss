@@ -1,0 +1,120 @@
+@mixin form {
+  background: $form-background;
+  border: $form-border;
+  box-shadow: $form-box-shadow;
+  margin: $form-margin;
+  padding: $form-padding;
+}
+
+@mixin form_label {
+  display: flex;
+  flex-direction: column;
+  font-family: $form-font-family;
+}
+
+@mixin form_field {
+  background: $input-background;
+  border-radius: $input-border-radius;
+  border: $input-border;
+  box-shadow: $input-box-shadow;
+  display: flex;
+  font-family: $input-font-family;
+  font-size: $input-font-size;
+  margin: $input-margin;
+  padding: $input-padding;
+}
+
+@mixin form_textarea_resize {
+  resize: $input-resize;
+}
+
+@mixin form_button {
+  background: $input-button-background;
+  border-radius: $input-button-border-radius;
+  border: $input-button-border;
+  box-shadow: $input-button-box-shadow;
+  color: $input-button-color;
+  cursor: pointer;
+  display: flex;
+  font-family: $input-button-font-family;
+  font-size: $input-button-font-size;
+  padding: $input-button-padding;
+
+  &:hover, &:focus { background-color: $input-button-focus; }
+
+  &.stretched {
+    display: block;
+    max-width: 100%;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@mixin form_option {
+  cursor: pointer;
+  font-family: $form-font-family;
+  margin: $input-option-margin;
+  padding: $input-option-padding;
+}
+
+@mixin form_option_layout {
+  margin-top: $input-option-margin-top;
+  display: flex;
+}
+
+@mixin form_option_layout_label {
+  align-items: center;
+  flex-direction: row;
+  margin-right: $input-option-label-margin-right;
+}
+
+@mixin form_option_row {
+  flex-direction: row;
+}
+
+@mixin form_option_column {
+  flex-direction: column;
+}
+
+@mixin form_option_row_margin {
+  margin-right: $input-option-label-margin-right;
+}
+
+@mixin form_option_column_margin {
+  margin-bottom: $input-option-label-margin-bottom;
+}
+
+@mixin form_fieldset {
+  background: $fieldset-background;
+  border-radius: $fieldset-border-radius;
+  border: $fieldset-border;
+  box-shadow: $fieldset-box-shadow;
+  display: flex;
+  margin: $fieldset-margin;
+  padding: $fieldset-padding;
+}
+
+@mixin form_legend {
+  background: $fieldset-legend-background;
+  border-radius: $fieldset-legend-border-radius;
+  border: $fieldset-legend-border;
+  box-shadow: $fieldset-legend-box-shadow;
+  color: $fieldset-legend-color;
+  font-family: $fieldset-legend-font-family;
+  font-size: $fieldset-legend-font-size;
+  padding: $fieldset-legend-padding;
+}
+
+@mixin form_disabled_state {
+  background: $input-disabled-background;
+  border: $input-disabled-border;
+  color: $input-disabled-color;
+  cursor: not-allowed;
+  resize: $input-disabled-resize;
+
+  &:hover {
+    background: $input-disabled-background;
+    border: $input-disabled-border;
+    color: $input-disabled-color;
+  }
+}

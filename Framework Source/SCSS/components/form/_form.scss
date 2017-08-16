@@ -1,0 +1,8 @@
+@import 'form_with_tags';
+@import 'form_classes_only';
+
+@if $tags-enabled == true {
+  @include form_with_tags;
+} @else {
+  @include form_classes_only;
+}

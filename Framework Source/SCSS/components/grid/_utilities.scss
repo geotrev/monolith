@@ -60,7 +60,7 @@
 
 // 5. Column collapse
 
-#{$row}.#{$scope}collapsed {
+.#{$row}.#{$scope}collapsed {
   .#{$column}s, .#{$column} {
     padding-bottom: 0;
     padding-left: 0;
