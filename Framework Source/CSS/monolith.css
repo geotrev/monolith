@@ -743,12 +743,7 @@ button,
 input[type=radio], input[type=checkbox],
 .radio, .checkbox {
   cursor: pointer;
-  font-family: sans-serif; }
-
-input[type=checkbox],
-input[type=radio],
-.checkbox,
-.radio {
+  font-family: sans-serif;
   margin: 0 12px 0 0;
   padding: 0; }
 
@@ -774,17 +769,13 @@ input[type=radio],
   flex-direction: row; }
 
 .radio-row input[type=radio],
-.radio-row .radio {
-  margin-right: 12px; }
-
+.radio-row .radio,
 .checkbox-row input[type=checkbox],
 .checkbox-row .checkbox {
   margin-right: 12px; }
 
 .radio-column label,
-.radio-column .radio-label {
-  margin-bottom: 16px; }
-
+.radio-column .radio-label,
 .checkbox-column label,
 .checkbox-column .checkbox-label {
   margin-bottom: 16px; }
@@ -811,29 +802,29 @@ fieldset,
     font-size: 16px;
     padding: 8px; }
 
-input[type=text]:disabled, input[type=password]:disabled,
-input[type=email]:disabled, input[type=date]:disabled,
-input[type=datetime-local]:disabled, input[type=month]:disabled,
-input[type=number]:disabled, input[type=tel]:disabled,
-input[type=search]:disabled, input[type=time]:disabled,
-input[type=url]:disabled, input[type=week]:disabled,
-input[type=submit]:disabled, input[type=file]:disabled, input[type=reset]:disabled,
-textarea:disabled, button:disabled,
-.text-field:disabled, .text-area:disabled, .button:disabled {
+input[type=text], input[type=password],
+input[type=email], input[type=date],
+input[type=datetime-local], input[type=month],
+input[type=number], input[type=tel],
+input[type=search], input[type=time],
+input[type=url], input[type=week],
+input[type=submit], input[type=file], input[type=reset],
+textarea, button,
+.text-field, .text-area, .button {
   background: lightgray;
   border: none;
   color: gray;
   cursor: not-allowed;
   resize: none; }
-  input[type=text]:disabled:hover, input[type=password]:disabled:hover,
-  input[type=email]:disabled:hover, input[type=date]:disabled:hover,
-  input[type=datetime-local]:disabled:hover, input[type=month]:disabled:hover,
-  input[type=number]:disabled:hover, input[type=tel]:disabled:hover,
-  input[type=search]:disabled:hover, input[type=time]:disabled:hover,
-  input[type=url]:disabled:hover, input[type=week]:disabled:hover,
-  input[type=submit]:disabled:hover, input[type=file]:disabled:hover, input[type=reset]:disabled:hover,
-  textarea:disabled:hover, button:disabled:hover,
-  .text-field:disabled:hover, .text-area:disabled:hover, .button:disabled:hover {
+  input[type=text]:hover, input[type=password]:hover,
+  input[type=email]:hover, input[type=date]:hover,
+  input[type=datetime-local]:hover, input[type=month]:hover,
+  input[type=number]:hover, input[type=tel]:hover,
+  input[type=search]:hover, input[type=time]:hover,
+  input[type=url]:hover, input[type=week]:hover,
+  input[type=submit]:hover, input[type=file]:hover, input[type=reset]:hover,
+  textarea:hover, button:hover,
+  .text-field:hover, .text-area:hover, .button:hover {
     background: lightgray;
     border: none;
     color: gray; }
