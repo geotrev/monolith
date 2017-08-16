@@ -686,13 +686,14 @@ label,
   flex-direction: column;
   font-family: sans-serif; }
 
-input[type=text], textarea,
+input[type=text],
 input[type=password], input[type=email],
 input[type=date], input[type=datetime-local],
 input[type=month], input[type=number],
 input[type=tel], input[type=search],
 input[type=time], input[type=url],
 input[type=week],
+textarea,
 .text-field, .text-area {
   background: white;
   border-radius: 4px;
@@ -708,8 +709,9 @@ textarea, input[type=text],
 .text-area {
   resize: vertical; }
 
-input[type=button], input[type=submit], button,
+input[type=button], input[type=submit],
 input[type=file], input[type=reset],
+button,
 .button {
   background: gray;
   border-radius: 4px;
@@ -721,14 +723,17 @@ input[type=file], input[type=reset],
   font-family: sans-serif;
   font-size: 16px;
   padding: 12px; }
-  input[type=button]:hover, input[type=button]:focus, input[type=submit]:hover, input[type=submit]:focus, button:hover, button:focus,
+  input[type=button]:hover, input[type=button]:focus, input[type=submit]:hover, input[type=submit]:focus,
   input[type=file]:hover,
   input[type=file]:focus, input[type=reset]:hover, input[type=reset]:focus,
+  button:hover,
+  button:focus,
   .button:hover,
   .button:focus {
     background-color: #9a9a9a; }
-  input[type=button].stretched, input[type=submit].stretched, button.stretched,
+  input[type=button].stretched, input[type=submit].stretched,
   input[type=file].stretched, input[type=reset].stretched,
+  button.stretched,
   .button.stretched {
     display: block;
     max-width: 100%;
@@ -806,29 +811,29 @@ fieldset,
     font-size: 16px;
     padding: 8px; }
 
-input[type=text]:disabled, textarea:disabled,
-input[type=password]:disabled, input[type=email]:disabled,
-input[type=date]:disabled, input[type=datetime-local]:disabled,
-input[type=month]:disabled, input[type=number]:disabled,
-input[type=tel]:disabled, input[type=search]:disabled,
-input[type=time]:disabled, input[type=url]:disabled,
-input[type=week]:disabled, button:disabled,
-input[type=submit]:disabled, input[type=file]:disabled,
-input[type=reset]:disabled, .text-field:disabled, .text-area:disabled, .button:disabled {
+input[type=text]:disabled, input[type=password]:disabled,
+input[type=email]:disabled, input[type=date]:disabled,
+input[type=datetime-local]:disabled, input[type=month]:disabled,
+input[type=number]:disabled, input[type=tel]:disabled,
+input[type=search]:disabled, input[type=time]:disabled,
+input[type=url]:disabled, input[type=week]:disabled,
+input[type=submit]:disabled, input[type=file]:disabled, input[type=reset]:disabled,
+textarea:disabled, button:disabled,
+.text-field:disabled, .text-area:disabled, .button:disabled {
   background: lightgray;
   border: none;
   color: gray;
   cursor: not-allowed;
   resize: none; }
-  input[type=text]:disabled:hover, textarea:disabled:hover,
-  input[type=password]:disabled:hover, input[type=email]:disabled:hover,
-  input[type=date]:disabled:hover, input[type=datetime-local]:disabled:hover,
-  input[type=month]:disabled:hover, input[type=number]:disabled:hover,
-  input[type=tel]:disabled:hover, input[type=search]:disabled:hover,
-  input[type=time]:disabled:hover, input[type=url]:disabled:hover,
-  input[type=week]:disabled:hover, button:disabled:hover,
-  input[type=submit]:disabled:hover, input[type=file]:disabled:hover,
-  input[type=reset]:disabled:hover, .text-field:disabled:hover, .text-area:disabled:hover, .button:disabled:hover {
+  input[type=text]:disabled:hover, input[type=password]:disabled:hover,
+  input[type=email]:disabled:hover, input[type=date]:disabled:hover,
+  input[type=datetime-local]:disabled:hover, input[type=month]:disabled:hover,
+  input[type=number]:disabled:hover, input[type=tel]:disabled:hover,
+  input[type=search]:disabled:hover, input[type=time]:disabled:hover,
+  input[type=url]:disabled:hover, input[type=week]:disabled:hover,
+  input[type=submit]:disabled:hover, input[type=file]:disabled:hover, input[type=reset]:disabled:hover,
+  textarea:disabled:hover, button:disabled:hover,
+  .text-field:disabled:hover, .text-area:disabled:hover, .button:disabled:hover {
     background: lightgray;
     border: none;
     color: gray; }

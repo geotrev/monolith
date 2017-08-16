@@ -19,13 +19,14 @@
 
   // input fields
 
-  input[type=text], textarea,
+  input[type=text],
   input[type=password], input[type=email],
   input[type=date], input[type=datetime-local],
   input[type=month], input[type=number],
   input[type=tel], input[type=search],
   input[type=time], input[type=url],
   input[type=week],
+  textarea,
   .text-field, .text-area {
     background: $input-background;
     border-radius: $input-border-radius;
@@ -43,8 +44,9 @@
 
   // input buttons
 
-  input[type=button], input[type=submit], button,
+  input[type=button], input[type=submit],
   input[type=file], input[type=reset],
+  button,
   .button {
     background: $input-button-background;
     border-radius: $input-button-border-radius;
@@ -148,15 +150,15 @@
 
   // disabled
 
-  input[type=text], textarea,
-  input[type=password], input[type=email],
-  input[type=date], input[type=datetime-local],
-  input[type=month], input[type=number],
-  input[type=tel], input[type=search],
-  input[type=time], input[type=url],
-  input[type=week], button,
-  input[type=submit], input[type=file],
-  input[type=reset], .text-field, .text-area, .button {
+  input[type=text], input[type=password],
+  input[type=email], input[type=date],
+  input[type=datetime-local], input[type=month],
+  input[type=number], input[type=tel],
+  input[type=search], input[type=time],
+  input[type=url], input[type=week],
+  input[type=submit], input[type=file], input[type=reset],
+  textarea, button,
+  .text-field, .text-area, .button {
     &:disabled {
       background: $input-disabled-background;
       border: $input-disabled-border;
