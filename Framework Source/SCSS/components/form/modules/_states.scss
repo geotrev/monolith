@@ -1,6 +1,6 @@
 // classes only
 
-@mixin form_state_classes {
+@mixin form_disabled_classes {
   .text-field, .text-area, .button {
     &:disabled {
       @include form_disabled_state;
@@ -10,7 +10,7 @@
 
 // with tags
 
-@mixin form_state_with_tags {
+@mixin form_disabled_with_tags {
   input[type=text], input[type=password],
   input[type=email], input[type=date],
   input[type=datetime-local], input[type=month],

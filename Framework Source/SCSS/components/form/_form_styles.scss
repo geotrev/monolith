@@ -1,3 +1,5 @@
+
+// <form>
 @mixin form {
   background: $form-background;
   border: $form-border;
@@ -6,12 +8,14 @@
   padding: $form-padding;
 }
 
+// <label>
 @mixin form_label {
   display: flex;
   flex-direction: column;
   font-family: $form-font-family;
 }
 
+// <input> and <textarea>
 @mixin form_field {
   background: $input-background;
   border-radius: $input-border-radius;
@@ -24,10 +28,12 @@
   padding: $input-padding;
 }
 
+// <textarea>
 @mixin form_textarea_resize {
   resize: $input-resize;
 }
 
+// input[type=submit/reset/file/button] and <button>
 @mixin form_button {
   background: $input-button-background;
   border-radius: $input-button-border-radius;
@@ -50,6 +56,7 @@
   }
 }
 
+// type=radio and type=checkbox
 @mixin form_option {
   cursor: pointer;
   font-family: $form-font-family;
@@ -57,17 +64,20 @@
   padding: $input-option-padding;
 }
 
+// radio and checkbox helper spacing: e.g., radio-row and radio-column
 @mixin form_option_layout {
   margin-top: $input-option-margin-top;
   display: flex;
 }
 
+// radio and checkbox <label> modifier
 @mixin form_option_layout_label {
   align-items: center;
   flex-direction: row;
   margin-right: $input-option-label-margin-right;
 }
 
+// radio and checkbox helper direction
 @mixin form_option_row {
   flex-direction: row;
 }
@@ -76,14 +86,17 @@
   flex-direction: column;
 }
 
+// radio-row and checkbox-row helper margin
 @mixin form_option_row_margin {
   margin-right: $input-option-label-margin-right;
 }
 
+// radio-column and checkbox-column helper margin
 @mixin form_option_column_margin {
   margin-bottom: $input-option-label-margin-bottom;
 }
 
+// <fieldset>
 @mixin form_fieldset {
   background: $fieldset-background;
   border-radius: $fieldset-border-radius;
@@ -94,6 +107,7 @@
   padding: $fieldset-padding;
 }
 
+// fieldset outer label: <legend>
 @mixin form_legend {
   background: $fieldset-legend-background;
   border-radius: $fieldset-legend-border-radius;
@@ -105,6 +119,7 @@
   padding: $fieldset-legend-padding;
 }
 
+// :disabled state on all input components
 @mixin form_disabled_state {
   background: $input-disabled-background;
   border: $input-disabled-border;
