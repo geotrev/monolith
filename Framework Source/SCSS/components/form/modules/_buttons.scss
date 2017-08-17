@@ -1,0 +1,18 @@
+// classes only
+
+@mixin form_button_classes {
+  .button {
+    @include form_button;
+  }
+}
+
+// with tags
+
+@mixin form_button_with_tags {
+  input[type=button], input[type=submit],
+  input[type=file], input[type=reset],
+  button,
+  .button {
+    @include form_button;
+  }
+}

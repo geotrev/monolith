@@ -1,0 +1,25 @@
+// classes only
+
+@mixin form_fieldset_classes {
+  .fieldset {
+    @include form_fieldset;
+
+    .legend {
+      @include form_legend;
+    }
+  }
+}
+
+// with tags
+
+@mixin form_fieldset_with_tags {
+  fieldset,
+  .fieldset {
+    @include form_fieldset;
+
+    legend,
+    .legend {
+      @include form_legend;
+    }
+  }
+}

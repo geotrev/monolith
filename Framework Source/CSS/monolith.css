@@ -672,43 +672,6 @@
   padding-left: 0;
   padding-right: 0; }
 
-form,
-.form {
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  margin: 0 0 0 0;
-  padding: 0; }
-
-label,
-.label {
-  display: flex;
-  flex-direction: column;
-  font-family: sans-serif; }
-
-input[type=text],
-input[type=password], input[type=email],
-input[type=date], input[type=datetime-local],
-input[type=month], input[type=number],
-input[type=tel], input[type=search],
-input[type=time], input[type=url],
-input[type=week],
-textarea,
-.text-field, .text-area {
-  background: white;
-  border-radius: 4px;
-  border: 1px solid darkgray;
-  box-shadow: none;
-  display: flex;
-  font-family: sans-serif;
-  font-size: 16px;
-  margin: 8px 0 16px 0;
-  padding: 12px; }
-
-textarea, input[type=text],
-.text-area {
-  resize: vertical; }
-
 input[type=button], input[type=submit],
 input[type=file], input[type=reset],
 button,
@@ -739,6 +702,57 @@ button,
     max-width: 100%;
     text-align: center;
     width: 100%; }
+
+input[type=text],
+input[type=password], input[type=email],
+input[type=date], input[type=datetime-local],
+input[type=month], input[type=number],
+input[type=tel], input[type=search],
+input[type=time], input[type=url],
+input[type=week],
+textarea,
+.text-field, .text-area {
+  background: white;
+  border-radius: 4px;
+  border: 1px solid darkgray;
+  box-shadow: none;
+  display: flex;
+  font-family: sans-serif;
+  font-size: 16px;
+  margin: 8px 0 16px 0;
+  padding: 12px; }
+
+textarea, input[type=text],
+.text-area {
+  resize: vertical; }
+
+fieldset,
+.fieldset {
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid black;
+  box-shadow: none;
+  display: flex;
+  margin: 0;
+  padding: 32px; }
+  fieldset legend,
+  fieldset .legend,
+  .fieldset legend,
+  .fieldset .legend {
+    background: black;
+    border-radius: 4px;
+    border: none;
+    box-shadow: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 8px; }
+
+label,
+.label {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif; }
 
 input[type=radio], input[type=checkbox],
 .radio, .checkbox {
@@ -780,28 +794,6 @@ input[type=radio], input[type=checkbox],
 .checkbox-column .checkbox-label {
   margin-bottom: 16px; }
 
-fieldset,
-.fieldset {
-  background: transparent;
-  border-radius: 4px;
-  border: 1px solid black;
-  box-shadow: none;
-  display: flex;
-  margin: 0;
-  padding: 32px; }
-  fieldset legend,
-  fieldset .legend,
-  .fieldset legend,
-  .fieldset .legend {
-    background: black;
-    border-radius: 4px;
-    border: none;
-    box-shadow: none;
-    color: white;
-    font-family: sans-serif;
-    font-size: 16px;
-    padding: 8px; }
-
 input[type=text], input[type=password],
 input[type=email], input[type=date],
 input[type=datetime-local], input[type=month],
@@ -828,5 +820,13 @@ textarea, button,
     background: lightgray;
     border: none;
     color: gray; }
+
+form,
+.form {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  margin: 0 0 0 0;
+  padding: 0; }
 
 /*# sourceMappingURL=monolith.css.map */
