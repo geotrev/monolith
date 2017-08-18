@@ -1,0 +1,32 @@
+// classes only
+
+@mixin form_field_classes {
+  .text-field, .text-area {
+    @include form_field;
+  }
+
+  .text-area {
+    @include form_textarea_resize;
+  }
+}
+
+// with tags
+
+@mixin form_field_with_tags {
+  input[type=text],
+  input[type=password], input[type=email],
+  input[type=date], input[type=datetime-local],
+  input[type=month], input[type=number],
+  input[type=tel], input[type=search],
+  input[type=time], input[type=url],
+  input[type=week],
+  textarea,
+  .text-field, .text-area {
+    @include form_field;
+  }
+
+  textarea, input[type=text],
+  .text-area {
+    @include form_textarea_resize;
+  }
+}

@@ -1,0 +1,16 @@
+// classes only
+
+@mixin form_tag_classes {
+  .form {
+    @include form;
+  }
+}
+
+// with tags
+
+@mixin form_tag_with_tags {
+  form,
+  .form {
+    @include form;
+  }
+}

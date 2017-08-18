@@ -1,0 +1,73 @@
+// classes only
+
+@mixin form_radio_and_checkbox_classes {
+  .radio, .checkbox {
+    @include form_option;
+  }
+
+  .radio-row, .checkbox-row,
+  .radio-column, .checkbox-column {
+    @include form_option_layout;
+
+    .radio-label, .checkbox-label {
+      @include form_option_layout_label;
+    }
+  }
+
+  .radio-column, .checkbox-column {
+    @include form_option_column;
+  }
+  .radio-row, .checkbox-row {
+    @include form_option_row;
+  }
+
+  .radio-row .radio,
+  .checkbox-row .checkbox {
+    @include form_option_row_margin;
+  }
+
+  .radio-column .radio-label,
+  .checkbox-column .checkbox-label {
+    @include form_option_column_margin;
+  }
+}
+
+// with tags
+
+@mixin form_radio_and_checkbox_with_tags {
+  input[type=radio], input[type=checkbox],
+  .radio, .checkbox {
+    @include form_option;
+  }
+
+  .radio-row, .checkbox-row,
+  .radio-column, .checkbox-column {
+    @include form_option_layout;
+
+    label,
+    .radio-label, .checkbox-label {
+      @include form_option_layout_label;
+    }
+  }
+
+  .radio-column, .checkbox-column {
+    @include form_option_column;
+  }
+  .radio-row, .checkbox-row {
+    @include form_option_row;
+  }
+
+  .radio-row input[type=radio],
+  .radio-row .radio,
+  .checkbox-row input[type=checkbox],
+  .checkbox-row .checkbox {
+    @include form_option_row_margin;
+  }
+
+  .radio-column label,
+  .radio-column .radio-label,
+  .checkbox-column label,
+  .checkbox-column .checkbox-label {
+    @include form_option_column_margin;
+  }
+}

@@ -1,0 +1,16 @@
+// classes only
+
+@mixin form_label_classes {
+  .label {
+    @include form_label;
+  }
+}
+
+// with tags
+
+@mixin form_label_with_tags {
+  label,
+  .label {
+    @include form_label;
+  }
+}
