@@ -8,19 +8,19 @@
 @import 'modules/states';
 
 @if $tags-enabled == true {
-  @include form_button_with_tags;
-  @include form_field_with_tags;
-  @include form_fieldset_with_tags;
-  @include form_label_with_tags;
-  @include form_radio_and_checkbox_with_tags;
-  @include form_disabled_with_tags;
   @include form_tag_with_tags;
+  @include form_label_with_tags;
+  @include form_field_with_tags;
+  @include form_button_with_tags;
+  @include form_radio_and_checkbox_with_tags;
+  @include form_fieldset_with_tags;
+  @include form_disabled_with_tags;
 } @else {
-  @include form_button_classes;
-  @include form_field_classes;
-  @include form_fieldset_classes;
-  @include form_label_classes;
-  @include form_radio_and_checkbox_classes;
-  @include form_disabled_classes;
   @include form_tag_classes;
+  @include form_label_classes;
+  @include form_field_classes;
+  @include form_button_classes;
+  @include form_radio_and_checkbox_classes;
+  @include form_fieldset_classes;
+  @include form_disabled_classes;
 }
