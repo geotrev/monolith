@@ -677,14 +677,14 @@ form,
   background: transparent;
   border: none;
   box-shadow: none;
-  margin: 0 0 0 0;
+  margin: 0;
   padding: 0; }
 
 label,
 .label {
   display: flex;
   flex-direction: column;
-  font-family: sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
 
 input[type=text],
 input[type=password], input[type=email],
@@ -700,7 +700,7 @@ textarea,
   border: 1px solid darkgray;
   box-shadow: none;
   display: flex;
-  font-family: sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 16px;
   margin: 8px 0 16px 0;
   padding: 12px; }
@@ -720,7 +720,7 @@ button,
   color: white;
   cursor: pointer;
   display: flex;
-  font-family: sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 16px;
   padding: 12px; }
   input[type=button]:hover, input[type=button]:focus, input[type=submit]:hover, input[type=submit]:focus,
@@ -743,7 +743,7 @@ button,
 input[type=radio], input[type=checkbox],
 .radio, .checkbox {
   cursor: pointer;
-  font-family: sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0 12px 0 0;
   padding: 0; }
 
@@ -798,7 +798,7 @@ fieldset,
     border: none;
     box-shadow: none;
     color: white;
-    font-family: sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-size: 16px;
     padding: 8px; }
 

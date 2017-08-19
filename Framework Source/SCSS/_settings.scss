@@ -65,12 +65,12 @@ $grid-gutter: $default-space;
 // 3. Forms
 //
 
-$form-margin: 0 0 0 0;
+$form-margin: 0;
 $form-padding: 0;
 $form-background: transparent;
 $form-box-shadow: none;
 $form-border: none;
-$form-font-family: sans-serif;
+$form-font-family: $default-font;
 
 // inputs
 
