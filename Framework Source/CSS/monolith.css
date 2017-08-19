@@ -672,6 +672,80 @@
   padding-left: 0;
   padding-right: 0; }
 
+input[type=button], input[type=submit],
+input[type=file], input[type=reset],
+button, .button {
+  padding: 10px 16px;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 0 0 16px 0;
+  box-shadow: none;
+  display: inline-flex; }
+  input[type=button]:hover, input[type=button]:focus, input[type=button]:visited, input[type=submit]:hover, input[type=submit]:focus, input[type=submit]:visited,
+  input[type=file]:hover,
+  input[type=file]:focus,
+  input[type=file]:visited, input[type=reset]:hover, input[type=reset]:focus, input[type=reset]:visited,
+  button:hover,
+  button:focus,
+  button:visited, .button:hover, .button:focus, .button:visited {
+    background: #737373;
+    color: white;
+    text-decoration: none; }
+  input[type=button]:active, input[type=submit]:active,
+  input[type=file]:active, input[type=reset]:active,
+  button:active, .button:active {
+    background: #737373;
+    color: white; }
+  input[type=button].small, input[type=submit].small,
+  input[type=file].small, input[type=reset].small,
+  button.small, .button.small {
+    padding: 8px 14px;
+    font-size: 14px; }
+  input[type=button].medium, input[type=submit].medium,
+  input[type=file].medium, input[type=reset].medium,
+  button.medium, .button.medium {
+    padding: 12px 18px;
+    font-size: 16px; }
+  input[type=button].large, input[type=submit].large,
+  input[type=file].large, input[type=reset].large,
+  button.large, .button.large {
+    padding: 16px 22px;
+    font-size: 20px; }
+  input[type=button].huge, input[type=submit].huge,
+  input[type=file].huge, input[type=reset].huge,
+  button.huge, .button.huge {
+    padding: 20px 30px;
+    font-size: 24px; }
+  input[type=button].wide, input[type=submit].wide,
+  input[type=file].wide, input[type=reset].wide,
+  button.wide, .button.wide {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex: 1 0 100%;
+    max-width: 100%; }
+
+a,
+.link {
+  font-family: inherit;
+  font-size: inherit;
+  color: blue;
+  text-decoration: none; }
+  a:hover, a:focus, a:visited,
+  .link:hover,
+  .link:focus,
+  .link:visited {
+    color: #6666ff;
+    text-decoration: underline; }
+  a:active,
+  .link:active {
+    color: #6666ff; }
+
 form,
 .form {
   background: transparent;
@@ -708,37 +782,6 @@ textarea,
 textarea, input[type=text],
 .text-area {
   resize: vertical; }
-
-input[type=button], input[type=submit],
-input[type=file], input[type=reset],
-button,
-.button {
-  background: gray;
-  border-radius: 4px;
-  border: none;
-  box-shadow: none;
-  color: white;
-  cursor: pointer;
-  display: flex;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-size: 16px;
-  padding: 12px; }
-  input[type=button]:hover, input[type=button]:focus, input[type=submit]:hover, input[type=submit]:focus,
-  input[type=file]:hover,
-  input[type=file]:focus, input[type=reset]:hover, input[type=reset]:focus,
-  button:hover,
-  button:focus,
-  .button:hover,
-  .button:focus {
-    background-color: #9a9a9a; }
-  input[type=button].stretched, input[type=submit].stretched,
-  input[type=file].stretched, input[type=reset].stretched,
-  button.stretched,
-  .button.stretched {
-    display: block;
-    max-width: 100%;
-    text-align: center;
-    width: 100%; }
 
 input[type=radio], input[type=checkbox],
 .radio, .checkbox {

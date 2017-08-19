@@ -1,0 +1,11 @@
+@import 'button_styles';
+@import 'modules/button';
+@import 'modules/link';
+
+@if $tags-enabled == true {
+  @include button_with_tags;
+  @include link_with_tags;
+} @else {
+  @include button_classes;
+  @include link_classes;
+}

@@ -3,7 +3,8 @@
 
 // 1. Global settings
 // 2. Grid
-// 3. Forms
+// 3. Buttons
+// 4. Forms
 
 // -------------------------- * -------------------------- //
 
@@ -62,7 +63,54 @@ $column-gutter: $default-space / 2;
 $grid-gutter: $default-space;
 
 //
-// 3. Forms
+// 3. Buttons
+//
+
+$link-color: blue;
+$link-decoration: none;
+$link-decoration-hover: underline;
+$link-font: inherit;
+$link-font-size: inherit;
+$link-hover: lighten($link-color, 20%);
+$link-active: $link-hover;
+
+$button-padding: 10px 16px;
+$button-border-radius: 4px;
+$button-font-size: 16px;
+$button-font: inherit;
+$button-color: white;
+$button-background: gray;
+$button-background-hover: darken($button-background, 5%);
+$button-background-active: $button-background-hover;
+$button-border: none;
+$button-box-shadow: none;
+$button-decoration: none;
+$button-decoration-hover: none;
+$button-margin: 0 0 16px 0;
+$button-color-hover: $button-color;
+$button-color-active: $button-color;
+
+$button-sizes: (
+  small: (
+    padding: 8px 14px,
+    font-size: 14px
+  ),
+  medium: (
+    padding: 12px 18px,
+    font-size: 16px
+  ),
+  large: (
+    padding: 16px 22px,
+    font-size: 20px
+  ),
+  huge: (
+    padding: 20px 30px,
+    font-size: 24px
+  )
+);
+
+//
+// 4. Forms
 //
 
 $form-margin: 0;
@@ -86,19 +134,6 @@ $input-background: white;
 // textarea resize
 
 $input-resize: vertical;
-
-// input button: type="button" or <button>
-
-$input-button-padding: $input-padding; // keeps inline elements the same height
-$input-button-border-radius: $input-border-radius;
-$input-button-font-size: $input-font-size;
-$input-button-font-family: $form-font-family;
-$input-button-background: gray;
-$input-button-border: none;
-$input-button-box-shadow: none;
-$input-button-color: white;
-$input-button-hover: lighten(gray, 10%);
-$input-button-focus: lighten(gray, 10%);
 
 // radio and checkbox
 
