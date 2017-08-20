@@ -390,7 +390,8 @@ template {
   display: none; }
 
 html, body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 16px; }
 
 .grid::before,
 .grid::after,
@@ -1121,11 +1122,11 @@ button, .button {
   input[type=button].wide, input[type=submit].wide,
   input[type=file].wide, input[type=reset].wide,
   button.wide, .button.wide {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex: 1 0 100%;
-    max-width: 100%; }
+    display: block;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%; }
 
 a,
 .link {
@@ -1244,29 +1245,45 @@ fieldset,
     font-size: 16px;
     padding: 8px; }
 
-input[type=text]:disabled, input[type=password]:disabled,
-input[type=email]:disabled, input[type=date]:disabled,
-input[type=datetime-local]:disabled, input[type=month]:disabled,
-input[type=number]:disabled, input[type=tel]:disabled,
-input[type=search]:disabled, input[type=time]:disabled,
-input[type=url]:disabled, input[type=week]:disabled,
-input[type=submit]:disabled, input[type=file]:disabled, input[type=reset]:disabled,
-textarea:disabled, button:disabled,
-.text-field:disabled, .text-area:disabled, .button:disabled {
+input[type=text]:disabled, input[type=text].disabled, input[type=password]:disabled, input[type=password].disabled,
+input[type=email]:disabled,
+input[type=email].disabled, input[type=date]:disabled, input[type=date].disabled,
+input[type=datetime-local]:disabled,
+input[type=datetime-local].disabled, input[type=month]:disabled, input[type=month].disabled,
+input[type=number]:disabled,
+input[type=number].disabled, input[type=tel]:disabled, input[type=tel].disabled,
+input[type=search]:disabled,
+input[type=search].disabled, input[type=time]:disabled, input[type=time].disabled,
+input[type=url]:disabled,
+input[type=url].disabled, input[type=week]:disabled, input[type=week].disabled,
+input[type=submit]:disabled,
+input[type=submit].disabled, input[type=file]:disabled, input[type=file].disabled, input[type=reset]:disabled, input[type=reset].disabled,
+textarea:disabled,
+textarea.disabled, button:disabled, button.disabled,
+.text-field:disabled,
+.text-field.disabled, .text-area:disabled, .text-area.disabled, .button:disabled, .button.disabled {
   background: lightgray;
   border: none;
   color: gray;
   cursor: not-allowed;
   resize: none; }
-  input[type=text]:disabled:hover, input[type=password]:disabled:hover,
-  input[type=email]:disabled:hover, input[type=date]:disabled:hover,
-  input[type=datetime-local]:disabled:hover, input[type=month]:disabled:hover,
-  input[type=number]:disabled:hover, input[type=tel]:disabled:hover,
-  input[type=search]:disabled:hover, input[type=time]:disabled:hover,
-  input[type=url]:disabled:hover, input[type=week]:disabled:hover,
-  input[type=submit]:disabled:hover, input[type=file]:disabled:hover, input[type=reset]:disabled:hover,
-  textarea:disabled:hover, button:disabled:hover,
-  .text-field:disabled:hover, .text-area:disabled:hover, .button:disabled:hover {
+  input[type=text]:disabled:hover, input[type=text].disabled:hover, input[type=password]:disabled:hover, input[type=password].disabled:hover,
+  input[type=email]:disabled:hover,
+  input[type=email].disabled:hover, input[type=date]:disabled:hover, input[type=date].disabled:hover,
+  input[type=datetime-local]:disabled:hover,
+  input[type=datetime-local].disabled:hover, input[type=month]:disabled:hover, input[type=month].disabled:hover,
+  input[type=number]:disabled:hover,
+  input[type=number].disabled:hover, input[type=tel]:disabled:hover, input[type=tel].disabled:hover,
+  input[type=search]:disabled:hover,
+  input[type=search].disabled:hover, input[type=time]:disabled:hover, input[type=time].disabled:hover,
+  input[type=url]:disabled:hover,
+  input[type=url].disabled:hover, input[type=week]:disabled:hover, input[type=week].disabled:hover,
+  input[type=submit]:disabled:hover,
+  input[type=submit].disabled:hover, input[type=file]:disabled:hover, input[type=file].disabled:hover, input[type=reset]:disabled:hover, input[type=reset].disabled:hover,
+  textarea:disabled:hover,
+  textarea.disabled:hover, button:disabled:hover, button.disabled:hover,
+  .text-field:disabled:hover,
+  .text-field.disabled:hover, .text-area:disabled:hover, .text-area.disabled:hover, .button:disabled:hover, .button.disabled:hover {
     background: lightgray;
     border: none;
     color: gray; }
