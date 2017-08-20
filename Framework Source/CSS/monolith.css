@@ -672,7 +672,9 @@
   padding-left: 0;
   padding-right: 0; }
 
-.button {
+input[type=button], input[type=submit],
+input[type=file], input[type=reset],
+button, .button {
   padding: 10px 16px;
   font-size: 16px;
   font-family: inherit;
@@ -684,43 +686,72 @@
   margin: 0 0 16px 0;
   box-shadow: none;
   display: inline-flex; }
-  .button:hover, .button:focus, .button:visited {
+  input[type=button]:visited, input[type=submit]:visited,
+  input[type=file]:visited, input[type=reset]:visited,
+  button:visited, .button:visited {
+    background-color: gray;
+    color: white; }
+  input[type=button]:hover, input[type=button]:focus, input[type=submit]:hover, input[type=submit]:focus,
+  input[type=file]:hover,
+  input[type=file]:focus, input[type=reset]:hover, input[type=reset]:focus,
+  button:hover,
+  button:focus, .button:hover, .button:focus {
     background: #737373;
     color: white;
     text-decoration: none; }
-  .button:active {
+  input[type=button]:active, input[type=submit]:active,
+  input[type=file]:active, input[type=reset]:active,
+  button:active, .button:active {
     background: #737373;
     color: white; }
-  .button.small {
+  input[type=button].small, input[type=submit].small,
+  input[type=file].small, input[type=reset].small,
+  button.small, .button.small {
     padding: 8px 14px;
     font-size: 14px; }
-  .button.medium {
+  input[type=button].medium, input[type=submit].medium,
+  input[type=file].medium, input[type=reset].medium,
+  button.medium, .button.medium {
     padding: 12px 18px;
     font-size: 16px; }
-  .button.large {
+  input[type=button].large, input[type=submit].large,
+  input[type=file].large, input[type=reset].large,
+  button.large, .button.large {
     padding: 16px 22px;
     font-size: 20px; }
-  .button.huge {
+  input[type=button].huge, input[type=submit].huge,
+  input[type=file].huge, input[type=reset].huge,
+  button.huge, .button.huge {
     padding: 20px 30px;
     font-size: 24px; }
-  .button.wide {
+  input[type=button].wide, input[type=submit].wide,
+  input[type=file].wide, input[type=reset].wide,
+  button.wide, .button.wide {
     display: flex;
     justify-content: center;
     text-align: center;
     flex: 1 0 100%;
     max-width: 100%; }
 
+a,
 .link {
   font-family: inherit;
   font-size: 16px;
   color: blue;
   text-decoration: none; }
-  .link:hover, .link:focus, .link:visited {
+  a:visited,
+  .link:visited {
+    color: blue; }
+  a:hover, a:focus,
+  .link:hover,
+  .link:focus {
     color: #6666ff;
     text-decoration: underline; }
+  a:active,
   .link:active {
     color: #6666ff; }
 
+form,
 .form {
   background: transparent;
   border: none;
@@ -728,11 +759,20 @@
   margin: 0;
   padding: 0; }
 
+label,
 .label {
   display: flex;
   flex-direction: column;
   font-family: inherit; }
 
+input[type=text],
+input[type=password], input[type=email],
+input[type=date], input[type=datetime-local],
+input[type=month], input[type=number],
+input[type=tel], input[type=search],
+input[type=time], input[type=url],
+input[type=week],
+textarea,
 .text-field, .text-area {
   background: white;
   border-radius: 4px;
@@ -744,9 +784,11 @@
   margin: 8px 0 16px 0;
   padding: 12px; }
 
+textarea, input[type=text],
 .text-area {
   resize: vertical; }
 
+input[type=radio], input[type=checkbox],
 .radio, .checkbox {
   cursor: pointer;
   font-family: inherit;
@@ -757,9 +799,13 @@
 .radio-column, .checkbox-column {
   margin-top: 8px;
   display: flex; }
-  .radio-row .radio-label, .radio-row .checkbox-label, .checkbox-row .radio-label, .checkbox-row .checkbox-label,
+  .radio-row label,
+  .radio-row .radio-label, .radio-row .checkbox-label, .checkbox-row label,
+  .checkbox-row .radio-label, .checkbox-row .checkbox-label,
+  .radio-column label,
   .radio-column .radio-label,
-  .radio-column .checkbox-label, .checkbox-column .radio-label, .checkbox-column .checkbox-label {
+  .radio-column .checkbox-label, .checkbox-column label,
+  .checkbox-column .radio-label, .checkbox-column .checkbox-label {
     align-items: center;
     flex-direction: row;
     margin-right: 12px; }
@@ -770,14 +816,19 @@
 .radio-row, .checkbox-row {
   flex-direction: row; }
 
+.radio-row input[type=radio],
 .radio-row .radio,
+.checkbox-row input[type=checkbox],
 .checkbox-row .checkbox {
   margin-right: 12px; }
 
+.radio-column label,
 .radio-column .radio-label,
+.checkbox-column label,
 .checkbox-column .checkbox-label {
   margin-bottom: 16px; }
 
+fieldset,
 .fieldset {
   background: transparent;
   border-radius: 4px;
@@ -786,6 +837,9 @@
   display: flex;
   margin: 0;
   padding: 32px; }
+  fieldset legend,
+  fieldset .legend,
+  .fieldset legend,
   .fieldset .legend {
     background: black;
     border-radius: 4px;
@@ -796,12 +850,28 @@
     font-size: 16px;
     padding: 8px; }
 
+input[type=text]:disabled, input[type=password]:disabled,
+input[type=email]:disabled, input[type=date]:disabled,
+input[type=datetime-local]:disabled, input[type=month]:disabled,
+input[type=number]:disabled, input[type=tel]:disabled,
+input[type=search]:disabled, input[type=time]:disabled,
+input[type=url]:disabled, input[type=week]:disabled,
+input[type=submit]:disabled, input[type=file]:disabled, input[type=reset]:disabled,
+textarea:disabled, button:disabled,
 .text-field:disabled, .text-area:disabled, .button:disabled {
   background: lightgray;
   border: none;
   color: gray;
   cursor: not-allowed;
   resize: none; }
+  input[type=text]:disabled:hover, input[type=password]:disabled:hover,
+  input[type=email]:disabled:hover, input[type=date]:disabled:hover,
+  input[type=datetime-local]:disabled:hover, input[type=month]:disabled:hover,
+  input[type=number]:disabled:hover, input[type=tel]:disabled:hover,
+  input[type=search]:disabled:hover, input[type=time]:disabled:hover,
+  input[type=url]:disabled:hover, input[type=week]:disabled:hover,
+  input[type=submit]:disabled:hover, input[type=file]:disabled:hover, input[type=reset]:disabled:hover,
+  textarea:disabled:hover, button:disabled:hover,
   .text-field:disabled:hover, .text-area:disabled:hover, .button:disabled:hover {
     background: lightgray;
     border: none;
