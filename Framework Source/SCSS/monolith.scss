@@ -6,6 +6,10 @@
 
 @import 'helpers/helpers';
 
+// Vendor – for Normalize.css
+
+@import 'vendor/normalize';
+
 // Components – Choose what to use in Monolith.
 
 @import 'components/global/global';
