@@ -1048,18 +1048,18 @@ html, body {
 .grid.large-section {
   padding-top: 144px;
   padding-bottom: 144px; }
-.grid .fullscreen {
+.grid.fullscreen {
   box-sizing: border-box;
   height: 100vh;
   max-width: unset;
   width: 100vw; }
-  .grid .fullscreen .row {
+  .grid.fullscreen .row {
     flex: 1 1 auto; }
-  .grid .fullscreen .row.align-bottom {
+  .grid.fullscreen .row.align-bottom {
     align-content: flex-end; }
-  .grid .fullscreen .row.align-middle {
+  .grid.fullscreen .row.align-middle {
     align-content: center; }
-  .grid .fullscreen .row.align-top {
+  .grid.fullscreen .row.align-top {
     align-content: flex-start; }
 
 .row.collapsed .columns, .row.collapsed .column {

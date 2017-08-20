@@ -31,7 +31,7 @@
 
   // 3. Grid fullscreen and align classes
 
-  .#{$scope}fullscreen {
+  &.#{$scope}fullscreen {
     box-sizing: border-box;
     height: 100vh;
     max-width: unset;
