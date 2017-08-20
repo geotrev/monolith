@@ -8,7 +8,7 @@ noun – mono·lith – \ˈmä-nə-ˌlith\
 
 See the [codepen example](https://codepen.io/geotrev/pen/PWEYaB) to see it in action.
 
-## Features & Options
+## Grid
 
 • Specify names for container, row and column elements
 
@@ -27,3 +27,9 @@ See the [codepen example](https://codepen.io/geotrev/pen/PWEYaB) to see it in ac
 • Five default breakpoints to choose from: `xsmall`, `small`, `medium`, `large`, `xlarge`
 
 • Breakpoint `@mixin`s for `up`, `down`, and `only`
+
+## Forms
+
+• Create customizable forms with `form`, `label`, `input`, and `fieldset`.
+
+• Use buttons in the form of `input`, `button`, or `a`.
