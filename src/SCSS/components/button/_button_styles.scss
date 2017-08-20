@@ -9,7 +9,8 @@
   text-decoration: $button-decoration;
   margin: $button-margin;
   box-shadow: $button-box-shadow;
-  display: inline-flex;
+  display: inline-block;
+  text-align: center;
 
   &:visited {
     background-color: $button-background;

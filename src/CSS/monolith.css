@@ -1080,7 +1080,8 @@ button, .button {
   text-decoration: none;
   margin: 0 0 16px 0;
   box-shadow: none;
-  display: inline-flex; }
+  display: inline-block;
+  text-align: center; }
   input[type=button]:visited, input[type=submit]:visited,
   input[type=file]:visited, input[type=reset]:visited,
   button:visited, .button:visited {
