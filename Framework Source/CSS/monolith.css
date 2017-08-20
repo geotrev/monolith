@@ -675,7 +675,7 @@
 .button {
   padding: 10px 16px;
   font-size: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: inherit;
   background-color: gray;
   color: white;
   border: none;
@@ -711,7 +711,7 @@
     max-width: 100%; }
 
 .link {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: inherit;
   font-size: 16px;
   color: blue;
   text-decoration: none; }
@@ -731,7 +731,7 @@
 .label {
   display: flex;
   flex-direction: column;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
+  font-family: inherit; }
 
 .text-field, .text-area {
   background: white;
@@ -739,7 +739,7 @@
   border: 1px solid darkgray;
   box-shadow: none;
   display: flex;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: inherit;
   font-size: 16px;
   margin: 8px 0 16px 0;
   padding: 12px; }
@@ -749,7 +749,7 @@
 
 .radio, .checkbox {
   cursor: pointer;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: inherit;
   margin: 0 12px 0 0;
   padding: 0; }
 
@@ -792,7 +792,7 @@
     border: none;
     box-shadow: none;
     color: white;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-family: inherit;
     font-size: 16px;
     padding: 8px; }
 

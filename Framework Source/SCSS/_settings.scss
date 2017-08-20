@@ -12,9 +12,9 @@
 // 1. Global Settings
 //
 
-$default-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-$default-font-size: 16px;
-$default-space: 16px;
+$global-font: inherit;
+$global-font-size: 16px;
+$global-space: 16px;
 
 $classes-only: true;
 
@@ -57,9 +57,9 @@ $columns: 12 !default;
 $grid-width: 992px !default;
 $order-threshold: 20 !default;
 
-$column-padding-bottom: $default-space;
-$column-gutter: $default-space / 2;
-$grid-gutter: $default-space;
+$column-padding-bottom: $global-space;
+$column-gutter: $global-space / 2;
+$grid-gutter: $global-space;
 
 //
 // 3. Buttons
@@ -68,15 +68,15 @@ $grid-gutter: $default-space;
 $link-color: blue;
 $link-decoration: none;
 $link-decoration-hover: underline;
-$link-font: $default-font;
-$link-font-size: $default-font-size;
+$link-font: $global-font;
+$link-font-size: $global-font-size;
 $link-hover: lighten($link-color, 20%);
 $link-active: $link-hover;
 
-$button-padding: 10px $default-space;
+$button-padding: 10px $global-space;
 $button-border-radius: 4px;
-$button-font-size: $default-font-size;
-$button-font: $default-font;
+$button-font-size: $global-font-size;
+$button-font: $global-font;
 $button-background: gray;
 $button-background-hover: darken($button-background, 5%);
 $button-background-active: $button-background-hover;
@@ -84,7 +84,7 @@ $button-border: none;
 $button-box-shadow: none;
 $button-decoration: none;
 $button-decoration-hover: none;
-$button-margin: 0 0 $default-space 0;
+$button-margin: 0 0 $global-space 0;
 $button-color: white;
 $button-color-hover: $button-color;
 $button-color-active: $button-color;
@@ -117,16 +117,16 @@ $form-padding: 0;
 $form-background: transparent;
 $form-box-shadow: none;
 $form-border: none;
-$form-font: $default-font;
+$form-font: $global-font;
 
 // inputs
 
-$input-font-size: $default-font-size;
+$input-font-size: $global-font-size;
 $input-font-family: $form-font;
 $input-box-shadow: none;
 $input-border: 1px solid darkgray;
 $input-padding: 12px;
-$input-margin: 8px 0 $default-space 0;
+$input-margin: 8px 0 $global-space 0;
 $input-border-radius: 4px;
 $input-background: white;
 
@@ -136,11 +136,11 @@ $input-resize: vertical;
 
 // radio and checkbox
 
-$input-option-row-padding-bottom: $default-space;
+$input-option-row-padding-bottom: $global-space;
 $input-option-padding: 0;
 $input-option-margin: 0 12px 0 0;
 $input-option-label-margin-right: 12px;
-$input-option-label-margin-bottom: $default-space;
+$input-option-label-margin-bottom: $global-space;
 $input-option-margin-top: 8px;
 
 // disabled
@@ -157,13 +157,13 @@ $fieldset-border-radius: 4px;
 $fieldset-box-shadow: none;
 $fieldset-background: transparent;
 $fieldset-margin: 0;
-$fieldset-padding: $default-space * 2;
+$fieldset-padding: $global-space * 2;
 
 // fieldset legend
 
 $fieldset-legend-font-family: $form-font;
-$fieldset-legend-font-size: $default-font-size;
-$fieldset-legend-padding: $default-space / 2;
+$fieldset-legend-font-size: $global-font-size;
+$fieldset-legend-padding: $global-space / 2;
 $fieldset-legend-color: white;
 $fieldset-legend-background: black;
 $fieldset-legend-box-shadow: none;
