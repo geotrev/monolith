@@ -3,7 +3,8 @@
 
 // 1. Global settings
 // 2. Grid
-// 3. Forms
+// 3. Buttons
+// 4. Forms
 
 // -------------------------- * -------------------------- //
 
@@ -11,12 +12,11 @@
 // 1. Global Settings
 //
 
-$default-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-$default-space: 16px;
-$default-font-size: 16px;
+$global-font: inherit;
+$global-font-size: 16px;
+$global-space: 16px;
 
-// Set to "false" to isolate Monolith to classes only.
-$tags-enabled: true;
+$classes-only: true;
 
 //
 // 2. Grid
@@ -57,12 +57,59 @@ $columns: 12 !default;
 $grid-width: 992px !default;
 $order-threshold: 20 !default;
 
-$column-padding-bottom: $default-space;
-$column-gutter: $default-space / 2;
-$grid-gutter: $default-space;
+$column-padding-bottom: $global-space;
+$column-gutter: $global-space / 2;
+$grid-gutter: $global-space;
 
 //
-// 3. Forms
+// 3. Buttons
+//
+
+$link-color: blue;
+$link-decoration: none;
+$link-decoration-hover: underline;
+$link-font: $global-font;
+$link-font-size: $global-font-size;
+$link-hover: lighten($link-color, 20%);
+$link-active: $link-hover;
+
+$button-padding: 10px $global-space;
+$button-border-radius: 4px;
+$button-font-size: $global-font-size;
+$button-font: $global-font;
+$button-background: gray;
+$button-background-hover: darken($button-background, 5%);
+$button-background-active: $button-background-hover;
+$button-border: none;
+$button-box-shadow: none;
+$button-decoration: none;
+$button-decoration-hover: none;
+$button-margin: 0 0 $global-space 0;
+$button-color: white;
+$button-color-hover: $button-color;
+$button-color-active: $button-color;
+
+$button-sizes: (
+  small: (
+    padding: 8px 14px,
+    font-size: 14px
+  ),
+  medium: (
+    padding: 12px 18px,
+    font-size: 16px
+  ),
+  large: (
+    padding: 16px 22px,
+    font-size: 20px
+  ),
+  huge: (
+    padding: 20px 30px,
+    font-size: 24px
+  )
+);
+
+//
+// 4. Forms
 //
 
 $form-margin: 0;
@@ -70,16 +117,16 @@ $form-padding: 0;
 $form-background: transparent;
 $form-box-shadow: none;
 $form-border: none;
-$form-font-family: $default-font;
+$form-font: $global-font;
 
 // inputs
 
-$input-font-size: $default-font-size;
-$input-font-family: $form-font-family;
+$input-font-size: $global-font-size;
+$input-font-family: $form-font;
 $input-box-shadow: none;
 $input-border: 1px solid darkgray;
 $input-padding: 12px;
-$input-margin: 8px 0 $default-space 0;
+$input-margin: 8px 0 $global-space 0;
 $input-border-radius: 4px;
 $input-background: white;
 
@@ -87,26 +134,13 @@ $input-background: white;
 
 $input-resize: vertical;
 
-// input button: type="button" or <button>
-
-$input-button-padding: $input-padding; // keeps inline elements the same height
-$input-button-border-radius: $input-border-radius;
-$input-button-font-size: $input-font-size;
-$input-button-font-family: $form-font-family;
-$input-button-background: gray;
-$input-button-border: none;
-$input-button-box-shadow: none;
-$input-button-color: white;
-$input-button-hover: lighten(gray, 10%);
-$input-button-focus: lighten(gray, 10%);
-
 // radio and checkbox
 
-$input-option-row-padding-bottom: $default-space;
+$input-option-row-padding-bottom: $global-space;
 $input-option-padding: 0;
 $input-option-margin: 0 12px 0 0;
 $input-option-label-margin-right: 12px;
-$input-option-label-margin-bottom: $default-space;
+$input-option-label-margin-bottom: $global-space;
 $input-option-margin-top: 8px;
 
 // disabled
@@ -123,13 +157,13 @@ $fieldset-border-radius: 4px;
 $fieldset-box-shadow: none;
 $fieldset-background: transparent;
 $fieldset-margin: 0;
-$fieldset-padding: $default-space * 2;
+$fieldset-padding: $global-space * 2;
 
 // fieldset legend
 
-$fieldset-legend-font-family: $form-font-family;
-$fieldset-legend-font-size: $default-font-size;
-$fieldset-legend-padding: $default-space / 2;
+$fieldset-legend-font-family: $form-font;
+$fieldset-legend-font-size: $global-font-size;
+$fieldset-legend-padding: $global-space / 2;
 $fieldset-legend-color: white;
 $fieldset-legend-background: black;
 $fieldset-legend-box-shadow: none;

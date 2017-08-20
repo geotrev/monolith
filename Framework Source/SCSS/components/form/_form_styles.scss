@@ -12,7 +12,7 @@
 @mixin form_label {
   display: flex;
   flex-direction: column;
-  font-family: $form-font-family;
+  font-family: $form-font;
 }
 
 // <input> and <textarea>
@@ -33,33 +33,10 @@
   resize: $input-resize;
 }
 
-// input[type=submit/reset/file/button] and <button>
-@mixin form_button {
-  background: $input-button-background;
-  border-radius: $input-button-border-radius;
-  border: $input-button-border;
-  box-shadow: $input-button-box-shadow;
-  color: $input-button-color;
-  cursor: pointer;
-  display: flex;
-  font-family: $input-button-font-family;
-  font-size: $input-button-font-size;
-  padding: $input-button-padding;
-
-  &:hover, &:focus { background-color: $input-button-focus; }
-
-  &.stretched {
-    display: block;
-    max-width: 100%;
-    text-align: center;
-    width: 100%;
-  }
-}
-
 // type=radio and type=checkbox
 @mixin form_option {
   cursor: pointer;
-  font-family: $form-font-family;
+  font-family: $form-font;
   margin: $input-option-margin;
   padding: $input-option-padding;
 }

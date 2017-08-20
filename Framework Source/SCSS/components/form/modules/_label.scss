@@ -1,7 +1,7 @@
 // classes only
 
 @mixin form_label_classes {
-  .label {
+  .#{$scope}label {
     @include form_label;
   }
 }
@@ -10,7 +10,7 @@
 
 @mixin form_label_with_tags {
   label,
-  .label {
+  .#{$scope}label {
     @include form_label;
   }
 }

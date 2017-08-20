@@ -1,11 +1,11 @@
 // classes only
 
 @mixin form_field_classes {
-  .text-field, .text-area {
+  .#{$scope}text-field, .#{$scope}text-area {
     @include form_field;
   }
 
-  .text-area {
+  .#{$scope}text-area {
     @include form_textarea_resize;
   }
 }
@@ -21,12 +21,12 @@
   input[type=time], input[type=url],
   input[type=week],
   textarea,
-  .text-field, .text-area {
+  .#{$scope}text-field, .#{$scope}text-area {
     @include form_field;
   }
 
   textarea, input[type=text],
-  .text-area {
+  .#{$scope}text-area {
     @include form_textarea_resize;
   }
 }

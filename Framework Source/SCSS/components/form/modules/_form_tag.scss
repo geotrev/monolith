@@ -1,7 +1,7 @@
 // classes only
 
 @mixin form_tag_classes {
-  .form {
+  .#{$scope}form {
     @include form;
   }
 }
@@ -10,7 +10,7 @@
 
 @mixin form_tag_with_tags {
   form,
-  .form {
+  .#{$scope}form {
     @include form;
   }
 }

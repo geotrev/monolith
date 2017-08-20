@@ -672,7 +672,55 @@
   padding-left: 0;
   padding-right: 0; }
 
-form,
+.button {
+  padding: 10px 16px;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: gray;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 0 0 16px 0;
+  box-shadow: none;
+  display: inline-flex; }
+  .button:hover, .button:focus, .button:visited {
+    background: #737373;
+    color: white;
+    text-decoration: none; }
+  .button:active {
+    background: #737373;
+    color: white; }
+  .button.small {
+    padding: 8px 14px;
+    font-size: 14px; }
+  .button.medium {
+    padding: 12px 18px;
+    font-size: 16px; }
+  .button.large {
+    padding: 16px 22px;
+    font-size: 20px; }
+  .button.huge {
+    padding: 20px 30px;
+    font-size: 24px; }
+  .button.wide {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex: 1 0 100%;
+    max-width: 100%; }
+
+.link {
+  font-family: inherit;
+  font-size: 16px;
+  color: blue;
+  text-decoration: none; }
+  .link:hover, .link:focus, .link:visited {
+    color: #6666ff;
+    text-decoration: underline; }
+  .link:active {
+    color: #6666ff; }
+
 .form {
   background: transparent;
   border: none;
@@ -680,70 +728,28 @@ form,
   margin: 0;
   padding: 0; }
 
-label,
 .label {
   display: flex;
   flex-direction: column;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
+  font-family: inherit; }
 
-input[type=text],
-input[type=password], input[type=email],
-input[type=date], input[type=datetime-local],
-input[type=month], input[type=number],
-input[type=tel], input[type=search],
-input[type=time], input[type=url],
-input[type=week],
-textarea,
 .text-field, .text-area {
   background: white;
   border-radius: 4px;
   border: 1px solid darkgray;
   box-shadow: none;
   display: flex;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: inherit;
   font-size: 16px;
   margin: 8px 0 16px 0;
   padding: 12px; }
 
-textarea, input[type=text],
 .text-area {
   resize: vertical; }
 
-input[type=button], input[type=submit],
-input[type=file], input[type=reset],
-button,
-.button {
-  background: gray;
-  border-radius: 4px;
-  border: none;
-  box-shadow: none;
-  color: white;
-  cursor: pointer;
-  display: flex;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-size: 16px;
-  padding: 12px; }
-  input[type=button]:hover, input[type=button]:focus, input[type=submit]:hover, input[type=submit]:focus,
-  input[type=file]:hover,
-  input[type=file]:focus, input[type=reset]:hover, input[type=reset]:focus,
-  button:hover,
-  button:focus,
-  .button:hover,
-  .button:focus {
-    background-color: #9a9a9a; }
-  input[type=button].stretched, input[type=submit].stretched,
-  input[type=file].stretched, input[type=reset].stretched,
-  button.stretched,
-  .button.stretched {
-    display: block;
-    max-width: 100%;
-    text-align: center;
-    width: 100%; }
-
-input[type=radio], input[type=checkbox],
 .radio, .checkbox {
   cursor: pointer;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: inherit;
   margin: 0 12px 0 0;
   padding: 0; }
 
@@ -751,13 +757,9 @@ input[type=radio], input[type=checkbox],
 .radio-column, .checkbox-column {
   margin-top: 8px;
   display: flex; }
-  .radio-row label,
-  .radio-row .radio-label, .radio-row .checkbox-label, .checkbox-row label,
-  .checkbox-row .radio-label, .checkbox-row .checkbox-label,
-  .radio-column label,
+  .radio-row .radio-label, .radio-row .checkbox-label, .checkbox-row .radio-label, .checkbox-row .checkbox-label,
   .radio-column .radio-label,
-  .radio-column .checkbox-label, .checkbox-column label,
-  .checkbox-column .radio-label, .checkbox-column .checkbox-label {
+  .radio-column .checkbox-label, .checkbox-column .radio-label, .checkbox-column .checkbox-label {
     align-items: center;
     flex-direction: row;
     margin-right: 12px; }
@@ -768,19 +770,14 @@ input[type=radio], input[type=checkbox],
 .radio-row, .checkbox-row {
   flex-direction: row; }
 
-.radio-row input[type=radio],
 .radio-row .radio,
-.checkbox-row input[type=checkbox],
 .checkbox-row .checkbox {
   margin-right: 12px; }
 
-.radio-column label,
 .radio-column .radio-label,
-.checkbox-column label,
 .checkbox-column .checkbox-label {
   margin-bottom: 16px; }
 
-fieldset,
 .fieldset {
   background: transparent;
   border-radius: 4px;
@@ -789,42 +786,23 @@ fieldset,
   display: flex;
   margin: 0;
   padding: 32px; }
-  fieldset legend,
-  fieldset .legend,
-  .fieldset legend,
   .fieldset .legend {
     background: black;
     border-radius: 4px;
     border: none;
     box-shadow: none;
     color: white;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-family: inherit;
     font-size: 16px;
     padding: 8px; }
 
-input[type=text], input[type=password],
-input[type=email], input[type=date],
-input[type=datetime-local], input[type=month],
-input[type=number], input[type=tel],
-input[type=search], input[type=time],
-input[type=url], input[type=week],
-input[type=submit], input[type=file], input[type=reset],
-textarea, button,
-.text-field, .text-area, .button {
+.text-field:disabled, .text-area:disabled, .button:disabled {
   background: lightgray;
   border: none;
   color: gray;
   cursor: not-allowed;
   resize: none; }
-  input[type=text]:hover, input[type=password]:hover,
-  input[type=email]:hover, input[type=date]:hover,
-  input[type=datetime-local]:hover, input[type=month]:hover,
-  input[type=number]:hover, input[type=tel]:hover,
-  input[type=search]:hover, input[type=time]:hover,
-  input[type=url]:hover, input[type=week]:hover,
-  input[type=submit]:hover, input[type=file]:hover, input[type=reset]:hover,
-  textarea:hover, button:hover,
-  .text-field:hover, .text-area:hover, .button:hover {
+  .text-field:disabled:hover, .text-area:disabled:hover, .button:disabled:hover {
     background: lightgray;
     border: none;
     color: gray; }
