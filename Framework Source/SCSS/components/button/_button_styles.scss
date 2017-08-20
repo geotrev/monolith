@@ -39,11 +39,11 @@
   // Wide
 
   &.wide {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex: 1 0 100%;
+    display: block;
     max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
   }
 }
 
