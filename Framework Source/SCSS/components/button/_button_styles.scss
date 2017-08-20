@@ -11,7 +11,12 @@
   box-shadow: $button-box-shadow;
   display: inline-flex;
 
-  &:hover, &:focus, &:visited {
+  &:visited {
+    background-color: $button-background;
+    color: $button-color;
+  }
+
+  &:hover, &:focus {
     background: $button-background-hover;
     color: $button-color-hover;
     text-decoration: $button-decoration-hover;
