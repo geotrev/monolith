@@ -1,10 +1,10 @@
 // classes only
 
 @mixin form_fieldset_classes {
-  .fieldset {
+  .#{$scope}fieldset {
     @include form_fieldset;
 
-    .legend {
+    .#{$scope}legend {
       @include form_legend;
     }
   }
@@ -14,11 +14,11 @@
 
 @mixin form_fieldset_with_tags {
   fieldset,
-  .fieldset {
+  .#{$scope}fieldset {
     @include form_fieldset;
 
     legend,
-    .legend {
+    .#{$scope}legend {
       @include form_legend;
     }
   }

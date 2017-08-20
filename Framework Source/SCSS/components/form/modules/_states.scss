@@ -1,7 +1,7 @@
 // classes only
 
 @mixin form_disabled_classes {
-  .text-field, .text-area, .button {
+  .#{$scope}text-field, .#{$scope}text-area, .#{$scope}button {
     &:disabled {
       @include form_disabled_state;
     }
@@ -19,7 +19,7 @@
   input[type=url], input[type=week],
   input[type=submit], input[type=file], input[type=reset],
   textarea, button,
-  .text-field, .text-area, .button {
+  .#{$scope}text-field, .#{$scope}text-area, .#{$scope}button {
     &:disabled {
       @include form_disabled_state;
     }

@@ -1,13 +1,13 @@
 @mixin button_with_tags {
   input[type=button], input[type=submit],
   input[type=file], input[type=reset],
-  button, .button {
+  button, .#{$scope}button {
     @include button;
   }
 }
 
 @mixin button_classes {
-  .button {
+  .#{$scope}button {
     @include button;
   }
 }

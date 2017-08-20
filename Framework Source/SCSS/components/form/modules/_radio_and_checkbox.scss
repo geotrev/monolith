@@ -1,33 +1,33 @@
 // classes only
 
 @mixin form_radio_and_checkbox_classes {
-  .radio, .checkbox {
+  .#{$scope}radio, .#{$scope}checkbox {
     @include form_option;
   }
 
-  .radio-row, .checkbox-row,
-  .radio-column, .checkbox-column {
+  .#{$scope}radio-row, .#{$scope}checkbox-row,
+  .#{$scope}radio-column, .#{$scope}checkbox-column {
     @include form_option_layout;
 
-    .radio-label, .checkbox-label {
+    .#{$scope}radio-label, .#{$scope}checkbox-label {
       @include form_option_layout_label;
     }
   }
 
-  .radio-column, .checkbox-column {
+  .#{$scope}radio-column, .#{$scope}checkbox-column {
     @include form_option_column;
   }
-  .radio-row, .checkbox-row {
+  .#{$scope}radio-row, .#{$scope}checkbox-row {
     @include form_option_row;
   }
 
-  .radio-row .radio,
-  .checkbox-row .checkbox {
+  .#{$scope}radio-row .#{$scope}radio,
+  .#{$scope}checkbox-row .#{$scope}checkbox {
     @include form_option_row_margin;
   }
 
-  .radio-column .radio-label,
-  .checkbox-column .checkbox-label {
+  .#{$scope}radio-column .#{$scope}radio-label,
+  .#{$scope}checkbox-column .#{$scope}checkbox-label {
     @include form_option_column_margin;
   }
 }
@@ -36,38 +36,38 @@
 
 @mixin form_radio_and_checkbox_with_tags {
   input[type=radio], input[type=checkbox],
-  .radio, .checkbox {
+  .#{$scope}radio, .#{$scope}checkbox {
     @include form_option;
   }
 
-  .radio-row, .checkbox-row,
-  .radio-column, .checkbox-column {
+  .#{$scope}radio-row, .#{$scope}checkbox-row,
+  .#{$scope}radio-column, .#{$scope}checkbox-column {
     @include form_option_layout;
 
     label,
-    .radio-label, .checkbox-label {
+    .#{$scope}radio-label, .#{$scope}checkbox-label {
       @include form_option_layout_label;
     }
   }
 
-  .radio-column, .checkbox-column {
+  .#{$scope}radio-column, .#{$scope}checkbox-column {
     @include form_option_column;
   }
-  .radio-row, .checkbox-row {
+  .#{$scope}radio-row, .#{$scope}checkbox-row {
     @include form_option_row;
   }
 
-  .radio-row input[type=radio],
-  .radio-row .radio,
-  .checkbox-row input[type=checkbox],
-  .checkbox-row .checkbox {
+  .#{$scope}radio-row input[type=radio],
+  .#{$scope}radio-row .#{$scope}radio,
+  .#{$scope}checkbox-row input[type=checkbox],
+  .#{$scope}checkbox-row .#{$scope}checkbox {
     @include form_option_row_margin;
   }
 
-  .radio-column label,
-  .radio-column .radio-label,
-  .checkbox-column label,
-  .checkbox-column .checkbox-label {
+  .#{$scope}radio-column label,
+  .#{$scope}radio-column .#{$scope}radio-label,
+  .#{$scope}checkbox-column label,
+  .#{$scope}checkbox-column .#{$scope}checkbox-label {
     @include form_option_column_margin;
   }
 }

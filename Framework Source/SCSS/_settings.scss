@@ -13,11 +13,10 @@
 //
 
 $default-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-$default-space: 16px;
 $default-font-size: 16px;
+$default-space: 16px;
 
-// Set to "false" to isolate Monolith to classes only.
-$tags-enabled: true;
+$classes-only: true;
 
 //
 // 2. Grid
@@ -118,12 +117,12 @@ $form-padding: 0;
 $form-background: transparent;
 $form-box-shadow: none;
 $form-border: none;
-$form-font-family: $default-font;
+$form-font: $default-font;
 
 // inputs
 
 $input-font-size: $default-font-size;
-$input-font-family: $form-font-family;
+$input-font-family: $form-font;
 $input-box-shadow: none;
 $input-border: 1px solid darkgray;
 $input-padding: 12px;
@@ -162,7 +161,7 @@ $fieldset-padding: $default-space * 2;
 
 // fieldset legend
 
-$fieldset-legend-font-family: $form-font-family;
+$fieldset-legend-font-family: $form-font;
 $fieldset-legend-font-size: $default-font-size;
 $fieldset-legend-padding: $default-space / 2;
 $fieldset-legend-color: white;

@@ -2,10 +2,10 @@
 @import 'modules/button';
 @import 'modules/link';
 
-@if $tags-enabled == true {
-  @include button_with_tags;
-  @include link_with_tags;
-} @else {
+@if $classes-only == true {
   @include button_classes;
   @include link_classes;
+} @else {
+  @include button_with_tags;
+  @include link_with_tags;
 }

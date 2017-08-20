@@ -12,7 +12,7 @@
 @mixin form_label {
   display: flex;
   flex-direction: column;
-  font-family: $form-font-family;
+  font-family: $form-font;
 }
 
 // <input> and <textarea>
@@ -36,7 +36,7 @@
 // type=radio and type=checkbox
 @mixin form_option {
   cursor: pointer;
-  font-family: $form-font-family;
+  font-family: $form-font;
   margin: $input-option-margin;
   padding: $input-option-padding;
 }
