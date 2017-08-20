@@ -48,7 +48,11 @@
   color: $link-color;
   text-decoration: $link-decoration;
 
-  &:hover, &:focus, &:visited {
+  &:visited {
+    color: $link-color;
+  }
+
+  &:hover, &:focus {
     color: $link-hover;
     text-decoration: $link-decoration-hover;
   }
