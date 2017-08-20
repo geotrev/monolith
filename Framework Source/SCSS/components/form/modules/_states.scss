@@ -20,6 +20,8 @@
   input[type=submit], input[type=file], input[type=reset],
   textarea, button,
   .text-field, .text-area, .button {
-    @include form_disabled_state;
+    &:disabled {
+      @include form_disabled_state;
+    }
   }
 }
