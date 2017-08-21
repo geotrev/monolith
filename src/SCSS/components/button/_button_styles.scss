@@ -11,6 +11,7 @@
   box-shadow: $button-box-shadow;
   display: inline-block;
   text-align: center;
+  cursor: pointer;
 
   &:visited {
     background-color: $button-background;

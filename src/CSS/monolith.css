@@ -692,7 +692,8 @@ button, .button {
   margin: 0 0 16px 0;
   box-shadow: none;
   display: inline-block;
-  text-align: center; }
+  text-align: center;
+  cursor: pointer; }
   input[type=button]:visited, input[type=submit]:visited,
   input[type=file]:visited, input[type=reset]:visited,
   button:visited, .button:visited {
