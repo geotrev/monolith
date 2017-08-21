@@ -1,0 +1,12 @@
+.content {
+  padding: 16px 0;
+  width: 100%;
+  background: goldenrod;
+}
+
+.content.blue { background: blue; }
+.content.red { background: red; }
+.content.green { background: yellowgreen; }
+
+.gray { background: lightgray; }
+.gray .content { background: white; }
