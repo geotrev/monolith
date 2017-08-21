@@ -3,8 +3,9 @@
 
 // 1. Global settings
 // 2. Grid
-// 3. Buttons
-// 4. Forms
+// 3. Typography
+// 4. Buttons
+// 5. Forms
 
 // -------------------------- * -------------------------- //
 
@@ -12,17 +13,17 @@
 // 1. Global Settings
 //
 
+$scope: 'mono-' !default;
+
+$classes-only: false;
+
 $global-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 $global-font-size: 16px;
 $global-space: 16px;
 
-$classes-only: false;
-
 //
 // 2. Grid
 //
-
-$scope: '' !default;
 
 $grid-classes: (
   grid: 'grid',
@@ -43,11 +44,11 @@ $grid-sections: (
 ) !default;
 
 $breakpoints: (
-  $scope + xsmall: 0,
-  $scope + small: 576px,
-  $scope + medium: 768px,
-  $scope + large: 992px,
-  $scope + xlarge: 1200px
+  xsmall: 0,
+  small: 576px,
+  medium: 768px,
+  large: 992px,
+  xlarge: 1200px
 ) !default;
 
 $column-offset-classes: true;
@@ -60,6 +61,51 @@ $order-threshold: 20 !default;
 $column-padding-bottom: $global-space;
 $column-gutter: $global-space / 2;
 $grid-gutter: $global-space;
+
+//
+// Typography
+//
+
+$type-header-weight: bold;
+$type-header-style: normal;
+
+// sizes are multipled 1.5x at medium breakpoint.
+// sizes are multipled by 2x at large breakpoint.
+
+// headers
+$typography: (
+  headers: (
+    h1: (
+      font-size: 32px,
+      margin-bottom: 16px
+    ),
+    h2: (
+      font-size: 28px,
+      margin-bottom: 16px
+    ),
+    h3: (
+      font-size: 24px,
+      margin-bottom: 14px
+    ),
+    h4: (
+      font-size: 20px,
+      margin-bottom: 12px
+    ),
+    h5: (
+      font-size: 18px,
+      margin-bottom: 10px
+    ),
+    h6: (
+      font-size: 16px,
+      margin-bottom: 10px
+    )
+  ),
+  paragraph: (
+    font-size: 16px,
+    margin-bottom: 16px,
+    line-height: 1.5
+  )
+);
 
 //
 // 3. Buttons

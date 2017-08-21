@@ -1,0 +1,58 @@
+// Headers
+//
+// #{$size} == h1, h2, h3, etc...
+
+@each $name in map-get($typography, headers) {
+  $size: nth($name, 1);
+
+  #{$size},
+  .#{$size} {
+    font-size: map-deep-get($typography, headers, $size, font-size);
+    margin-bottom: map-deep-get($typography, headers, $size, margin-bottom);
+    font-family: $global-font;
+    font-weight: $type-header-weight;
+    font-style: $type-header-style;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+  }
+}
+
+@include breakpoint-up(medium) {
+  @each $name in map-get($typography, headers) {
+    $size: nth($name, 1);
+
+    #{$size},
+    .#{$size} {
+      font-size: map-deep-get($typography, headers, $size, font-size) * 1.5;
+      margin-bottom: map-deep-get($typography, headers, $size, margin-bottom) * 1.5;
+    }
+  }
+}
+
+@include breakpoint-up(large) {
+  @each $name in map-get($typography, headers) {
+    $size: nth($name, 1);
+
+    #{$size},
+    .#{$size} {
+      font-size: map-deep-get($typography, headers, $size, font-size) * 2;
+      margin-bottom: map-deep-get($typography, headers, $size, margin-bottom) * 2;
+    }
+  }
+}
+
+// Paragraph
+
+p,
+.paragraph {
+  font-size: map-deep-get($typography, paragraph, font-size);
+  margin-bottom: map-deep-get($typography, paragraph, margin-bottom);
+  line-height: map-deep-get($typography, paragraph, line-height);
+  font-family: $global-font;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
