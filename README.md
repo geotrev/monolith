@@ -14,22 +14,22 @@ See the [codepen example](https://codepen.io/geotrev/pen/PWEYaB) to see it in ac
 
 • Define gutters and spacing for containers and columns
 
-• Fluid & fixed-width containers at multiple sizes: `.narrow`, `.default`, `.large`
+• Fluid & fixed-width containers at multiple sizes: `narrow`, `default`, `large`
 
-• Use section classes for focused content: `.small-section`, `.medium-section`, `.large-section`
+• Use section classes for focused content: `small-section`, `medium-section`, `large-section`
 
-• Offset columns with breakpoint utility classes: e.g., `.small-offset-3`, `.large-offset-5`
+• Offset columns
 
-• Order columns with breakpoint utility classes: e.g., `.small-order-3`, `.large-order-5`
+• Order columns.
 
-• Collapse column padding with `.collapsed`
+• Collapse column padding inside a row by using `collapsed row`.
 
 • Five default breakpoints to choose from: `xsmall`, `small`, `medium`, `large`, `xlarge`
 
-• Breakpoint `@mixin`s for `up`, `down`, and `only`
+• Breakpoint mixins: `up`, `down`, `only`
 
 ## Forms
 
-• Create customizable forms with `form`, `label`, `input`, and `fieldset`.
+• Create highly customizable forms.
 
 • Use buttons in the form of `input`, `button`, or `a`.
