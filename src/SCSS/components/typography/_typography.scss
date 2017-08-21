@@ -51,6 +51,8 @@ p,
   margin-bottom: map-deep-get($typography, paragraph, margin-bottom);
   line-height: map-deep-get($typography, paragraph, line-height);
   font-family: $global-font;
+  font-weight: $type-paragraph-weight;
+  font-style: $type-paragraph-style;
   margin-top: 0;
   margin-left: 0;
   margin-right: 0;

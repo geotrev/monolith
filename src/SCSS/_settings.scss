@@ -13,7 +13,7 @@
 // 1. Global Settings
 //
 
-$scope: 'mono-' !default;
+$scope: '' !default;
 
 $classes-only: false;
 
@@ -68,6 +68,9 @@ $grid-gutter: $global-space;
 
 $type-header-weight: bold;
 $type-header-style: normal;
+
+$type-paragraph-weight: normal;
+$type-paragraph-style: normal;
 
 // sizes are multipled 1.5x at medium breakpoint.
 // sizes are multipled by 2x at large breakpoint.
