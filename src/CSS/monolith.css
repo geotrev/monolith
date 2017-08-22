@@ -46,21 +46,21 @@ html, body {
 
 @media screen and (min-width: 0) {
   .xsmall-1 {
-    flex: 0 0 8.33333%;
-    max-width: 8.33333%; }
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%; }
 
   .xsmall-offset-1 {
-    margin-left: 8.33333%; }
+    margin-left: 8.3333333333%; }
 
   .xsmall-order-1 {
     order: 1; }
 
   .xsmall-2 {
-    flex: 0 0 16.66667%;
-    max-width: 16.66667%; }
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%; }
 
   .xsmall-offset-2 {
-    margin-left: 16.66667%; }
+    margin-left: 16.6666666667%; }
 
   .xsmall-order-2 {
     order: 2; }
@@ -76,21 +76,21 @@ html, body {
     order: 3; }
 
   .xsmall-4 {
-    flex: 0 0 33.33333%;
-    max-width: 33.33333%; }
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%; }
 
   .xsmall-offset-4 {
-    margin-left: 33.33333%; }
+    margin-left: 33.3333333333%; }
 
   .xsmall-order-4 {
     order: 4; }
 
   .xsmall-5 {
-    flex: 0 0 41.66667%;
-    max-width: 41.66667%; }
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%; }
 
   .xsmall-offset-5 {
-    margin-left: 41.66667%; }
+    margin-left: 41.6666666667%; }
 
   .xsmall-order-5 {
     order: 5; }
@@ -106,21 +106,21 @@ html, body {
     order: 6; }
 
   .xsmall-7 {
-    flex: 0 0 58.33333%;
-    max-width: 58.33333%; }
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%; }
 
   .xsmall-offset-7 {
-    margin-left: 58.33333%; }
+    margin-left: 58.3333333333%; }
 
   .xsmall-order-7 {
     order: 7; }
 
   .xsmall-8 {
-    flex: 0 0 66.66667%;
-    max-width: 66.66667%; }
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%; }
 
   .xsmall-offset-8 {
-    margin-left: 66.66667%; }
+    margin-left: 66.6666666667%; }
 
   .xsmall-order-8 {
     order: 8; }
@@ -136,21 +136,21 @@ html, body {
     order: 9; }
 
   .xsmall-10 {
-    flex: 0 0 83.33333%;
-    max-width: 83.33333%; }
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%; }
 
   .xsmall-offset-10 {
-    margin-left: 83.33333%; }
+    margin-left: 83.3333333333%; }
 
   .xsmall-order-10 {
     order: 10; }
 
   .xsmall-11 {
-    flex: 0 0 91.66667%;
-    max-width: 91.66667%; }
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%; }
 
   .xsmall-offset-11 {
-    margin-left: 91.66667%; }
+    margin-left: 91.6666666667%; }
 
   .xsmall-order-11 {
     order: 11; }
@@ -166,21 +166,21 @@ html, body {
     order: 12; } }
 @media screen and (min-width: 576px) {
   .small-1 {
-    flex: 0 0 8.33333%;
-    max-width: 8.33333%; }
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%; }
 
   .small-offset-1 {
-    margin-left: 8.33333%; }
+    margin-left: 8.3333333333%; }
 
   .small-order-1 {
     order: 1; }
 
   .small-2 {
-    flex: 0 0 16.66667%;
-    max-width: 16.66667%; }
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%; }
 
   .small-offset-2 {
-    margin-left: 16.66667%; }
+    margin-left: 16.6666666667%; }
 
   .small-order-2 {
     order: 2; }
@@ -196,21 +196,21 @@ html, body {
     order: 3; }
 
   .small-4 {
-    flex: 0 0 33.33333%;
-    max-width: 33.33333%; }
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%; }
 
   .small-offset-4 {
-    margin-left: 33.33333%; }
+    margin-left: 33.3333333333%; }
 
   .small-order-4 {
     order: 4; }
 
   .small-5 {
-    flex: 0 0 41.66667%;
-    max-width: 41.66667%; }
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%; }
 
   .small-offset-5 {
-    margin-left: 41.66667%; }
+    margin-left: 41.6666666667%; }
 
   .small-order-5 {
     order: 5; }
@@ -226,21 +226,21 @@ html, body {
     order: 6; }
 
   .small-7 {
-    flex: 0 0 58.33333%;
-    max-width: 58.33333%; }
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%; }
 
   .small-offset-7 {
-    margin-left: 58.33333%; }
+    margin-left: 58.3333333333%; }
 
   .small-order-7 {
     order: 7; }
 
   .small-8 {
-    flex: 0 0 66.66667%;
-    max-width: 66.66667%; }
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%; }
 
   .small-offset-8 {
-    margin-left: 66.66667%; }
+    margin-left: 66.6666666667%; }
 
   .small-order-8 {
     order: 8; }
@@ -256,21 +256,21 @@ html, body {
     order: 9; }
 
   .small-10 {
-    flex: 0 0 83.33333%;
-    max-width: 83.33333%; }
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%; }
 
   .small-offset-10 {
-    margin-left: 83.33333%; }
+    margin-left: 83.3333333333%; }
 
   .small-order-10 {
     order: 10; }
 
   .small-11 {
-    flex: 0 0 91.66667%;
-    max-width: 91.66667%; }
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%; }
 
   .small-offset-11 {
-    margin-left: 91.66667%; }
+    margin-left: 91.6666666667%; }
 
   .small-order-11 {
     order: 11; }
@@ -286,21 +286,21 @@ html, body {
     order: 12; } }
 @media screen and (min-width: 768px) {
   .medium-1 {
-    flex: 0 0 8.33333%;
-    max-width: 8.33333%; }
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%; }
 
   .medium-offset-1 {
-    margin-left: 8.33333%; }
+    margin-left: 8.3333333333%; }
 
   .medium-order-1 {
     order: 1; }
 
   .medium-2 {
-    flex: 0 0 16.66667%;
-    max-width: 16.66667%; }
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%; }
 
   .medium-offset-2 {
-    margin-left: 16.66667%; }
+    margin-left: 16.6666666667%; }
 
   .medium-order-2 {
     order: 2; }
@@ -316,21 +316,21 @@ html, body {
     order: 3; }
 
   .medium-4 {
-    flex: 0 0 33.33333%;
-    max-width: 33.33333%; }
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%; }
 
   .medium-offset-4 {
-    margin-left: 33.33333%; }
+    margin-left: 33.3333333333%; }
 
   .medium-order-4 {
     order: 4; }
 
   .medium-5 {
-    flex: 0 0 41.66667%;
-    max-width: 41.66667%; }
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%; }
 
   .medium-offset-5 {
-    margin-left: 41.66667%; }
+    margin-left: 41.6666666667%; }
 
   .medium-order-5 {
     order: 5; }
@@ -346,21 +346,21 @@ html, body {
     order: 6; }
 
   .medium-7 {
-    flex: 0 0 58.33333%;
-    max-width: 58.33333%; }
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%; }
 
   .medium-offset-7 {
-    margin-left: 58.33333%; }
+    margin-left: 58.3333333333%; }
 
   .medium-order-7 {
     order: 7; }
 
   .medium-8 {
-    flex: 0 0 66.66667%;
-    max-width: 66.66667%; }
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%; }
 
   .medium-offset-8 {
-    margin-left: 66.66667%; }
+    margin-left: 66.6666666667%; }
 
   .medium-order-8 {
     order: 8; }
@@ -376,21 +376,21 @@ html, body {
     order: 9; }
 
   .medium-10 {
-    flex: 0 0 83.33333%;
-    max-width: 83.33333%; }
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%; }
 
   .medium-offset-10 {
-    margin-left: 83.33333%; }
+    margin-left: 83.3333333333%; }
 
   .medium-order-10 {
     order: 10; }
 
   .medium-11 {
-    flex: 0 0 91.66667%;
-    max-width: 91.66667%; }
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%; }
 
   .medium-offset-11 {
-    margin-left: 91.66667%; }
+    margin-left: 91.6666666667%; }
 
   .medium-order-11 {
     order: 11; }
@@ -406,21 +406,21 @@ html, body {
     order: 12; } }
 @media screen and (min-width: 992px) {
   .large-1 {
-    flex: 0 0 8.33333%;
-    max-width: 8.33333%; }
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%; }
 
   .large-offset-1 {
-    margin-left: 8.33333%; }
+    margin-left: 8.3333333333%; }
 
   .large-order-1 {
     order: 1; }
 
   .large-2 {
-    flex: 0 0 16.66667%;
-    max-width: 16.66667%; }
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%; }
 
   .large-offset-2 {
-    margin-left: 16.66667%; }
+    margin-left: 16.6666666667%; }
 
   .large-order-2 {
     order: 2; }
@@ -436,21 +436,21 @@ html, body {
     order: 3; }
 
   .large-4 {
-    flex: 0 0 33.33333%;
-    max-width: 33.33333%; }
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%; }
 
   .large-offset-4 {
-    margin-left: 33.33333%; }
+    margin-left: 33.3333333333%; }
 
   .large-order-4 {
     order: 4; }
 
   .large-5 {
-    flex: 0 0 41.66667%;
-    max-width: 41.66667%; }
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%; }
 
   .large-offset-5 {
-    margin-left: 41.66667%; }
+    margin-left: 41.6666666667%; }
 
   .large-order-5 {
     order: 5; }
@@ -466,21 +466,21 @@ html, body {
     order: 6; }
 
   .large-7 {
-    flex: 0 0 58.33333%;
-    max-width: 58.33333%; }
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%; }
 
   .large-offset-7 {
-    margin-left: 58.33333%; }
+    margin-left: 58.3333333333%; }
 
   .large-order-7 {
     order: 7; }
 
   .large-8 {
-    flex: 0 0 66.66667%;
-    max-width: 66.66667%; }
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%; }
 
   .large-offset-8 {
-    margin-left: 66.66667%; }
+    margin-left: 66.6666666667%; }
 
   .large-order-8 {
     order: 8; }
@@ -496,21 +496,21 @@ html, body {
     order: 9; }
 
   .large-10 {
-    flex: 0 0 83.33333%;
-    max-width: 83.33333%; }
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%; }
 
   .large-offset-10 {
-    margin-left: 83.33333%; }
+    margin-left: 83.3333333333%; }
 
   .large-order-10 {
     order: 10; }
 
   .large-11 {
-    flex: 0 0 91.66667%;
-    max-width: 91.66667%; }
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%; }
 
   .large-offset-11 {
-    margin-left: 91.66667%; }
+    margin-left: 91.6666666667%; }
 
   .large-order-11 {
     order: 11; }
@@ -526,21 +526,21 @@ html, body {
     order: 12; } }
 @media screen and (min-width: 1200px) {
   .xlarge-1 {
-    flex: 0 0 8.33333%;
-    max-width: 8.33333%; }
+    flex: 0 0 8.3333333333%;
+    max-width: 8.3333333333%; }
 
   .xlarge-offset-1 {
-    margin-left: 8.33333%; }
+    margin-left: 8.3333333333%; }
 
   .xlarge-order-1 {
     order: 1; }
 
   .xlarge-2 {
-    flex: 0 0 16.66667%;
-    max-width: 16.66667%; }
+    flex: 0 0 16.6666666667%;
+    max-width: 16.6666666667%; }
 
   .xlarge-offset-2 {
-    margin-left: 16.66667%; }
+    margin-left: 16.6666666667%; }
 
   .xlarge-order-2 {
     order: 2; }
@@ -556,21 +556,21 @@ html, body {
     order: 3; }
 
   .xlarge-4 {
-    flex: 0 0 33.33333%;
-    max-width: 33.33333%; }
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%; }
 
   .xlarge-offset-4 {
-    margin-left: 33.33333%; }
+    margin-left: 33.3333333333%; }
 
   .xlarge-order-4 {
     order: 4; }
 
   .xlarge-5 {
-    flex: 0 0 41.66667%;
-    max-width: 41.66667%; }
+    flex: 0 0 41.6666666667%;
+    max-width: 41.6666666667%; }
 
   .xlarge-offset-5 {
-    margin-left: 41.66667%; }
+    margin-left: 41.6666666667%; }
 
   .xlarge-order-5 {
     order: 5; }
@@ -586,21 +586,21 @@ html, body {
     order: 6; }
 
   .xlarge-7 {
-    flex: 0 0 58.33333%;
-    max-width: 58.33333%; }
+    flex: 0 0 58.3333333333%;
+    max-width: 58.3333333333%; }
 
   .xlarge-offset-7 {
-    margin-left: 58.33333%; }
+    margin-left: 58.3333333333%; }
 
   .xlarge-order-7 {
     order: 7; }
 
   .xlarge-8 {
-    flex: 0 0 66.66667%;
-    max-width: 66.66667%; }
+    flex: 0 0 66.6666666667%;
+    max-width: 66.6666666667%; }
 
   .xlarge-offset-8 {
-    margin-left: 66.66667%; }
+    margin-left: 66.6666666667%; }
 
   .xlarge-order-8 {
     order: 8; }
@@ -616,21 +616,21 @@ html, body {
     order: 9; }
 
   .xlarge-10 {
-    flex: 0 0 83.33333%;
-    max-width: 83.33333%; }
+    flex: 0 0 83.3333333333%;
+    max-width: 83.3333333333%; }
 
   .xlarge-offset-10 {
-    margin-left: 83.33333%; }
+    margin-left: 83.3333333333%; }
 
   .xlarge-order-10 {
     order: 10; }
 
   .xlarge-11 {
-    flex: 0 0 91.66667%;
-    max-width: 91.66667%; }
+    flex: 0 0 91.6666666667%;
+    max-width: 91.6666666667%; }
 
   .xlarge-offset-11 {
-    margin-left: 91.66667%; }
+    margin-left: 91.6666666667%; }
 
   .xlarge-order-11 {
     order: 11; }
@@ -678,17 +678,20 @@ html, body {
   padding-left: 0;
   padding-right: 0; }
 
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0; }
+
 h1,
 .h1 {
   font-size: 32px;
   margin-bottom: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: bold;
-  font-style: normal;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 0; }
+  font-style: normal; }
 
 h2,
 .h2 {
@@ -696,11 +699,7 @@ h2,
   margin-bottom: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: bold;
-  font-style: normal;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 0; }
+  font-style: normal; }
 
 h3,
 .h3 {
@@ -708,11 +707,7 @@ h3,
   margin-bottom: 14px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: bold;
-  font-style: normal;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 0; }
+  font-style: normal; }
 
 h4,
 .h4 {
@@ -720,11 +715,7 @@ h4,
   margin-bottom: 12px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: bold;
-  font-style: normal;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 0; }
+  font-style: normal; }
 
 h5,
 .h5 {
@@ -732,11 +723,7 @@ h5,
   margin-bottom: 10px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: bold;
-  font-style: normal;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 0; }
+  font-style: normal; }
 
 h6,
 .h6 {
@@ -744,11 +731,7 @@ h6,
   margin-bottom: 10px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: bold;
-  font-style: normal;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 0; }
+  font-style: normal; }
 
 @media screen and (min-width: 768px) {
   h1,
@@ -812,15 +795,15 @@ h6,
     margin-bottom: 20px; } }
 p,
 .paragraph {
-  font-size: 16px;
-  margin-bottom: 16px;
-  line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-weight: normal;
+  font-size: 16px;
   font-style: normal;
-  margin-top: 0;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 16px;
   margin-left: 0;
   margin-right: 0;
+  margin-top: 0;
   padding: 0; }
 
 input[type=button], input[type=submit],
