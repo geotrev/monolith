@@ -2,8 +2,8 @@
 //
 // #{$size} == h1, h2, h3, etc...
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3, h4, h5, h6, p
+.h1, .h2, .h3, .h4, .h5, .h6, .paragraph {
   margin-top: 0;
   margin-left: 0;
   margin-right: 0;
@@ -57,8 +57,12 @@ p,
   font-weight: map-deep-get($typography, paragraph, font-weight);
   line-height: map-deep-get($typography, paragraph, line-height);
   margin-bottom: map-deep-get($typography, paragraph, margin-bottom);
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding: 0;
+}
+
+em,
+.em {
+  font-family: $global-font;
+  font-size: inherit;
+  font-style: map-deep-get($typography, em, font-style);
+  font-weight: map-deep-get($typography, em, font-weight);
 }
