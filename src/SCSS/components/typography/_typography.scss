@@ -4,6 +4,7 @@
 
 h1, h2, h3, h4, h5, h6, p
 .h1, .h2, .h3, .h4, .h5, .h6, .paragraph {
+  font-family: $global-font;
   margin-top: 0;
   margin-left: 0;
   margin-right: 0;
@@ -16,10 +17,9 @@ h1, h2, h3, h4, h5, h6, p
   #{$header},
   .#{$header} {
     font-size: map-deep-get($typography, headers, $header, font-size);
-    margin-bottom: map-deep-get($typography, headers, $header, margin-bottom);
-    font-family: $global-font;
-    font-weight: map-deep-get($typography, headers, $header, font-weight);
     font-style: map-deep-get($typography, headers, $header, font-style);
+    font-weight: map-deep-get($typography, headers, $header, font-weight);
+    line-height: map-deep-get($typography, headers, $header, line-height);
   }
 }
 
@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6, p
     #{$header},
     .#{$header} {
       font-size: map-deep-get($typography, headers, $header, font-size) * 1.5;
-      margin-bottom: map-deep-get($typography, headers, $header, margin-bottom) * 1.5;
+      line-height: map-deep-get($typography, headers, $header, line-height) * 1.25;
     }
   }
 }
@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6, p
     #{$header},
     .#{$header} {
       font-size: map-deep-get($typography, headers, $header, font-size) * 2;
-      margin-bottom: map-deep-get($typography, headers, $header, margin-bottom) * 2;
+      line-height: map-deep-get($typography, headers, $header, line-height) * 1.5;
     }
   }
 }
@@ -61,8 +61,19 @@ p,
 
 em,
 .em {
-  font-family: $global-font;
   font-size: inherit;
   font-style: map-deep-get($typography, em, font-style);
   font-weight: map-deep-get($typography, em, font-weight);
+}
+
+mark,
+.mark {
+  padding: map-deep-get($typography, mark, padding);
+  background: $mark-bg;
+}
+
+small,
+.small {
+  font-weight: ;
+  font-size: ;
 }

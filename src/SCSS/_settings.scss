@@ -66,6 +66,8 @@ $grid-gutter: $global-space;
 // Typography
 //
 
+$mark-bg: lightblue;
+
 // sizes are multipled 1.5x at medium breakpoint.
 // sizes are multipled by 2x at large breakpoint.
 
@@ -74,37 +76,37 @@ $typography: (
   headers: (
     h1: (
       font-size: 32px,
-      margin-bottom: 16px,
+      line-height: 1.25,
       font-style: normal,
       font-weight: bold
     ),
     h2: (
       font-size: 28px,
-      margin-bottom: 16px,
+      line-height: 1.25,
       font-style: normal,
       font-weight: bold
     ),
     h3: (
       font-size: 24px,
-      margin-bottom: 14px,
+      line-height: 1.25,
       font-style: normal,
       font-weight: bold
     ),
     h4: (
       font-size: 20px,
-      margin-bottom: 12px,
+      line-height: 1.25,
       font-style: normal,
       font-weight: bold
     ),
     h5: (
       font-size: 18px,
-      margin-bottom: 10px,
+      line-height: 1.25,
       font-style: normal,
       font-weight: bold
     ),
     h6: (
       font-size: 16px,
-      margin-bottom: 10px,
+      line-height: 1.25,
       font-style: normal,
       font-weight: bold
     )
@@ -119,6 +121,13 @@ $typography: (
   em: (
     font-style: normal,
     font-weight: bold
+  ),
+  small: (
+    font-size: 14px,
+    font-weight: normal
+  ),
+  mark: (
+    padding: 10px
   )
 );
 
