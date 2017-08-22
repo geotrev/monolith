@@ -66,70 +66,68 @@ $grid-gutter: $global-space;
 // Typography
 //
 
-$mark-bg: lightblue;
-
 // sizes are multipled 1.5x at medium breakpoint.
 // sizes are multipled by 2x at large breakpoint.
 
 // headers
-$typography: (
-  headers: (
-    h1: (
-      font-size: 32px,
-      line-height: 1.25,
-      font-style: normal,
-      font-weight: bold
-    ),
-    h2: (
-      font-size: 28px,
-      line-height: 1.25,
-      font-style: normal,
-      font-weight: bold
-    ),
-    h3: (
-      font-size: 24px,
-      line-height: 1.25,
-      font-style: normal,
-      font-weight: bold
-    ),
-    h4: (
-      font-size: 20px,
-      line-height: 1.25,
-      font-style: normal,
-      font-weight: bold
-    ),
-    h5: (
-      font-size: 18px,
-      line-height: 1.25,
-      font-style: normal,
-      font-weight: bold
-    ),
-    h6: (
-      font-size: 16px,
-      line-height: 1.25,
-      font-style: normal,
-      font-weight: bold
-    )
-  ),
-  paragraph: (
-    font-size: 16px,
-    margin-bottom: 16px,
-    line-height: 1.5,
-    font-weight: normal,
-    font-style: normal
-  ),
-  em: (
+$type-headers: (
+  h1: (
+    font-size: 32px,
     font-style: normal,
-    font-weight: bold
+    font-weight: bold,
+    color: #000
   ),
-  small: (
-    font-size: 14px,
-    font-weight: normal
+  h2: (
+    font-size: 28px,
+    font-style: normal,
+    font-weight: bold,
+    color: #000
   ),
-  mark: (
-    padding: 10px
+  h3: (
+    font-size: 24px,
+    font-style: normal,
+    font-weight: bold,
+    color: #000
+  ),
+  h4: (
+    font-size: 20px,
+    font-style: normal,
+    font-weight: bold,
+    color: #000
+  ),
+  h5: (
+    font-size: 18px,
+    font-style: normal,
+    font-weight: bold,
+    color: #000
+  ),
+  h6: (
+    font-size: 16px,
+    font-style: normal,
+    font-weight: bold,
+    color: #000
   )
 );
+
+$type-header-line-height: 1.3;
+
+$type-p-font-size: 16px;
+$type-p-margin-bottom: 16px;
+$type-p-line-height: 1.5;
+$type-p-font-weight: normal;
+$type-p-font-style: normal;
+$type-p-color: #000;
+
+$type-em-font-style: normal;
+$type-em-font-weight: bold;
+
+$type-small-font-size: 14px;
+$type-small-font-weight: normal;
+
+$type-mark-padding: 10px;
+$type-mark-color: #000;
+$type-mark-background: lightblue;
+
 
 //
 // 3. Buttons

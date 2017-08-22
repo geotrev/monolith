@@ -1,8 +1,6 @@
-// Headers
-//
-// #{$size} == h1, h2, h3, etc...
+// Style consistency between type elements
 
-h1, h2, h3, h4, h5, h6, p
+h1, h2, h3, h4, h5, h6, p, em, small, mark,
 .h1, .h2, .h3, .h4, .h5, .h6, .paragraph {
   font-family: $global-font;
   margin-top: 0;
@@ -11,38 +9,41 @@ h1, h2, h3, h4, h5, h6, p
   padding: 0;
 }
 
-@each $name in map-get($typography, headers) {
+// Headers
+//
+// #{$size} == h1, h2, h3, etc...
+
+@each $name in $type-headers {
   $header: nth($name, 1);
 
   #{$header},
   .#{$header} {
-    font-size: map-deep-get($typography, headers, $header, font-size);
-    font-style: map-deep-get($typography, headers, $header, font-style);
-    font-weight: map-deep-get($typography, headers, $header, font-weight);
-    line-height: map-deep-get($typography, headers, $header, line-height);
+    color: map-deep-get($type-headers, $header, color);
+    font-size: map-deep-get($type-headers, $header, font-size);
+    font-style: map-deep-get($type-headers, $header, font-style);
+    font-weight: map-deep-get($type-headers, $header, font-weight);
+    line-height: $type-header-line-height;
   }
 }
 
 @include breakpoint-up(medium) {
-  @each $name in map-get($typography, headers) {
+  @each $name in $type-headers {
     $header: nth($name, 1);
 
     #{$header},
     .#{$header} {
-      font-size: map-deep-get($typography, headers, $header, font-size) * 1.5;
-      line-height: map-deep-get($typography, headers, $header, line-height) * 1.25;
+      font-size: map-deep-get($type-headers, $header, font-size) * 1.5;
     }
   }
 }
 
 @include breakpoint-up(large) {
-  @each $name in map-get($typography, headers) {
+  @each $name in $type-headers {
     $header: nth($name, 1);
 
     #{$header},
     .#{$header} {
-      font-size: map-deep-get($typography, headers, $header, font-size) * 2;
-      line-height: map-deep-get($typography, headers, $header, line-height) * 1.5;
+      font-size: map-deep-get($type-headers, $header, font-size) * 2;
     }
   }
 }
@@ -51,29 +52,30 @@ h1, h2, h3, h4, h5, h6, p
 
 p,
 .paragraph {
-  font-family: $global-font;
-  font-size: map-deep-get($typography, paragraph, font-size);
-  font-style: map-deep-get($typography, paragraph, font-style);
-  font-weight: map-deep-get($typography, paragraph, font-weight);
-  line-height: map-deep-get($typography, paragraph, line-height);
-  margin-bottom: map-deep-get($typography, paragraph, margin-bottom);
+  font-size: $type-p-font-size;
+  font-style: $type-p-font-style;
+  font-weight: $type-p-font-weight;
+  line-height: $type-p-line-height;
+  margin-bottom: $type-p-margin-bottom;
+  color: $type-p-color;
 }
 
 em,
 .em {
   font-size: inherit;
-  font-style: map-deep-get($typography, em, font-style);
-  font-weight: map-deep-get($typography, em, font-weight);
+  font-style: $type-em-font-style;
+  font-weight: $type-em-font-weight;
 }
 
 mark,
 .mark {
-  padding: map-deep-get($typography, mark, padding);
-  background: $mark-bg;
+  padding: $type-mark-padding;
+  background: $type-mark-background;
+  color: $type-mark-color;
 }
 
 small,
 .small {
-  font-weight: ;
-  font-size: ;
+  font-weight: $type-small-font-weight;
+  font-size: $type-small-font-size;
 }
