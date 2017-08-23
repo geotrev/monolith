@@ -824,6 +824,7 @@ em,
 
 mark,
 .mark {
+  font-size: inherit;
   padding: 10px;
   background: lightblue;
   color: #000; }
