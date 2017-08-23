@@ -1,4 +1,4 @@
-// universal styling
+// Apply font family and reset spacing
 
 h1, h2, h3, h4, h5, h6, p, em, small, mark,
 .h1, .h2, .h3, .h4, .h5, .h6, .paragraph {
@@ -16,8 +16,7 @@ h1, h2, h3, h4, h5, h6, p, em, small, mark,
   $header-font-weight: map-deep-get($type-header-styles, $header-tag, font-weight);
   $header-margin: map-deep-get($type-header-styles, $header-tag, margin-bottom);
 
-  #{$header-tag},
-  .#{$header-tag} {
+  #{$header-tag}, .#{$header-tag} {
     color: $header-color;
     font-style: $header-font-style;
     font-weight: $header-font-weight;
@@ -34,8 +33,7 @@ h1, h2, h3, h4, h5, h6, p, em, small, mark,
   $header-font-medium: map-deep-get($type-header-sizes, $header, medium);
   $header-font-large: map-deep-get($type-header-sizes, $header, large);
 
-  #{$header},
-  .#{$header} {
+  #{$header}, .#{$header} {
     font-size: $header-font-xsmall;
 
     @include breakpoint-up(medium) {
@@ -48,10 +46,9 @@ h1, h2, h3, h4, h5, h6, p, em, small, mark,
   }
 }
 
-// paragraphs
+// paragraph
 
-p,
-.paragraph {
+p, .paragraph {
   font-size: $type-p-font-size;
   font-style: $type-p-font-style;
   font-weight: $type-p-font-weight;
@@ -62,8 +59,7 @@ p,
 
 // em
 
-em,
-.em {
+em, .em {
   font-size: inherit;
   font-style: $type-em-font-style;
   font-weight: $type-em-font-weight;
@@ -71,8 +67,7 @@ em,
 
 // mark
 
-mark,
-.mark {
+mark, .mark {
   font-size: inherit;
   padding: $type-mark-padding;
   background: $type-mark-background;
@@ -81,8 +76,7 @@ mark,
 
 // small
 
-small,
-.small {
+small, .small {
   font-weight: $type-small-font-weight;
   font-size: $type-small-font-size;
 }
