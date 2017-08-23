@@ -66,46 +66,79 @@ $grid-gutter: $global-space;
 // Typography
 //
 
-// sizes are multipled 1.5x at medium breakpoint.
-// sizes are multipled by 2x at large breakpoint.
+// Header sizes
 
-// headers
-$type-headers: (
+$type-header-sizes: (
   h1: (
-    font-size: 32px,
-    font-style: normal,
-    font-weight: bold,
-    color: #000
+    xsmall: 32px,
+    medium: 48px,
+     large: 64px
   ),
   h2: (
-    font-size: 28px,
-    font-style: normal,
-    font-weight: bold,
-    color: #000
+    xsmall: 28px,
+    medium: 42px,
+     large: 56px
   ),
   h3: (
-    font-size: 24px,
-    font-style: normal,
-    font-weight: bold,
-    color: #000
+    xsmall: 24px,
+    medium: 36px,
+     large: 48px
   ),
   h4: (
-    font-size: 20px,
-    font-style: normal,
-    font-weight: bold,
-    color: #000
+    xsmall: 20px,
+    medium: 30px,
+     large: 40px
   ),
   h5: (
-    font-size: 18px,
-    font-style: normal,
-    font-weight: bold,
-    color: #000
+    xsmall: 18px,
+    medium: 27px,
+     large: 36px
   ),
   h6: (
-    font-size: 16px,
+    xsmall: $global-font-size,
+    medium: 24px,
+     large: 32px
+  )
+);
+
+// Header styling
+
+$type-header-styles: (
+  h1: (
+    color: #000,
     font-style: normal,
     font-weight: bold,
-    color: #000
+    margin-bottom: 32px
+  ),
+  h2: (
+    color: #000,
+    font-style: normal,
+    font-weight: bold,
+    margin-bottom: 26px
+  ),
+  h3: (
+    color: #000,
+    font-style: normal,
+    font-weight: bold,
+    margin-bottom: 22px
+  ),
+  h4: (
+    color: #000,
+    font-style: normal,
+    font-weight: bold,
+    margin-bottom: $global-space
+  ),
+  h5: (
+    color: #000,
+    font-style: normal,
+    font-weight: bold,
+    margin-bottom: 12px
+  ),
+  h6: (
+    color: #000,
+    font-style: normal,
+    font-weight: bold,
+    margin-bottom: 10px
   )
 );
 

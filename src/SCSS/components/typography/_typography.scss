@@ -1,40 +1,54 @@
-// Style consistency between type elements
+// universal styling
 
 h1, h2, h3, h4, h5, h6, p, em, small, mark,
 .h1, .h2, .h3, .h4, .h5, .h6, .paragraph {
   font-family: $global-font;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
   padding: 0;
 }
 
-// Headers
-//
-// #{$header} == h1, h2, h3, etc...
+// Header color, font style, and line height
 
-@each $name in $type-headers {
-  $header: nth($name, 1);
+@each $name in $type-header-styles {
+  $header-tag: nth($name, 1);
+  $header-color: map-deep-get($type-header-styles, $header-tag, color);
+  $header-font-style: map-deep-get($type-header-styles, $header-tag, font-style);
+  $header-font-weight: map-deep-get($type-header-styles, $header-tag, font-weight);
+  $header-margin: map-deep-get($type-header-styles, $header-tag, margin-bottom);
+
+  #{$header-tag},
+  .#{$header-tag} {
+    color: $header-color;
+    font-style: $header-font-style;
+    font-weight: $header-font-weight;
+    line-height: $type-header-line-height;
+    margin-bottom: $header-margin;
+  }
+}
+
+// Header sizes
+
+@each $size in $type-header-sizes {
+  $header: nth($size, 1);
+  $header-font-xsmall: map-deep-get($type-header-sizes, $header, xsmall);
+  $header-font-medium: map-deep-get($type-header-sizes, $header, medium);
+  $header-font-large: map-deep-get($type-header-sizes, $header, large);
 
   #{$header},
   .#{$header} {
-    color: map-deep-get($type-headers, $header, color);
-    font-size: map-deep-get($type-headers, $header, font-size);
-    font-style: map-deep-get($type-headers, $header, font-style);
-    font-weight: map-deep-get($type-headers, $header, font-weight);
-    line-height: $type-header-line-height;
+    font-size: $header-font-xsmall;
 
     @include breakpoint-up(medium) {
-      font-size: map-deep-get($type-headers, $header, font-size) * 1.5;
+      font-size: $header-font-medium;
     }
 
     @include breakpoint-up(large) {
-      font-size: map-deep-get($type-headers, $header, font-size) * 2;
+      font-size: $header-font-large;
     }
   }
 }
 
-// Paragraph
+// paragraphs
 
 p,
 .paragraph {
@@ -46,6 +60,8 @@ p,
   color: $type-p-color;
 }
 
+// em
+
 em,
 .em {
   font-size: inherit;
@@ -53,12 +69,16 @@ em,
   font-weight: $type-em-font-weight;
 }
 
+// mark
+
 mark,
 .mark {
   padding: $type-mark-padding;
   background: $type-mark-background;
   color: $type-mark-color;
 }
+
+// small
 
 small,
 .small {

@@ -31,10 +31,14 @@
 
   // Sizes
   @each $name in $button-sizes {
-    $size: nth($name, 1);
-    &.#{$size} {
-      padding: map-deep-get($button-sizes, $size, padding);
-      font-size: map-deep-get($button-sizes, $size, font-size);
+    $button-size: nth($name, 1);
+
+    $button-padding: map-deep-get($button-sizes, $button-size, padding);
+    $button-font-size: map-deep-get($button-sizes, $button-size, font-size);
+
+    &.#{$button-size} {
+      padding: $button-padding;
+      font-size: $button-font-size;
     }
   }
 
