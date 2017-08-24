@@ -1,4 +1,4 @@
-// Apply font family and reset spacing
+// Apply font family simple spacing reset
 
 h1, h2, h3, h4, h5, h6, p, em, small, mark,
 .h1, .h2, .h3, .h4, .h5, .h6, .paragraph {
@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6, p, em, small, mark,
   padding: 0;
 }
 
-// Header color, font style, and line height
+// Header color, font style, margin, and line height
 
 @each $name in $type-header-styles {
   $header-tag: nth($name, 1);
@@ -29,20 +29,14 @@ h1, h2, h3, h4, h5, h6, p, em, small, mark,
 
 @each $size in $type-header-sizes {
   $break: nth($size, 1);
-  $h1: map-deep-get($type-header-sizes, $break, h1);
-  $h2: map-deep-get($type-header-sizes, $break, h2);
-  $h3: map-deep-get($type-header-sizes, $break, h3);
-  $h4: map-deep-get($type-header-sizes, $break, h4);
-  $h5: map-deep-get($type-header-sizes, $break, h5);
-  $h6: map-deep-get($type-header-sizes, $break, h6);
 
   @include breakpoint-up($break) {
-    h1 { font-size: $h1; }
-    h2 { font-size: $h2; }
-    h3 { font-size: $h3; }
-    h4 { font-size: $h4; }
-    h5 { font-size: $h5; }
-    h6 { font-size: $h6; }
+    @for $i from 1 through 6 {
+      h#{$i}, .h#{$i}  {
+        $value: map-deep-get($type-header-sizes, $break, h#{$i});
+        font-size: $value;
+      }
+    }
   }
 }
 
