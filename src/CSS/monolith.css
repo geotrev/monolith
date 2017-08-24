@@ -729,60 +729,60 @@ h6, .h6 {
   line-height: 1.3;
   margin-bottom: 10px; }
 
-h1, .h1 {
-  font-size: 32px; }
-  @media screen and (min-width: 768px) {
-    h1, .h1 {
-      font-size: 48px; } }
-  @media screen and (min-width: 992px) {
-    h1, .h1 {
-      font-size: 64px; } }
+@media screen and (min-width: 0) {
+  h1 {
+    font-size: 32px; }
 
-h2, .h2 {
-  font-size: 28px; }
-  @media screen and (min-width: 768px) {
-    h2, .h2 {
-      font-size: 42px; } }
-  @media screen and (min-width: 992px) {
-    h2, .h2 {
-      font-size: 56px; } }
+  h2 {
+    font-size: 28px; }
 
-h3, .h3 {
-  font-size: 24px; }
-  @media screen and (min-width: 768px) {
-    h3, .h3 {
-      font-size: 36px; } }
-  @media screen and (min-width: 992px) {
-    h3, .h3 {
-      font-size: 48px; } }
+  h3 {
+    font-size: 24px; }
 
-h4, .h4 {
-  font-size: 20px; }
-  @media screen and (min-width: 768px) {
-    h4, .h4 {
-      font-size: 30px; } }
-  @media screen and (min-width: 992px) {
-    h4, .h4 {
-      font-size: 40px; } }
+  h4 {
+    font-size: 20px; }
 
-h5, .h5 {
-  font-size: 18px; }
-  @media screen and (min-width: 768px) {
-    h5, .h5 {
-      font-size: 27px; } }
-  @media screen and (min-width: 992px) {
-    h5, .h5 {
-      font-size: 36px; } }
+  h5 {
+    font-size: 18px; }
 
-h6, .h6 {
-  font-size: 16px; }
-  @media screen and (min-width: 768px) {
-    h6, .h6 {
-      font-size: 24px; } }
-  @media screen and (min-width: 992px) {
-    h6, .h6 {
-      font-size: 32px; } }
+  h6 {
+    font-size: 16px; } }
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 48px; }
 
+  h2 {
+    font-size: 42px; }
+
+  h3 {
+    font-size: 36px; }
+
+  h4 {
+    font-size: 30px; }
+
+  h5 {
+    font-size: 27px; }
+
+  h6 {
+    font-size: 24px; } }
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 64px; }
+
+  h2 {
+    font-size: 56px; }
+
+  h3 {
+    font-size: 48px; }
+
+  h4 {
+    font-size: 40px; }
+
+  h5 {
+    font-size: 36px; }
+
+  h6 {
+    font-size: 32px; } }
 p, .paragraph {
   font-size: 16px;
   font-style: normal;

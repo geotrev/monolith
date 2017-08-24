@@ -25,28 +25,28 @@ h1, h2, h3, h4, h5, h6, p, em, small, mark,
   }
 }
 
-// Header sizes
+// Header font sizes
 
 @each $size in $type-header-sizes {
-  $header: nth($size, 1);
-  $header-font-xsmall: map-deep-get($type-header-sizes, $header, xsmall);
-  $header-font-medium: map-deep-get($type-header-sizes, $header, medium);
-  $header-font-large: map-deep-get($type-header-sizes, $header, large);
+  $break: nth($size, 1);
+  $h1: map-deep-get($type-header-sizes, $break, h1);
+  $h2: map-deep-get($type-header-sizes, $break, h2);
+  $h3: map-deep-get($type-header-sizes, $break, h3);
+  $h4: map-deep-get($type-header-sizes, $break, h4);
+  $h5: map-deep-get($type-header-sizes, $break, h5);
+  $h6: map-deep-get($type-header-sizes, $break, h6);
 
-  #{$header}, .#{$header} {
-    font-size: $header-font-xsmall;
-
-    @include breakpoint-up(medium) {
-      font-size: $header-font-medium;
-    }
-
-    @include breakpoint-up(large) {
-      font-size: $header-font-large;
-    }
+  @include breakpoint-up($break) {
+    h1 { font-size: $h1; }
+    h2 { font-size: $h2; }
+    h3 { font-size: $h3; }
+    h4 { font-size: $h4; }
+    h5 { font-size: $h5; }
+    h6 { font-size: $h6; }
   }
 }
 
-// paragraph
+// p
 
 p, .paragraph {
   font-size: $type-p-font-size;

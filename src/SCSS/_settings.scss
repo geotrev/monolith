@@ -68,36 +68,63 @@ $grid-gutter: $global-space;
 
 // Header sizes at specified breakpoints
 
+// $type-header-sizes: (
+//   h1: (
+//     xsmall: 32px,
+//     medium: 48px,
+//      large: 64px
+//   ),
+//   h2: (
+//     xsmall: 28px,
+//     medium: 42px,
+//      large: 56px
+//   ),
+//   h3: (
+//     xsmall: 24px,
+//     medium: 36px,
+//      large: 48px
+//   ),
+//   h4: (
+//     xsmall: 20px,
+//     medium: 30px,
+//      large: 40px
+//   ),
+//   h5: (
+//     xsmall: 18px,
+//     medium: 27px,
+//      large: 36px
+//   ),
+//   h6: (
+//     xsmall: $global-font-size,
+//     medium: 24px,
+//      large: 32px
+//   )
+// );
+
 $type-header-sizes: (
-  h1: (
-    xsmall: 32px,
-    medium: 48px,
-     large: 64px
+  xsmall: (
+    h1: 32px,
+    h2: 28px,
+    h3: 24px,
+    h4: 20px,
+    h5: 18px,
+    h6: $global-font-size
   ),
-  h2: (
-    xsmall: 28px,
-    medium: 42px,
-     large: 56px
+  medium: (
+    h1: 48px,
+    h2: 42px,
+    h3: 36px,
+    h4: 30px,
+    h5: 27px,
+    h6: 24px
   ),
-  h3: (
-    xsmall: 24px,
-    medium: 36px,
-     large: 48px
-  ),
-  h4: (
-    xsmall: 20px,
-    medium: 30px,
-     large: 40px
-  ),
-  h5: (
-    xsmall: 18px,
-    medium: 27px,
-     large: 36px
-  ),
-  h6: (
-    xsmall: $global-font-size,
-    medium: 24px,
-     large: 32px
+  large: (
+    h1: 64px,
+    h2: 56px,
+    h3: 48px,
+    h4: 40px,
+    h5: 36px,
+    h6: 32px
   )
 );
 
