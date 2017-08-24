@@ -1,27 +1,24 @@
-// classes only
 
-@mixin form_disabled_classes {
-  .#{$scope}text-field, .#{$scope}text-area, .#{$scope}button {
-    &:disabled, &.disabled {
-      @include form_disabled_state;
-    }
-  }
-}
+input[type=text], input[type=password],
+input[type=email], input[type=date],
+input[type=datetime-local], input[type=month],
+input[type=number], input[type=tel],
+input[type=search], input[type=time],
+input[type=url], input[type=week],
+input[type=submit], input[type=file], input[type=reset],
+textarea, button,
+.#{$scope}text-field, .#{$scope}text-area, .#{$scope}button {
+  &:disabled, &.disabled {
+    background: $input-disabled-background;
+    border: $input-disabled-border;
+    color: $input-disabled-color;
+    cursor: not-allowed;
+    resize: $input-disabled-resize;
 
-// with tags
-
-@mixin form_disabled_with_tags {
-  input[type=text], input[type=password],
-  input[type=email], input[type=date],
-  input[type=datetime-local], input[type=month],
-  input[type=number], input[type=tel],
-  input[type=search], input[type=time],
-  input[type=url], input[type=week],
-  input[type=submit], input[type=file], input[type=reset],
-  textarea, button,
-  .#{$scope}text-field, .#{$scope}text-area, .#{$scope}button {
-    &:disabled, &.disabled {
-      @include form_disabled_state;
+    &:hover {
+      background: $input-disabled-background;
+      border: $input-disabled-border;
+      color: $input-disabled-color;
     }
   }
 }

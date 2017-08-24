@@ -15,8 +15,6 @@
 
 $scope: '' !default;
 
-$classes-only: false;
-
 $global-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 $global-font-size: 16px;
 $global-space: 16px;
@@ -65,41 +63,6 @@ $grid-gutter: $global-space;
 //
 // Typography
 //
-
-// Header sizes at specified breakpoints
-
-// $type-header-sizes: (
-//   h1: (
-//     xsmall: 32px,
-//     medium: 48px,
-//      large: 64px
-//   ),
-//   h2: (
-//     xsmall: 28px,
-//     medium: 42px,
-//      large: 56px
-//   ),
-//   h3: (
-//     xsmall: 24px,
-//     medium: 36px,
-//      large: 48px
-//   ),
-//   h4: (
-//     xsmall: 20px,
-//     medium: 30px,
-//      large: 40px
-//   ),
-//   h5: (
-//     xsmall: 18px,
-//     medium: 27px,
-//      large: 36px
-//   ),
-//   h6: (
-//     xsmall: $global-font-size,
-//     medium: 24px,
-//      large: 32px
-//   )
-// );
 
 $type-header-sizes: (
   xsmall: (
