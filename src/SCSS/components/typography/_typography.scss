@@ -1,0 +1,76 @@
+// Apply font family simple spacing reset
+
+h1, h2, h3, h4, h5, h6, p, em, small, mark,
+.h1, .h2, .h3, .h4, .h5, .h6, .paragraph {
+  font-family: $global-font;
+  margin: 0;
+  padding: 0;
+}
+
+// Header color, font style, margin, and line height
+
+@each $name in $type-header-styles {
+  $header-tag: nth($name, 1);
+  $header-color: map-deep-get($type-header-styles, $header-tag, color);
+  $header-font-style: map-deep-get($type-header-styles, $header-tag, font-style);
+  $header-font-weight: map-deep-get($type-header-styles, $header-tag, font-weight);
+  $header-margin: map-deep-get($type-header-styles, $header-tag, margin-bottom);
+
+  #{$header-tag}, .#{$header-tag} {
+    color: $header-color;
+    font-style: $header-font-style;
+    font-weight: $header-font-weight;
+    line-height: $type-header-line-height;
+    margin-bottom: $header-margin;
+  }
+}
+
+// Header font sizes
+
+@each $size in $type-header-sizes {
+  $break: nth($size, 1);
+
+  @include breakpoint-up($break) {
+    @for $i from 1 through 6 {
+      h#{$i}, .h#{$i}  {
+        $size: map-deep-get($type-header-sizes, $break, h#{$i});
+        font-size: $size;
+      }
+    }
+  }
+}
+
+// p
+
+p, .paragraph {
+  font-size: $type-p-font-size;
+  font-style: $type-p-font-style;
+  font-weight: $type-p-font-weight;
+  line-height: $type-p-line-height;
+  margin-bottom: $type-p-margin-bottom;
+  color: $type-p-color;
+}
+
+// em
+
+em, .em {
+  font-size: inherit;
+  font-style: $type-em-font-style;
+  font-weight: $type-em-font-weight;
+}
+
+// mark
+
+mark, .mark {
+  font-size: inherit;
+  padding: $type-mark-padding;
+  background: $type-mark-background;
+  color: $type-mark-color;
+}
+
+// small
+
+small, .small {
+  font-weight: $type-small-font-weight;
+  font-size: $type-small-font-size;
+}

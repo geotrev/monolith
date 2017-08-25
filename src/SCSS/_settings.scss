@@ -3,8 +3,9 @@
 
 // 1. Global settings
 // 2. Grid
-// 3. Buttons
-// 4. Forms
+// 3. Typography
+// 4. Buttons
+// 5. Forms
 
 // -------------------------- * -------------------------- //
 
@@ -12,17 +13,15 @@
 // 1. Global Settings
 //
 
+$scope: '' !default;
+
 $global-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 $global-font-size: 16px;
 $global-space: 16px;
 
-$classes-only: false;
-
 //
 // 2. Grid
 //
-
-$scope: '' !default;
 
 $grid-classes: (
   grid: 'grid',
@@ -43,11 +42,11 @@ $grid-sections: (
 ) !default;
 
 $breakpoints: (
-  $scope + xsmall: 0,
-  $scope + small: 576px,
-  $scope + medium: 768px,
-  $scope + large: 992px,
-  $scope + xlarge: 1200px
+  xsmall: 0,
+  small: 576px,
+  medium: 768px,
+  large: 992px,
+  xlarge: 1200px
 ) !default;
 
 $column-offset-classes: true;
@@ -60,6 +59,98 @@ $order-threshold: 20 !default;
 $column-padding-bottom: $global-space;
 $column-gutter: $global-space / 2;
 $grid-gutter: $global-space;
+
+//
+// Typography
+//
+
+$type-header-sizes: (
+  xsmall: (
+    h1: 32px,
+    h2: 28px,
+    h3: 24px,
+    h4: 20px,
+    h5: 18px,
+    h6: $global-font-size
+  ),
+  medium: (
+    h1: 48px,
+    h2: 42px,
+    h3: 36px,
+    h4: 30px,
+    h5: 27px,
+    h6: 24px
+  ),
+  large: (
+    h1: 64px,
+    h2: 56px,
+    h3: 48px,
+    h4: 40px,
+    h5: 36px,
+    h6: 32px
+  )
+);
+
+// Header styling
+
+$type-header-styles: (
+  h1: (
+    color: #000,
+    font-style: normal,
+    font-weight: bold,
+    margin-bottom: 32px
+  ),
+  h2: (
+    color: #000,
+    font-style: normal,
+    font-weight: bold,
+    margin-bottom: 26px
+  ),
+  h3: (
+    color: #000,
+    font-style: normal,
+    font-weight: bold,
+    margin-bottom: 22px
+  ),
+  h4: (
+    color: #000,
+    font-style: normal,
+    font-weight: bold,
+    margin-bottom: $global-space
+  ),
+  h5: (
+    color: #000,
+    font-style: normal,
+    font-weight: bold,
+    margin-bottom: 12px
+  ),
+  h6: (
+    color: #000,
+    font-style: normal,
+    font-weight: bold,
+    margin-bottom: 10px
+  )
+);
+
+$type-header-line-height: 1.3;
+
+$type-p-font-size: 16px;
+$type-p-margin-bottom: 16px;
+$type-p-line-height: 1.5;
+$type-p-font-weight: normal;
+$type-p-font-style: normal;
+$type-p-color: #000;
+
+$type-em-font-style: normal;
+$type-em-font-weight: bold;
+
+$type-small-font-size: 14px;
+$type-small-font-weight: normal;
+
+$type-mark-padding: 10px;
+$type-mark-color: #000;
+$type-mark-background: lightblue;
+
 
 //
 // 3. Buttons

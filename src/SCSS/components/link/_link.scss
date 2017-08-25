@@ -1,0 +1,18 @@
+a,
+.#{$scope}link {
+  font-family: $link-font;
+  font-size: $link-font-size;
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  &:visited {
+    color: $link-color;
+  }
+
+  &:hover, &:focus {
+    color: $link-hover;
+    text-decoration: $link-decoration-hover;
+  }
+
+  &:active { color: $link-active; }
+}

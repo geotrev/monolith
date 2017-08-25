@@ -1,73 +1,42 @@
-// classes only
 
-@mixin form_radio_and_checkbox_classes {
-  .#{$scope}radio, .#{$scope}checkbox {
-    @include form_option;
-  }
+input[type=radio], input[type=checkbox],
+.#{$scope}radio, .#{$scope}checkbox {
+  cursor: pointer;
+  font-family: $form-font;
+  margin: $input-option-margin;
+  padding: $input-option-padding;
+}
 
-  .#{$scope}radio-row, .#{$scope}checkbox-row,
-  .#{$scope}radio-column, .#{$scope}checkbox-column {
-    @include form_option_layout;
+.#{$scope}radio-row, .#{$scope}checkbox-row,
+.#{$scope}radio-column, .#{$scope}checkbox-column {
+  margin-top: $input-option-margin-top;
+  display: flex;
 
-    .#{$scope}radio-label, .#{$scope}checkbox-label {
-      @include form_option_layout_label;
-    }
-  }
-
-  .#{$scope}radio-column, .#{$scope}checkbox-column {
-    @include form_option_column;
-  }
-  .#{$scope}radio-row, .#{$scope}checkbox-row {
-    @include form_option_row;
-  }
-
-  .#{$scope}radio-row .#{$scope}radio,
-  .#{$scope}checkbox-row .#{$scope}checkbox {
-    @include form_option_row_margin;
-  }
-
-  .#{$scope}radio-column .#{$scope}radio-label,
-  .#{$scope}checkbox-column .#{$scope}checkbox-label {
-    @include form_option_column_margin;
+  label,
+  .#{$scope}radio-label, .#{$scope}checkbox-label {
+    align-items: center;
+    flex-direction: row;
+    margin-right: $input-option-label-margin-right;
   }
 }
 
-// with tags
+.#{$scope}radio-column, .#{$scope}checkbox-column {
+  flex-direction: column;
+}
+.#{$scope}radio-row, .#{$scope}checkbox-row {
+  flex-direction: row;
+}
 
-@mixin form_radio_and_checkbox_with_tags {
-  input[type=radio], input[type=checkbox],
-  .#{$scope}radio, .#{$scope}checkbox {
-    @include form_option;
-  }
+.#{$scope}radio-row input[type=radio],
+.#{$scope}radio-row .#{$scope}radio,
+.#{$scope}checkbox-row input[type=checkbox],
+.#{$scope}checkbox-row .#{$scope}checkbox {
+  margin-right: $input-option-label-margin-right;
+}
 
-  .#{$scope}radio-row, .#{$scope}checkbox-row,
-  .#{$scope}radio-column, .#{$scope}checkbox-column {
-    @include form_option_layout;
-
-    label,
-    .#{$scope}radio-label, .#{$scope}checkbox-label {
-      @include form_option_layout_label;
-    }
-  }
-
-  .#{$scope}radio-column, .#{$scope}checkbox-column {
-    @include form_option_column;
-  }
-  .#{$scope}radio-row, .#{$scope}checkbox-row {
-    @include form_option_row;
-  }
-
-  .#{$scope}radio-row input[type=radio],
-  .#{$scope}radio-row .#{$scope}radio,
-  .#{$scope}checkbox-row input[type=checkbox],
-  .#{$scope}checkbox-row .#{$scope}checkbox {
-    @include form_option_row_margin;
-  }
-
-  .#{$scope}radio-column label,
-  .#{$scope}radio-column .#{$scope}radio-label,
-  .#{$scope}checkbox-column label,
-  .#{$scope}checkbox-column .#{$scope}checkbox-label {
-    @include form_option_column_margin;
-  }
+.#{$scope}radio-column label,
+.#{$scope}radio-column .#{$scope}radio-label,
+.#{$scope}checkbox-column label,
+.#{$scope}checkbox-column .#{$scope}checkbox-label {
+  margin-bottom: $input-option-label-margin-bottom;
 }

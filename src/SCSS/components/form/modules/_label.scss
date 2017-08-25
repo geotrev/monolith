@@ -1,16 +1,7 @@
-// classes only
 
-@mixin form_label_classes {
-  .#{$scope}label {
-    @include form_label;
-  }
-}
-
-// with tags
-
-@mixin form_label_with_tags {
-  label,
-  .#{$scope}label {
-    @include form_label;
-  }
+label,
+.#{$scope}label {
+  display: flex;
+  flex-direction: column;
+  font-family: $form-font;
 }
