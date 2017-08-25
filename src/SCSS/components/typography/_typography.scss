@@ -33,8 +33,8 @@ h1, h2, h3, h4, h5, h6, p, em, small, mark,
   @include breakpoint-up($break) {
     @for $i from 1 through 6 {
       h#{$i}, .h#{$i}  {
-        $value: map-deep-get($type-header-sizes, $break, h#{$i});
-        font-size: $value;
+        $size: map-deep-get($type-header-sizes, $break, h#{$i});
+        font-size: $size;
       }
     }
   }
