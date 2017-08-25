@@ -1,25 +1,23 @@
-// classes only
 
-@mixin form_fieldset_classes {
-  .#{$scope}fieldset {
-    @include form_fieldset;
+fieldset,
+.#{$scope}fieldset {
+  background: $fieldset-background;
+  border-radius: $fieldset-border-radius;
+  border: $fieldset-border;
+  box-shadow: $fieldset-box-shadow;
+  display: flex;
+  margin: $fieldset-margin;
+  padding: $fieldset-padding;
 
-    .#{$scope}legend {
-      @include form_legend;
-    }
-  }
-}
-
-// with tags
-
-@mixin form_fieldset_with_tags {
-  fieldset,
-  .#{$scope}fieldset {
-    @include form_fieldset;
-
-    legend,
-    .#{$scope}legend {
-      @include form_legend;
-    }
+  legend,
+  .#{$scope}legend {
+    background: $fieldset-legend-background;
+    border-radius: $fieldset-legend-border-radius;
+    border: $fieldset-legend-border;
+    box-shadow: $fieldset-legend-box-shadow;
+    color: $fieldset-legend-color;
+    font-family: $fieldset-legend-font-family;
+    font-size: $fieldset-legend-font-size;
+    padding: $fieldset-legend-padding;
   }
 }

@@ -1,32 +1,25 @@
-// classes only
 
-@mixin form_field_classes {
-  .#{$scope}text-field, .#{$scope}text-area {
-    @include form_field;
-  }
-
-  .#{$scope}text-area {
-    @include form_textarea_resize;
-  }
+input[type=text],
+input[type=password], input[type=email],
+input[type=date], input[type=datetime-local],
+input[type=month], input[type=number],
+input[type=tel], input[type=search],
+input[type=time], input[type=url],
+input[type=week],
+textarea,
+.#{$scope}text-field, .#{$scope}text-area {
+  background: $input-background;
+  border-radius: $input-border-radius;
+  border: $input-border;
+  box-shadow: $input-box-shadow;
+  display: flex;
+  font-family: $input-font-family;
+  font-size: $input-font-size;
+  margin: $input-margin;
+  padding: $input-padding;
 }
 
-// with tags
-
-@mixin form_field_with_tags {
-  input[type=text],
-  input[type=password], input[type=email],
-  input[type=date], input[type=datetime-local],
-  input[type=month], input[type=number],
-  input[type=tel], input[type=search],
-  input[type=time], input[type=url],
-  input[type=week],
-  textarea,
-  .#{$scope}text-field, .#{$scope}text-area {
-    @include form_field;
-  }
-
-  textarea, input[type=text],
-  .#{$scope}text-area {
-    @include form_textarea_resize;
-  }
+textarea, input[type=text],
+.#{$scope}text-area {
+  resize: $input-resize;
 }
