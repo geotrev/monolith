@@ -15,39 +15,30 @@
 
 $scope: '' !default;
 
-$global-font:
-  -apple-system,
-  BlinkMacSystemFont,
-  "Segoe UI",
-  Roboto,
-  Oxygen-Sans,
-  Ubuntu,
-  Cantarell,
-  "Helvetica Neue",
-  sans-serif !default;
-
+$global-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
 $global-font-size: 16px !default;
 $global-space: 16px !default;
 
-$global-palette: (
-  primary: darkblue,
-  secondary: goldenrod,
-  tertiary: crimson
-);
+$primary: teal;
+$secondary: goldenrod;
+$tertiary: crimson;
+$warning: yellow;
+$success: green;
+$destroy: red;
+$notice: skyblue;
 
-$global-gray: (
-  black: #000000,
-  gray100: #111,
-  gray200: #222,
-  gray300: #333,
-  gray400: #444,
-  gray500: #555,
-  gray600: #666,
-  gray700: #777,
-  gray800: #888,
-  gray900: #999,
-  white: #ffffff
-);
+$black: #000000;
+$gray100: #111;
+$gray200: #222;
+$gray300: #333;
+$gray400: #444;
+$gray500: #555;
+$gray600: #666;
+$gray700: #777;
+$gray800: #888;
+$gray900: #999;
+$white: #ffffff;
+$link: blue;
 
 //
 // 2. Grid
@@ -121,41 +112,39 @@ $type-header-sizes: (
   )
 );
 
-// Header styling
-
 $type-header-styles: (
   h1: (
-    color: #000,
+    color: $gray200,
     font-style: normal,
     font-weight: bold,
     margin-bottom: 32px
   ),
   h2: (
-    color: #000,
+    color: $gray200,
     font-style: normal,
     font-weight: bold,
     margin-bottom: 26px
   ),
   h3: (
-    color: #000,
+    color: $gray200,
     font-style: normal,
     font-weight: bold,
     margin-bottom: 22px
   ),
   h4: (
-    color: #000,
+    color: $gray200,
     font-style: normal,
     font-weight: bold,
     margin-bottom: $global-space
   ),
   h5: (
-    color: #000,
+    color: $gray200,
     font-style: normal,
     font-weight: bold,
     margin-bottom: 12px
   ),
   h6: (
-    color: #000,
+    color: $gray200,
     font-style: normal,
     font-weight: bold,
     margin-bottom: 10px
@@ -164,12 +153,12 @@ $type-header-styles: (
 
 $type-header-line-height: 1.3;
 
+$type-p-color: $gray200;
 $type-p-font-size: 16px;
-$type-p-margin-bottom: 16px;
-$type-p-line-height: 1.5;
-$type-p-font-weight: normal;
 $type-p-font-style: normal;
-$type-p-color: #000;
+$type-p-font-weight: normal;
+$type-p-line-height: 1.5;
+$type-p-margin-bottom: 16px;
 
 $type-em-font-style: normal;
 $type-em-font-weight: bold;
@@ -178,35 +167,41 @@ $type-small-font-size: 14px;
 $type-small-font-weight: normal;
 
 $type-mark-padding: 10px;
-$type-mark-color: #000;
-$type-mark-background: lightblue;
+$type-mark-color: $gray200;
+$type-mark-background: $notice;
 
 
 //
 // 3. Buttons
 //
 
-$link-color: blue;
+$link-color: $link;
 $link-decoration: none;
 $link-decoration-hover: underline;
 $link-font: $global-font;
 $link-font-size: $global-font-size;
-$link-hover: lighten($link-color, 20%);
+$link-hover: lighten($link, 20%);
 $link-active: $link-hover;
 
 $button-padding: 10px $global-space;
+$button-margin: 0 0 $global-space 0;
+
 $button-border-radius: 4px;
+$button-border: none;
+
 $button-font-size: $global-font-size;
 $button-font: $global-font;
-$button-background: gray;
-$button-background-hover: darken($button-background, 5%);
-$button-background-active: $button-background-hover;
-$button-border: none;
+
 $button-box-shadow: none;
+
 $button-decoration: none;
 $button-decoration-hover: none;
-$button-margin: 0 0 $global-space 0;
-$button-color: white;
+
+$button-background: $primary;
+$button-background-hover: lighten($button-background, 5%);
+$button-background-active: $button-background-hover;
+
+$button-color: $white;
 $button-color-hover: $button-color;
 $button-color-active: $button-color;
 
@@ -245,11 +240,11 @@ $form-font: $global-font;
 $input-font-size: $global-font-size;
 $input-font-family: $form-font;
 $input-box-shadow: none;
-$input-border: 1px solid darkgray;
+$input-border: 1px solid $gray900;
 $input-padding: 12px;
 $input-margin: 8px 0 $global-space 0;
 $input-border-radius: 4px;
-$input-background: white;
+$input-background: $white;
 
 // textarea resize
 
@@ -266,14 +261,14 @@ $input-option-margin-top: 8px;
 
 // disabled
 
-$input-disabled-background: lightgray;
-$input-disabled-color: gray;
+$input-disabled-background: lighten($gray900, 20%);
+$input-disabled-color: $gray700;
 $input-disabled-border: none;
 $input-disabled-resize: none;
 
 // fieldset
 
-$fieldset-border: 1px solid black;
+$fieldset-border: 1px solid $black;
 $fieldset-border-radius: 4px;
 $fieldset-box-shadow: none;
 $fieldset-background: transparent;
@@ -285,8 +280,8 @@ $fieldset-padding: $global-space * 2;
 $fieldset-legend-font-family: $form-font;
 $fieldset-legend-font-size: $global-font-size;
 $fieldset-legend-padding: $global-space / 2;
-$fieldset-legend-color: white;
-$fieldset-legend-background: black;
+$fieldset-legend-color: $white;
+$fieldset-legend-background: $secondary;
 $fieldset-legend-box-shadow: none;
 $fieldset-legend-border: none;
 $fieldset-legend-border-radius: 4px;
