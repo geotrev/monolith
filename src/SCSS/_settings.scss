@@ -15,9 +15,39 @@
 
 $scope: '' !default;
 
-$global-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-$global-font-size: 16px;
-$global-space: 16px;
+$global-font:
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  Oxygen-Sans,
+  Ubuntu,
+  Cantarell,
+  "Helvetica Neue",
+  sans-serif !default;
+
+$global-font-size: 16px !default;
+$global-space: 16px !default;
+
+$global-palette: (
+  primary: darkblue,
+  secondary: goldenrod,
+  tertiary: crimson
+);
+
+$global-gray: (
+  black: #000000,
+  gray100: #111,
+  gray200: #222,
+  gray300: #333,
+  gray400: #444,
+  gray500: #555,
+  gray600: #666,
+  gray700: #777,
+  gray800: #888,
+  gray900: #999,
+  white: #ffffff
+);
 
 //
 // 2. Grid
