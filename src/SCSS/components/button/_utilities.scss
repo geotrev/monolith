@@ -17,8 +17,60 @@ button, .#{$scope}button {
     $button-font-size: map-deep-get($button-sizes, $button-size, font-size);
 
     &.#{$button-size} {
-      padding: $button-padding;
       font-size: $button-font-size;
+      padding: $button-padding;
+    }
+  }
+
+  &.outline {
+    background: transparent;
+    color: $button-default-background;
+
+    &:visited, &:active {
+      background: transparent;;
+      color: $button-default-background;
+    }
+
+    &:hover, &:focus {
+      background: transparent;
+      color: $button-default-background-hover;
+    }
+  }
+
+  @each $type, $color in $button-palette {
+    &.#{$type} {
+      background-color: $color;
+      border-color: $color;
+      color: $button-default-color;
+
+      &:visited, &:active {
+        background-color: $color;
+        border-color: $color;
+        color: $button-default-color;
+      }
+
+      &:hover, &:focus {
+        background: lighten($color, 10%);
+        border-color: lighten($color, 10%);
+        color: $button-default-color;
+      }
+
+      &.outline {
+        background: transparent;
+        color: $color;
+
+        &:visited, &:active {
+          background: transparent;
+          border-color: $color;
+          color: $color;
+        }
+
+        &:hover, &:focus {
+          background: transparent;
+          border-color: lighten($color, 10%);
+          color: lighten($color, 10%);
+        }
+      }
     }
   }
 

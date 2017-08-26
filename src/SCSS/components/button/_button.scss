@@ -3,76 +3,36 @@ input[type=file], input[type=reset],
 button, .#{$scope}button {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  background: $button-default-background;
+  border-color: $button-default-border-color;
   border-radius: $button-border-radius;
+  border-style: $button-border-style;
+  border-width: $button-border-width;
   box-shadow: $button-box-shadow;
   box-sizing: border-box;
+  color: $button-default-color;
   cursor: pointer;
   display: inline-block;
   font-family: $button-font;
   font-size: $button-font-size;
+  font-style: $button-font-style;
   margin: $button-margin;
   padding: $button-padding;
   text-align: center;
   text-decoration: $button-decoration;
-  border-width: 1px;
-  border-style: solid;
-  background: map-get($brand-palette, primary);
-  border-color: map-get($brand-palette, primary);
-  color: map-get($gray-palette, white);
 
   &:visited, &:active {
-    background-color: map-get($brand-palette, primary);
-    border-color: map-get($brand-palette, primary);
-    color: map-get($gray-palette, white);
+    background-color: $button-default-background;
+    border-color: $button-default-border-color;
+    color: $button-default-color;
   }
 
   &:hover, &:focus {
-    background: lighten(map-get($brand-palette, primary), 10%);
-    border-color: lighten(map-get($brand-palette, primary), 10%);
-    color: map-get($gray-palette, white);
+    background: $button-default-background-hover;
+    border-color: $button-default-border-color-hover;
+    color: $button-default-color;
     text-decoration: $button-decoration;
   }
-
-  @each $type, $color in $button-brand-palette {
-    &.#{$type} {
-      border-color: $color;
-      background-color: $color;
-      color: map-get($gray-palette, white);
-
-      &:visited, &:active {
-        background-color: $color;
-        border-color: $color;
-        color: map-get($gray-palette, white);
-      }
-
-      &:hover, &:focus {
-        background: lighten($color, 10%);
-        border-color: lighten($color, 10%);
-        color: map-get($gray-palette, white);
-      }
-    }
-  }
-
-  @each $type, $color in $button-status-palette {
-    &.#{$type} {
-      border-color: $color;
-      background-color: $color;
-      color: map-get($gray-palette, white);
-
-      &:visited, &:active {
-        background-color: $color;
-        border-color: $color;
-        color: map-get($gray-palette, white);
-      }
-
-      &:hover, &:focus {
-        background: lighten($color, 10%);
-        border-color: lighten($color, 10%);
-        color: map-get($gray-palette, white);
-      }
-    }
-  }
-
 }
 
 @import 'utilities';

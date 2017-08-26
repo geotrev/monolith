@@ -6,19 +6,19 @@ input[type=number], input[type=tel],
 input[type=search], input[type=time],
 input[type=url], input[type=week],
 input[type=submit], input[type=file], input[type=reset],
-textarea, button,
+textarea, button, a,
 .#{$scope}text-field, .#{$scope}text-area, .#{$scope}button {
   &:disabled, &.disabled {
-    background: $input-disabled-background;
-    border: $input-disabled-border;
-    color: $input-disabled-color;
+    background: $input-disabled-background !important;
+    border: $input-disabled-border !important;
+    color: $input-disabled-color !important;
     cursor: not-allowed;
-    resize: $input-disabled-resize;
+    resize: $input-disabled-resize !important;
 
     &:hover {
-      background: $input-disabled-background;
-      border: $input-disabled-border;
-      color: $input-disabled-color;
+      background: $input-disabled-background !important;
+      border: $input-disabled-border !important;
+      color: $input-disabled-color !important;
     }
   }
 }
