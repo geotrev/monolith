@@ -1,0 +1,25 @@
+input[type=button], input[type=submit],
+input[type=file], input[type=reset],
+button, .#{$scope}button {
+
+  // Wide
+  &.wide {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  // Sizes
+  @each $name in $button-sizes {
+    $button-size: nth($name, 1);
+
+    $button-padding: map-deep-get($button-sizes, $button-size, padding);
+    $button-font-size: map-deep-get($button-sizes, $button-size, font-size);
+
+    &.#{$button-size} {
+      padding: $button-padding;
+      font-size: $button-font-size;
+    }
+  }
+
+}

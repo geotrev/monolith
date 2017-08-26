@@ -22,16 +22,17 @@ $global-space: 16px !default;
 $brand-palette: (
   primary: teal,
   secondary: goldenrod,
-  tertiary: crimson,
-  link: blue
-);
+  tertiary: crimson
+) !default;
+
+$link-color: blue;
 
 $status-palette: (
-  warning: yellow,
+  warning: yellowgreen,
   success: green,
   destroy: red,
-  notice: skyblue
-);
+  notice: darkblue
+) !default;
 
 $gray-palette: (
   black: #000000,
@@ -45,7 +46,7 @@ $gray-palette: (
   gray800: #888,
   gray900: #999,
   white: #ffffff
-);
+) !default;
 
 //
 // 2. Grid
@@ -182,19 +183,23 @@ $type-mark-background: map-get($status-palette, notice);
 // 3. Buttons
 //
 
-$link-color: map-get($brand-palette, link);
+$link-color: $link-color;
 $link-decoration: none;
 $link-decoration-hover: underline;
 $link-font: $global-font;
 $link-font-size: $global-font-size;
-$link-hover: lighten(map-get($brand-palette, link), 20%);
+$link-hover: lighten($link-color, 20%);
 $link-active: $link-hover;
+
+$button-brand-palette: $brand-palette;
+$button-status-palette: $status-palette;
 
 $button-padding: 10px $global-space;
 $button-margin: 0 0 $global-space 0;
 
 $button-border-radius: 4px;
-$button-border: none;
+$button-border-style: solid;
+$button-border-width: 1px;
 
 $button-font-size: $global-font-size;
 $button-font: $global-font;
@@ -203,14 +208,6 @@ $button-box-shadow: none;
 
 $button-decoration: none;
 $button-decoration-hover: none;
-
-$button-background: map-get($brand-palette, primary);
-$button-background-hover: lighten($button-background, 5%);
-$button-background-active: $button-background-hover;
-
-$button-color: map-get($gray-palette, white);
-$button-color-hover: $button-color;
-$button-color-active: $button-color;
 
 $button-sizes: (
   small: (
