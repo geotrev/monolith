@@ -1,0 +1,15 @@
+@function map-deep-get($map, $keys...) {
+  $value: $map;
+  @each $key in $keys {
+    $value: map-get($value, $key);
+  }
+  @return $value;
+}
+
+@function find-invert-of($color) {
+  @if (lightness($color) > 55) {
+    @return #222222; // Lighter backgorund, return dark color
+  } @else {
+    @return #ffffff; // Darker background, return light color
+  }
+}
