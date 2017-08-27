@@ -20,25 +20,6 @@ button, .#{$scope}button {
     width: 100%;
   }
 
-  @each $status, $color in $button-status-palette {
-    &.#{$status} {
-      background: lighten($color, 5%);
-      border-color: lighten($color, 5%);
-      color: findInvert($color);
-
-      &:active, &:visited {
-        background: lighten($color, 5%);
-        border-color: lighten($color, 5%);
-        color: findInvert($color);
-      }
-      &:focus, &:hover {
-        background: $color;
-        border-color: $color;
-        color: findInvert($color);
-      }
-    }
-  }
-
   @each $type in $button-types {
     $name: nth($type, 1);
     $background: map-deep-get($button-types, $name, background);

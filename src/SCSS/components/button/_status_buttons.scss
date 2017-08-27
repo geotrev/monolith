@@ -1,0 +1,22 @@
+input[type=button], input[type=submit],
+input[type=file], input[type=reset],
+button, .#{$scope}button {
+  @each $status, $color in $button-status-palette {
+    &.#{$status} {
+      background: lighten($color, 5%);
+      border-color: lighten($color, 5%);
+      color: find-invert($color);
+
+      &:active, &:visited {
+        background: lighten($color, 5%);
+        border-color: lighten($color, 5%);
+        color: find-invert($color);
+      }
+      &:focus, &:hover {
+        background: $color;
+        border-color: $color;
+        color: find-invert($color);
+      }
+    }
+  }
+}
