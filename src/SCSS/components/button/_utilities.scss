@@ -15,8 +15,8 @@ button, .#{$scope}button {
     }
   }
 
-  @each $status, $color in $button-palette {
-    &.#{$scope}#{$status} {
+  @each $name, $color in $button-palette {
+    &.#{$scope}#{$name} {
       background-color: $color;
       border-color: $color;
       color: $button-default-color;
