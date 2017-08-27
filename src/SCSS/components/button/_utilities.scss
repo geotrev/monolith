@@ -22,6 +22,7 @@ button, .#{$scope}button {
     }
   }
 
+  // Buttons with color palette
   @each $type, $color in $button-palette {
     &.#{$scope}#{$type} {
       background-color: $color;
