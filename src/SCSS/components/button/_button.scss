@@ -3,14 +3,14 @@ input[type=file], input[type=reset],
 button, .#{$scope}button {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  background: $button-default-background;
-  border-color: $button-default-border-color;
+  box-sizing: border-box;
+  background: $button-background;
+  border-color: $button-border-color;
   border-radius: $button-border-radius;
   border-style: $button-border-style;
   border-width: $button-border-width;
   box-shadow: $button-box-shadow;
-  box-sizing: border-box;
-  color: $button-default-color;
+  color: $button-color;
   cursor: pointer;
   display: inline-block;
   font-family: $button-font;
@@ -22,15 +22,15 @@ button, .#{$scope}button {
   text-decoration: $button-decoration;
 
   &:visited, &:active {
-    background-color: $button-default-background;
-    border-color: $button-default-border-color;
-    color: $button-default-color;
+    background-color: $button-background;
+    border-color: $button-border-color;
+    color: $button-color;
   }
 
   &:hover, &:focus {
-    background: $button-default-background-hover;
-    border-color: $button-default-border-color-hover;
-    color: $button-default-color;
+    background: $button-background-hover;
+    border-color: $button-border-color-hover;
+    color: $button-color;
     text-decoration: $button-decoration;
   }
 }

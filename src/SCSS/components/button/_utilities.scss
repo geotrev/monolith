@@ -2,7 +2,6 @@ input[type=button], input[type=submit],
 input[type=file], input[type=reset],
 button, .#{$scope}button {
 
-  // Sizes
   @each $size in $button-sizes {
     $button-size: nth($size, 1);
 
@@ -15,137 +14,60 @@ button, .#{$scope}button {
     }
   }
 
-  @each $name, $color in $button-palette {
-    &.#{$scope}#{$name} {
-      background: $color;
-      border-color: $color;
-      color: find-invert-of($color);
-
-      &:visited, &:active {
-        background: $color;
-        border-color: $color;
-        color: find-invert-of($color);
-      }
-
-      &:hover, &:focus {
-        background: lighten($color, 10%);
-        border-color: lighten($color, 10%);
-        color: find-invert-of($color);
-      }
-
-      &.#{$scope}outline {
-        background: transparent;
-        color: $color;
-
-        &:visited, &:active {
-          background: transparent;
-          border-color: $color;
-          color: $color;
-        }
-
-        &:hover, &:focus {
-          background: transparent;
-          border-color: lighten($color, 10%);
-          color: lighten($color, 10%);
-        }
-      }
-
-      &.#{$scope}clear {
-        background: transparent;
-        color: $color;
-        border-color: transparent;
-
-        &:visited, &:active {
-          background: transparent;
-          color: $color;
-          border-color: transparent;
-        }
-
-        &:hover, &:focus {
-          background: transparent;
-          color: lighten($color, 10%);
-          border-color: transparent;
-        }
-      }
-    }
-  }
-
   &.#{$scope}wide {
     display: block;
     max-width: 100%;
     width: 100%;
   }
 
-  &.#{$scope}outline {
-    background: transparent;
-    color: $button-default-color-invert;
+  @each $status, $color in $button-status-palette {
+    &.#{$status} {
+      background: lighten($color, 5%);
+      border-color: lighten($color, 5%);
+      color: findInvert($color);
 
-    &:visited, &:active {
-      background: transparent;
-      color: $button-default-color-invert;
-    }
-
-    &:hover, &:focus {
-      background: transparent;
-      color: $button-default-color-invert-hover;
-    }
-  }
-
-  &.#{$scope}clear {
-    background: transparent;
-    color: $button-default-color-invert;
-    border-color: transparent;
-
-    &:visited, &:active {
-      background: transparent;
-      color: $button-default-color-invert;
-      border-color: transparent;
-    }
-
-    &:hover, &:focus {
-      background: transparent;
-      color: $button-default-color-invert-hover;
-      border-color: transparent;
+      &:active, &:visited {
+        background: lighten($color, 5%);
+        border-color: lighten($color, 5%);
+        color: findInvert($color);
+      }
+      &:focus, &:hover {
+        background: $color;
+        border-color: $color;
+        color: findInvert($color);
+      }
     }
   }
 
-  &.#{$scope}invert {
-    color: $button-default-color-invert;
-    background: white;
-    border-color: white;
-    border-style: solid;
-    border-width: 1px;
+  @each $type in $button-types {
+    $name: nth($type, 1);
+    $background: map-deep-get($button-types, $name, background);
+    $background-hover: map-deep-get($button-types, $name, background-hover);
+    $color: map-deep-get($button-types, $name, color);
+    $color-hover: map-deep-get($button-types, $name, color-hover);
+    $border-color: map-deep-get($button-types, $name, border-color);
+    $border-color-hover: map-deep-get($button-types, $name, border-color-hover);
+    $box-shadow: map-deep-get($button-types, $name, box-shadow);
+    $box-shadow-hover: map-deep-get($button-types, $name, box-shadow-hover);
 
-    &:visited, &:active {
-      background: white;
-      color: $button-default-color-invert;
-      border-color: white;
-    }
+    &.#{$name} {
+      background: $background;
+      border-color: $border-color;
+      box-shadow: $box-shadow;
+      color: $color;
 
-    &:hover, &:focus {
-      background: rgba(white, 0.8);
-      color: $button-default-color-invert;
-      border-color: rgba(white, 0.8);
-    }
-  }
+      &:active, &:visited {
+        background: $background;
+        border-color: $border-color;
+        color: $color;
+      }
 
-  &.#{$scope}invert.#{$scope}outline {
-    color: white;
-    background: transparent;
-    border-color: white;
-    border-style: solid;
-    border-width: 1px;
-
-    &:visited, &:active {
-      background: transparent;
-      color: white;
-      border-color: white;
-    }
-
-    &:hover, &:focus {
-      background: transparent;
-      color: rgba(white, 0.8);
-      border-color: rgba(white, 0.8);
+      &:focus, &:hover {
+        background: $background-hover;
+        border-color: $border-color-hover;
+        box-shadow: $box-shadow;
+        color: $color-hover;
+      }
     }
   }
 }

@@ -39,7 +39,7 @@
   @return (map-get($color-rgb, 'red') * .2126) + (map-get($color-rgb, 'green') * .7152) + (map-get($color-rgb, 'blue') * .0722);
 }
 
-@function find-invert-of($color) {
+@function findInvert($color) {
   @if (colorLuminance($color) > 0.55) {
     @return map-get($gray-palette, gray300);
   } @else {
