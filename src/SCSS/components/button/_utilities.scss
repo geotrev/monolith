@@ -22,21 +22,6 @@ button, .#{$scope}button {
     }
   }
 
-  &.outline {
-    background: transparent;
-    color: $button-default-background;
-
-    &:visited, &:active {
-      background: transparent;;
-      color: $button-default-background;
-    }
-
-    &:hover, &:focus {
-      background: transparent;
-      color: $button-default-background-hover;
-    }
-  }
-
   @each $type, $color in $button-palette {
     &.#{$type} {
       background-color: $color;
@@ -56,21 +41,74 @@ button, .#{$scope}button {
       }
 
       &.outline {
-        background: transparent;
+        background-color: transparent;
         color: $color;
 
         &:visited, &:active {
-          background: transparent;
+          background-color: transparent;
           border-color: $color;
           color: $color;
         }
 
         &:hover, &:focus {
-          background: transparent;
+          background-color: transparent;
           border-color: lighten($color, 10%);
           color: lighten($color, 10%);
         }
       }
+
+      &.clear {
+        background-color: transparent;
+        color: $color;
+        border-color: transparent;
+
+        &:visited, &:active {
+          background-color: transparent;
+          color: $color;
+          border-color: transparent;
+        }
+
+        &:hover, &:focus {
+          background-color: transparent;
+          color: lighten($color, 10%);
+          border-color: transparent;
+        }
+      }
+    }
+  }
+
+  // Outline
+  &.outline {
+    background-color: transparent;
+    color: $button-default-background;
+
+    &:visited, &:active {
+      background-color: transparent;
+      color: $button-default-background;
+    }
+
+    &:hover, &:focus {
+      background-color: transparent;
+      color: $button-default-background-hover;
+    }
+  }
+
+  // Clear
+  &.clear {
+    background-color: transparent;
+    color: $button-default-background;
+    border-color: transparent;
+
+    &:visited, &:active {
+      background-color: transparent;
+      color: $button-default-background;
+      border-color: transparent;
+    }
+
+    &:hover, &:focus {
+      background-color: transparent;
+      color: $button-default-background-hover;
+      border-color: transparent;
     }
   }
 
