@@ -1,7 +1,10 @@
 // Apply font family simple spacing reset
 
 h1, h2, h3, h4, h5, h6, p, em, small, mark,
-.h1, .h2, .h3, .h4, .h5, .h6, .paragraph {
+.#{$scope}h1, .#{$scope}h2,
+.#{$scope}h3, .#{$scope}h4,
+.#{$scope}h5, .#{$scope}h6,
+.#{$scope}paragraph {
   font-family: $global-font;
   margin: 0;
   padding: 0;
@@ -16,7 +19,7 @@ h1, h2, h3, h4, h5, h6, p, em, small, mark,
   $header-font-weight: map-deep-get($type-header-styles, $header-tag, font-weight);
   $header-margin: map-deep-get($type-header-styles, $header-tag, margin-bottom);
 
-  #{$header-tag}, .#{$header-tag} {
+  #{$header-tag}, .#{$scope}#{$header-tag} {
     color: $header-color;
     font-style: $header-font-style;
     font-weight: $header-font-weight;
@@ -32,7 +35,7 @@ h1, h2, h3, h4, h5, h6, p, em, small, mark,
 
   @include breakpoint-up($break) {
     @for $i from 1 through 6 {
-      h#{$i}, .h#{$i}  {
+      h#{$i}, .#{$scope}h#{$i}  {
         $size: map-deep-get($type-header-sizes, $break, h#{$i});
         font-size: $size;
       }
@@ -42,7 +45,7 @@ h1, h2, h3, h4, h5, h6, p, em, small, mark,
 
 // p
 
-p, .paragraph {
+p, .#{$scope}paragraph {
   font-size: $type-p-font-size;
   font-style: $type-p-font-style;
   font-weight: $type-p-font-weight;
@@ -53,7 +56,7 @@ p, .paragraph {
 
 // em
 
-em, .em {
+em, .#{$scope}em {
   font-size: inherit;
   font-style: $type-em-font-style;
   font-weight: $type-em-font-weight;
@@ -61,7 +64,7 @@ em, .em {
 
 // mark
 
-mark, .mark {
+mark, .#{$scope}mark {
   font-size: inherit;
   padding: $type-mark-padding;
   background: $type-mark-background;
@@ -70,7 +73,7 @@ mark, .mark {
 
 // small
 
-small, .small {
+small, .#{$scope}small {
   font-weight: $type-small-font-weight;
   font-size: $type-small-font-size;
 }

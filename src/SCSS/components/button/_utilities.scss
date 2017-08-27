@@ -3,7 +3,7 @@ input[type=file], input[type=reset],
 button, .#{$scope}button {
 
   // Wide
-  &.wide {
+  &.#{$scope}wide {
     display: block;
     max-width: 100%;
     width: 100%;
@@ -16,14 +16,14 @@ button, .#{$scope}button {
     $button-padding: map-deep-get($button-sizes, $button-size, padding);
     $button-font-size: map-deep-get($button-sizes, $button-size, font-size);
 
-    &.#{$button-size} {
+    &.#{$scope}#{$button-size} {
       font-size: $button-font-size;
       padding: $button-padding;
     }
   }
 
   @each $type, $color in $button-palette {
-    &.#{$type} {
+    &.#{$scope}#{$type} {
       background-color: $color;
       border-color: $color;
       color: $button-default-color;
@@ -40,7 +40,7 @@ button, .#{$scope}button {
         color: $button-default-color;
       }
 
-      &.outline {
+      &.#{$scope}outline {
         background-color: transparent;
         color: $color;
 
@@ -57,7 +57,7 @@ button, .#{$scope}button {
         }
       }
 
-      &.clear {
+      &.#{$scope}clear {
         background-color: transparent;
         color: $color;
         border-color: transparent;

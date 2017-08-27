@@ -8,7 +8,7 @@ input[type=url], input[type=week],
 input[type=submit], input[type=file], input[type=reset],
 textarea, button, a,
 .#{$scope}text-field, .#{$scope}text-area, .#{$scope}button {
-  &:disabled, &.disabled {
+  &:disabled, &.#{$scope}disabled {
     background: $input-disabled-background !important;
     border: $input-disabled-border !important;
     color: $input-disabled-color !important;
