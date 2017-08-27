@@ -1,26 +1,9 @@
-// ------------------------------ *
-//
-// Utilities
-//
-// 1. Grid widths
-// 2. Grid sections
-// 3. Grid fullscreen
-// 4. Grid fullscreen align classes
-// 5. Column collapsing
-//
-// ------------------------------ *
-
 .#{$grid} {
-
-  // 1. Grid widths
-
   @each $name, $width in $grid-widths {
     &.#{$scope}#{$name} {
       max-width: $width;
     }
   }
-
-  // 2. Grid sections
 
   @each $name, $padding in $grid-sections {
     &.#{$scope}#{$name}-section {
@@ -28,8 +11,6 @@
       padding-bottom: $padding;
     }
   }
-
-  // 3. Grid fullscreen and align classes
 
   &.#{$scope}fullscreen {
     box-sizing: border-box;
@@ -40,8 +21,6 @@
     .#{$row} {
       flex: 1 1 auto;
     }
-
-    // 4. Grid fullscreen align classes
 
     .#{$row} {
       &.#{$scope}align-bottom {
@@ -55,10 +34,7 @@
       }
     }
   }
-
 }
-
-// 5. Column collapse
 
 .#{$row}.#{$scope}collapsed {
   .#{$column}s, .#{$column} {

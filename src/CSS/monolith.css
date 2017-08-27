@@ -1154,7 +1154,10 @@ div {
 }
 
 h1, h2, h3, h4, h5, h6, p, em, small, mark,
-.h1, .h2, .h3, .h4, .h5, .h6, .paragraph {
+.h1, .h2,
+.h3, .h4,
+.h5, .h6,
+.paragraph {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
   padding: 0;
@@ -1379,14 +1382,6 @@ button:focus, .button:hover, .button:focus {
   border-color: #00b3b3;
   color: #ffffff;
   text-decoration: none;
-}
-
-input[type=button].wide, input[type=submit].wide,
-input[type=file].wide, input[type=reset].wide,
-button.wide, .button.wide {
-  display: block;
-  max-width: 100%;
-  width: 100%;
 }
 
 input[type=button].small, input[type=submit].small,
@@ -1998,6 +1993,14 @@ button.notice.clear:focus, .button.notice.clear:hover, .button.notice.clear:focu
   border-color: transparent;
 }
 
+input[type=button].wide, input[type=submit].wide,
+input[type=file].wide, input[type=reset].wide,
+button.wide, .button.wide {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
 input[type=button].outline, input[type=submit].outline,
 input[type=file].outline, input[type=reset].outline,
 button.outline, .button.outline {
@@ -2156,7 +2159,7 @@ input[type=radio], input[type=checkbox],
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-right: 12px;
+  padding-right: 16px;
 }
 
 .radio-column, .checkbox-column {
@@ -2164,6 +2167,7 @@ input[type=radio], input[type=checkbox],
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding-bottom: 16px;
 }
 
 .radio-row, .checkbox-row {
@@ -2171,20 +2175,21 @@ input[type=radio], input[type=checkbox],
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding-bottom: 16px;
 }
 
 .radio-row input[type=radio],
 .radio-row .radio,
 .checkbox-row input[type=checkbox],
 .checkbox-row .checkbox {
-  margin-right: 12px;
+  margin-right: 8px;
 }
 
 .radio-column label,
 .radio-column .radio-label,
 .checkbox-column label,
 .checkbox-column .checkbox-label {
-  margin-bottom: 16px;
+  padding-bottom: 16px;
 }
 
 input[type=text]:disabled, input[type=text].disabled, input[type=password]:disabled, input[type=password].disabled,
@@ -2231,4 +2236,18 @@ textarea.disabled:hover, button:disabled:hover, button.disabled:hover, a:disable
   background: #cccccc !important;
   border: none !important;
   color: #777 !important;
+}
+
+input[type=text]:focus, input[type=password]:focus,
+input[type=email]:focus, input[type=date]:focus,
+input[type=datetime-local]:focus, input[type=month]:focus,
+input[type=number]:focus, input[type=tel]:focus,
+input[type=search]:focus, input[type=time]:focus,
+input[type=url]:focus, input[type=week]:focus,
+input[type=submit]:focus, input[type=file]:focus, input[type=reset]:focus,
+textarea:focus, button:focus, a:focus,
+.text-field:focus, .text-area:focus, .button:focus {
+  background: #ffffff;
+  border: 1px solid #999;
+  box-shadow: none;
 }

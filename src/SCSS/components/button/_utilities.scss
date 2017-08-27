@@ -2,16 +2,9 @@ input[type=button], input[type=submit],
 input[type=file], input[type=reset],
 button, .#{$scope}button {
 
-  // Wide
-  &.#{$scope}wide {
-    display: block;
-    max-width: 100%;
-    width: 100%;
-  }
-
   // Sizes
-  @each $name in $button-sizes {
-    $button-size: nth($name, 1);
+  @each $size in $button-sizes {
+    $button-size: nth($size, 1);
 
     $button-padding: map-deep-get($button-sizes, $button-size, padding);
     $button-font-size: map-deep-get($button-sizes, $button-size, font-size);
@@ -22,9 +15,8 @@ button, .#{$scope}button {
     }
   }
 
-  // Buttons with color palette
-  @each $type, $color in $button-palette {
-    &.#{$scope}#{$type} {
+  @each $status, $color in $button-palette {
+    &.#{$scope}#{$status} {
       background-color: $color;
       border-color: $color;
       color: $button-default-color;
@@ -78,7 +70,12 @@ button, .#{$scope}button {
     }
   }
 
-  // Outline
+  &.#{$scope}wide {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+  }
+
   &.#{$scope}outline {
     background-color: transparent;
     color: $button-default-background;
@@ -94,7 +91,6 @@ button, .#{$scope}button {
     }
   }
 
-  // Clear
   &.#{$scope}clear {
     background-color: transparent;
     color: $button-default-background;

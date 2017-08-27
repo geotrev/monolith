@@ -1,5 +1,3 @@
-// Apply font family simple spacing reset
-
 h1, h2, h3, h4, h5, h6, p, em, small, mark,
 .#{$scope}h1, .#{$scope}h2,
 .#{$scope}h3, .#{$scope}h4,
@@ -10,10 +8,8 @@ h1, h2, h3, h4, h5, h6, p, em, small, mark,
   padding: 0;
 }
 
-// Header color, font style, margin, and line height
-
-@each $name in $type-header-styles {
-  $header-tag: nth($name, 1);
+@each $header-name in $type-header-styles {
+  $header-tag: nth($header-name, 1);
   $header-color: map-deep-get($type-header-styles, $header-tag, color);
   $header-font-style: map-deep-get($type-header-styles, $header-tag, font-style);
   $header-font-weight: map-deep-get($type-header-styles, $header-tag, font-weight);
@@ -28,22 +24,18 @@ h1, h2, h3, h4, h5, h6, p, em, small, mark,
   }
 }
 
-// Header font sizes
+@each $button-size in $type-header-sizes {
+  $breakpoint: nth($button-size, 1);
 
-@each $size in $type-header-sizes {
-  $break: nth($size, 1);
-
-  @include breakpoint-up($break) {
+  @include breakpoint-up($breakpoint) {
     @for $i from 1 through 6 {
       h#{$i}, .#{$scope}h#{$i}  {
-        $size: map-deep-get($type-header-sizes, $break, h#{$i});
-        font-size: $size;
+        $button-size: map-deep-get($type-header-sizes, $breakpoint, h#{$i});
+        font-size: $button-size;
       }
     }
   }
 }
-
-// p
 
 p, .#{$scope}paragraph {
   font-size: $type-p-font-size;
@@ -54,15 +46,11 @@ p, .#{$scope}paragraph {
   color: $type-p-color;
 }
 
-// em
-
 em, .#{$scope}em {
   font-size: inherit;
   font-style: $type-em-font-style;
   font-weight: $type-em-font-weight;
 }
-
-// mark
 
 mark, .#{$scope}mark {
   font-size: inherit;
@@ -70,8 +58,6 @@ mark, .#{$scope}mark {
   background: $type-mark-background;
   color: $type-mark-color;
 }
-
-// small
 
 small, .#{$scope}small {
   font-weight: $type-small-font-weight;

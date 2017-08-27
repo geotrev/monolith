@@ -21,4 +21,10 @@ textarea, button, a,
       color: $input-disabled-color !important;
     }
   }
+
+  &:focus {
+    background: $input-focus-background;
+    border: $input-focus-border;
+    box-shadow: $input-focus-box-shadow;
+  }
 }

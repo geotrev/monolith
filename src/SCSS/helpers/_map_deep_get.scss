@@ -1,5 +1,3 @@
-// Deep mapping
-
 @function map-deep-get($map, $keys...) {
   $value: $map;
   @each $key in $keys {
