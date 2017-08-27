@@ -9,38 +9,38 @@
   </head>
   <body>
 
-    <div class="small-section grid">
+    <div class="small-section wide grid">
       <div class="row">
         <div class="medium-6 columns">
           <h1 class="h1">Header 1</h1>
-          <h1>Header 1</h1>
+          <h1>Header 1 <small>(no classes)</small></h1>
         </div>
         <div class="medium-6 columns">
           <h2 class="h2">Header 2</h2>
-          <h2>Header 2</h2>
+          <h2>Header 2 <small>(no classes)</small></h2>
         </div>
         <div class="medium-6 columns">
           <h3 class="h3">Header 3</h3>
-          <h3>Header 3</h3>
+          <h3>Header 3 <small>(no classes)</small></h3>
         </div>
         <div class="medium-6 columns">
           <h4 class="h4">Header 4</h4>
-          <h4>Header 4</h4>
+          <h4>Header 4 <small>(no classes)</small></h4>
         </div>
         <div class="medium-6 columns">
           <h5 class="h5">Header 5</h5>
-          <h5>Header 5</h5>
+          <h5>Header 5 <small>(no classes)</small></h5>
         </div>
         <div class="medium-6 columns">
           <h6 class="h6">Header 6</h6>
-          <h6>Header 6</h6>
+          <h6>Header 6 <small>(no classes)</small></h6>
         </div>
         <div class="column">
           <p class="paragraph">
             <em class="em">Smooth, thick and viscous on the palate,</em> with a full and robust body. For a moment, it's sweet and tropical, then hops rush in and tear it all to shreds! The lip-smacking hop profile roams all over the place, as a sticky pine and a slightly burnt resinous coating forms on the palate. Intensely spicy, with a big grape-fruity zest and a sugary, warming alcohol that smacks you upside the head for noticing it. Malt-wise, caramel and bread flavors clamor to be heard, but the hops entangle them and draw them back into the depths of the brew, where they die. Malt flavors are there, but they add sweetness and body versus anything distinct enough to challenge the hops.
           </p>
           <p>
-            <em>Smooth, thick and viscous on the palate,</em> with a full and robust body. For a moment, it's sweet and tropical, then hops rush in and tear it all to shreds! The lip-smacking hop profile roams all over the place, as a sticky pine and a slightly burnt resinous coating forms on the palate. Intensely spicy, with a big grape-fruity zest and a sugary, warming alcohol that smacks you upside the head for noticing it. Malt-wise, caramel and bread flavors clamor to be heard, but the hops entangle them and draw them back into the depths of the brew, where they die. Malt flavors are there, but they add sweetness and body versus anything distinct enough to challenge the hops.
+            <em>Smooth, thick and viscous on the palate,</em> with a full and robust body. For a moment, it's sweet and tropical, then hops rush in and tear it all to shreds! The lip-smacking hop profile roams all over the place, as a sticky pine and a slightly burnt resinous coating forms on the palate. Intensely spicy, with a big grape-fruity zest and a sugary, warming alcohol that smacks you upside the head for noticing it. Malt-wise, caramel and bread flavors clamor to be heard, but the hops entangle them and draw them back into the depths of the brew, where they die. Malt flavors are there, but they add sweetness and body versus anything distinct enough to challenge the hops. <em>(no classes)</em>
           </p>
         </div>
       </div>
@@ -90,22 +90,27 @@
     </div>
     <div class="small-section grid">
       <div class="row">
-        <div class="medium-2 small-4 columns">
+        <div class="column">
+          <p><small>Resize to see order changes!</small></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="xsmall-4 columns">
           <div class="content"></div>
         </div>
-        <div class="medium-2 small-4 columns">
+        <div class="xsmall-4 columns">
           <div class="content"></div>
         </div>
-        <div class="medium-2 small-4 columns small-order-1 medium-order-3 large-order-2">
+        <div class="xsmall-4 columns small-order-1 medium-order-3 large-order-2">
           <div class="content red"></div>
         </div>
-        <div class="medium-2 small-4 columns small-order-3 medium-order-2 large-order-1">
+        <div class="xsmall-4 columns small-order-3 medium-order-2 large-order-1">
           <div class="content blue"></div>
         </div>
-        <div class="medium-2 small-4 columns small-order-2 medium-order-1 large-order-3">
+        <div class="xsmall-4 columns small-order-2 medium-order-1 large-order-3">
           <div class="content green"></div>
         </div>
-        <div class="medium-2 small-4 columns">
+        <div class="xsmall-4 columns">
           <div class="content"></div>
         </div>
       </div>
@@ -177,6 +182,150 @@
       <div class="row">
 
         <div class="column">
+          <button disabled class="wide">Disabled Button (no button class)</button>
+          <button disabled>Disabled Button (no classes)</button>
+          <input class="wide" disabled type="submit" value="Disabled Input Button (no button class)" />
+          <input disabled type="submit" value="Disabled Input Button (no classes)" />
+
+          <button disabled class="wide button">Disabled Button</button>
+          <button disabled class="button">Disabled Button</button>
+          <a class="wide button disabled">Disabled Link Button</a>
+          <a class="button disabled">Disabled Link Button</a>
+          <input class="wide button" disabled type="submit" value="Disabled Input Button" />
+          <input class="button" disabled type="submit" value="Disabled Input Button" />
+
+          <button class="clear wide">Wide (no button class)</button>
+          <button class="clear">Button (no classes)</button>
+          <input class="clear wide" type="submit" value="Input Button (no button class)" />
+          <input class="clear" type="submit" value="Input Button (no classes)" />
+
+          <button class="clear wide button">Button</button>
+          <button class="clear button">Button</button>
+          <a class="clear wide button">Link Button</a>
+          <a class="clear button">Link Button</a>
+          <input class="clear wide button" type="submit" value="Input Button" />
+          <input class="clear button" type="submit" value="Input Button" />
+
+          <button class="wide">Wide (no button class)</button>
+          <button>Button (no classes)</button>
+          <input class="wide" type="submit" value="Input Button (no button class)" />
+          <input type="submit" value="Input Button (no classes)" />
+
+          <button class="wide button">Button</button>
+          <button class="button">Button</button>
+          <a class="wide button">Link Button</a>
+          <a class="button">Link Button</a>
+          <input class="wide button" type="submit" value="Input Button" />
+          <input class="button" type="submit" value="Input Button" />
+
+          <button class="outline wide">Disabled Button (no button class)</button>
+          <button class="outline">Disabled Button (no classes)</button>
+          <input class="outline wide" type="submit" value="Disabled Input Button (no button class)" />
+          <input class="outline" type="submit" value="Disabled Input Button (no classes)" />
+
+          <button class="outline wide button">Disabled Button</button>
+          <button class="outline button">Disabled Button</button>
+          <a class="outline wide button">Disabled Link Button</a>
+          <a class="outline button">Disabled Link Button</a>
+          <input class="outline wide button" type="submit" value="Disabled Input Button" />
+          <input class="outline button" type="submit" value="Disabled Input Button" />
+        </div>
+
+        <div class="column">
+          <button class="clear destroy button">Clear Destroy Button</button>
+          <a class="clear destroy button">Clear Destroy Link Button</a>
+          <input class="clear destroy button" type="submit" value="Clear Destroy Input Button" />
+        </div>
+
+        <div class="column">
+          <button class="primary button">Primary Button</button>
+          <a class="primary button">Primary Link Button</a>
+          <input class="primary button" type="submit" value="Primary Input Button" />
+        </div>
+        <div class="column">
+          <button class="secondary button">Secondary Button</button>
+          <a class="secondary button">Secondary Link Button</a>
+          <input class="secondary button" type="submit" value="Secondary Input Button" />
+        </div>
+        <div class="column">
+          <button class="tertiary button">Tertiary Button</button>
+          <a class="tertiary button">Tertiary Link Button</a>
+          <input class="tertiary button" type="submit" value="Tertiary Input Button" />
+        </div>
+
+        <div class="column">
+          <button class="success button">Success Button</button>
+          <a class="success button">Success Link Button</a>
+          <input class="success button" type="submit" value="Success Input Button" />
+        </div>
+        <div class="column">
+          <button class="warning button">Warning Button</button>
+          <a class="warning button">Warning Link Button</a>
+          <input class="warning button" type="submit" value="Warning Input Button" />
+        </div>
+        <div class="column">
+          <button class="destroy button">Destroy Button</button>
+          <a class="destroy button">Destroy Link Button</a>
+          <input class="destroy button" type="submit" value="Destroy Input Button" />
+        </div>
+        <div class="column">
+          <button class="notice button">Notice Button</button>
+          <a class="notice button">Notice Link Button</a>
+          <input class="notice button" type="submit" value="Notice Input Button" />
+        </div>
+
+        <div class="column">
+          <button class="outline primary button">Outline Primary Button</button>
+          <a class="outline primary button">Outline Primary Link Button</a>
+          <input class="outline primary button" type="submit" value="Primary Input Button" />
+        </div>
+        <div class="column">
+          <button class="outline secondary button">Outline Secondary Button</button>
+          <a class="outline secondary button">Outline Secondary Link Button</a>
+          <input class="outline secondary button" type="submit" value="Outline Secondary Input Button" />
+        </div>
+        <div class="column">
+          <button class="outline tertiary button">Outline Tertiary Button</button>
+          <a class="outline tertiary button">Outline Tertiary Link Button</a>
+          <input class="outline tertiary button" type="submit" value="Outline Tertiary Input Button" />
+        </div>
+
+        <div class="column">
+          <button class="outline notice button">Outline Notice Button</button>
+          <a class="outline notice button">Outline Notice Link Button</a>
+          <input class="outline notice button" type="submit" value="Outline Notice Input Button" />
+        </div>
+        <div class="column">
+          <button class="outline warning button">Outline Warning Button</button>
+          <a class="outline warning button">Outline Warning Link Button</a>
+          <input class="outline warning button" type="submit" value="Outline Warning Input Button" />
+        </div>
+        <div class="column">
+          <button class="outline success button">Outline Success Button</button>
+          <a class="outline success button">Outline Success Link Button</a>
+          <input class="outline success button" type="submit" value="Outline Success Input Button" />
+        </div>
+        <div class="column">
+          <button class="destroy outline button">Outline Destroy Button</button>
+          <a class="destroy outline button">Outline Destroy Link Button</a>
+          <input class="destroy outline button" type="submit" value="Outline Destroy Input Button" />
+        </div>
+
+        <div class="column">
+          <a href="#0" class="link">This is a link!</a>
+        </div>
+
+        <div class="column">
+          <a href="#0">This is a link! (no classes)</a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="small-section grid">
+      <div class="row">
+
+        <div class="column">
           <form class="form">
             <label class="label" for="form">
               Input Field
@@ -217,20 +366,6 @@
               Disabled Text Area (no classes)
               <textarea disabled="" type="text"></textarea>
             </label>
-
-            <button class="wide button">Button</button>
-            <button class="button">Button</button>
-            <a class="wide button">Link Button</a>
-            <a class="button">Link Button</a>
-            <input class="wide button" type="submit" value="Input Button" />
-            <input class="button" type="submit" value="Input Button" />
-
-            <button disabled class="wide button">Button</button>
-            <button disabled class="button">Button</button>
-            <a class="wide button disabled">Link Button</a>
-            <a class="button disabled">Link Button</a>
-            <input class="wide button" disabled type="submit" value="Input Button" />
-            <input class="button" disabled type="submit" value="Input Button" />
           </form>
         </div>
 

@@ -4,8 +4,8 @@
   background: goldenrod;
 }
 
-.content.blue { background: blue; }
-.content.red { background: red; }
+.content.blue { background: teal; }
+.content.red { background: crimson; }
 .content.green { background: yellowgreen; }
 
 .gray { background: lightgray; }

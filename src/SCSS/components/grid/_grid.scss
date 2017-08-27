@@ -22,6 +22,7 @@ $column: map-get($grid-classes, column);
 .#{$grid} {
   box-sizing: border-box;
   display: flex;
+  flex-flow: column nowrap;
   margin: 0 auto;
   max-width: $grid-width;
   padding-left: $grid-gutter;

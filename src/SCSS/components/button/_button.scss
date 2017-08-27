@@ -3,55 +3,36 @@ input[type=file], input[type=reset],
 button, .#{$scope}button {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  background-color: $button-background;
+  background: $button-default-background;
+  border-color: $button-default-border-color;
   border-radius: $button-border-radius;
-  border: $button-border;
+  border-style: $button-border-style;
+  border-width: $button-border-width;
   box-shadow: $button-box-shadow;
   box-sizing: border-box;
-  color: $button-color;
+  color: $button-default-color;
   cursor: pointer;
   display: inline-block;
   font-family: $button-font;
   font-size: $button-font-size;
+  font-style: $button-font-style;
   margin: $button-margin;
   padding: $button-padding;
   text-align: center;
   text-decoration: $button-decoration;
 
-  &:visited {
-    background-color: $button-background;
-    color: $button-color;
+  &:visited, &:active {
+    background-color: $button-default-background;
+    border-color: $button-default-border-color;
+    color: $button-default-color;
   }
 
   &:hover, &:focus {
-    background: $button-background-hover;
-    color: $button-color-hover;
-    text-decoration: $button-decoration-hover;
-  }
-
-  &:active {
-    background: $button-background-active;
-    color: $button-color-active;
-  }
-
-  // Sizes
-  @each $name in $button-sizes {
-    $button-size: nth($name, 1);
-
-    $button-padding: map-deep-get($button-sizes, $button-size, padding);
-    $button-font-size: map-deep-get($button-sizes, $button-size, font-size);
-
-    &.#{$button-size} {
-      padding: $button-padding;
-      font-size: $button-font-size;
-    }
-  }
-
-  // Wide
-
-  &.wide {
-    display: block;
-    max-width: 100%;
-    width: 100%;
+    background: $button-default-background-hover;
+    border-color: $button-default-border-color-hover;
+    color: $button-default-color;
+    text-decoration: $button-decoration;
   }
 }
+
+@import 'utilities';
