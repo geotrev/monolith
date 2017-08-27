@@ -6,10 +6,43 @@
   @return $value;
 }
 
+// color invert functions kindly borrowed from the fine folks at bulma.io
+// https://github.com/jgthms/bulma/blob/master/sass/utilities/functions.sass
+
+@function powerNumber($number, $exp) {
+  $value: 1;
+  @if $exp > 0 {
+    @for $i from 1 through $exp {
+      $value: $value * $number;
+    }
+  } @elseif $exp < 0 {
+    @for $i from 1 through -$exp {
+      $value: $value / $number;
+    }
+  }
+  @return $value;
+}
+
+@function colorLuminance($color) {
+  $color-rgb: ('red': red($color),'green': green($color),'blue': blue($color));
+  @each $name, $value in $color-rgb {
+    $adjusted: 0;
+    $value: $value / 255;
+    @if $value < 0.03928 {
+      $value: $value / 12.92;
+    } @else {
+      $value: ($value + .055) / 1.055;
+      $value: powerNumber($value, 2);
+    }
+    $color-rgb: map-merge($color-rgb, ($name: $value));
+  }
+  @return (map-get($color-rgb, 'red') * .2126) + (map-get($color-rgb, 'green') * .7152) + (map-get($color-rgb, 'blue') * .0722);
+}
+
 @function find-invert-of($color) {
-  @if (lightness($color) > 55) {
-    @return #222222; // Lighter backgorund, return dark color
+  @if (colorLuminance($color) > 0.55) {
+    @return map-get($gray-palette, gray300);
   } @else {
-    @return #ffffff; // Darker background, return light color
+    @return #fff;
   }
 }

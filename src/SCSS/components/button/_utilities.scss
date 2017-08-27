@@ -17,52 +17,52 @@ button, .#{$scope}button {
 
   @each $name, $color in $button-palette {
     &.#{$scope}#{$name} {
-      background-color: $color;
+      background: $color;
       border-color: $color;
-      color: $button-default-color;
+      color: find-invert-of($color);
 
       &:visited, &:active {
-        background-color: $color;
+        background: $color;
         border-color: $color;
-        color: $button-default-color;
+        color: find-invert-of($color);
       }
 
       &:hover, &:focus {
         background: lighten($color, 10%);
         border-color: lighten($color, 10%);
-        color: $button-default-color;
+        color: find-invert-of($color);
       }
 
       &.#{$scope}outline {
-        background-color: transparent;
+        background: transparent;
         color: $color;
 
         &:visited, &:active {
-          background-color: transparent;
+          background: transparent;
           border-color: $color;
           color: $color;
         }
 
         &:hover, &:focus {
-          background-color: transparent;
+          background: transparent;
           border-color: lighten($color, 10%);
           color: lighten($color, 10%);
         }
       }
 
       &.#{$scope}clear {
-        background-color: transparent;
+        background: transparent;
         color: $color;
         border-color: transparent;
 
         &:visited, &:active {
-          background-color: transparent;
+          background: transparent;
           color: $color;
           border-color: transparent;
         }
 
         &:hover, &:focus {
-          background-color: transparent;
+          background: transparent;
           color: lighten($color, 10%);
           border-color: transparent;
         }
@@ -77,36 +77,75 @@ button, .#{$scope}button {
   }
 
   &.#{$scope}outline {
-    background-color: transparent;
-    color: $button-default-background;
+    background: transparent;
+    color: $button-default-color-invert;
 
     &:visited, &:active {
-      background-color: transparent;
-      color: $button-default-background;
+      background: transparent;
+      color: $button-default-color-invert;
     }
 
     &:hover, &:focus {
-      background-color: transparent;
-      color: $button-default-background-hover;
+      background: transparent;
+      color: $button-default-color-invert-hover;
     }
   }
 
   &.#{$scope}clear {
-    background-color: transparent;
-    color: $button-default-background;
+    background: transparent;
+    color: $button-default-color-invert;
     border-color: transparent;
 
     &:visited, &:active {
-      background-color: transparent;
-      color: $button-default-background;
+      background: transparent;
+      color: $button-default-color-invert;
       border-color: transparent;
     }
 
     &:hover, &:focus {
-      background-color: transparent;
-      color: $button-default-background-hover;
+      background: transparent;
+      color: $button-default-color-invert-hover;
       border-color: transparent;
     }
   }
 
+  &.#{$scope}invert {
+    color: $button-default-color-invert;
+    background: white;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+
+    &:visited, &:active {
+      background: white;
+      color: $button-default-color-invert;
+      border-color: white;
+    }
+
+    &:hover, &:focus {
+      background: rgba(white, 0.8);
+      color: $button-default-color-invert;
+      border-color: rgba(white, 0.8);
+    }
+  }
+
+  &.#{$scope}invert.#{$scope}outline {
+    color: white;
+    background: transparent;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+
+    &:visited, &:active {
+      background: transparent;
+      color: white;
+      border-color: white;
+    }
+
+    &:hover, &:focus {
+      background: transparent;
+      color: rgba(white, 0.8);
+      border-color: rgba(white, 0.8);
+    }
+  }
 }

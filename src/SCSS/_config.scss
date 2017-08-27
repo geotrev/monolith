@@ -28,7 +28,7 @@ $brand-palette: (
 $link-color: blue;
 
 $status-palette: (
-  warning: yellowgreen,
+  warning: khaki,
   success: green,
   destroy: red,
   notice: darkblue
@@ -223,6 +223,8 @@ $button-default-background-hover: lighten($button-default-background, 10%);
 $button-default-border-color: map-get($brand-palette, primary);
 $button-default-border-color-hover: lighten($button-default-border-color, 10%);
 $button-default-color: map-get($gray-palette, white);
+$button-default-color-invert: map-get($brand-palette, primary);
+$button-default-color-invert-hover: lighten(map-get($brand-palette, primary), 10%);
 
 $button-padding: 10px $global-space;
 $button-margin: 0 0 $global-space 0;
