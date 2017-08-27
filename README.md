@@ -50,7 +50,7 @@ See the [codepen example](https://codepen.io/geotrev/pen/PWEYaB) to see it in ac
 
 • Use `small`, `medium`, `large`, or `huge` buttons.
 
-• Apply an `outline`, `clear`, or `wide` button styles.
+• Apply `outline`, `clear`, or `wide` button styles.
 
 ## Forms
 
