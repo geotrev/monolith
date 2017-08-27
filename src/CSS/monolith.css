@@ -1514,7 +1514,7 @@ button.inverted, .button.inverted {
   background: #f2f2f2;
   border-color: #f2f2f2;
   box-shadow: none;
-  color: teal;
+  color: #333;
 }
 
 input[type=button].inverted:active, input[type=button].inverted:visited, input[type=submit].inverted:active, input[type=submit].inverted:visited,
@@ -1524,7 +1524,7 @@ button.inverted:active,
 button.inverted:visited, .button.inverted:active, .button.inverted:visited {
   background: #f2f2f2;
   border-color: #f2f2f2;
-  color: teal;
+  color: #333;
 }
 
 input[type=button].inverted:focus, input[type=button].inverted:hover, input[type=submit].inverted:focus, input[type=submit].inverted:hover,
@@ -1535,7 +1535,7 @@ button.inverted:hover, .button.inverted:focus, .button.inverted:hover {
   background: #ffffff;
   border-color: #ffffff;
   box-shadow: none;
-  color: teal;
+  color: #333;
 }
 
 input[type=button].inverted-outline, input[type=submit].inverted-outline,

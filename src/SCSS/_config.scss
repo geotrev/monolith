@@ -270,8 +270,8 @@ $button-types: (
   inverted: (
     background: darken(map-get($gray-palette, white), 5%),
     background-hover: map-get($gray-palette, white),
-    color: map-get($brand-palette, primary),
-    color-hover: map-get($brand-palette, primary),
+    color: map-get($gray-palette, gray300),
+    color-hover: map-get($gray-palette, gray300),
     border-color: darken(map-get($gray-palette, white), 5%),
     border-color-hover: map-get($gray-palette, white),
     box-shadow: none,

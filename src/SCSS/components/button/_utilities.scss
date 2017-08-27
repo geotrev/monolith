@@ -4,7 +4,6 @@ button, .#{$scope}button {
 
   @each $size in $button-sizes {
     $button-size: nth($size, 1);
-
     $button-padding: map-deep-get($button-sizes, $button-size, padding);
     $button-font-size: map-deep-get($button-sizes, $button-size, font-size);
 
@@ -31,7 +30,7 @@ button, .#{$scope}button {
     $box-shadow: map-deep-get($button-types, $name, box-shadow);
     $box-shadow-hover: map-deep-get($button-types, $name, box-shadow-hover);
 
-    &.#{$name} {
+    &.#{$scope}#{$name} {
       background: $background;
       border-color: $border-color;
       box-shadow: $box-shadow;
