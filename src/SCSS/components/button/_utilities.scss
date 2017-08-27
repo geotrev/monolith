@@ -78,7 +78,7 @@ button, .#{$scope}button {
   }
 
   // Outline
-  &.outline {
+  &.#{$scope}outline {
     background-color: transparent;
     color: $button-default-background;
 
@@ -94,7 +94,7 @@ button, .#{$scope}button {
   }
 
   // Clear
-  &.clear {
+  &.#{$scope}clear {
     background-color: transparent;
     color: $button-default-background;
     border-color: transparent;
