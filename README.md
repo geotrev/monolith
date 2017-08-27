@@ -8,6 +8,12 @@ noun – mono·lith – \ˈmä-nə-ˌlith\
 
 See the [codepen example](https://codepen.io/geotrev/pen/PWEYaB) to see it in action.
 
+## Overview
+
+• Define project fonts across components.
+
+• Highly customizable color palette that will apply across components.
+
 ## Grid
 
 • Specify names for container, row and column elements
@@ -28,8 +34,26 @@ See the [codepen example](https://codepen.io/geotrev/pen/PWEYaB) to see it in ac
 
 • Breakpoint mixins: `up`, `down`, `only`
 
+## Typography
+
+• Control over header and paragraph elements.
+
+• Change the way html text helpers work by defining styles in `mark`, `small`, and `em`.
+
+## Buttons
+
+• Use a simple button style with `input` and `button`.
+
+• Apply button styles to `a` elements as well with `.button` class (can be used with `input` and `button` as well).
+
+• Use `a` or `.link` class to use simple anchor links.
+
+• Use `small`, `medium`, `large`, or `huge` buttons.
+
+• Apply an `outline`, `clear`, or `wide` button styles.
+
 ## Forms
 
-• Create highly customizable forms.
+• Create highly customizable forms in input fields and text areas.
 
-• Use buttons in the form of `input`, `button`, or `a`.
+• Define active, focus, and disabled styles for fields (works for buttons, too).
