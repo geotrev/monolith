@@ -16,27 +16,29 @@ input[type=radio], input[type=checkbox],
   .#{$scope}radio-label, .#{$scope}checkbox-label {
     align-items: center;
     flex-direction: row;
-    margin-right: $input-option-label-margin-right;
+    padding-right: $input-option-label-padding-right;
   }
 }
 
 .#{$scope}radio-column, .#{$scope}checkbox-column {
   flex-direction: column;
+  padding-bottom: $input-option-column-padding-bottom;
 }
 .#{$scope}radio-row, .#{$scope}checkbox-row {
   flex-direction: row;
+  padding-bottom: $input-option-row-padding-bottom;
 }
 
 .#{$scope}radio-row input[type=radio],
 .#{$scope}radio-row .#{$scope}radio,
 .#{$scope}checkbox-row input[type=checkbox],
 .#{$scope}checkbox-row .#{$scope}checkbox {
-  margin-right: $input-option-label-margin-right;
+  margin-right: $input-option-input-margin-right;
 }
 
 .#{$scope}radio-column label,
 .#{$scope}radio-column .#{$scope}radio-label,
 .#{$scope}checkbox-column label,
 .#{$scope}checkbox-column .#{$scope}checkbox-label {
-  margin-bottom: $input-option-label-margin-bottom;
+  padding-bottom: $input-option-label-padding-bottom;
 }

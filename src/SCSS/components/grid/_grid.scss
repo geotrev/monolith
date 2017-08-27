@@ -1,10 +1,6 @@
-// Selector variables
-
 $grid: map-get($grid-classes, grid);
 $row: map-get($grid-classes, row);
 $column: map-get($grid-classes, column);
-
-// Grid
 
 .#{$grid}::before,
 .#{$grid}::after,
@@ -30,8 +26,6 @@ $column: map-get($grid-classes, column);
   position: relative;
 }
 
-// Row
-
 .#{$row} {
   display: flex;
   flex-flow: row wrap;
@@ -39,8 +33,6 @@ $column: map-get($grid-classes, column);
   position: relative;
   width: 100%;
 }
-
-// Column(s)
 
 .#{$column}s, .#{$column} {
   box-sizing: border-box;
@@ -58,29 +50,25 @@ $column: map-get($grid-classes, column);
   }
 }
 
-//
-// Grid, offset, and order classes generator
-//
+@each $breakpoint in $breakpoints {
+  $break-name: nth($breakpoint, 1);
 
-@each $break in $breakpoints {
-  $size: nth($break, 1); // take only the name of the breakpoint, NOT its value.
-
-  @include breakpoint-up($size) {
+  @include breakpoint-up($break-name) {
     @for $i from 1 through $columns {
 
-      .#{$size}-#{$i} {
+      .#{$break-name}-#{$i} {
         flex: 0 0 percentage($i / $columns);
         max-width: percentage($i / $columns);
       }
 
       @if $column-offset-classes == true {
-        .#{$size}-offset-#{$i} {
+        .#{$break-name}-offset-#{$i} {
           margin-left: percentage($i / $columns);
         }
       }
 
       @if $column-order-classes == true {
-        .#{$size}-order-#{$i} {
+        .#{$break-name}-order-#{$i} {
           order: $i;
         }
       }

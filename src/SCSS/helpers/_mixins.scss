@@ -1,6 +1,3 @@
-// Breakpoint Mixins
-// NOTE: "breakpoint-up" is used to generate grid classes.
-
 @mixin breakpoint-up($size) {
   @media screen and (min-width: #{map-get($breakpoints, $size)}) {
     @content;
@@ -10,7 +7,7 @@
 @mixin breakpoint-down($size) {
   @media screen and (max-width: #{map-get($breakpoints, $size) - 1}) {
     @content;
-  } // "-1" prevents overlap of 1px against next breakpoint
+  }
 }
 
 @mixin breakpoint-only($min, $max) {

@@ -2,17 +2,8 @@ input[type=button], input[type=submit],
 input[type=file], input[type=reset],
 button, .#{$scope}button {
 
-  // Wide
-  &.#{$scope}wide {
-    display: block;
-    max-width: 100%;
-    width: 100%;
-  }
-
-  // Sizes
-  @each $name in $button-sizes {
-    $button-size: nth($name, 1);
-
+  @each $size in $button-sizes {
+    $button-size: nth($size, 1);
     $button-padding: map-deep-get($button-sizes, $button-size, padding);
     $button-font-size: map-deep-get($button-sizes, $button-size, font-size);
 
@@ -22,95 +13,41 @@ button, .#{$scope}button {
     }
   }
 
-  // Buttons with color palette
-  @each $type, $color in $button-palette {
-    &.#{$scope}#{$type} {
-      background-color: $color;
-      border-color: $color;
-      color: $button-default-color;
+  &.#{$scope}wide {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+  }
 
-      &:visited, &:active {
-        background-color: $color;
-        border-color: $color;
-        color: $button-default-color;
-      }
+  @each $type in $button-types {
+    $name: nth($type, 1);
+    $background: map-deep-get($button-types, $name, background);
+    $background-hover: map-deep-get($button-types, $name, background-hover);
+    $color: map-deep-get($button-types, $name, color);
+    $color-hover: map-deep-get($button-types, $name, color-hover);
+    $border-color: map-deep-get($button-types, $name, border-color);
+    $border-color-hover: map-deep-get($button-types, $name, border-color-hover);
+    $box-shadow: map-deep-get($button-types, $name, box-shadow);
+    $box-shadow-hover: map-deep-get($button-types, $name, box-shadow-hover);
 
-      &:hover, &:focus {
-        background: lighten($color, 10%);
-        border-color: lighten($color, 10%);
-        color: $button-default-color;
-      }
+    &.#{$scope}#{$name} {
+      background: $background;
+      border-color: $border-color;
+      box-shadow: $box-shadow;
+      color: $color;
 
-      &.#{$scope}outline {
-        background-color: transparent;
+      &:active, &:visited {
+        background: $background;
+        border-color: $border-color;
         color: $color;
-
-        &:visited, &:active {
-          background-color: transparent;
-          border-color: $color;
-          color: $color;
-        }
-
-        &:hover, &:focus {
-          background-color: transparent;
-          border-color: lighten($color, 10%);
-          color: lighten($color, 10%);
-        }
       }
 
-      &.#{$scope}clear {
-        background-color: transparent;
-        color: $color;
-        border-color: transparent;
-
-        &:visited, &:active {
-          background-color: transparent;
-          color: $color;
-          border-color: transparent;
-        }
-
-        &:hover, &:focus {
-          background-color: transparent;
-          color: lighten($color, 10%);
-          border-color: transparent;
-        }
+      &:focus, &:hover {
+        background: $background-hover;
+        border-color: $border-color-hover;
+        box-shadow: $box-shadow;
+        color: $color-hover;
       }
     }
   }
-
-  // Outline
-  &.#{$scope}outline {
-    background-color: transparent;
-    color: $button-default-background;
-
-    &:visited, &:active {
-      background-color: transparent;
-      color: $button-default-background;
-    }
-
-    &:hover, &:focus {
-      background-color: transparent;
-      color: $button-default-background-hover;
-    }
-  }
-
-  // Clear
-  &.#{$scope}clear {
-    background-color: transparent;
-    color: $button-default-background;
-    border-color: transparent;
-
-    &:visited, &:active {
-      background-color: transparent;
-      color: $button-default-background;
-      border-color: transparent;
-    }
-
-    &:hover, &:focus {
-      background-color: transparent;
-      color: $button-default-background-hover;
-      border-color: transparent;
-    }
-  }
-
 }
