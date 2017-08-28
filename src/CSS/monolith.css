@@ -1362,6 +1362,8 @@ button, .button {
   padding: 10px 16px;
   text-align: center;
   text-decoration: none;
+  -webkit-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
 }
 
 input[type=button]:visited, input[type=button]:active, input[type=submit]:visited, input[type=submit]:active,
@@ -1383,6 +1385,8 @@ button:focus, .button:hover, .button:focus {
   border-color: #444;
   color: #222;
   text-decoration: none;
+  -webkit-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
 }
 
 input[type=button].small, input[type=submit].small,
@@ -1574,8 +1578,8 @@ button.inverted-outline:hover, .button.inverted-outline:focus, .button.inverted-
 input[type=button].warning, input[type=submit].warning,
 input[type=file].warning, input[type=reset].warning,
 button.warning, .button.warning {
-  background: #f3eba3;
-  border-color: #f3eba3;
+  background: #f4edac;
+  border-color: #f4edac;
   color: #222;
 }
 
@@ -1584,8 +1588,8 @@ input[type=file].warning:active,
 input[type=file].warning:visited, input[type=reset].warning:active, input[type=reset].warning:visited,
 button.warning:active,
 button.warning:visited, .button.warning:active, .button.warning:visited {
-  background: #f3eba3;
-  border-color: #f3eba3;
+  background: #f4edac;
+  border-color: #f4edac;
   color: #222;
 }
 
@@ -1602,8 +1606,8 @@ button.warning:hover, .button.warning:focus, .button.warning:hover {
 input[type=button].success, input[type=submit].success,
 input[type=file].success, input[type=reset].success,
 button.success, .button.success {
-  background: #007e00;
-  border-color: #007e00;
+  background: #008800;
+  border-color: #008800;
   color: #fff;
 }
 
@@ -1612,8 +1616,8 @@ input[type=file].success:active,
 input[type=file].success:visited, input[type=reset].success:active, input[type=reset].success:visited,
 button.success:active,
 button.success:visited, .button.success:active, .button.success:visited {
-  background: #007e00;
-  border-color: #007e00;
+  background: #008800;
+  border-color: #008800;
   color: #fff;
 }
 
@@ -1630,8 +1634,8 @@ button.success:hover, .button.success:focus, .button.success:hover {
 input[type=button].destroy, input[type=submit].destroy,
 input[type=file].destroy, input[type=reset].destroy,
 button.destroy, .button.destroy {
-  background: #ff1a1a;
-  border-color: #ff1a1a;
+  background: #ff2424;
+  border-color: #ff2424;
   color: #fff;
 }
 
@@ -1640,8 +1644,8 @@ input[type=file].destroy:active,
 input[type=file].destroy:visited, input[type=reset].destroy:active, input[type=reset].destroy:visited,
 button.destroy:active,
 button.destroy:visited, .button.destroy:active, .button.destroy:visited {
-  background: #ff1a1a;
-  border-color: #ff1a1a;
+  background: #ff2424;
+  border-color: #ff2424;
   color: #fff;
 }
 
@@ -1658,8 +1662,8 @@ button.destroy:hover, .button.destroy:focus, .button.destroy:hover {
 input[type=button].notice, input[type=submit].notice,
 input[type=file].notice, input[type=reset].notice,
 button.notice, .button.notice {
-  background: #568ebd;
-  border-color: #568ebd;
+  background: #5e93c0;
+  border-color: #5e93c0;
   color: #fff;
 }
 
@@ -1668,8 +1672,8 @@ input[type=file].notice:active,
 input[type=file].notice:visited, input[type=reset].notice:active, input[type=reset].notice:visited,
 button.notice:active,
 button.notice:visited, .button.notice:active, .button.notice:visited {
-  background: #568ebd;
-  border-color: #568ebd;
+  background: #5e93c0;
+  border-color: #5e93c0;
   color: #fff;
 }
 
@@ -1867,6 +1871,18 @@ textarea.disabled:hover, button:disabled:hover, button.disabled:hover, a:disable
   color: #444 !important;
 }
 
+input[type=text], input[type=password],
+input[type=email], input[type=date],
+input[type=datetime-local], input[type=month],
+input[type=number], input[type=tel],
+input[type=search], input[type=time],
+input[type=url], input[type=week],
+textarea,
+.text-field, .text-area {
+  -webkit-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
+}
+
 input[type=text]:focus, input[type=text]:active, input[type=password]:focus, input[type=password]:active,
 input[type=email]:focus,
 input[type=email]:active, input[type=date]:focus, input[type=date]:active,
@@ -1900,6 +1916,8 @@ textarea:hover,
   border: 1px solid #666;
   box-shadow: none;
   outline: none;
+  -webkit-transition: ease-out 0.2s;
+  transition: ease-out 0.2s;
 }
 
 /*# sourceMappingURL=monolith.css.map */
