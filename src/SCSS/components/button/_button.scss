@@ -16,11 +16,13 @@ button, .#{$scope}button {
   font-family: $button-font;
   font-size: $button-font-size;
   font-style: $button-font-style;
+  font-weight: $button-font-weight;
   outline: $global-outline;
   margin: $button-margin;
   padding: $button-padding;
   text-align: center;
   text-decoration: $button-decoration;
+  transition: $global-ease;
 
   &:visited, &:active {
     background-color: $button-background;
@@ -33,6 +35,7 @@ button, .#{$scope}button {
     border-color: $button-border-color-hover;
     color: $button-color;
     text-decoration: $button-decoration;
+    transition: $global-ease;
   }
 }
 

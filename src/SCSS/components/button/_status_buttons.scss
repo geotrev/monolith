@@ -3,13 +3,13 @@ input[type=file], input[type=reset],
 button, .#{$scope}button {
   @each $status, $color in $button-status-palette {
     &.#{$scope}#{$status} {
-      background: lighten($color, 5%);
-      border-color: lighten($color, 5%);
+      background: lighten($color, 7%);
+      border-color: lighten($color, 7%);
       color: find-invert($color);
 
       &:active, &:visited {
-        background: lighten($color, 5%);
-        border-color: lighten($color, 5%);
+        background: lighten($color, 7%);
+        border-color: lighten($color, 7%);
         color: find-invert($color);
       }
 

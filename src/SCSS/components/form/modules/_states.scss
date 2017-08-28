@@ -31,6 +31,7 @@ input[type=search], input[type=time],
 input[type=url], input[type=week],
 textarea,
 .#{$scope}text-field, .#{$scope}text-area {
+  transition: $global-ease;
 
   &:focus, &:active {
     background: $input-focus-background !important;
@@ -44,5 +45,6 @@ textarea,
     border: $input-hover-border;
     box-shadow: $input-hover-box-shadow;
     outline: $global-outline;
+    transition: $global-ease;
   }
 }
