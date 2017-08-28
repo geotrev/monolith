@@ -10,15 +10,15 @@ See the [codepen example](https://codepen.io/geotrev/pen/PWEYaB) to see it in ac
 
 ## Overview
 
-• Define project fonts across components.
+• Highly configurable styles using `_config.scss`. Don't waste time editing raw CSS!
 
-• Highly customizable color palette that will apply across components.
+• Highly customizable color palettes, font options, spacing, and the like that apply across components.
 
 ## Grid
 
-• Specify names for container, row and column elements
+• Specify names for grid (container), row and column elements
 
-• Define gutters and spacing for containers and columns
+• Define gutters and spacing for rows and columns.
 
 • Fluid & fixed-width containers at multiple sizes: `narrow`, `default`, `large`
 
@@ -44,16 +44,18 @@ See the [codepen example](https://codepen.io/geotrev/pen/PWEYaB) to see it in ac
 
 • Use a simple button style with `input` and `button`.
 
-• Apply button styles to `a` elements as well with `.button` class (can be used with `input` and `button` as well).
+• Apply button styles to `<a>` elements as well with a `button` class (can be used with `<input>` and `<button>` as well).
 
-• Use `a` or `.link` class to use simple anchor links.
+• Use `<a>` by itself, or with a `link` class to apply simple anchor links.
 
 • Use `small`, `medium`, `large`, or `huge` buttons.
+
+• `warning`, `destroy`, `success`, and `notice` button styles provided from the global status color palette.
 
 • Apply `outline`, `clear`, or `wide` button styles.
 
 ## Forms
 
-• Create highly customizable forms in input fields and text areas.
+• Customize `input`, `fieldset`, `legend`, `label`, `radio`, `checkbox` and other common elements of forms.
 
 • Define active, focus, and disabled styles for fields (works for buttons, too).
