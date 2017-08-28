@@ -1,8 +1,7 @@
 // Monolith CSS
 // A CSS framework that acts as a single, organized system.
 
-// 1. Fonts & Spacing
-// 2. Colors
+// 1. Globals
 // 2. Grid
 // 3. Typography
 // 4. Buttons
@@ -11,7 +10,7 @@
 // -------------------------- * -------------------------- //
 
 //
-// 1. Global Config
+// 1. Globals
 //
 
 $scope: '' !default;
@@ -21,12 +20,6 @@ $global-font-size: 16px !default;
 $global-space: 16px !default;
 $global-ease: ease-out 0.2s !default;
 $global-outline: none;
-
-// -------------------------- * -------------------------- //
-
-//
-// 2. Colors
-//
 
 $primary: goldenrod;
 $secondary: crimson;
@@ -55,7 +48,7 @@ $status-notice: map-get($status-palette, notice);
 // -------------------------- * -------------------------- //
 
 //
-// 3. Grid
+// 2. Grid
 //
 
 $grid-classes: (
@@ -98,7 +91,7 @@ $grid-gutter: $global-space;
 // -------------------------- * -------------------------- //
 
 //
-// 4. Typography
+// 3. Typography
 //
 
 $type-header-sizes: (
@@ -189,7 +182,7 @@ $type-mark-background: $status-warning;
 // -------------------------- * -------------------------- //
 
 //
-// 5. Buttons
+// 4. Buttons
 //
 
 $link-color: lighten($primary, 10%);
@@ -297,7 +290,7 @@ $button-types: (
 // -------------------------- * -------------------------- //
 
 //
-// 6. Forms
+// 5. Forms
 //
 
 $form-margin: 0;
