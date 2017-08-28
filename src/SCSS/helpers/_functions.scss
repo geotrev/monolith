@@ -41,7 +41,7 @@
 
 @function find-invert($color) {
   @if (color-luminance($color) > 0.55) {
-    @return map-get($gray-palette, gray300);
+    @return $gray200;
   } @else {
     @return #fff;
   }

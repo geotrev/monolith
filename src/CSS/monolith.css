@@ -1304,7 +1304,7 @@ em, .em {
 mark, .mark {
   font-size: inherit;
   padding: 10px;
-  background: steelblue;
+  background: khaki;
   color: #222;
 }
 
@@ -1318,25 +1318,26 @@ a,
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 16px;
   font-style: normal;
-  color: teal;
+  font-weight: normal;
+  color: #e4b849;
   text-decoration: none;
 }
 
 a:visited,
 .link:visited {
-  color: teal;
+  color: #e4b849;
 }
 
 a:hover, a:focus,
 .link:hover,
 .link:focus {
-  color: #009a9a;
+  color: goldenrod;
   text-decoration: underline;
 }
 
 a:active,
 .link:active {
-  color: #009a9a;
+  color: goldenrod;
 }
 
 input[type=button], input[type=submit],
@@ -1344,17 +1345,18 @@ input[type=file], input[type=reset],
 button, .button {
   box-sizing: border-box;
   background: #ffffff;
-  border-color: #999;
+  border-color: #888;
   border-radius: 4px;
   border-style: solid;
   border-width: 1px;
   box-shadow: none;
-  color: #333;
+  color: #222;
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 16px;
   font-style: normal;
+  font-weight: normal;
   outline: none;
   margin: 0 0 16px 0;
   padding: 10px 16px;
@@ -1368,8 +1370,8 @@ input[type=file]:active, input[type=reset]:visited, input[type=reset]:active,
 button:visited,
 button:active, .button:visited, .button:active {
   background-color: #ffffff;
-  border-color: #999;
-  color: #333;
+  border-color: #888;
+  color: #222;
 }
 
 input[type=button]:hover, input[type=button]:focus, input[type=submit]:hover, input[type=submit]:focus,
@@ -1378,8 +1380,8 @@ input[type=file]:focus, input[type=reset]:hover, input[type=reset]:focus,
 button:hover,
 button:focus, .button:hover, .button:focus {
   background: #ffffff;
-  border-color: #666;
-  color: #333;
+  border-color: #444;
+  color: #222;
   text-decoration: none;
 }
 
@@ -1422,8 +1424,8 @@ button.wide, .button.wide {
 input[type=button].primary, input[type=submit].primary,
 input[type=file].primary, input[type=reset].primary,
 button.primary, .button.primary {
-  background: #009a9a;
-  border-color: #009a9a;
+  background: #e1af33;
+  border-color: #e1af33;
   box-shadow: none;
   color: #ffffff;
 }
@@ -1433,8 +1435,8 @@ input[type=file].primary:active,
 input[type=file].primary:visited, input[type=reset].primary:active, input[type=reset].primary:visited,
 button.primary:active,
 button.primary:visited, .button.primary:active, .button.primary:visited {
-  background: #009a9a;
-  border-color: #009a9a;
+  background: #e1af33;
+  border-color: #e1af33;
   color: #ffffff;
 }
 
@@ -1443,8 +1445,8 @@ input[type=file].primary:focus,
 input[type=file].primary:hover, input[type=reset].primary:focus, input[type=reset].primary:hover,
 button.primary:focus,
 button.primary:hover, .button.primary:focus, .button.primary:hover {
-  background: teal;
-  border-color: teal;
+  background: goldenrod;
+  border-color: goldenrod;
   box-shadow: none;
   color: #ffffff;
 }
@@ -1453,9 +1455,9 @@ input[type=button].secondary, input[type=submit].secondary,
 input[type=file].secondary, input[type=reset].secondary,
 button.secondary, .button.secondary {
   background: transparent;
-  border-color: #00b3b3;
+  border-color: #e4b849;
   box-shadow: none;
-  color: teal;
+  color: goldenrod;
 }
 
 input[type=button].secondary:active, input[type=button].secondary:visited, input[type=submit].secondary:active, input[type=submit].secondary:visited,
@@ -1464,8 +1466,8 @@ input[type=file].secondary:visited, input[type=reset].secondary:active, input[ty
 button.secondary:active,
 button.secondary:visited, .button.secondary:active, .button.secondary:visited {
   background: transparent;
-  border-color: #00b3b3;
-  color: teal;
+  border-color: #e4b849;
+  color: goldenrod;
 }
 
 input[type=button].secondary:focus, input[type=button].secondary:hover, input[type=submit].secondary:focus, input[type=submit].secondary:hover,
@@ -1474,9 +1476,9 @@ input[type=file].secondary:hover, input[type=reset].secondary:focus, input[type=
 button.secondary:focus,
 button.secondary:hover, .button.secondary:focus, .button.secondary:hover {
   background: transparent;
-  border-color: teal;
+  border-color: goldenrod;
   box-shadow: none;
-  color: teal;
+  color: goldenrod;
 }
 
 input[type=button].tertiary, input[type=submit].tertiary,
@@ -1485,7 +1487,7 @@ button.tertiary, .button.tertiary {
   background: transparent;
   border-color: transparent;
   box-shadow: none;
-  color: teal;
+  color: goldenrod;
 }
 
 input[type=button].tertiary:active, input[type=button].tertiary:visited, input[type=submit].tertiary:active, input[type=submit].tertiary:visited,
@@ -1495,7 +1497,7 @@ button.tertiary:active,
 button.tertiary:visited, .button.tertiary:active, .button.tertiary:visited {
   background: transparent;
   border-color: transparent;
-  color: teal;
+  color: goldenrod;
 }
 
 input[type=button].tertiary:focus, input[type=button].tertiary:hover, input[type=submit].tertiary:focus, input[type=submit].tertiary:hover,
@@ -1503,19 +1505,19 @@ input[type=file].tertiary:focus,
 input[type=file].tertiary:hover, input[type=reset].tertiary:focus, input[type=reset].tertiary:hover,
 button.tertiary:focus,
 button.tertiary:hover, .button.tertiary:focus, .button.tertiary:hover {
-  background: #f2f2f2;
-  border-color: #f2f2f2;
+  background: #f7f7f7;
+  border-color: #f7f7f7;
   box-shadow: none;
-  color: teal;
+  color: goldenrod;
 }
 
 input[type=button].inverted, input[type=submit].inverted,
 input[type=file].inverted, input[type=reset].inverted,
 button.inverted, .button.inverted {
-  background: #f2f2f2;
-  border-color: #f2f2f2;
+  background: #eaeaea;
+  border-color: #eaeaea;
   box-shadow: none;
-  color: #333;
+  color: #222;
 }
 
 input[type=button].inverted:active, input[type=button].inverted:visited, input[type=submit].inverted:active, input[type=submit].inverted:visited,
@@ -1523,9 +1525,9 @@ input[type=file].inverted:active,
 input[type=file].inverted:visited, input[type=reset].inverted:active, input[type=reset].inverted:visited,
 button.inverted:active,
 button.inverted:visited, .button.inverted:active, .button.inverted:visited {
-  background: #f2f2f2;
-  border-color: #f2f2f2;
-  color: #333;
+  background: #eaeaea;
+  border-color: #eaeaea;
+  color: #222;
 }
 
 input[type=button].inverted:focus, input[type=button].inverted:hover, input[type=submit].inverted:focus, input[type=submit].inverted:hover,
@@ -1536,14 +1538,14 @@ button.inverted:hover, .button.inverted:focus, .button.inverted:hover {
   background: #ffffff;
   border-color: #ffffff;
   box-shadow: none;
-  color: #333;
+  color: #222;
 }
 
 input[type=button].inverted-outline, input[type=submit].inverted-outline,
 input[type=file].inverted-outline, input[type=reset].inverted-outline,
 button.inverted-outline, .button.inverted-outline {
   background: transparent;
-  border-color: #d9d9d9;
+  border-color: #ddd;
   box-shadow: none;
   color: #ffffff;
 }
@@ -1554,7 +1556,7 @@ input[type=file].inverted-outline:visited, input[type=reset].inverted-outline:ac
 button.inverted-outline:active,
 button.inverted-outline:visited, .button.inverted-outline:active, .button.inverted-outline:visited {
   background: transparent;
-  border-color: #d9d9d9;
+  border-color: #ddd;
   color: #ffffff;
 }
 
@@ -1574,7 +1576,7 @@ input[type=file].warning, input[type=reset].warning,
 button.warning, .button.warning {
   background: #f3eba3;
   border-color: #f3eba3;
-  color: #333;
+  color: #222;
 }
 
 input[type=button].warning:active, input[type=button].warning:visited, input[type=submit].warning:active, input[type=submit].warning:visited,
@@ -1584,7 +1586,7 @@ button.warning:active,
 button.warning:visited, .button.warning:active, .button.warning:visited {
   background: #f3eba3;
   border-color: #f3eba3;
-  color: #333;
+  color: #222;
 }
 
 input[type=button].warning:focus, input[type=button].warning:hover, input[type=submit].warning:focus, input[type=submit].warning:hover,
@@ -1594,7 +1596,7 @@ button.warning:focus,
 button.warning:hover, .button.warning:focus, .button.warning:hover {
   background: khaki;
   border-color: khaki;
-  color: #333;
+  color: #222;
 }
 
 input[type=button].success, input[type=submit].success,
@@ -1692,7 +1694,7 @@ textarea,
 .text-field, .text-area {
   background: #ffffff;
   border-radius: 4px;
-  border: 1px solid #999;
+  border: 1px solid #888;
   box-shadow: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1712,7 +1714,7 @@ fieldset,
 .fieldset {
   background: transparent;
   border-radius: 4px;
-  border: 1px solid #cccccc;
+  border: 1px solid #ddd;
   box-shadow: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1728,8 +1730,8 @@ fieldset .legend,
   background: #ffffff;
   border-radius: 4px;
   border: none;
-  box-shadow: 0 8px 30px #999;
-  color: #333;
+  box-shadow: 0 8px 30px #888;
+  color: #222;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 16px;
   padding: 12px 20px;
@@ -1836,9 +1838,9 @@ textarea:disabled,
 textarea.disabled, button:disabled, button.disabled, a:disabled, a.disabled,
 .text-field:disabled,
 .text-field.disabled, .text-area:disabled, .text-area.disabled, .button:disabled, .button.disabled {
-  background: #e6e6e6 !important;
-  border: 1px solid #cccccc !important;
-  color: #777 !important;
+  background: #ddd !important;
+  border: 1px solid #ddd !important;
+  color: #444 !important;
   cursor: not-allowed;
   resize: none !important;
 }
@@ -1860,9 +1862,9 @@ textarea:disabled:hover,
 textarea.disabled:hover, button:disabled:hover, button.disabled:hover, a:disabled:hover, a.disabled:hover,
 .text-field:disabled:hover,
 .text-field.disabled:hover, .text-area:disabled:hover, .text-area.disabled:hover, .button:disabled:hover, .button.disabled:hover {
-  background: #e6e6e6 !important;
-  border: 1px solid #cccccc !important;
-  color: #777 !important;
+  background: #ddd !important;
+  border: 1px solid #ddd !important;
+  color: #444 !important;
 }
 
 input[type=text]:focus, input[type=text]:active, input[type=password]:focus, input[type=password]:active,
@@ -1881,7 +1883,7 @@ textarea:active,
 .text-field:focus,
 .text-field:active, .text-area:focus, .text-area:active {
   background: #ffffff !important;
-  border: 1px solid teal !important;
+  border: 1px solid goldenrod !important;
   box-shadow: none !important;
   outline: none;
 }
