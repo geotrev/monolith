@@ -60,4 +60,4 @@ noun – mono·lith – \ˈmä-nə-ˌlith\
 
 • Customize `input`, `fieldset`, `legend`, `label`, `radio`, `checkbox` and other common elements of forms.
 
-• Define `hover`, `active`, `focus`, and `disable`d styles for fields. Disabled state will work on buttons as well.
+• Define `hover`, `active`, `focus`, and `disabled` styles for fields. Disabled state will work on buttons as well.
