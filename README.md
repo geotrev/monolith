@@ -58,4 +58,4 @@ See the [codepen example](https://codepen.io/geotrev/pen/PWEYaB) to see it in ac
 
 • Customize `input`, `fieldset`, `legend`, `label`, `radio`, `checkbox` and other common elements of forms.
 
-• Define active, focus, and disabled styles for fields (works for buttons, too).
+• Define hover, active, focus, and disabled styles for fields (works for buttons, too).
