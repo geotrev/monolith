@@ -21,10 +21,28 @@ textarea, button, a,
       color: $input-disabled-color !important;
     }
   }
+}
 
-  &:focus {
-    background: $input-focus-background;
-    border: $input-focus-border;
-    box-shadow: $input-focus-box-shadow;
+input[type=text], input[type=password],
+input[type=email], input[type=date],
+input[type=datetime-local], input[type=month],
+input[type=number], input[type=tel],
+input[type=search], input[type=time],
+input[type=url], input[type=week],
+textarea,
+.#{$scope}text-field, .#{$scope}text-area {
+
+  &:focus, &:active {
+    background: $input-focus-background !important;
+    border: $input-focus-border !important;
+    box-shadow: $input-focus-box-shadow !important;
+    outline: $global-outline;
+  }
+
+  &:hover {
+    background: $input-hover-background;
+    border: $input-hover-border;
+    box-shadow: $input-hover-box-shadow;
+    outline: $global-outline;
   }
 }
