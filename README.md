@@ -10,52 +10,58 @@ See the [codepen example](https://codepen.io/geotrev/pen/PWEYaB) to see it in ac
 
 ## Overview
 
-• Highly configurable styles using `_config.scss`. Don't waste time editing raw CSS!
+• Easily configure styles in `_config.scss`. 
 
 • Highly customizable color palettes, font options, spacing, and the like that apply across components.
+
+• By default each component uses global fonts, spacing, and colors; replace with unique styles for branding customization.
+
+• Define brand palette with primary, secondary, and tertiary colors, including an array for black/white combinations.
+
+• Default status colors: `warning`, `destroy`, `success`, `notice`.
 
 ## Grid
 
 • Specify names for grid (container), row and column elements
 
-• Define gutters and spacing for rows and columns.
+• Columns with no defined width classes (i.e., `xsmall-4`) will space evenly in their container, regardless of content.
 
-• Fluid & fixed-width containers at multiple sizes: `narrow`, `default`, `large`
+• Define gutters and spacing for `column` base class.
 
-• Use section classes for focused content: `small-section`, `medium-section`, `large-section`
+• Fluid & fixed-width containers at multiple sizes (no class for default width): `narrow`, `large`
 
-• Offset columns
+• Use section classes for focused content (adds vertical padding to grid container): `small-section`, `medium-section`, `large-section`
 
-• Order columns.
+• Offset columns by breakpoint.
+
+• Order columns by breakpoint.
 
 • Collapse column padding inside a row by using `collapsed row`.
 
-• Five default breakpoints to choose from: `xsmall`, `small`, `medium`, `large`, `xlarge`
+• Five default breakpoint classes: `xsmall`, `small`, `medium`, `large`, `xlarge`
 
-• Breakpoint mixins: `up`, `down`, `only`
+• Use breakpoint names for mixins. E.g., `@include breakpoint-up(large) { ... }` or `<div class="xsmall-12 large-6 columns"></div>`
 
 ## Typography
 
-• Control over header and paragraph elements.
+• Define default header and paragraph base styles, including breakpoint size behavior and colors. 
 
 • Change the way html text helpers work by defining styles in `mark`, `small`, and `em`.
 
 ## Buttons
 
-• Use a simple button style with `input` and `button`.
+• Versatile buttons in multiple sizes: `small`, default (no size modifier), `medium`, `large`, `huge`
 
-• Apply button styles to `<a>` elements as well with a `button` class (can be used with `<input>` and `<button>` as well).
+• All status colors reflected in buttons with modifier classes: `warning`, `destroy`, `success`, `notice`
 
-• Use `<a>` by itself, or with a `link` class to apply simple anchor links.
+• Make your buttons wide with a `wide` class.
 
-• Use `small`, `medium`, `large`, or `huge` buttons.
+• Button default styles defined for `primary`, `secondary`, `tertiary`, `inverted`, and `inverted-outline` buttons.
 
-• `warning`, `destroy`, `success`, and `notice` button styles provided from the global status color palette.
-
-• Apply `outline`, `clear`, or `wide` button styles.
+• Style simple `<a>` elements. Uses primary color by default.
 
 ## Forms
 
 • Customize `input`, `fieldset`, `legend`, `label`, `radio`, `checkbox` and other common elements of forms.
 
-• Define hover, active, focus, and disabled styles for fields (works for buttons, too).
+• Define `hover`, `active`, `focus`, and `disable`d styles for fields. Disabled state will work on buttons as well.
