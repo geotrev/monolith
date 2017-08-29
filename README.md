@@ -4,10 +4,6 @@ noun – mono·lith – \ˈmä-nə-ˌlith\
 
 "A CSS framework that acts as a single, organized system."
 
-### [gtreviranus.github.io/monolith](https://gtreviranus.github.io/monolith)
-
-See the [codepen example](https://codepen.io/geotrev/pen/PWEYaB) to see it in action.
-
 ## Overview
 
 • Highly configurable styles using `_config.scss`. Don't waste time editing raw CSS!
