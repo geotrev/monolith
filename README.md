@@ -1,6 +1,6 @@
 # Monolith
 
-noun – mono·lith – \ˈmä-nə-ˌlith\ 
+noun – mono·lith – \ˈmä-nə-ˌlith\
 
 "A CSS framework that acts as a single, organized system."
 
