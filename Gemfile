@@ -1,3 +1,7 @@
 source "https://rubygems.org"
-gem "github-pages", group: :jekyll_plugins
-gem "octopress-autoprefixer"
+
+group :plugins do
+  gem "jekyll-assets"
+end
+
+gem "autoprefixer-rails"

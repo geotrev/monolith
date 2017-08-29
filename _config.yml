@@ -3,4 +3,20 @@ sass:
   # style:    :compressed
 
 gems:
-  - octopress-autoprefixer
+  - jekyll-assets
+
+assets:
+  autoprefixer:
+    browsers:
+      - "last 2 versions"
+      - "IE > 9"
+  assets:
+    - "styles.css"
+  sources:
+    - _assets/css
+    # - _assets/images
+    # - _assets/javascripts
+    # - _assets/stylesheets
+    # - _assets/fonts
+    # - _assets/img
+    # - _assets/js
