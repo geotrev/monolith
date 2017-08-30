@@ -8,8 +8,8 @@ gems:
 assets:
   autoprefixer:
     browsers:
-      - "last 2 versions"
-      - "IE > 9"
+      - "last 4 versions"
+      - "IE > 8"
   assets:
     - "styles.css"
   sources:
