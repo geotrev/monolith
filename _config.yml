@@ -6,12 +6,10 @@ gems:
   - jekyll-assets
 
 assets:
-  autoprefixer:
-    browsers:
-      - "last 4 versions"
-      - "IE > 8"
   assets:
     - "styles.css"
+  compress:
+    css: false
   sources:
     - _assets/css
     # - _assets/images
@@ -20,3 +18,7 @@ assets:
     # - _assets/fonts
     # - _assets/img
     # - _assets/js
+  autoprefixer:
+    browsers:
+      - "last 4 versions"
+      - "IE > 8"
