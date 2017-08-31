@@ -84,6 +84,7 @@ $columns: 12 !default;
 $grid-width: 992px !default;
 $order-threshold: 20 !default;
 
+$column-padding-top: 0;
 $column-padding-bottom: $global-space;
 $column-gutter: $global-space / 2;
 $grid-gutter: $global-space;

@@ -40,6 +40,7 @@ $column: map-get($grid-classes, column);
   max-width: 100%;
   min-height: 1px;
   min-width: 0;
+  padding-top: $column-padding-top;
   padding-bottom: $column-padding-bottom;
   padding-left: $column-gutter;
   padding-right: $column-gutter;
