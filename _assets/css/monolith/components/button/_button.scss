@@ -1,0 +1,43 @@
+input[type=button], input[type=submit],
+input[type=file], input[type=reset],
+button, .#{$scope}button {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: $button-background;
+  border-color: $button-border-color;
+  border-radius: $button-border-radius;
+  border-style: $button-border-style;
+  border-width: $button-border-width;
+  box-shadow: $button-box-shadow;
+  color: $button-color;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $button-font;
+  font-size: $button-font-size;
+  font-style: $button-font-style;
+  font-weight: $button-font-weight;
+  outline: $global-outline;
+  margin: $button-margin;
+  padding: $button-padding;
+  text-align: center;
+  text-decoration: $button-decoration;
+  transition: $global-ease;
+
+  &:visited, &:active {
+    background-color: $button-background;
+    border-color: $button-border-color;
+    color: $button-color;
+  }
+
+  &:hover, &:focus {
+    background: $button-background-hover;
+    border-color: $button-border-color-hover;
+    color: $button-color;
+    text-decoration: $button-decoration;
+    transition: $global-ease;
+  }
+}
+
+@import 'utilities';
+@import 'status_buttons';

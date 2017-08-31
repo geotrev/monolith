@@ -1,0 +1,24 @@
+sass:
+  sass_dir: _scss
+  # style:    :compressed
+
+gems:
+  - jekyll-assets
+
+assets:
+  assets:
+    - "monolith.css"
+  compress:
+    css: false
+  sources:
+    - _assets/css
+    # - _assets/images
+    # - _assets/javascripts
+    # - _assets/stylesheets
+    # - _assets/fonts
+    # - _assets/img
+    # - _assets/js
+  autoprefixer:
+    browsers:
+      - "last 4 versions"
+      - "IE > 8"

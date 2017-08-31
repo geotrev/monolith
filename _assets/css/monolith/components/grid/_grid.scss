@@ -1,0 +1,80 @@
+$grid: map-get($grid-classes, grid);
+$row: map-get($grid-classes, row);
+$column: map-get($grid-classes, column);
+
+.#{$grid}::before,
+.#{$grid}::after,
+.#{$grid} .#{$row}::before,
+.#{$grid} .#{$row}::after,
+.#{$row} .#{$column}::before, .#{$row} .#{$column}::after,
+.#{$row} .#{$column}s::before, .#{$row} .#{$column}s::after {
+  display: block;
+  height: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.#{$grid} {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 auto;
+  max-width: $grid-width;
+  padding-left: $grid-gutter;
+  padding-right: $grid-gutter;
+  position: relative;
+}
+
+.#{$row} {
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1 0 auto;
+  position: relative;
+  width: 100%;
+}
+
+.#{$column}s, .#{$column} {
+  box-sizing: border-box;
+  flex: 1 1 0;
+  max-width: 100%;
+  min-height: 1px;
+  min-width: 0;
+  padding-bottom: $column-padding-bottom;
+  padding-left: $column-gutter;
+  padding-right: $column-gutter;
+  word-wrap: break-word;
+
+  @if $column-order-classes == true {
+    order: 999;
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  $break-name: nth($breakpoint, 1);
+
+  @include breakpoint-up($break-name) {
+    @for $i from 1 through $columns {
+
+      .#{$break-name}-#{$i} {
+        flex: 0 0 percentage($i / $columns);
+        max-width: percentage($i / $columns);
+      }
+
+      @if $column-offset-classes == true {
+        .#{$break-name}-offset-#{$i} {
+          margin-left: percentage($i / $columns);
+        }
+      }
+
+      @if $column-order-classes == true {
+        .#{$break-name}-order-#{$i} {
+          order: $i;
+        }
+      }
+
+    } // end @for
+  } // end @include
+} // end @each
+
+@import 'utilities';

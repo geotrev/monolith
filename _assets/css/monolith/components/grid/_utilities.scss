@@ -1,0 +1,45 @@
+.#{$grid} {
+  @each $name, $width in $grid-widths {
+    &.#{$scope}#{$name} {
+      max-width: $width;
+    }
+  }
+
+  @each $name, $padding in $grid-sections {
+    &.#{$scope}#{$name}-section {
+      padding-top: $padding;
+      padding-bottom: $padding;
+    }
+  }
+
+  &.#{$scope}fullscreen {
+    box-sizing: border-box;
+    height: 100vh;
+    max-width: unset;
+    width: 100vw;
+
+    .#{$row} {
+      flex: 1 1 auto;
+    }
+
+    .#{$row} {
+      &.#{$scope}align-bottom {
+        align-content: flex-end;
+      }
+      &.#{$scope}align-middle {
+        align-content: center;
+      }
+      &.#{$scope}align-top    {
+        align-content: flex-start;
+      }
+    }
+  }
+}
+
+.#{$row}.#{$scope}collapsed {
+  .#{$column}s, .#{$column} {
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
