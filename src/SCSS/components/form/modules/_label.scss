@@ -1,0 +1,7 @@
+
+label,
+.#{$scope}label {
+  display: flex;
+  flex-direction: column;
+  font-family: $form-font;
+}

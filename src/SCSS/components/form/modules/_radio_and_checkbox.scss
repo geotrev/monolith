@@ -1,0 +1,44 @@
+
+input[type=radio], input[type=checkbox],
+.#{$scope}radio, .#{$scope}checkbox {
+  cursor: pointer;
+  font-family: $form-font;
+  margin: $input-option-margin;
+  padding: $input-option-padding;
+}
+
+.#{$scope}radio-row, .#{$scope}checkbox-row,
+.#{$scope}radio-column, .#{$scope}checkbox-column {
+  margin-top: $input-option-margin-top;
+  display: flex;
+
+  label,
+  .#{$scope}radio-label, .#{$scope}checkbox-label {
+    align-items: center;
+    flex-direction: row;
+    padding-right: $input-option-label-padding-right;
+  }
+}
+
+.#{$scope}radio-column, .#{$scope}checkbox-column {
+  flex-direction: column;
+  padding-bottom: $input-option-column-padding-bottom;
+}
+.#{$scope}radio-row, .#{$scope}checkbox-row {
+  flex-direction: row;
+  padding-bottom: $input-option-row-padding-bottom;
+}
+
+.#{$scope}radio-row input[type=radio],
+.#{$scope}radio-row .#{$scope}radio,
+.#{$scope}checkbox-row input[type=checkbox],
+.#{$scope}checkbox-row .#{$scope}checkbox {
+  margin-right: $input-option-input-margin-right;
+}
+
+.#{$scope}radio-column label,
+.#{$scope}radio-column .#{$scope}radio-label,
+.#{$scope}checkbox-column label,
+.#{$scope}checkbox-column .#{$scope}checkbox-label {
+  padding-bottom: $input-option-label-padding-bottom;
+}

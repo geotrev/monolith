@@ -7,7 +7,7 @@ gems:
 
 assets:
   assets:
-    - "styles.css"
+    - "monolith.css"
   compress:
     css: false
   sources:

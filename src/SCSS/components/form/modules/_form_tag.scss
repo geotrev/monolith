@@ -1,0 +1,9 @@
+
+form,
+.#{$scope}form {
+  background: $form-background;
+  border: $form-border;
+  box-shadow: $form-box-shadow;
+  margin: $form-margin;
+  padding: $form-padding;
+}

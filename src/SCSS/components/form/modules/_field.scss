@@ -1,0 +1,25 @@
+
+input[type=text],
+input[type=password], input[type=email],
+input[type=date], input[type=datetime-local],
+input[type=month], input[type=number],
+input[type=tel], input[type=search],
+input[type=time], input[type=url],
+input[type=week],
+textarea,
+.#{$scope}text-field, .#{$scope}text-area {
+  background: $input-background;
+  border-radius: $input-border-radius;
+  border: $input-border;
+  box-shadow: $input-box-shadow;
+  display: flex;
+  font-family: $input-font-family;
+  font-size: $input-font-size;
+  margin: $input-margin;
+  padding: $input-padding;
+}
+
+textarea, input[type=text],
+.#{$scope}text-area {
+  resize: $input-resize;
+}
