@@ -7,7 +7,7 @@ button, .#{$scope}button {
       border-color: lighten($color, 7%);
       color: find-invert($color);
 
-      &:active, &:visited {
+      &:visited {
         background: lighten($color, 7%);
         border-color: lighten($color, 7%);
         color: find-invert($color);
@@ -16,6 +16,12 @@ button, .#{$scope}button {
       &:focus, &:hover {
         background: $color;
         border-color: $color;
+        color: find-invert($color);
+      }
+      
+      &:active {
+        background: darken($color, 2%);
+        border-color: darken($color, 2%);
         color: find-invert($color);
       }
     }

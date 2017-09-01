@@ -1117,11 +1117,9 @@ button, .button {
   text-align: center;
   text-decoration: none;
   transition: ease-out 0.2s; }
-  input[type=button]:visited, input[type=button]:active, input[type=submit]:visited, input[type=submit]:active,
-  input[type=file]:visited,
-  input[type=file]:active, input[type=reset]:visited, input[type=reset]:active,
-  button:visited,
-  button:active, .button:visited, .button:active {
+  input[type=button]:visited, input[type=submit]:visited,
+  input[type=file]:visited, input[type=reset]:visited,
+  button:visited, .button:visited {
     background-color: #ffffff;
     border-color: #888;
     color: #222; }
@@ -1135,6 +1133,12 @@ button, .button {
     color: #222;
     text-decoration: none;
     transition: ease-out 0.2s; }
+  input[type=button]:active, input[type=submit]:active,
+  input[type=file]:active, input[type=reset]:active,
+  button:active, .button:active {
+    background-color: #f7f7f7;
+    border-color: #111;
+    color: #222; }
 
 input[type=button].small, input[type=submit].small,
 input[type=file].small, input[type=reset].small,
@@ -1166,16 +1170,14 @@ input[type=button].primary, input[type=submit].primary,
 input[type=file].primary, input[type=reset].primary,
 button.primary, .button.primary {
   background: #e1af33;
-  border-color: #e1af33;
+  border-color: #d19e1f;
   box-shadow: none;
   color: #ffffff; }
-  input[type=button].primary:active, input[type=button].primary:visited, input[type=submit].primary:active, input[type=submit].primary:visited,
-  input[type=file].primary:active,
-  input[type=file].primary:visited, input[type=reset].primary:active, input[type=reset].primary:visited,
-  button.primary:active,
-  button.primary:visited, .button.primary:active, .button.primary:visited {
+  input[type=button].primary:visited, input[type=submit].primary:visited,
+  input[type=file].primary:visited, input[type=reset].primary:visited,
+  button.primary:visited, .button.primary:visited {
     background: #e1af33;
-    border-color: #e1af33;
+    border-color: #d19e1f;
     color: #ffffff; }
   input[type=button].primary:focus, input[type=button].primary:hover, input[type=submit].primary:focus, input[type=submit].primary:hover,
   input[type=file].primary:focus,
@@ -1186,20 +1188,25 @@ button.primary, .button.primary {
     border-color: goldenrod;
     box-shadow: none;
     color: #ffffff; }
+  input[type=button].primary:active, input[type=submit].primary:active,
+  input[type=file].primary:active, input[type=reset].primary:active,
+  button.primary:active, .button.primary:active {
+    background: #d19e1f;
+    border-color: #d19e1f;
+    box-shadow: none;
+    color: #ffffff; }
 input[type=button].secondary, input[type=submit].secondary,
 input[type=file].secondary, input[type=reset].secondary,
 button.secondary, .button.secondary {
   background: transparent;
-  border-color: #e4b849;
+  border-color: #e1af33;
   box-shadow: none;
   color: goldenrod; }
-  input[type=button].secondary:active, input[type=button].secondary:visited, input[type=submit].secondary:active, input[type=submit].secondary:visited,
-  input[type=file].secondary:active,
-  input[type=file].secondary:visited, input[type=reset].secondary:active, input[type=reset].secondary:visited,
-  button.secondary:active,
-  button.secondary:visited, .button.secondary:active, .button.secondary:visited {
+  input[type=button].secondary:visited, input[type=submit].secondary:visited,
+  input[type=file].secondary:visited, input[type=reset].secondary:visited,
+  button.secondary:visited, .button.secondary:visited {
     background: transparent;
-    border-color: #e4b849;
+    border-color: #e1af33;
     color: goldenrod; }
   input[type=button].secondary:focus, input[type=button].secondary:hover, input[type=submit].secondary:focus, input[type=submit].secondary:hover,
   input[type=file].secondary:focus,
@@ -1210,6 +1217,13 @@ button.secondary, .button.secondary {
     border-color: goldenrod;
     box-shadow: none;
     color: goldenrod; }
+  input[type=button].secondary:active, input[type=submit].secondary:active,
+  input[type=file].secondary:active, input[type=reset].secondary:active,
+  button.secondary:active, .button.secondary:active {
+    background: transparent;
+    border-color: #d19e1f;
+    box-shadow: none;
+    color: goldenrod; }
 input[type=button].tertiary, input[type=submit].tertiary,
 input[type=file].tertiary, input[type=reset].tertiary,
 button.tertiary, .button.tertiary {
@@ -1217,11 +1231,9 @@ button.tertiary, .button.tertiary {
   border-color: transparent;
   box-shadow: none;
   color: goldenrod; }
-  input[type=button].tertiary:active, input[type=button].tertiary:visited, input[type=submit].tertiary:active, input[type=submit].tertiary:visited,
-  input[type=file].tertiary:active,
-  input[type=file].tertiary:visited, input[type=reset].tertiary:active, input[type=reset].tertiary:visited,
-  button.tertiary:active,
-  button.tertiary:visited, .button.tertiary:active, .button.tertiary:visited {
+  input[type=button].tertiary:visited, input[type=submit].tertiary:visited,
+  input[type=file].tertiary:visited, input[type=reset].tertiary:visited,
+  button.tertiary:visited, .button.tertiary:visited {
     background: transparent;
     border-color: transparent;
     color: goldenrod; }
@@ -1234,6 +1246,13 @@ button.tertiary, .button.tertiary {
     border-color: #f7f7f7;
     box-shadow: none;
     color: goldenrod; }
+  input[type=button].tertiary:active, input[type=submit].tertiary:active,
+  input[type=file].tertiary:active, input[type=reset].tertiary:active,
+  button.tertiary:active, .button.tertiary:active {
+    background: #f1f1f1;
+    border-color: #f1f1f1;
+    box-shadow: none;
+    color: goldenrod; }
 input[type=button].inverted, input[type=submit].inverted,
 input[type=file].inverted, input[type=reset].inverted,
 button.inverted, .button.inverted {
@@ -1241,11 +1260,9 @@ button.inverted, .button.inverted {
   border-color: #eaeaea;
   box-shadow: none;
   color: #222; }
-  input[type=button].inverted:active, input[type=button].inverted:visited, input[type=submit].inverted:active, input[type=submit].inverted:visited,
-  input[type=file].inverted:active,
-  input[type=file].inverted:visited, input[type=reset].inverted:active, input[type=reset].inverted:visited,
-  button.inverted:active,
-  button.inverted:visited, .button.inverted:active, .button.inverted:visited {
+  input[type=button].inverted:visited, input[type=submit].inverted:visited,
+  input[type=file].inverted:visited, input[type=reset].inverted:visited,
+  button.inverted:visited, .button.inverted:visited {
     background: #eaeaea;
     border-color: #eaeaea;
     color: #222; }
@@ -1258,6 +1275,13 @@ button.inverted, .button.inverted {
     border-color: #ffffff;
     box-shadow: none;
     color: #222; }
+  input[type=button].inverted:active, input[type=submit].inverted:active,
+  input[type=file].inverted:active, input[type=reset].inverted:active,
+  button.inverted:active, .button.inverted:active {
+    background: #ddd;
+    border-color: #ddd;
+    box-shadow: none;
+    color: #222; }
 input[type=button].inverted-outline, input[type=submit].inverted-outline,
 input[type=file].inverted-outline, input[type=reset].inverted-outline,
 button.inverted-outline, .button.inverted-outline {
@@ -1265,11 +1289,9 @@ button.inverted-outline, .button.inverted-outline {
   border-color: #ddd;
   box-shadow: none;
   color: #ffffff; }
-  input[type=button].inverted-outline:active, input[type=button].inverted-outline:visited, input[type=submit].inverted-outline:active, input[type=submit].inverted-outline:visited,
-  input[type=file].inverted-outline:active,
-  input[type=file].inverted-outline:visited, input[type=reset].inverted-outline:active, input[type=reset].inverted-outline:visited,
-  button.inverted-outline:active,
-  button.inverted-outline:visited, .button.inverted-outline:active, .button.inverted-outline:visited {
+  input[type=button].inverted-outline:visited, input[type=submit].inverted-outline:visited,
+  input[type=file].inverted-outline:visited, input[type=reset].inverted-outline:visited,
+  button.inverted-outline:visited, .button.inverted-outline:visited {
     background: transparent;
     border-color: #ddd;
     color: #ffffff; }
@@ -1282,6 +1304,13 @@ button.inverted-outline, .button.inverted-outline {
     border-color: #ffffff;
     box-shadow: none;
     color: #ffffff; }
+  input[type=button].inverted-outline:active, input[type=submit].inverted-outline:active,
+  input[type=file].inverted-outline:active, input[type=reset].inverted-outline:active,
+  button.inverted-outline:active, .button.inverted-outline:active {
+    background: transparent;
+    border-color: #d8d8d8;
+    box-shadow: none;
+    color: #ffffff; }
 
 input[type=button].warning, input[type=submit].warning,
 input[type=file].warning, input[type=reset].warning,
@@ -1289,11 +1318,9 @@ button.warning, .button.warning {
   background: #f4edac;
   border-color: #f4edac;
   color: #222; }
-  input[type=button].warning:active, input[type=button].warning:visited, input[type=submit].warning:active, input[type=submit].warning:visited,
-  input[type=file].warning:active,
-  input[type=file].warning:visited, input[type=reset].warning:active, input[type=reset].warning:visited,
-  button.warning:active,
-  button.warning:visited, .button.warning:active, .button.warning:visited {
+  input[type=button].warning:visited, input[type=submit].warning:visited,
+  input[type=file].warning:visited, input[type=reset].warning:visited,
+  button.warning:visited, .button.warning:visited {
     background: #f4edac;
     border-color: #f4edac;
     color: #222; }
@@ -1305,17 +1332,21 @@ button.warning, .button.warning {
     background: khaki;
     border-color: khaki;
     color: #222; }
+  input[type=button].warning:active, input[type=submit].warning:active,
+  input[type=file].warning:active, input[type=reset].warning:active,
+  button.warning:active, .button.warning:active {
+    background: #efe483;
+    border-color: #efe483;
+    color: #222; }
 input[type=button].success, input[type=submit].success,
 input[type=file].success, input[type=reset].success,
 button.success, .button.success {
   background: #008800;
   border-color: #008800;
   color: #fff; }
-  input[type=button].success:active, input[type=button].success:visited, input[type=submit].success:active, input[type=submit].success:visited,
-  input[type=file].success:active,
-  input[type=file].success:visited, input[type=reset].success:active, input[type=reset].success:visited,
-  button.success:active,
-  button.success:visited, .button.success:active, .button.success:visited {
+  input[type=button].success:visited, input[type=submit].success:visited,
+  input[type=file].success:visited, input[type=reset].success:visited,
+  button.success:visited, .button.success:visited {
     background: #008800;
     border-color: #008800;
     color: #fff; }
@@ -1327,17 +1358,21 @@ button.success, .button.success {
     background: darkgreen;
     border-color: darkgreen;
     color: #fff; }
+  input[type=button].success:active, input[type=submit].success:active,
+  input[type=file].success:active, input[type=reset].success:active,
+  button.success:active, .button.success:active {
+    background: #005a00;
+    border-color: #005a00;
+    color: #fff; }
 input[type=button].destroy, input[type=submit].destroy,
 input[type=file].destroy, input[type=reset].destroy,
 button.destroy, .button.destroy {
   background: #ff2424;
   border-color: #ff2424;
   color: #fff; }
-  input[type=button].destroy:active, input[type=button].destroy:visited, input[type=submit].destroy:active, input[type=submit].destroy:visited,
-  input[type=file].destroy:active,
-  input[type=file].destroy:visited, input[type=reset].destroy:active, input[type=reset].destroy:visited,
-  button.destroy:active,
-  button.destroy:visited, .button.destroy:active, .button.destroy:visited {
+  input[type=button].destroy:visited, input[type=submit].destroy:visited,
+  input[type=file].destroy:visited, input[type=reset].destroy:visited,
+  button.destroy:visited, .button.destroy:visited {
     background: #ff2424;
     border-color: #ff2424;
     color: #fff; }
@@ -1349,17 +1384,21 @@ button.destroy, .button.destroy {
     background: red;
     border-color: red;
     color: #fff; }
+  input[type=button].destroy:active, input[type=submit].destroy:active,
+  input[type=file].destroy:active, input[type=reset].destroy:active,
+  button.destroy:active, .button.destroy:active {
+    background: #f50000;
+    border-color: #f50000;
+    color: #fff; }
 input[type=button].notice, input[type=submit].notice,
 input[type=file].notice, input[type=reset].notice,
 button.notice, .button.notice {
   background: #5e93c0;
   border-color: #5e93c0;
   color: #fff; }
-  input[type=button].notice:active, input[type=button].notice:visited, input[type=submit].notice:active, input[type=submit].notice:visited,
-  input[type=file].notice:active,
-  input[type=file].notice:visited, input[type=reset].notice:active, input[type=reset].notice:visited,
-  button.notice:active,
-  button.notice:visited, .button.notice:active, .button.notice:visited {
+  input[type=button].notice:visited, input[type=submit].notice:visited,
+  input[type=file].notice:visited, input[type=reset].notice:visited,
+  button.notice:visited, .button.notice:visited {
     background: #5e93c0;
     border-color: #5e93c0;
     color: #fff; }
@@ -1370,6 +1409,12 @@ button.notice, .button.notice {
   button.notice:hover, .button.notice:focus, .button.notice:hover {
     background: steelblue;
     border-color: steelblue;
+    color: #fff; }
+  input[type=button].notice:active, input[type=submit].notice:active,
+  input[type=file].notice:active, input[type=reset].notice:active,
+  button.notice:active, .button.notice:active {
+    background: #437dad;
+    border-color: #437dad;
     color: #fff; }
 
 input[type=text],
