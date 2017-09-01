@@ -20,45 +20,25 @@ button, .#{$scope}button {
   }
 
   @each $type in $button-types {
-    $name: nth($type, 1);
-    $background: map-deep-get($button-types, $name, background);
-    $background-hover: map-deep-get($button-types, $name, background-hover);
-    $background-active: map-deep-get($button-types, $name, background-active);
-    $color: map-deep-get($button-types, $name, color);
-    $color-hover: map-deep-get($button-types, $name, color-hover);
-    $color-active: map-deep-get($button-types, $name, color-active);
-    $border-color: map-deep-get($button-types, $name, border-color);
-    $border-color-hover: map-deep-get($button-types, $name, border-color-hover);
-    $border-color-active: map-deep-get($button-types, $name, border-color-active);
-    $box-shadow: map-deep-get($button-types, $name, box-shadow);
-    $box-shadow-hover: map-deep-get($button-types, $name, box-shadow-hover);
-    $box-shadow-active: map-deep-get($button-types, $name, box-shadow-active);
+    $kind: nth($type, 1);
+    $bg: map-deep-get($button-types, $kind, background);
+    $bg-hover: map-deep-get($button-types, $kind, background-hover);
+    $bg-active: map-deep-get($button-types, $kind, background-active);
+    $text: map-deep-get($button-types, $kind, color);
+    $text-hover: map-deep-get($button-types, $kind, color-hover);
+    $text-active: map-deep-get($button-types, $kind, color-active);
+    $bc: map-deep-get($button-types, $kind, border-color);
+    $bc-hover: map-deep-get($button-types, $kind, border-color-hover);
+    $bc-active: map-deep-get($button-types, $kind, border-color-active);
+    $shadow: map-deep-get($button-types, $kind, box-shadow);
+    $shadow-hover: map-deep-get($button-types, $kind, box-shadow-hover);
+    $shadow-active: map-deep-get($button-types, $kind, box-shadow-active);
 
-    &.#{$scope}#{$name} {
-      background: $background;
-      border-color: $border-color;
-      box-shadow: $box-shadow;
-      color: $color;
-
-      &:visited {
-        background: $background;
-        border-color: $border-color;
-        color: $color;
-      }
-
-      &:focus, &:hover {
-        background: $background-hover;
-        border-color: $border-color-hover;
-        box-shadow: $box-shadow-hover;
-        color: $color-hover;
-      }
-
-      &:active {
-        background: $background-active;
-        border-color: $border-color-active;
-        box-shadow: $box-shadow-active;
-        color: $color-active;
-      }
-    }
+    @include button-state(
+      $kind,
+      $text, $bg, $bc, $shadow,
+      $text-hover, $bg-hover, $bc-hover, $shadow-hover,
+      $text-active, $bg-active, $bc-active, $shadow-active
+    );
   }
 }
