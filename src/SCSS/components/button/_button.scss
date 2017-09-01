@@ -24,7 +24,7 @@ button, .#{$scope}button {
   text-decoration: $button-decoration;
   transition: $global-ease;
 
-  &:visited, &:active {
+  &:visited {
     background-color: $button-background;
     border-color: $button-border-color;
     color: $button-color;
@@ -36,6 +36,12 @@ button, .#{$scope}button {
     color: $button-color;
     text-decoration: $button-decoration;
     transition: $global-ease;
+  }
+
+  &:active {
+    background-color: $button-background-active;
+    border-color: $button-border-colo-active;
+    color: $button-color;
   }
 }
 
