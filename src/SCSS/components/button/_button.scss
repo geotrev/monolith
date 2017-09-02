@@ -24,8 +24,7 @@ button, .#{$scope}button {
     $button-box-shadow, $button-border-color, $button-color, $button-background,
     $button-box-shadow-hover, $button-border-color-hover, $button-color-hover, $button-background-hover,
     $button-box-shadow-active, $button-border-color-active, $button-color-active, $button-background-active
-  )
+  );
 }
 
 @import 'utilities';
-@import 'status_buttons';
