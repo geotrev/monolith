@@ -186,38 +186,6 @@ $type-mark-background: $status-warning;
 // 4. Buttons
 //
 
-$link-color: lighten($primary, 10%);
-$link-decoration: none;
-$link-decoration-hover: underline;
-$link-font: $global-font;
-$link-style: normal;
-$link-weight: normal;
-$link-font-size: $global-font-size;
-$link-hover: $primary;
-$link-active: $link-hover;
-
-$button-status-palette: $status-palette;
-
-$button-background: $white;
-$button-background-hover: $button-background;
-$button-background-active: lighten($gray900, 10%);
-$button-color: $gray200;
-$button-padding: 10px $global-space;
-$button-margin: 0 0 $global-space 0;
-$button-border-radius: 4px;
-$button-border-style: solid;
-$button-border-width: 1px;
-$button-border-color: $gray800;
-$button-border-color-hover: $gray400;
-$button-border-colo-active: $gray100;
-$button-font-size: $global-font-size;
-$button-font-style: normal;
-$button-font-weight: normal;
-$button-font: $global-font;
-$button-box-shadow: none;
-$button-decoration: none;
-$button-decoration-hover: none;
-
 $button-sizes: (
   small: (
     padding: 8px 14px,
@@ -236,6 +204,40 @@ $button-sizes: (
     font-size: 24px
   )
 ) !default;
+
+$button-status-palette: $status-palette;
+
+// Default button styles
+
+$button-padding: 10px $global-space;
+$button-margin: 0 0 $global-space 0;
+$button-border-radius: 4px;
+$button-border-style: solid;
+$button-border-width: 2px;
+$button-font-size: $global-font-size;
+$button-font-style: normal;
+$button-font-weight: normal;
+$button-font: $global-font;
+$button-decoration: none;
+$button-decoration-hover: none;
+
+$button-background: $white;
+$button-background-hover: $button-background;
+$button-background-active: lighten($gray900, 10%);
+
+$button-color: $gray200;
+$button-color-hover: $button-color;
+$button-color-active: $button-color;
+
+$button-border-color: $gray800;
+$button-border-color-hover: $gray600;
+$button-border-color-active: $gray400;
+
+$button-box-shadow: none;
+$button-box-shadow-hover: $button-box-shadow;
+$button-box-shadow-active: $button-box-shadow;
+
+// Branded button styles
 
 $button-types: (
   primary: (
@@ -310,11 +312,25 @@ $button-types: (
   )
 ) !default;
 
+// Links
+
+$link-color: lighten($primary, 10%);
+$link-decoration: none;
+$link-decoration-hover: underline;
+$link-font: $global-font;
+$link-style: normal;
+$link-weight: normal;
+$link-font-size: $global-font-size;
+$link-hover: $primary;
+$link-active: $link-hover;
+
 // -------------------------- * -------------------------- //
 
 //
 // 5. Forms
 //
+
+// Form tag (wrapper)
 
 $form-margin: 0;
 $form-padding: 0;
@@ -324,7 +340,7 @@ $form-border: none;
 $form-font: $global-font;
 $form-radius: 4px;
 
-// inputs
+// input field + text area
 
 $input-font-size: $global-font-size;
 $input-font-family: $form-font;
@@ -334,8 +350,9 @@ $input-padding: 12px;
 $input-margin: 8px 0 $global-space 0;
 $input-border-radius: $form-radius;
 $input-background: $white;
+$input-resize: vertical;
 
-// input states
+// input field + text area states
 
 $input-hover-background: $input-background;
 $input-hover-border: 1px solid $gray600;
@@ -344,10 +361,6 @@ $input-hover-box-shadow: $input-box-shadow;
 $input-focus-background: $input-background;
 $input-focus-border: 1px solid $primary;
 $input-focus-box-shadow: $input-box-shadow;
-
-// textarea resize
-
-$input-resize: vertical;
 
 // radio and checkbox
 

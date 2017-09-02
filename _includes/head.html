@@ -4,4 +4,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <title>Monolith CSS – A super-powered CSS system built for the modern web</title>
   {% css monolith %}
+
+  <style>
+    .content {
+      padding: 16px 0;
+      width: 100%;
+      background: lightgray;
+    }
+
+    .invert-block {
+      background: black;
+      padding: 1rem;
+      margin: 16px 0;
+    }
+
+    .content.blue { background: teal; }
+    .content.red { background: crimson; }
+    .content.green { background: green; }
+
+    .gray { background: lightgray; }
+    .gray .content { background: white; }
+  </style>
 </head>
