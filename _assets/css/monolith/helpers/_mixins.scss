@@ -17,3 +17,46 @@
       @content;
   }
 }
+
+@mixin button-style(
+  $box-shadow:null,
+  $border-color:null,
+  $color:null,
+  $background:null,
+
+  $box-shadow-hover:null,
+  $border-color-hover:null,
+  $color-hover:null,
+  $background-hover:null,
+
+  $box-shadow-active:null,
+  $border-color-active:null,
+  $color-active:null,
+  $background-active:null
+) {
+  box-shadow: $box-shadow;
+  border-color: $border-color;
+  color: $color;
+  background: $background;
+
+  &:visited {
+    box-shadow: $box-shadow;
+    border-color: $border-color;
+    color: $color;
+    background: $background;
+  }
+  &:hover, &:focus {
+    box-shadow: $box-shadow-hover;
+    border-color: $border-color-hover;
+    color: $color-hover;
+    background: $background-hover;
+    text-decoration: $button-decoration;
+    transition: $global-ease;
+  }
+  &:active {
+    box-shadow: $box-shadow-active;
+    border-color: $border-color-active;
+    color: $color-active;
+    background: $background-active;
+  }
+}
