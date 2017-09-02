@@ -20,11 +20,7 @@ button, .#{$scope}button {
   text-decoration: $button-decoration;
   transition: $global-ease;
 
-  @include button-style(
-    $button-box-shadow, $button-border-color, $button-color, $button-background,
-    $button-box-shadow-hover, $button-border-color-hover, $button-color-hover, $button-background-hover,
-    $button-box-shadow-active, $button-border-color-active, $button-color-active, $button-background-active
-  );
+  @include button-style();
 }
 
 @import 'utilities';
