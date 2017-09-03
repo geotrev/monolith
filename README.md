@@ -4,17 +4,51 @@ noun – mono·lith – \ˈmä-nə-ˌlith\
 
 "A super-powered CSS system built for the modern web."
 
+## Getting Started
+
+### SCSS
+
+Because Monolith is an SCSS framework designed to be modified, your best bet is to add the SCSS to your pipeline and adjust settings through `_config.scss`. This way you have full control over which components get included in `monolith.scss` (which you can include in your website's `<head>`).
+
+[Download Version 1.0](https://github.com/gtreviranus/monolith/tree/master/src/SCSS/monolith.zip)
+
+### Package
+
+If you prefer to use a package, currently NPM is the only option (more to come soon!).
+
+Install it:
+
+```shell
+$npm install --save monolith-css
+```
+
+Link the compiled CSS to your project `<head>`:
+
+```html
+<link href="path/to/monolith.css" rel="stylesheet"/>
+<!-- Add new styles after Monolith -->
+```
+
+**Recommended:** Copy `_config.scss` into your project's SCSS pipeline and overwrite Monolith's defaults. This way you avoid that "out of the box" look.
+
+`_config.scss`:
+```css
+@import 'path/to/config';
+```
+
+### CSS
+
+[Grab the CSS!](https://github.com/gtreviranus/monolith/blob/master/src/CSS/monolith.css).
+
 ## Overview
 
-• Easily configure styles in `_config.scss`. 
+• Easily configure styles in `_config.scss`.
 
 • Highly customizable color palettes, font options, spacing, and the like that apply across components.
 
 • By default each component uses global fonts, spacing, and colors; replace with unique styles for branding customization.
 
 • Define brand palette with primary, secondary, and tertiary colors, including an array for black/white combinations.
-
-• Default status colors: `warning`, `destroy`, `success`, `notice`.
 
 ## Grid
 
@@ -40,7 +74,7 @@ noun – mono·lith – \ˈmä-nə-ˌlith\
 
 ## Typography
 
-• Define default header and paragraph base styles, including breakpoint size behavior and colors. 
+• Define default header and paragraph base styles, including breakpoint size behavior and colors.
 
 • Change the way html text helpers work by defining styles in `mark`, `small`, and `em`.
 
