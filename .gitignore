@@ -3,3 +3,4 @@ _site
 .ruby-version
 .sass-cache
 .asset-cache
+debug/
