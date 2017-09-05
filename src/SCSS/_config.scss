@@ -13,12 +13,17 @@
 // 1. Globals
 //
 
-$scope: '' !default;
+$scope: '';
 
 $global-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
-$global-font-size: 16px !default;
-$global-space: 16px !default;
-$global-ease: ease-out 0.2s !default;
+$global-monospace: monospace, monospace;
+$global-font-size: 16px;
+
+$global-border-radius: 4px;
+$global-border-width: 2px;
+
+$global-space: 16px;
+$global-ease: ease-out 0.2s;
 $global-outline: none;
 
 $primary: goldenrod;
@@ -38,7 +43,7 @@ $status-palette: (
   success: darkgreen,
   destroy: red,
   notice: steelblue
-) !default;
+);
 
 $status-warning: map-get($status-palette, warning);
 $status-success: map-get($status-palette, success);
@@ -55,19 +60,19 @@ $grid-classes: (
   grid: 'grid',
   row: 'row',
   column: 'column'
-) !default;
+);
 
 $grid-widths: (
   fluid: 100%,
   narrow: 768px,
   wide: 1200px
-) !default;
+);
 
 $grid-sections: (
   small: 48px,
   medium: 96px,
   large: 144px
-) !default;
+);
 
 $breakpoints: (
   xsmall: 0,
@@ -75,14 +80,14 @@ $breakpoints: (
   medium: 768px,
   large: 992px,
   xlarge: 1200px
-) !default;
+);
 
 $column-offset-classes: true;
 $column-order-classes: true;
 
-$columns: 12 !default;
-$grid-width: 992px !default;
-$order-threshold: 20 !default;
+$columns: 12;
+$grid-width: 992px;
+$order-threshold: 20;
 
 $column-padding-top: 0;
 $column-padding-bottom: $global-space;
@@ -174,7 +179,7 @@ $type-header-sizes: (
       margin-bottom: 10px
     )
   )
-) !default;
+);
 
 $type-header-styles: (
   h1: (
@@ -207,7 +212,7 @@ $type-header-styles: (
     font-style: normal,
     font-weight: bold
   )
-) !default;
+);
 
 $type-header-line-height: 1.3;
 
@@ -218,8 +223,21 @@ $type-p-font-weight: normal;
 $type-p-line-height: 1.5;
 $type-p-margin-bottom: 16px;
 
-$type-em-font-style: normal;
-$type-em-font-weight: bold;
+$type-code-font: $global-monospace;
+$type-code-font-size: 1em;
+$type-code-color: $black;
+$type-code-background: $gray900;
+$type-code-border: $global-border-width solid $gray800;
+$type-code-radius: $global-border-radius;
+$type-code-padding: 0 4px;
+
+$type-pre-padding: $global-space;
+
+$type-strong-font-style: normal;
+$type-strong-font-weight: bold;
+
+$type-em-font-style: italic;
+$type-em-font-weight: normal;
 
 $type-small-font-size: 75%;
 $type-small-font-weight: inherit;
@@ -251,15 +269,15 @@ $button-sizes: (
     padding: 20px 30px,
     font-size: 24px
   )
-) !default;
+);
 
 // Default button styles
 
 $button-padding: 10px $global-space;
 $button-margin: 0 0 $global-space 0;
-$button-border-radius: 4px;
+$button-border-radius: $global-border-radius;
 $button-border-style: solid;
-$button-border-width: 2px;
+$button-border-width: $global-border-width;
 $button-font-size: $global-font-size;
 $button-font-style: normal;
 $button-font-weight: normal;
@@ -356,7 +374,7 @@ $button-types: (
     box-shadow-hover: none,
     box-shadow-active: none
   )
-) !default;
+);
 
 // Links
 
@@ -384,14 +402,14 @@ $form-background: transparent;
 $form-box-shadow: none;
 $form-border: none;
 $form-font: $global-font;
-$form-radius: 4px;
+$form-radius: $global-border-radius;
 
 // input field + text area
 
 $input-font-size: $global-font-size;
 $input-font-family: $form-font;
 $input-box-shadow: none;
-$input-border: 1px solid $gray800;
+$input-border: $global-border-width solid $gray800;
 $input-padding: 12px;
 $input-margin: 8px 0 $global-space 0;
 $input-border-radius: $form-radius;
@@ -401,11 +419,11 @@ $input-resize: vertical;
 // input field + text area states
 
 $input-hover-background: $input-background;
-$input-hover-border: 1px solid $gray600;
+$input-hover-border: $global-border-width solid $gray600;
 $input-hover-box-shadow: $input-box-shadow;
 
 $input-focus-background: $input-background;
-$input-focus-border: 1px solid $primary;
+$input-focus-border: $global-border-width solid $primary;
 $input-focus-box-shadow: $input-box-shadow;
 
 // radio and checkbox
@@ -423,12 +441,12 @@ $input-option-margin-top: 8px;
 
 $input-disabled-background: $gray900;
 $input-disabled-color: $gray400;
-$input-disabled-border: 1px solid $input-disabled-background;
+$input-disabled-border: $global-border-width solid $input-disabled-background;
 $input-disabled-resize: none;
 
 // fieldset
 
-$fieldset-border: 1px solid $gray900;
+$fieldset-border: $global-border-width solid $gray900;
 $fieldset-border-radius: $form-radius;
 $fieldset-box-shadow: none;
 $fieldset-background: transparent;
@@ -444,4 +462,4 @@ $fieldset-legend-color: $gray200;
 $fieldset-legend-background: $white;
 $fieldset-legend-box-shadow: 0 8px 30px $gray800;
 $fieldset-legend-border: none;
-$fieldset-legend-border-radius: 4px;
+$fieldset-legend-border-radius: $global-border-radius;

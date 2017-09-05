@@ -1,6 +1,6 @@
 {
   "name": "monolith-css",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A super-powered CSS system for the modern web.",
   "main": "index.js",
   "scripts": {
