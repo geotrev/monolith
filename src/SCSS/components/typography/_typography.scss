@@ -13,26 +13,23 @@ h1, h2, h3, h4, h5, h6, p, em, small, mark,
   $header-color: map-deep-get($type-header-styles, $header-tag, color);
   $header-font-style: map-deep-get($type-header-styles, $header-tag, font-style);
   $header-font-weight: map-deep-get($type-header-styles, $header-tag, font-weight);
-  $header-margin: map-deep-get($type-header-styles, $header-tag, margin-bottom);
 
   #{$header-tag}, .#{$scope}#{$header-tag} {
     color: $header-color;
     font-style: $header-font-style;
     font-weight: $header-font-weight;
     line-height: $type-header-line-height;
-    margin-bottom: $header-margin;
   }
 }
 
-@each $button-size in $type-header-sizes {
-  $breakpoint: nth($button-size, 1);
+@each $header-break in $type-header-sizes {
+  $breakpoint: nth($header-break, 1);
 
-  @include breakpoint-up($breakpoint) {
-    @for $i from 1 through 6 {
-      h#{$i}, .#{$scope}h#{$i}  {
-        $button-size: map-deep-get($type-header-sizes, $breakpoint, h#{$i});
-        font-size: $button-size;
-      }
+  @if $breakpoint == nth(nth($breakpoints, 1), 1) {
+    @include make-header-sizes($breakpoint);
+  } @else {
+    @include breakpoint-up($breakpoint) {
+      @include make-header-sizes($breakpoint);
     }
   }
 }

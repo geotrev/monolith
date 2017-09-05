@@ -54,28 +54,14 @@ $column: map-get($grid-classes, column);
 @each $breakpoint in $breakpoints {
   $break-name: nth($breakpoint, 1);
 
-  @include breakpoint-up($break-name) {
-    @for $i from 1 through $columns {
+  @if $break-name == nth(nth($breakpoints, 1), 1) {
+    @include make-grid-classes($break-name);
+  } @else {
+    @include breakpoint-up($break-name) {
+      @include make-grid-classes($break-name)
+    } // end @include
+  } // end @if
 
-      .#{$break-name}-#{$i} {
-        flex: 0 0 percentage($i / $columns);
-        max-width: percentage($i / $columns);
-      }
-
-      @if $column-offset-classes == true {
-        .#{$break-name}-offset-#{$i} {
-          margin-left: percentage($i / $columns);
-        }
-      }
-
-      @if $column-order-classes == true {
-        .#{$break-name}-order-#{$i} {
-          order: $i;
-        }
-      }
-
-    } // end @for
-  } // end @include
 } // end @each
 
 @import 'utilities';
