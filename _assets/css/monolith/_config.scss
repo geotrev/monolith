@@ -226,8 +226,8 @@ $type-p-margin-bottom: 16px;
 $type-code-font: $global-monospace;
 $type-code-font-size: 1em;
 $type-code-color: $black;
-$type-code-background: $gray900;
-$type-code-border: $global-border-width solid $gray800;
+$type-code-background: lighten($gray900, 5%);
+$type-code-border: none;
 $type-code-radius: $global-border-radius;
 $type-code-padding: 0 4px;
 

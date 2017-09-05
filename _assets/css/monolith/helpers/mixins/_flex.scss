@@ -1,0 +1,12 @@
+@mixin flex(
+  $display:null,
+  $direction:null,
+  $wrap:null,
+  $grow:null,
+  $shrink:null,
+  $basis:null
+) {
+  display: $display;
+  flex-flow: $direction $wrap;
+  flex: $grow $shrink $basis;
+}

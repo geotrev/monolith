@@ -1,11 +1,11 @@
 
 fieldset,
 .#{$scope}fieldset {
+  @include flex(flex);
   background: $fieldset-background;
   border-radius: $fieldset-border-radius;
   border: $fieldset-border;
   box-shadow: $fieldset-box-shadow;
-  display: flex;
   margin: $fieldset-margin;
   padding: $fieldset-padding;
 

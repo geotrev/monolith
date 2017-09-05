@@ -9,23 +9,23 @@ input[type=radio], input[type=checkbox],
 
 .#{$scope}radio-row, .#{$scope}checkbox-row,
 .#{$scope}radio-column, .#{$scope}checkbox-column {
+  @include flex(flex);
   margin-top: $input-option-margin-top;
-  display: flex;
 
   label,
   .#{$scope}radio-label, .#{$scope}checkbox-label {
+    @include flex($direction: row);
     align-items: center;
-    flex-direction: row;
     padding-right: $input-option-label-padding-right;
   }
 }
 
 .#{$scope}radio-column, .#{$scope}checkbox-column {
-  flex-direction: column;
+  @include flex($direction: column);
   padding-bottom: $input-option-column-padding-bottom;
 }
 .#{$scope}radio-row, .#{$scope}checkbox-row {
-  flex-direction: row;
+  @include flex($direction: row);
   padding-bottom: $input-option-row-padding-bottom;
 }
 

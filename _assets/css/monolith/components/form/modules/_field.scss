@@ -8,11 +8,11 @@ input[type=time], input[type=url],
 input[type=week],
 textarea,
 .#{$scope}text-field, .#{$scope}text-area {
+  @include flex(flex);
   background: $input-background;
   border-radius: $input-border-radius;
   border: $input-border;
   box-shadow: $input-box-shadow;
-  display: flex;
   font-family: $input-font-family;
   font-size: $input-font-size;
   margin: $input-margin;
