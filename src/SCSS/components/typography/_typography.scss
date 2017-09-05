@@ -22,8 +22,8 @@ h1, h2, h3, h4, h5, h6, p, em, small, mark,
   }
 }
 
-@each $button-size in $type-header-sizes {
-  $breakpoint: nth($button-size, 1);
+@each $header-break in $type-header-sizes {
+  $breakpoint: nth($header-break, 1);
 
   @if $breakpoint == nth(nth($breakpoints, 1), 1) {
     @include make-header-sizes($breakpoint);
