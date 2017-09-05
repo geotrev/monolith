@@ -31,7 +31,7 @@ Link the compiled CSS to your project `<head>`:
 
 **Recommended:** Copy `_config.scss` into your project's SCSS pipeline and overwrite Monolith's defaults. This way you avoid that "out of the box" look.
 
-`_config.scss`:
+Duplicate `_config.scss` if you want to preserve Monolith's defaults, then import it for SCSS compiler:
 ```css
 @import 'path/to/config';
 ```
