@@ -55,10 +55,10 @@ $column: map-get($grid-classes, column);
   $break-name: nth($breakpoint, 1);
 
   @if $break-name == nth(nth($breakpoints, 1), 1) {
-    @include make-grid-classes($break-name);
+    @include grid-classes($break-name);
   } @else {
     @include breakpoint-up($break-name) {
-      @include make-grid-classes($break-name)
+      @include grid-classes($break-name)
     } // end @include
   } // end @if
 

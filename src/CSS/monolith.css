@@ -944,7 +944,26 @@ div {
 .row.collapsed .columns, .row.collapsed .column {
   padding-bottom: 0;
   padding-left: 0;
-  padding-right: 0; }
+  padding-right: 0;
+  padding-top: 0; }
+
+.columns.collapsed, .column.collapsed {
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0; }
+
+.visible {
+  visibility: visible; }
+
+.hidden {
+  visibility: hidden; }
+
+.show {
+  display: inherit; }
+
+.hide {
+  display: none; }
 
 h1, h2, h3, h4, h5, h6, p, em, small, mark,
 .h1, .h2,
@@ -1071,10 +1090,28 @@ p, .paragraph {
   margin-bottom: 16px;
   color: #222; }
 
-em, .em {
+pre, code, kbd, samp, tt,
+.pre, .code, .kbd, .samp, .tt {
+  font-family: monospace, monospace;
+  font-size: 1em;
+  background: #ddd;
+  border: 2px solid #888;
+  border-radius: 4px;
+  padding: 0 4px;
+  color: #000111; }
+
+pre, .pre {
+  padding: 16px; }
+
+strong, .strong {
   font-size: inherit;
   font-style: normal;
   font-weight: bold; }
+
+em, .em {
+  font-size: inherit;
+  font-style: italic;
+  font-weight: normal; }
 
 mark, .mark {
   font-size: inherit;
@@ -1085,6 +1122,15 @@ mark, .mark {
 small, .small {
   font-weight: inherit;
   font-size: 75%; }
+
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
 
 a,
 .link {
@@ -1353,7 +1399,7 @@ textarea,
 .text-field, .text-area {
   background: #ffffff;
   border-radius: 4px;
-  border: 1px solid #888;
+  border: 2px solid #888;
   box-shadow: none;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1371,7 +1417,7 @@ fieldset,
 .fieldset {
   background: transparent;
   border-radius: 4px;
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
   box-shadow: none;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1480,7 +1526,7 @@ textarea.disabled, button:disabled, button.disabled, a:disabled, a.disabled,
 .text-field:disabled,
 .text-field.disabled, .text-area:disabled, .text-area.disabled, .button:disabled, .button.disabled {
   background: #ddd !important;
-  border: 1px solid #ddd !important;
+  border: 2px solid #ddd !important;
   color: #444 !important;
   cursor: not-allowed;
   resize: none !important; }
@@ -1502,7 +1548,7 @@ textarea.disabled, button:disabled, button.disabled, a:disabled, a.disabled,
   .text-field:disabled:hover,
   .text-field.disabled:hover, .text-area:disabled:hover, .text-area.disabled:hover, .button:disabled:hover, .button.disabled:hover {
     background: #ddd !important;
-    border: 1px solid #ddd !important;
+    border: 2px solid #ddd !important;
     color: #444 !important; }
 
 input[type=text], input[type=password],
@@ -1530,7 +1576,7 @@ textarea,
   .text-field:focus,
   .text-field:active, .text-area:focus, .text-area:active {
     background: #ffffff !important;
-    border: 1px solid goldenrod !important;
+    border: 2px solid goldenrod !important;
     box-shadow: none !important;
     outline: none; }
   input[type=text]:hover, input[type=password]:hover,
@@ -1542,7 +1588,7 @@ textarea,
   textarea:hover,
   .text-field:hover, .text-area:hover {
     background: #ffffff;
-    border: 1px solid #666;
+    border: 2px solid #666;
     box-shadow: none;
     outline: none;
     transition: ease-out 0.2s; }

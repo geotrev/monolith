@@ -26,11 +26,15 @@ h1, h2, h3, h4, h5, h6, p, em, small, mark,
   $breakpoint: nth($header-break, 1);
 
   @if $breakpoint == nth(nth($breakpoints, 1), 1) {
-    @include make-header-sizes($breakpoint);
+
+    @include header-sizes($breakpoint);
+
   } @else {
+
     @include breakpoint-up($breakpoint) {
-      @include make-header-sizes($breakpoint);
+      @include header-sizes($breakpoint);
     }
+
   }
 }
 
@@ -41,6 +45,26 @@ p, .#{$scope}paragraph {
   line-height: $type-p-line-height;
   margin-bottom: $type-p-margin-bottom;
   color: $type-p-color;
+}
+
+pre, code, kbd, samp, tt,
+.#{$scope}pre, .#{$scope}code, .#{$scope}kbd, .#{$scope}samp, .#{$scope}tt  {
+  font-family: $type-code-font;
+  font-size: $type-code-font-size;
+  background: $type-code-background;
+  border: $type-code-border;
+  border-radius: $type-code-radius;
+  padding: $type-code-padding;
+  color: $type-code-color;
+}
+pre, .#{$scope}pre {
+  padding: $type-pre-padding;
+}
+
+strong, .#{$scope}strong {
+  font-size: inherit;
+  font-style: $type-strong-font-style;
+  font-weight: $type-strong-font-weight;
 }
 
 em, .#{$scope}em {
@@ -60,3 +84,5 @@ small, .#{$scope}small {
   font-weight: $type-small-font-weight;
   font-size: $type-small-font-size;
 }
+
+@import 'utilities';
