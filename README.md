@@ -19,7 +19,7 @@ If you prefer to use a package, currently NPM is the only option (more to come s
 Install it:
 
 ```shell
-$npm install --save monolith-css
+$ npm install --save monolith-css
 ```
 
 Link the compiled CSS to your project `<head>`:
@@ -38,7 +38,7 @@ Link the compiled CSS to your project `<head>`:
 
 ### CSS
 
-[Grab the CSS!](https://github.com/gtreviranus/monolith/blob/master/src/CSS/monolith.css).
+[Grab the CSS!](https://github.com/gtreviranus/monolith/blob/master/src/CSS/monolith.css) (**recommended:** add before any custom styles for new projects)
 
 ## Overview
 
