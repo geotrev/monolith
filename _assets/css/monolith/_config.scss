@@ -100,6 +100,8 @@ $grid-gutter: $global-space;
 // 3. Typography
 //
 
+// Header sizes & spacing
+
 $type-header-sizes: (
   xsmall: (
     h1: (
@@ -180,6 +182,8 @@ $type-header-sizes: (
     )
   )
 );
+
+// Header style
 
 $type-header-styles: (
   h1: (
@@ -271,7 +275,7 @@ $button-sizes: (
   )
 );
 
-// Default button styles
+// Default button
 
 $button-padding: 10px $global-space;
 $button-margin: 0 0 $global-space 0;
@@ -301,7 +305,7 @@ $button-box-shadow: none;
 $button-box-shadow-hover: $button-box-shadow;
 $button-box-shadow-active: $button-box-shadow;
 
-// Branded button styles
+// Branded & specialized buttons
 
 $button-types: (
   primary: (
@@ -376,7 +380,7 @@ $button-types: (
   )
 );
 
-// Links
+// Text links
 
 $link-color: lighten($primary, 10%);
 $link-decoration: none;
@@ -394,7 +398,7 @@ $link-active: $link-hover;
 // 5. Forms
 //
 
-// Form tag (wrapper)
+// Form tag (use as wrapper for all form elements)
 
 $form-margin: 0;
 $form-padding: 0;
@@ -404,7 +408,7 @@ $form-border: none;
 $form-font: $global-font;
 $form-radius: $global-border-radius;
 
-// input field + text area
+// Input field + text area
 
 $input-font-size: $global-font-size;
 $input-font-family: $form-font;
@@ -416,7 +420,7 @@ $input-border-radius: $form-radius;
 $input-background: $white;
 $input-resize: vertical;
 
-// input field + text area states
+// Input field + text area states
 
 $input-hover-background: $input-background;
 $input-hover-border: $global-border-width solid $gray600;
@@ -426,7 +430,7 @@ $input-focus-background: $input-background;
 $input-focus-border: $global-border-width solid $primary;
 $input-focus-box-shadow: $input-box-shadow;
 
-// radio and checkbox
+// Radio and checkbox
 
 $input-option-row-padding-bottom: $global-space;
 $input-option-column-padding-bottom: $global-space;
@@ -437,14 +441,14 @@ $input-option-label-padding-bottom: $global-space;
 $input-option-input-margin-right: $global-space / 2;
 $input-option-margin-top: 8px;
 
-// disabled
+// Disabled
 
 $input-disabled-background: $gray900;
 $input-disabled-color: $gray400;
 $input-disabled-border: $global-border-width solid $input-disabled-background;
 $input-disabled-resize: none;
 
-// fieldset
+// Fieldset
 
 $fieldset-border: $global-border-width solid $gray900;
 $fieldset-border-radius: $form-radius;
@@ -453,7 +457,7 @@ $fieldset-background: transparent;
 $fieldset-margin: 0;
 $fieldset-padding: $global-space * 2;
 
-// fieldset legend
+// Fieldset legend
 
 $fieldset-legend-font-family: $form-font;
 $fieldset-legend-font-size: $global-font-size;
