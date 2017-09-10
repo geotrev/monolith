@@ -1,3 +1,27 @@
+@charset "UTF-8";
+.is-visible {
+  visibility: visible; }
+
+.is-visually-hidden {
+  visibility: hidden; }
+
+.is-displayed-block {
+  display: block; }
+
+.is-displayed-flex {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.is-not-displayed {
+  display: none; }
+
+.has-sans-font {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
+
+.has-serif-font {
+  font-family: Constantia, ‘Lucida Bright’, Lucidabright, ‘Lucida Serif’, Lucida, ‘DejaVu Serif’, ‘Bitstream Vera Serif’, ‘Liberation Serif’, Georgia, serif; }
+
 html, body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 16px;
@@ -5,6 +29,15 @@ html, body {
   padding: 0; }
 
 div {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6, p, em, small, mark,
+.h1, .h2,
+.h3, .h4,
+.h5, .h6,
+.paragraph {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
   padding: 0; }
 
@@ -952,27 +985,6 @@ div {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0; }
-
-.visible {
-  visibility: visible; }
-
-.hidden {
-  visibility: hidden; }
-
-.show {
-  display: inherit; }
-
-.hide {
-  display: none; }
-
-h1, h2, h3, h4, h5, h6, p, em, small, mark,
-.h1, .h2,
-.h3, .h4,
-.h5, .h6,
-.paragraph {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  margin: 0;
-  padding: 0; }
 
 h1, .h1 {
   color: #222;
