@@ -16,15 +16,11 @@
   $breakpoint: nth($header-break, 1);
 
   @if $breakpoint == nth(nth($breakpoints, 1), 1) {
-
     @include header-sizes($breakpoint);
-
   } @else {
-
     @include breakpoint-up($breakpoint) {
       @include header-sizes($breakpoint);
     }
-
   }
 }
 
@@ -74,5 +70,3 @@ small, .#{$scope}small {
   font-weight: $type-small-font-weight;
   font-size: $type-small-font-size;
 }
-
-@import 'utilities';

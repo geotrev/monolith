@@ -1,7 +1,6 @@
-.has-sans-font {
-  font-family: $global-font-sans;
-}
+.has-sans-font { font-family: $global-font-sans; }
+.has-serif-font { font-family: $global-font-serif; }
 
-.has-serif-font {
-  font-family: $global-font-serif;
-}
+.has-center-text { text-align: center; }
+.has-left-text { text-align: left; }
+.has-right-text { text-align: right; }

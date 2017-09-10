@@ -22,6 +22,15 @@
 .has-serif-font {
   font-family: Constantia, ‘Lucida Bright’, Lucidabright, ‘Lucida Serif’, Lucida, ‘DejaVu Serif’, ‘Bitstream Vera Serif’, ‘Liberation Serif’, Georgia, serif; }
 
+.has-center-text {
+  text-align: center; }
+
+.has-left-text {
+  text-align: left; }
+
+.has-right-text {
+  text-align: right; }
+
 html, body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 16px;
@@ -1134,15 +1143,6 @@ mark, .mark {
 small, .small {
   font-weight: inherit;
   font-size: 75%; }
-
-.text-center {
-  text-align: center; }
-
-.text-left {
-  text-align: left; }
-
-.text-right {
-  text-align: right; }
 
 a,
 .link {
