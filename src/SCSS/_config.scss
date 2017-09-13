@@ -15,16 +15,16 @@
 
 $scope: '';
 
+$global-space: 16px;
+$global-ease: ease-out 0.2s;
+
 $global-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
-$global-font-serif: Constantia, ‘Lucida Bright’, Lucidabright, ‘Lucida Serif’, Lucida, ‘DejaVu Serif’, ‘Bitstream Vera Serif’, ‘Liberation Serif’, Georgia, serif;
+$global-font-serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 $global-monospace: monospace, monospace;
 $global-font-size: 16px;
 
 $global-border-radius: 4px;
 $global-border-width: 2px;
-
-$global-space: 16px;
-$global-ease: ease-out 0.2s;
 $global-outline: none;
 
 $primary-color: goldenrod;
