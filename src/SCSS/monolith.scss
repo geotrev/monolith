@@ -1,5 +1,7 @@
+@import 'helpers/functions/functions';
 @import 'config';
-@import 'helpers/helpers';
+@import 'helpers/mixins/mixins';
+@import 'helpers/classes/classes';
 
 @import 'components/global/global';
 @import 'components/grid/grid';

@@ -46,11 +46,6 @@ $status-palette: (
   notice: steelblue
 );
 
-$status-warning: map-get($status-palette, warning);
-$status-success: map-get($status-palette, success);
-$status-destroy: map-get($status-palette, destroy);
-$status-notice: map-get($status-palette, notice);
-
 // -------------------------- * -------------------------- //
 
 //
@@ -249,7 +244,7 @@ $type-small-font-weight: inherit;
 
 $type-mark-padding: 10px;
 $type-mark-color: $gray200;
-$type-mark-background: $status-warning;
+$type-mark-background: status(warning);
 
 // -------------------------- * -------------------------- //
 
