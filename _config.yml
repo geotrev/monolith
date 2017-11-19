@@ -8,6 +8,7 @@ gems:
 assets:
   assets:
     - "monolith.css"
+    - "other_styles.css"
   compress:
     css: false
   sources:
