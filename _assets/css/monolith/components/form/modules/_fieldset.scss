@@ -1,7 +1,7 @@
 
 fieldset,
 .#{$scope}fieldset {
-  @include flex(flex);
+  @include flex(flex, column);
   background: $fieldset-background;
   border-radius: $fieldset-border-radius;
   border: $fieldset-border;
