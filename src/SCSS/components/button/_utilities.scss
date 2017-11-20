@@ -21,15 +21,19 @@ button, .#{$scope}button {
 
   @each $type in $button-types {
     $name: nth($type, 1);
+
     $background: map-deep-get($button-types, $name, background);
     $background-hover: map-deep-get($button-types, $name, background-hover);
     $background-active: map-deep-get($button-types, $name, background-active);
+
     $color: map-deep-get($button-types, $name, color);
     $color-hover: map-deep-get($button-types, $name, color-hover);
     $color-active: map-deep-get($button-types, $name, color-active);
+
     $border-color: map-deep-get($button-types, $name, border-color);
     $border-color-hover: map-deep-get($button-types, $name, border-color-hover);
     $border-color-active: map-deep-get($button-types, $name, border-color-active);
+
     $box-shadow: map-deep-get($button-types, $name, box-shadow);
     $box-shadow-hover: map-deep-get($button-types, $name, box-shadow-hover);
     $box-shadow-active: map-deep-get($button-types, $name, box-shadow-active);
