@@ -28,8 +28,9 @@
   font-size: 18px; }
 
 .snippet {
+  background: #f4f4f4;
   display: block;
   margin: 50px 0;
-  color: #666;
+  color: #777;
   white-space: pre-wrap;
   word-wrap: break-word; }
