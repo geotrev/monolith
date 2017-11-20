@@ -2,7 +2,7 @@
 
 noun – mono·lith – \ˈmä-nə-ˌlith\
 
-"A super-powered CSS system built for the modern web."
+"A CSS framework that acts as a single, organized system."
 
 ## Getting Started
 
