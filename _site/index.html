@@ -5,29 +5,9 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <title>Monolith CSS – A super-powered CSS system built for the modern web</title>
+
   <link type="text/css" rel="stylesheet" href="/assets/monolith.css">
   <link type="text/css" rel="stylesheet" href="/assets/other_styles.css">
-
-  <style>
-    .content {
-      padding: 16px 0;
-      width: 100%;
-      background: lightgray;
-    }
-
-    .invert-block {
-      background: black;
-      padding: 1rem;
-      margin: 16px 0;
-    }
-
-    .content.blue { background: teal; }
-    .content.red { background: crimson; }
-    .content.green { background: green; }
-
-    .gray { background: lightgray; }
-    .gray .content { background: white; }
-  </style>
 </head>
 
   <body>
@@ -91,20 +71,24 @@
   </div>
 
   <div class="row">
+  <div class="xsmall-12 medium-6 medium-offset-3 columns">
+    <pre class="snippet"> &lt;h6 class="h6"> Header Text &lt;/h6> <br/> &lt;h6> Header Text &lt;/h6> </pre>
+  </div>
+</div>
+
+  <div class="row">
     <div class="xsmall-12 columns">
       <p>
         <em>Smooth, thick and viscous on the palate,</em> with a full and robust body. <strong>For a moment,</strong> it's sweet and tropical, <code>then hops rush in and tear it all to shreds!</code> The lip-smacking hop profile roams all over the place, as a sticky pine and a slightly burnt resinous coating forms on the palate. Intensely spicy, with a big grape-fruity zest and a sugary, warming alcohol that smacks you upside the head for noticing it. Malt-wise, caramel and bread flavors clamor to be heard, but the hops entangle them and draw them back into the depths of the brew, where they die. Malt flavors are there, but they add sweetness and body versus anything distinct enough to challenge the hops.
       </p>
     </div>
-    <div class="xsmall-12 medium-6 medium-offset-3 columns">
-      <pre>
-/* Some neat preformatted text! */
-body {
-  color: red;
-}
-      </pre>
-    </div>
   </div>
+
+  <div class="row">
+  <div class="xsmall-12 medium-6 medium-offset-3 columns">
+    <pre class="snippet"> &lt;em>Smooth, thick and viscous on the palate,&lt;/em> <br/> &lt;strong>For a moment, it's sweet and&lt;/strong> <br/> &lt;code>and tear it all to shreds!&lt;/code> </pre>
+  </div>
+</div>
 </div>
 
 
