@@ -1,7 +1,7 @@
 
 fieldset,
 .#{$scope}fieldset {
-  @include flex(flex, column, $align: flex-start);
+  @include flex(flex, column);
   background: $fieldset-background;
   border-radius: $fieldset-border-radius;
   border: $fieldset-border;
@@ -11,6 +11,7 @@ fieldset,
 
   legend,
   .#{$scope}legend {
+    align-self: flex-start;
     background: $fieldset-legend-background;
     border-radius: $fieldset-legend-border-radius;
     border: $fieldset-legend-border;

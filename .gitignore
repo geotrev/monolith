@@ -1,5 +1,5 @@
 .DS_Store
-_site
+_site/
 .ruby-version
 .sass-cache
 .asset-cache
