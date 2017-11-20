@@ -1,20 +1,19 @@
 input[type=button], input[type=submit],
 input[type=file], input[type=reset],
 button, .#{$scope}button {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  align-self: flex-start;
   border-radius: $button-border-radius;
   border-style: $button-border-style;
   border-width: $button-border-width;
+  box-sizing: border-box;
   cursor: pointer;
   display: inline-block;
   font-family: $button-font;
   font-size: $button-font-size;
   font-style: $button-font-style;
   font-weight: $button-font-weight;
-  outline: $global-outline;
   margin: $button-margin;
+  outline: $global-outline;
   padding: $button-padding;
   text-align: center;
   text-decoration: $button-decoration;
