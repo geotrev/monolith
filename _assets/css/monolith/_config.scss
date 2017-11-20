@@ -41,7 +41,7 @@ $white: #ffffff;
 
 $status-palette: (
   warning: khaki,
-  success: darkgreen,
+  success: green,
   destroy: red,
   notice: steelblue
 );
@@ -304,6 +304,7 @@ $button-box-shadow-active: $button-box-shadow;
 // Branded & specialized buttons
 
 $button-types: (
+  // basic
   primary: (
     background: lighten($primary-color, 5%),
     background-hover: $primary-color,
@@ -346,6 +347,8 @@ $button-types: (
     box-shadow-hover: none,
     box-shadow-active: none
   ),
+
+  // inverted
   inverted: (
     background: lighten($gray900, 5%),
     background-hover: $white,
@@ -370,6 +373,64 @@ $button-types: (
     border-color: $gray900,
     border-color-hover: $white,
     border-color-active: darken($gray900, 2%),
+    box-shadow: none,
+    box-shadow-hover: none,
+    box-shadow-active: none
+  ),
+
+  // status
+  warning: (
+    background: darken(status(warning), 5%),
+    background-hover: status(warning),
+    background-active: darken(status(warning), 2%),
+    color: $black,
+    color-hover: $black,
+    color-active: $black,
+    border-color: transparent,
+    border-color-hover: transparent,
+    border-color-active: transparent,
+    box-shadow: none,
+    box-shadow-hover: none,
+    box-shadow-active: none
+  ),
+  success: (
+    background: darken(status(success), 5%),
+    background-hover: status(success),
+    background-active: darken(status(success), 2%),
+    color: $white,
+    color-hover: $white,
+    color-active: $white,
+    border-color: transparent,
+    border-color-hover: transparent,
+    border-color-active: transparent,
+    box-shadow: none,
+    box-shadow-hover: none,
+    box-shadow-active: none
+  ),
+  destroy: (
+    background: darken(status(destroy), 5%),
+    background-hover: status(destroy),
+    background-active: darken(status(destroy), 2%),
+    color: $white,
+    color-hover: $white,
+    color-active: $white,
+    border-color: transparent,
+    border-color-hover: transparent,
+    border-color-active: transparent,
+    box-shadow: none,
+    box-shadow-hover: none,
+    box-shadow-active: none
+  ),
+  notice: (
+    background: darken(status(notice), 5%),
+    background-hover: status(notice),
+    background-active: darken(status(notice), 2%),
+    color: $white,
+    color-hover: $white,
+    color-active: $white,
+    border-color: transparent,
+    border-color-hover: transparent,
+    border-color-active: transparent,
     box-shadow: none,
     box-shadow-hover: none,
     box-shadow-active: none
