@@ -1432,6 +1432,9 @@ fieldset,
   -webkit-flex-flow: column;
       -ms-flex-flow: column;
           flex-flow: column;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   background: transparent;
   border-radius: 4px;
   border: 2px solid #ddd;
