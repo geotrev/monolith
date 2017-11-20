@@ -10,7 +10,7 @@ noun – mono·lith – \ˈmä-nə-ˌlith\
 
 Because Monolith is an SCSS framework designed to be modified, your best bet is to add the SCSS to your pipeline and adjust settings through `_config.scss`. This way you have full control over which components get included in `monolith.scss` (which you can include in your website's `<head>`).
 
-[Download Version 1.0](https://github.com/gtreviranus/monolith/tree/master/src/SCSS/monolith-scss.zip)
+[Download Most Recent Version](https://github.com/gtreviranus/monolith/tree/master/src/SCSS/monolith-scss.zip)
 
 ### Package
 
