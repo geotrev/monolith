@@ -34,7 +34,8 @@
   background: #f4f4f4;
   display: block;
   margin: 50px 0;
+  overflow-x: scroll;
   color: #777;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  // white-space: pre-wrap;
+  // word-wrap: break-word;
 }

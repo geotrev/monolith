@@ -5,91 +5,90 @@
 
     <div class="xsmall-12 columns">
       <button class="small button">Small Button</button>
-      <button class="small">Small Button</button>
-      <a class="small button">Link Small Button</a>
+      <a class="small button">Small Link Button</a>
       <input class="small button" type="submit" value="Input Small Button" />
-      <input class="small" type="submit" value="Input Small Button" />
 
       <br/>
+      <br/>
 
-      <button class="button">Button</button>
       <button class="button">Button</button>
       <a class="button">Link Button</a>
       <input class="button" type="submit" value="Input Button" />
-      <input class="button" type="submit" value="Input Button" />
 
+      <br/>
       <br/>
 
       <button class="medium button">Medium Button</button>
-      <button class="medium">Medium Button</button>
-      <a class="medium button">Link Medium Button</a>
+      <a class="medium button">Medium Link Button</a>
       <input class="medium button" type="submit" value="Input Medium Button" />
-      <input class="medium" type="submit" value="Input Medium Button" />
 
+      <br/>
       <br/>
 
       <button class="large button">Large Button</button>
-      <button class="large">Large Button</button>
-      <a class="large button">Link Large Button</a>
+      <a class="large button">Large Link Button</a>
       <input class="large button" type="submit" value="Input Large Button" />
-      <input class="large" type="submit" value="Input Large Button" />
 
+      <br/>
       <br/>
 
       <button class="huge button">Huge Button</button>
-      <button class="huge">Huge Button</button>
-      <a class="huge button">Link Huge Button</a>
+      <a class="huge button">Huge Link Button</a>
       <input class="huge button" type="submit" value="Input Huge Button" />
-      <input class="huge" type="submit" value="Input Huge Button" />
 
-      <br/>
+      {% include mono/buttons/buttons_demo_1.html %}
 
-      <button disabled class="wide">Disabled Button (no button class)</button>
+      <button disabled class="wide">Disabled Wide Button (no button class)</button>
+      <input class="wide" disabled type="submit" value="Disabled Wide Input Button (no button class)" />
       <button disabled>Disabled Button (no classes)</button>
-      <input class="wide" disabled type="submit" value="Disabled Input Button (no button class)" />
       <input disabled type="submit" value="Disabled Input Button (no classes)" />
 
+      <br/>
       <br/>
 
       <button disabled class="button">Disabled Button</button>
       <a class="button disabled">Disabled Link Button</a>
       <input class="button" disabled type="submit" value="Disabled Input Button" />
 
-      <br/>
+      {% include mono/buttons/buttons_demo_2.html %}
 
       <button>Button (no classes)</button>
       <input type="submit" value="Input Button (no classes)" />
 
-      <br/>
+      {% include mono/buttons/buttons_demo_3.html %}
 
       <button class="wide button">Wide Button</button>
       <a class="wide button">Link Wide Button</a>
       <input class="wide button" type="submit" value="Input Wide Button" />
 
-      <br/>
+      {% include mono/buttons/buttons_demo_4.html %}
 
       <button class="primary button">Primary Button</button>
       <a class="primary button">Link Primary Button</a>
       <input class="primary button" type="submit" value="Input Primary Button" />
 
-      <br/>
+      {% include mono/buttons/buttons_demo_5.html %}
 
       <button class="secondary button">Secondary Button</button>
       <a class="secondary button">Link Secondary Button</a>
       <input class="secondary button" type="submit" value="Input Secondary Button" />
 
-      <br/>
+      {% include mono/buttons/buttons_demo_6.html %}
 
       <button class="tertiary button">Tertiary Button</button>
       <a class="tertiary button">Link Tertiary Button</a>
       <input class="tertiary button" type="submit" value="Input Tertiary Button" />
 
+      {% include mono/buttons/buttons_demo_7.html %}
+
       <!-- <br/>
+      <br/>
 
       <button class="warning button">Warning Button</button>
       <a class="warning button">Link Warning Button</a>
       <input class="warning button" type="submit" value="Input Warning Button" />
 
+      <br/>
       <br/>
 
       <button class="success button">Success Button</button>
@@ -97,11 +96,13 @@
       <input class="success button" type="submit" value="Input Success Button" />
 
       <br/>
+      <br/>
 
       <button class="destroy button">Destroy Button</button>
       <a class="destroy button">Link Destroy Button</a>
       <input class="destroy button" type="submit" value="Input Destroy Button" />
 
+      <br/>
       <br/>
 
       <button class="notice button">Notice Button</button>
@@ -109,25 +110,34 @@
       <input class="notice button" type="submit" value="Input Notice Button" /> -->
     </div>
 
-    <div class="xsmall-12 columns invert-block">
-      <button class="inverted button">Inverted Button</button>
-      <a class="inverted button">Link Inverted Button</a>
-      <input class="inverted button" type="submit" value="Input Inverted Button" />
+    <div class="xsmall-12 collapsed columns">
+      <div class="xsmall-12 columns invert-block">
+        <button class="inverted button">Inverted Button</button>
+        <a class="inverted button">Link Inverted Button</a>
+        <input class="inverted button" type="submit" value="Input Inverted Button" />
+      </div>
 
-      <br/>
+      {% include mono/buttons/buttons_demo_8.html %}
 
-      <button class="inverted-outline button">Inverted Outline Button</button>
-      <a class="inverted-outline button">Link Inverted Outline Button</a>
-      <input class="inverted-outline button" type="submit" value="Input Inverted Outline Button" />
+      <div class="xsmall-12 columns invert-block">
+        <button class="inverted-outline button">Inverted Outline Button</button>
+        <a class="inverted-outline button">Link Inverted Outline Button</a>
+        <input class="inverted-outline button" type="submit" value="Input Inverted Outline Button" />
+      </div>
+
+      {% include mono/buttons/buttons_demo_9.html %}
     </div>
 
-    <div class="xsmall-12 columns">
-      <a href="#0" class="link">This is a link!</a>
-    </div>
+    <div class="xsmall-12 collapsed columns">
+      <div class="xsmall-12 columns">
+        <a href="#0" class="link">This is a link!</a>
+      </div>
 
-    <div class="xsmall-12 columns">
-      <a href="#0">This is a link! (no classes)</a>
-    </div>
+      <div class="xsmall-12 columns">
+        <a href="#0">This is a link! (no classes)</a>
+      </div>
 
+      {% include mono/buttons/buttons_demo_10.html %}
+    </div>
   </div>
 </div>
