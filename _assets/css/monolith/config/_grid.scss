@@ -1,0 +1,39 @@
+// Grid
+
+$grid-classes: (
+  grid: 'grid',
+  row: 'row',
+  column: 'column'
+);
+
+$grid-widths: (
+  fluid: 100%,
+  narrow: 768px,
+  wide: 1200px
+);
+
+$grid-sections: (
+  small: 48px,
+  medium: 96px,
+  large: 144px
+);
+
+$breakpoints: (
+  xsmall: 0,
+  small: 576px,
+  medium: 768px,
+  large: 992px,
+  xlarge: 1200px
+);
+
+$column-offset-classes: true;
+$column-order-classes: true;
+
+$columns: 12;
+$grid-width: 992px;
+$order-threshold: 20;
+
+$column-padding-top: 0;
+$column-padding-bottom: $global-space;
+$column-gutter: $global-space / 2;
+$grid-gutter: $global-space;

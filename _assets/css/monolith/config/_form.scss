@@ -1,0 +1,70 @@
+
+// Form tag (use as wrapper for all form elements)
+
+$form-margin: 0;
+$form-padding: 0;
+$form-background: transparent;
+$form-box-shadow: none;
+$form-border: none;
+$form-font: $global-font-sans;
+$form-radius: $global-border-radius;
+
+// Input field + text area
+
+$input-font-size: $global-font-size;
+$input-font: $form-font;
+$input-box-shadow: none;
+$input-border: $global-border-width solid $gray800;
+$input-padding: 12px;
+$input-margin: 8px 0 $global-space 0;
+$input-border-radius: $form-radius;
+$input-background: $white;
+$input-resize: vertical;
+
+// Input field + text area states
+
+$input-hover-background: $input-background;
+$input-hover-border: $global-border-width solid $gray600;
+$input-hover-box-shadow: $input-box-shadow;
+
+$input-focus-background: $input-background;
+$input-focus-border: $global-border-width solid $primary-color;
+$input-focus-box-shadow: $input-box-shadow;
+
+// Radio and checkbox
+
+$input-option-row-padding-bottom: $global-space;
+$input-option-column-padding-bottom: $global-space;
+$input-option-padding: 0;
+$input-option-margin: 0 12px 0 0;
+$input-option-label-padding-right: $global-space;
+$input-option-label-padding-bottom: $global-space;
+$input-option-input-margin-right: $global-space / 2;
+$input-option-margin-top: 8px;
+
+// Disabled
+
+$input-disabled-background: $gray900;
+$input-disabled-color: $gray400;
+$input-disabled-border: $global-border-width solid $input-disabled-background;
+$input-disabled-resize: none;
+
+// Fieldset
+
+$fieldset-border: $global-border-width solid $gray900;
+$fieldset-border-radius: $form-radius;
+$fieldset-box-shadow: none;
+$fieldset-background: transparent;
+$fieldset-margin: 0;
+$fieldset-padding: $global-space * 2;
+
+// Fieldset legend
+
+$fieldset-legend-font: $form-font;
+$fieldset-legend-font-size: $global-font-size;
+$fieldset-legend-padding: 12px 20px;
+$fieldset-legend-color: $gray200;
+$fieldset-legend-background: $white;
+$fieldset-legend-box-shadow: 0 8px 30px $gray800;
+$fieldset-legend-border: none;
+$fieldset-legend-border-radius: $global-border-radius;
