@@ -2,6 +2,7 @@
   padding: 16px 0;
   width: 100%;
   background: lightgray;
+  border-radius: 40px;
 }
 
 .invert-block {
@@ -36,6 +37,5 @@
   margin: 50px 0;
   overflow-x: scroll;
   color: #777;
-  // white-space: pre-wrap;
-  // word-wrap: break-word;
+  line-height: 1.5;
 }

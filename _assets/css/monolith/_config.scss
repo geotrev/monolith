@@ -1,17 +1,15 @@
 // Monolith CSS
 // A CSS framework that acts as a single, organized system.
-
+// --------------------------------------------------------
 // 1. Globals
 // 2. Grid
 // 3. Typography
 // 4. Buttons
 // 5. Forms
+// --------------------------------------------------------
 
-// -------------------------- * -------------------------- //
-
-//
 // 1. Globals
-//
+// ----------
 
 $scope: '';
 
@@ -46,11 +44,8 @@ $status-palette: (
   notice: steelblue
 );
 
-// -------------------------- * -------------------------- //
-
-//
 // 2. Grid
-//
+// -------
 
 $grid-classes: (
   grid: 'grid',
@@ -78,23 +73,21 @@ $breakpoints: (
   xlarge: 1200px,
 );
 
-$column-offset-classes: true;
-$column-order-classes: true;
-
-$columns: 12;
+$grid-gutter: $global-space;
 $grid-width: 992px;
+
 $order-threshold: 20;
 
+$columns: 12;
 $column-padding-top: 0;
 $column-padding-bottom: $global-space;
 $column-gutter: $global-space / 2;
-$grid-gutter: $global-space;
 
-// -------------------------- * -------------------------- //
+$column-offset-classes: true;
+$column-order-classes: true;
 
-//
 // 3. Typography
-//
+// -------------
 
 // Header sizes & spacing
 
@@ -246,11 +239,8 @@ $type-mark-padding: 10px;
 $type-mark-color: $gray200;
 $type-mark-background: status(warning);
 
-// -------------------------- * -------------------------- //
-
-//
 // 4. Buttons
-//
+// ----------
 
 $button-sizes: (
   small: (
@@ -449,13 +439,10 @@ $link-font-size: $global-font-size;
 $link-hover: $primary-color;
 $link-active: $link-hover;
 
-// -------------------------- * -------------------------- //
-
-//
 // 5. Forms
-//
+// --------
 
-// Form tag (use as wrapper for all form elements)
+// Form tag
 
 $form-margin: 0;
 $form-padding: 0;
@@ -465,7 +452,7 @@ $form-border: none;
 $form-font: $global-font-sans;
 $form-radius: $global-border-radius;
 
-// Input field + text area
+// Input + Textarea
 
 $input-font-size: $global-font-size;
 $input-font: $form-font;
@@ -477,7 +464,7 @@ $input-border-radius: $form-radius;
 $input-background: $white;
 $input-resize: vertical;
 
-// Input field + text area states
+// Input + Textarea states
 
 $input-hover-background: $input-background;
 $input-hover-border: $global-border-width solid $gray600;
@@ -487,7 +474,12 @@ $input-focus-background: $input-background;
 $input-focus-border: $global-border-width solid $primary-color;
 $input-focus-box-shadow: $input-box-shadow;
 
-// Radio and checkbox
+$input-disabled-background: $gray900;
+$input-disabled-color: $gray400;
+$input-disabled-border: $global-border-width solid $input-disabled-background;
+$input-disabled-resize: none;
+
+// Radio and Checkbox
 
 $input-option-row-padding-bottom: $global-space;
 $input-option-column-padding-bottom: $global-space;
@@ -497,13 +489,6 @@ $input-option-label-padding-right: $global-space;
 $input-option-label-padding-bottom: $global-space;
 $input-option-input-margin-right: $global-space / 2;
 $input-option-margin-top: 8px;
-
-// Disabled
-
-$input-disabled-background: $gray900;
-$input-disabled-color: $gray400;
-$input-disabled-border: $global-border-width solid $input-disabled-background;
-$input-disabled-resize: none;
 
 // Fieldset
 
