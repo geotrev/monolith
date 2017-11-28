@@ -1639,10 +1639,21 @@ input[type=radio], input[type=checkbox],
   padding-bottom: 16px; }
 
 .radio-row, .checkbox-row {
-  -webkit-flex-flow: row;
-      -ms-flex-flow: row;
-          flex-flow: row;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
   padding-bottom: 16px; }
+  .radio-row label, .radio-row .checkbox-label, .radio-row .radio-label, .checkbox-row label, .checkbox-row .checkbox-label, .checkbox-row .radio-label {
+    padding-right: 0;
+    padding-bottom: 16px; }
+  @media screen and (min-width: 576px) {
+    .radio-row, .checkbox-row {
+      -webkit-flex-flow: row;
+          -ms-flex-flow: row;
+              flex-flow: row; }
+      .radio-row label, .radio-row .checkbox-label, .radio-row .radio-label, .checkbox-row label, .checkbox-row .checkbox-label, .checkbox-row .radio-label {
+        padding-right: 16px;
+        padding-bottom: 0; } }
 
 .radio-row input[type=radio],
 .radio-row .radio,
