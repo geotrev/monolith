@@ -1,6 +1,6 @@
 {
   "name": "monolith-css",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "A CSS framework that acts as a single, organized system.",
   "main": "index.js",
   "scripts": {

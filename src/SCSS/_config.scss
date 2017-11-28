@@ -1,17 +1,15 @@
 // Monolith CSS
 // A CSS framework that acts as a single, organized system.
-
+// --------------------------------------------------------
 // 1. Globals
 // 2. Grid
 // 3. Typography
 // 4. Buttons
 // 5. Forms
+// --------------------------------------------------------
 
-// -------------------------- * -------------------------- //
-
-//
 // 1. Globals
-//
+// ----------
 
 $scope: '';
 
@@ -46,28 +44,25 @@ $status-palette: (
   notice: steelblue
 );
 
-// -------------------------- * -------------------------- //
-
-//
 // 2. Grid
-//
+// -------
 
 $grid-classes: (
   grid: 'grid',
   row: 'row',
-  column: 'column'
+  column: 'column',
 );
 
 $grid-widths: (
   fluid: 100%,
   narrow: 768px,
-  wide: 1200px
+  wide: 1200px,
 );
 
 $grid-sections: (
   small: 48px,
   medium: 96px,
-  large: 144px
+  large: 144px,
 );
 
 $breakpoints: (
@@ -75,26 +70,24 @@ $breakpoints: (
   small: 576px,
   medium: 768px,
   large: 992px,
-  xlarge: 1200px
+  xlarge: 1200px,
 );
+
+$grid-gutter: $global-space;
+$grid-width: 992px;
+
+$order-threshold: 20;
+
+$columns: 12;
+$column-padding-top: 0;
+$column-padding-bottom: $global-space;
+$column-gutter: $global-space / 2;
 
 $column-offset-classes: true;
 $column-order-classes: true;
 
-$columns: 12;
-$grid-width: 992px;
-$order-threshold: 20;
-
-$column-padding-top: 0;
-$column-padding-bottom: $global-space;
-$column-gutter: $global-space / 2;
-$grid-gutter: $global-space;
-
-// -------------------------- * -------------------------- //
-
-//
 // 3. Typography
-//
+// -------------
 
 // Header sizes & spacing
 
@@ -102,81 +95,81 @@ $type-header-sizes: (
   xsmall: (
     h1: (
       font-size: 32px,
-      margin-bottom: 20px
+      margin-bottom: 20px,
     ),
     h2: (
       font-size: 28px,
-      margin-bottom: 18px
+      margin-bottom: 18px,
     ),
     h3: (
       font-size: 24px,
-      margin-bottom: $global-space
+      margin-bottom: $global-space,
     ),
     h4: (
       font-size: 20px,
-      margin-bottom: 14px
+      margin-bottom: 14px,
     ),
     h5: (
       font-size: 18px,
-      margin-bottom: 12px
+      margin-bottom: 12px,
     ),
     h6: (
       font-size: $global-font-size,
-      margin-bottom: 10px
-    )
+      margin-bottom: 10px,
+    ),
   ),
   medium: (
     h1: (
       font-size: 48px,
-      margin-bottom: 24px
+      margin-bottom: 24px,
     ),
     h2: (
       font-size: 42px,
-      margin-bottom: 20px
+      margin-bottom: 20px,
     ),
     h3: (
       font-size: 36px,
-      margin-bottom: 18px
+      margin-bottom: 18px,
     ),
     h4: (
       font-size: 30px,
-      margin-bottom: $global-space
+      margin-bottom: $global-space,
     ),
     h5: (
       font-size: 27px,
-      margin-bottom: 14px
+      margin-bottom: 14px,
     ),
     h6: (
       font-size: 24px,
-      margin-bottom: 12px
-    )
+      margin-bottom: 12px,
+    ),
   ),
   large: (
     h1: (
       font-size: 64px,
-      margin-bottom: 32px
+      margin-bottom: 32px,
     ),
     h2: (
       font-size: 56px,
-      margin-bottom: 26px
+      margin-bottom: 26px,
     ),
     h3: (
       font-size: 48px,
-      margin-bottom: 22px
+      margin-bottom: 22px,
     ),
     h4: (
       font-size: 40px,
-      margin-bottom: $global-space
+      margin-bottom: $global-space,
     ),
     h5: (
       font-size: 36px,
-      margin-bottom: 12px
+      margin-bottom: 12px,
     ),
     h6: (
       font-size: 32px,
-      margin-bottom: 10px
-    )
-  )
+      margin-bottom: 10px,
+    ),
+  ),
 );
 
 // Header style
@@ -185,33 +178,33 @@ $type-header-styles: (
   h1: (
     color: $gray200,
     font-style: normal,
-    font-weight: bold
+    font-weight: bold,
   ),
   h2: (
     color: $gray200,
     font-style: normal,
-    font-weight: bold
+    font-weight: bold,
   ),
   h3: (
     color: $gray200,
     font-style: normal,
-    font-weight: bold
+    font-weight: bold,
   ),
   h4: (
     color: $gray200,
     font-style: normal,
-    font-weight: bold
+    font-weight: bold,
   ),
   h5: (
     color: $gray200,
     font-style: normal,
-    font-weight: bold
+    font-weight: bold,
   ),
   h6: (
     color: $gray200,
     font-style: normal,
-    font-weight: bold
-  )
+    font-weight: bold,
+  ),
 );
 
 $type-header-line-height: 1.3;
@@ -246,29 +239,26 @@ $type-mark-padding: 10px;
 $type-mark-color: $gray200;
 $type-mark-background: status(warning);
 
-// -------------------------- * -------------------------- //
-
-//
 // 4. Buttons
-//
+// ----------
 
 $button-sizes: (
   small: (
     padding: 8px 14px,
-    font-size: 14px
+    font-size: 14px,
   ),
   medium: (
     padding: 12px 18px,
-    font-size: 16px
+    font-size: 16px,
   ),
   large: (
     padding: 16px 22px,
-    font-size: 20px
+    font-size: 20px,
   ),
   huge: (
     padding: 20px 30px,
-    font-size: 24px
-  )
+    font-size: 24px,
+  ),
 );
 
 // Default button
@@ -317,7 +307,7 @@ $button-types: (
     border-color-active: transparent,
     box-shadow: none,
     box-shadow-hover: none,
-    box-shadow-active: none
+    box-shadow-active: none,
   ),
   secondary: (
     background: transparent,
@@ -331,7 +321,7 @@ $button-types: (
     border-color-active: darken($primary-color, 2%),
     box-shadow: none,
     box-shadow-hover: none,
-    box-shadow-active: none
+    box-shadow-active: none,
   ),
   tertiary: (
     background: transparent,
@@ -345,7 +335,7 @@ $button-types: (
     border-color-active: transparent,
     box-shadow: none,
     box-shadow-hover: none,
-    box-shadow-active: none
+    box-shadow-active: none,
   ),
 
   // inverted
@@ -361,7 +351,7 @@ $button-types: (
     border-color-active: transparent,
     box-shadow: none,
     box-shadow-hover: none,
-    box-shadow-active: none
+    box-shadow-active: none,
   ),
   inverted-outline: (
     background: transparent,
@@ -375,7 +365,7 @@ $button-types: (
     border-color-active: darken($gray900, 2%),
     box-shadow: none,
     box-shadow-hover: none,
-    box-shadow-active: none
+    box-shadow-active: none,
   ),
 
   // status
@@ -391,7 +381,7 @@ $button-types: (
     border-color-active: transparent,
     box-shadow: none,
     box-shadow-hover: none,
-    box-shadow-active: none
+    box-shadow-active: none,
   ),
   success: (
     background: darken(status(success), 5%),
@@ -405,7 +395,7 @@ $button-types: (
     border-color-active: transparent,
     box-shadow: none,
     box-shadow-hover: none,
-    box-shadow-active: none
+    box-shadow-active: none,
   ),
   destroy: (
     background: darken(status(destroy), 5%),
@@ -419,7 +409,7 @@ $button-types: (
     border-color-active: transparent,
     box-shadow: none,
     box-shadow-hover: none,
-    box-shadow-active: none
+    box-shadow-active: none,
   ),
   notice: (
     background: darken(status(notice), 5%),
@@ -433,8 +423,8 @@ $button-types: (
     border-color-active: transparent,
     box-shadow: none,
     box-shadow-hover: none,
-    box-shadow-active: none
-  )
+    box-shadow-active: none,
+  ),
 );
 
 // Text links
@@ -449,13 +439,10 @@ $link-font-size: $global-font-size;
 $link-hover: $primary-color;
 $link-active: $link-hover;
 
-// -------------------------- * -------------------------- //
-
-//
 // 5. Forms
-//
+// --------
 
-// Form tag (use as wrapper for all form elements)
+// Form tag
 
 $form-margin: 0;
 $form-padding: 0;
@@ -465,7 +452,7 @@ $form-border: none;
 $form-font: $global-font-sans;
 $form-radius: $global-border-radius;
 
-// Input field + text area
+// Input + Textarea
 
 $input-font-size: $global-font-size;
 $input-font: $form-font;
@@ -477,7 +464,7 @@ $input-border-radius: $form-radius;
 $input-background: $white;
 $input-resize: vertical;
 
-// Input field + text area states
+// Input + Textarea states
 
 $input-hover-background: $input-background;
 $input-hover-border: $global-border-width solid $gray600;
@@ -487,7 +474,14 @@ $input-focus-background: $input-background;
 $input-focus-border: $global-border-width solid $primary-color;
 $input-focus-box-shadow: $input-box-shadow;
 
-// Radio and checkbox
+$input-disabled-background: $gray900;
+$input-disabled-color: $gray400;
+$input-disabled-border: $global-border-width solid $input-disabled-background;
+$input-disabled-resize: none;
+
+// Radio and Checkbox
+
+$input-option-row-breakpoint: small;
 
 $input-option-row-padding-bottom: $global-space;
 $input-option-column-padding-bottom: $global-space;
@@ -497,13 +491,6 @@ $input-option-label-padding-right: $global-space;
 $input-option-label-padding-bottom: $global-space;
 $input-option-input-margin-right: $global-space / 2;
 $input-option-margin-top: 8px;
-
-// Disabled
-
-$input-disabled-background: $gray900;
-$input-disabled-color: $gray400;
-$input-disabled-border: $global-border-width solid $input-disabled-background;
-$input-disabled-resize: none;
 
 // Fieldset
 
