@@ -27,7 +27,7 @@
   text-transform: uppercase;
   color: goldenrod;
   border-bottom: 2px solid goldenrod;
-  padding-bottom: 10px;
+  padding: 15px 0 10px 0;
   font-size: 18px;
 }
 
@@ -38,4 +38,36 @@
   overflow-x: scroll;
   color: #777;
   line-height: 1.5;
+}
+
+.nav { margin: 0 auto; }
+
+.nav-list {
+  border-bottom: 1px solid #efefef;
+  font-family: -apple-system, sans-serif;
+  font-size: 18px;
+  margin: 20px auto 10px auto;
+  max-width: 600px;
+  padding: 0;
+  text-align: center;
+}
+
+.nav-item {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.nav-item .nav-link {
+  display: inline-block; // otherwise <a> ignores padding
+  margin: 0 20px -1px 20px; // offset border-bottom
+  padding-bottom: 10px;
+  border-bottom: 3px solid transparent;
+  text-decoration: none;
+  color: black;
+  transition: 0.2s ease-out;
+
+  &:hover {
+    border-color: dodgerblue;
+    color: dodgerblue;
+  }
 }
