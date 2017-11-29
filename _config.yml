@@ -9,16 +9,17 @@ assets:
   assets:
     - "monolith.css"
     - "other_styles.css"
+    - "app.js"
   compress:
     css: false
   sources:
     - _assets/css
-    # - _assets/images
+    - _assets/js
     # - _assets/javascripts
+    # - _assets/images
     # - _assets/stylesheets
     # - _assets/fonts
     # - _assets/img
-    # - _assets/js
   autoprefixer:
     browsers:
       - "last 4 versions"

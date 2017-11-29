@@ -1,14 +1,10 @@
+@import 'monolith';
+
 .content {
   padding: 16px 0;
   width: 100%;
   background: lightgray;
   border-radius: 40px;
-}
-
-.invert-block {
-  background: black;
-  padding: 1rem;
-  margin: 16px 0;
 }
 
 .content{
@@ -23,6 +19,17 @@
   .content { background: white; }
 }
 
+// button invert block
+
+.invert-block {
+  background: black;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 16px 0;
+}
+
+// section headers
+
 .site_h3 {
   text-transform: uppercase;
   color: goldenrod;
@@ -30,6 +37,8 @@
   padding: 15px 0 10px 0;
   font-size: 18px;
 }
+
+// code
 
 .snippet {
   background: #f4f4f4;
@@ -40,27 +49,38 @@
   line-height: 1.5;
 }
 
+// nav
+
 .nav { margin: 0 auto; }
 
 .nav-list {
-  border-bottom: 1px solid #efefef;
-  font-family: -apple-system, sans-serif;
+  @include flex(flex, column, nowrap, $align: center);
+
+  font-family: $global-font-sans;
   font-size: 18px;
-  margin: 20px auto 10px auto;
   max-width: 600px;
   padding: 0;
   text-align: center;
+
+  @include breakpoint-up(small) {
+    @include flex(flex, row, nowrap, $align: center);
+  }
+
+  &.vertical {
+    @include flex(flex, column, nowrap, $align: center);
+  }
 }
 
 .nav-item {
-  display: inline-block;
   list-style-type: none;
+  border-bottom: 1px solid #efefef;
+  margin: 20px auto 10px auto;
 }
 
 .nav-item .nav-link {
   display: inline-block; // otherwise <a> ignores padding
-  margin: 0 20px -1px 20px; // offset border-bottom
-  padding-bottom: 10px;
+  margin: 0 10px -1px 10px; // offset border-bottom
+  padding: 0 10px 10px 10px;
   border-bottom: 3px solid transparent;
   text-decoration: none;
   color: black;
