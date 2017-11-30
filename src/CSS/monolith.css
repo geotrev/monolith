@@ -1,34 +1,85 @@
 .has-sans-font {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important; }
 
 .has-serif-font {
-  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif; }
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif !important; }
 
 .has-center-text {
-  text-align: center; }
+  text-align: center !important; }
 
 .has-left-text {
-  text-align: left; }
+  text-align: left !important; }
 
 .has-right-text {
-  text-align: right; }
+  text-align: right !important; }
 
 .is-visible {
-  visibility: visible; }
+  visibility: visible !important; }
 
 .is-visually-hidden {
-  visibility: hidden; }
+  visibility: hidden !important; }
 
-.is-displayed-block {
-  display: block; }
+.is-block {
+  display: block !important; }
 
-.is-displayed-flex {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
+.is-flex {
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important; }
 
 .is-not-displayed {
-  display: none; }
+  display: none !important; }
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px; }
+
+.visually-hidden-focusable:active,
+.visually-hidden-focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: normal;
+  width: auto; }
+
+.trim-margin {
+  margin: 0 !important; }
+
+.trim-padding {
+  padding: 0 !important; }
+
+.trim-margin-top {
+  margin-top: 0 !important; }
+
+.trim-margin-right {
+  margin-right: 0 !important; }
+
+.trim-margin-bottom {
+  margin-bottom: 0 !important; }
+
+.trim-margin-left {
+  margin-left: 0 !important; }
+
+.trim-padding-top {
+  padding-top: 0 !important; }
+
+.trim-padding-right {
+  padding-right: 0 !important; }
+
+.trim-padding-bottom {
+  padding-bottom: 0 !important; }
+
+.trim-padding-left {
+  padding-left: 0 !important; }
 
 html, body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
@@ -1568,7 +1619,7 @@ fieldset,
   border: 2px solid #ddd;
   box-shadow: none;
   margin: 0;
-  padding: 32px; }
+  padding: 16px; }
   fieldset legend,
   fieldset .legend,
   .fieldset legend,
