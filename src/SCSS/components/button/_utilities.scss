@@ -25,24 +25,29 @@ button, .#{$scope}button {
     $background: map-deep-get($button-types, $name, background);
     $background-hover: map-deep-get($button-types, $name, background-hover);
     $background-active: map-deep-get($button-types, $name, background-active);
+    $background-focus: map-deep-get($button-types, $name, background-focus);
 
     $color: map-deep-get($button-types, $name, color);
     $color-hover: map-deep-get($button-types, $name, color-hover);
     $color-active: map-deep-get($button-types, $name, color-active);
+    $color-focus: map-deep-get($button-types, $name, color-focus);
 
     $border-color: map-deep-get($button-types, $name, border-color);
     $border-color-hover: map-deep-get($button-types, $name, border-color-hover);
     $border-color-active: map-deep-get($button-types, $name, border-color-active);
+    $border-color-focus: map-deep-get($button-types, $name, border-color-focus);
 
     $box-shadow: map-deep-get($button-types, $name, box-shadow);
     $box-shadow-hover: map-deep-get($button-types, $name, box-shadow-hover);
     $box-shadow-active: map-deep-get($button-types, $name, box-shadow-active);
+    $box-shadow-focus: map-deep-get($button-types, $name, box-shadow-focus);
 
     &.#{$scope}#{$name} {
       @include button-style(
         $box-shadow, $border-color, $color, $background,
         $box-shadow-hover, $border-color-hover, $color-hover, $background-hover,
-        $box-shadow-active, $border-color-active, $color-active, $background-active
+        $box-shadow-active, $border-color-active, $color-active, $background-active,
+        $box-shadow-focus, $border-color-focus, $color-focus, $background-focus
       );
     }
   }

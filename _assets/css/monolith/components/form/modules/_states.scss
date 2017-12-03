@@ -37,14 +37,12 @@ textarea,
     background: $input-focus-background !important;
     border: $input-focus-border !important;
     box-shadow: $input-focus-box-shadow !important;
-    outline: $global-outline;
   }
 
   &:hover {
     background: $input-hover-background;
     border: $input-hover-border;
     box-shadow: $input-hover-box-shadow;
-    outline: $global-outline;
     transition: $global-ease;
   }
 }
