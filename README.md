@@ -2,7 +2,7 @@
 
 noun – mono·lith – \ˈmä-nə-ˌlith\
 
-"a large single upright block of stone, especially one shaped into or serving as a pillar or monument."
+"a structure shaped into or serving as the core of front-end projects."
 
 ## Getting Started
 
