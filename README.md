@@ -2,7 +2,7 @@
 
 noun – mono·lith – \ˈmä-nə-ˌlith\
 
-"A CSS framework that acts as a single, organized system."
+"a large single upright block of stone, especially one shaped into or serving as a pillar or monument."
 
 ## Getting Started
 
