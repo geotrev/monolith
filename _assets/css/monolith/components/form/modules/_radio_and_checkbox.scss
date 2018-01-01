@@ -1,35 +1,35 @@
 
 input[type=radio], input[type=checkbox],
-.#{$scope}radio, .#{$scope}checkbox {
+.radio, .checkbox {
   cursor: pointer;
   font-family: $form-font;
   margin: $input-option-margin;
   padding: $input-option-padding;
 }
 
-.#{$scope}radio-row, .#{$scope}checkbox-row,
-.#{$scope}radio-column, .#{$scope}checkbox-column {
+.radio-row, .checkbox-row,
+.radio-column, .checkbox-column {
   @include flex(flex);
   margin-top: $input-option-margin-top;
 
   label,
-  .#{$scope}radio-label, .#{$scope}checkbox-label {
+  .radio-label, .checkbox-label {
     @include flex($direction: row);
     align-items: center;
     padding-right: $input-option-label-padding-right;
   }
 }
 
-.#{$scope}radio-column, .#{$scope}checkbox-column {
+.radio-column, .checkbox-column {
   @include flex($direction: column);
   padding-bottom: $input-option-column-padding-bottom;
 }
 
-.#{$scope}radio-row, .#{$scope}checkbox-row {
+.radio-row, .checkbox-row {
   @include flex($direction: column);
   padding-bottom: $input-option-row-padding-bottom;
 
-  label, #{$scope}.checkbox-label, #{$scope}.radio-label {
+  label, .checkbox-label, .radio-label {
     padding-right: 0;
     padding-bottom: $input-option-label-padding-bottom;
   }
@@ -37,23 +37,23 @@ input[type=radio], input[type=checkbox],
   @include breakpoint-up($input-option-row-breakpoint) {
     @include flex($direction: row);
 
-    label, #{$scope}.checkbox-label, #{$scope}.radio-label {
+    label, .checkbox-label, .radio-label {
       padding-right: $input-option-label-padding-right;
       padding-bottom: 0;
     }
   }
 }
 
-.#{$scope}radio-row input[type=radio],
-.#{$scope}radio-row .#{$scope}radio,
-.#{$scope}checkbox-row input[type=checkbox],
-.#{$scope}checkbox-row .#{$scope}checkbox {
+.radio-row input[type=radio],
+.radio-row .radio,
+.checkbox-row input[type=checkbox],
+.checkbox-row .checkbox {
   margin-right: $input-option-input-margin-right;
 }
 
-.#{$scope}radio-column label,
-.#{$scope}radio-column .#{$scope}radio-label,
-.#{$scope}checkbox-column label,
-.#{$scope}checkbox-column .#{$scope}checkbox-label {
+.radio-column label,
+.radio-column .radio-label,
+.checkbox-column label,
+.checkbox-column .checkbox-label {
   padding-bottom: $input-option-label-padding-bottom;
 }

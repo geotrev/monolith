@@ -1,18 +1,18 @@
 .#{$grid} {
   @each $name, $width in $grid-widths {
-    &.#{$scope}#{$name} {
+    &.#{$name} {
       max-width: $width;
     }
   }
 
   @each $name, $padding in $grid-sections {
-    &.#{$scope}#{$name}-section {
+    &.#{$name}-section {
       padding-top: $padding;
       padding-bottom: $padding;
     }
   }
 
-  &.#{$scope}fullscreen {
+  &.fullscreen {
     box-sizing: border-box;
     height: 100vh;
     max-width: unset;
@@ -23,20 +23,20 @@
     }
 
     .#{$row} {
-      &.#{$scope}align-bottom {
+      &.align-bottom {
         align-content: flex-end;
       }
-      &.#{$scope}align-middle {
+      &.align-middle {
         align-content: center;
       }
-      &.#{$scope}align-top    {
+      &.align-top    {
         align-content: flex-start;
       }
     }
   }
 }
 
-.#{$row}.#{$scope}collapsed {
+.#{$row}.collapsed {
   .#{$column}s, .#{$column} {
     padding-bottom: 0;
     padding-left: 0;

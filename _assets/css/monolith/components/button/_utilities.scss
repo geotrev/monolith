@@ -1,19 +1,19 @@
 input[type=button], input[type=submit],
 input[type=file], input[type=reset],
-button, .#{$scope}button {
+button, .button {
 
   @each $size in $button-sizes {
     $button-size: nth($size, 1);
     $button-padding: map-deep-get($button-sizes, $button-size, padding);
     $button-font-size: map-deep-get($button-sizes, $button-size, font-size);
 
-    &.#{$scope}#{$button-size} {
+    &.#{$button-size} {
       font-size: $button-font-size;
       padding: $button-padding;
     }
   }
 
-  &.#{$scope}wide {
+  &.wide {
     display: block;
     max-width: 100%;
     width: 100%;
@@ -42,7 +42,7 @@ button, .#{$scope}button {
     $box-shadow-active: map-deep-get($button-types, $name, box-shadow-active);
     $box-shadow-focus: map-deep-get($button-types, $name, box-shadow-focus);
 
-    &.#{$scope}#{$name} {
+    &.#{$name} {
       @include button-style(
         $box-shadow, $border-color, $color, $background,
         $box-shadow-hover, $border-color-hover, $color-hover, $background-hover,
