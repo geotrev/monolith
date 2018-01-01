@@ -7,7 +7,7 @@ input[type=tel], input[type=search],
 input[type=time], input[type=url],
 input[type=week],
 textarea,
-.#{$scope}text-field, .#{$scope}text-area {
+.text-field, .text-area {
   @include flex(flex);
   background: $input-background;
   border-radius: $input-border-radius;
@@ -20,6 +20,6 @@ textarea,
 }
 
 textarea, input[type=text],
-.#{$scope}text-area {
+.text-area {
   resize: $input-resize;
 }

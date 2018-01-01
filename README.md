@@ -2,7 +2,7 @@
 
 noun – mono·lith – \ˈmä-nə-ˌlith\
 
-"a structure shaped into or serving as the core of front-end projects."
+'The core of your next front-end project.'
 
 ## Getting Started
 

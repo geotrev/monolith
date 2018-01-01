@@ -5,10 +5,11 @@ input[type=datetime-local], input[type=month],
 input[type=number], input[type=tel],
 input[type=search], input[type=time],
 input[type=url], input[type=week],
-input[type=submit], input[type=file], input[type=reset],
+input[type=submit], input[type=file], 
+input[type=reset], input[type=button],
 textarea, button, a,
-.#{$scope}text-field, .#{$scope}text-area, .#{$scope}button {
-  &:disabled, &.#{$scope}disabled {
+.text-field, .text-area, .button {
+  &:disabled, &.disabled {
     background: $input-disabled-background !important;
     border: $input-disabled-border !important;
     color: $input-disabled-color !important;
@@ -30,7 +31,7 @@ input[type=number], input[type=tel],
 input[type=search], input[type=time],
 input[type=url], input[type=week],
 textarea,
-.#{$scope}text-field, .#{$scope}text-area {
+.text-field, .text-area {
   transition: $global-ease;
 
   &:focus, &:active {

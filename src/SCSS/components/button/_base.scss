@@ -1,6 +1,6 @@
 input[type=button], input[type=submit],
 input[type=file], input[type=reset],
-button, .#{$scope}button {
+button, .button {
   align-self: flex-start;
   border-radius: $button-border-radius;
   border-style: $button-border-style;
