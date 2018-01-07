@@ -11,6 +11,8 @@
 // 1. Globals
 // ----------
 
+// If you have a scope, don't forget to
+// uncomment the scope wrapper in monolith.scss
 $scope: '';
 
 $global-space: 16px;
@@ -89,6 +91,9 @@ $column-order-classes: true;
 // 3. Typography
 // -------------
 
+// Note: You can't add extra CSS properties here.
+//       Do that in a separate stylesheet as
+//       a class modifier instead. 
 $type-header-sizes: (
   xsmall: (
     h1: (
@@ -170,6 +175,9 @@ $type-header-sizes: (
   ),
 );
 
+// Note: You can't add extra CSS properties here.
+//       Do that in a separate stylesheet as
+//       a class modifier instead. 
 $type-header-styles: (
   h1: (
     color: $gray200,
@@ -238,6 +246,9 @@ $type-mark-background: status(warning);
 // 4. Buttons
 // ----------
 
+// Note: You can't add extra CSS properties here.
+//       Do that in a separate stylesheet as
+//       a class modifier instead. 
 $button-sizes: (
   small: (
     padding: 8px 14px,
@@ -293,6 +304,9 @@ $button-box-shadow-focus: $button-box-shadow;
 
 // Branded & specialized buttons
 
+// Note: You can't add extra CSS properties here.
+//       Do that in a separate stylesheet as
+//       a class modifier instead. 
 $button-types: (
   // basic
   primary: (
@@ -300,14 +314,17 @@ $button-types: (
     background-hover: $primary-color,
     background-active: darken($primary-color, 2%),
     background-focus: $primary-color,
+    
     color: $white,
     color-hover: $white,
     color-active: $white,
     color-focus: $white,
+    
     border-color: transparent,
     border-color-hover: transparent,
     border-color-active: transparent,
     border-color-focus: transparent,
+    
     box-shadow: none,
     box-shadow-hover: none,
     box-shadow-active: none,
@@ -318,14 +335,17 @@ $button-types: (
     background-hover: transparent,
     background-active: transparent,
     background-focus: transparent,
+    
     color: lighten($primary-color, 5%),
     color-hover: $primary-color,
     color-active: darken($primary-color, 2%),
     color-focus: $primary-color,
+    
     border-color: lighten($primary-color, 5%),
     border-color-hover: $primary-color,
     border-color-active: darken($primary-color, 2%),
     border-color-focus: $primary-color,
+    
     box-shadow: none,
     box-shadow-hover: none,
     box-shadow-active: none,
@@ -336,14 +356,17 @@ $button-types: (
     background-hover: rgba($gray900, 0.2),
     background-active: rgba($gray900, 0.3),
     background-focus: rgba($gray900, 0.2),
+    
     color: $primary-color,
     color-hover: $primary-color,
     color-active: $primary-color,
     color-focus: $primary-color,
+    
     border-color: transparent,
     border-color-hover: transparent,
     border-color-active: transparent,
     border-color-focus: transparent,
+    
     box-shadow: none,
     box-shadow-hover: none,
     box-shadow-active: none,
@@ -356,14 +379,17 @@ $button-types: (
     background-hover: $white,
     background-active: $gray900,
     background-focus: $white,
+    
     color: $gray200,
     color-hover: $gray200,
     color-active: $gray200,
     color-focus: $gray200,
+    
     border-color: transparent,
     border-color-hover: transparent,
     border-color-active: transparent,
     border-color-focus: transparent,
+    
     box-shadow: none,
     box-shadow-hover: none,
     box-shadow-active: none,
@@ -374,14 +400,17 @@ $button-types: (
     background-hover: transparent,
     background-active: transparent,
     background-focus: transparent,
+    
     color: $white,
     color-hover: $white,
     color-active: $white,
     color-focus: $white,
+    
     border-color: $gray900,
     border-color-hover: $white,
     border-color-active: darken($gray900, 2%),
     border-color-focus: $white,
+    
     box-shadow: none,
     box-shadow-hover: none,
     box-shadow-active: none,
@@ -394,14 +423,17 @@ $button-types: (
     background-hover: status(warning),
     background-active: darken(status(warning), 2%),
     background-focus: status(warning),
+    
     color: $black,
     color-hover: $black,
     color-active: $black,
     color-focus: $black,
+    
     border-color: transparent,
     border-color-hover: transparent,
     border-color-active: transparent,
     border-color-focus: transparent,
+    
     box-shadow: none,
     box-shadow-hover: none,
     box-shadow-active: none,
@@ -412,14 +444,17 @@ $button-types: (
     background-hover: status(success),
     background-active: darken(status(success), 2%),
     background-focus: status(success),
+    
     color: $white,
     color-hover: $white,
     color-active: $white,
     color-focus: $white,
+    
     border-color: transparent,
     border-color-hover: transparent,
     border-color-active: transparent,
     border-color-focus: transparent,
+    
     box-shadow: none,
     box-shadow-hover: none,
     box-shadow-active: none,
@@ -430,14 +465,17 @@ $button-types: (
     background-hover: status(destroy),
     background-active: darken(status(destroy), 2%),
     background-focus: status(destroy),
+    
     color: $white,
     color-hover: $white,
     color-active: $white,
     color-focus: $white,
+    
     border-color: transparent,
     border-color-hover: transparent,
     border-color-active: transparent,
     border-color-focus: transparent,
+    
     box-shadow: none,
     box-shadow-hover: none,
     box-shadow-active: none,
@@ -448,14 +486,17 @@ $button-types: (
     background-hover: status(notice),
     background-active: darken(status(notice), 2%),
     background-focus: status(notice),
+    
     color: $white,
     color-hover: $white,
     color-active: $white,
     color-focus: $white,
+    
     border-color: transparent,
     border-color-hover: transparent,
     border-color-active: transparent,
     border-color-focus: transparent,
+    
     box-shadow: none,
     box-shadow-hover: none,
     box-shadow-active: none,
