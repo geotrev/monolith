@@ -20,14 +20,12 @@
 
     .#{$row} {
       @include flex($grow: 1, $shrink: 1, $basis: auto);
+      align-content: center;
     }
 
     .#{$row} {
       &.align-bottom {
         align-content: flex-end;
-      }
-      &.align-middle {
-        align-content: center;
       }
       &.align-top    {
         align-content: flex-start;
