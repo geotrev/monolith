@@ -1,2 +1,11 @@
-@import 'modules/base';
-@import 'modules/type';
+html, body {
+  font-family: $global-font-sans;
+  font-size: $global-font-size;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}

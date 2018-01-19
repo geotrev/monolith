@@ -50,7 +50,9 @@ $column: map-get($grid-classes, column);
 
 @each $breakpoint in $breakpoints {
   $break-name: nth($breakpoint, 1);
-  @if $break-name == nth(nth($breakpoints, 1), 1) {
+  $smallest-break-name: nth(nth($breakpoints, 1), 1);
+  
+  @if $break-name == $smallest-break-name {
     @include grid-classes($break-name);
   } @else {
     @include breakpoint-up($break-name) {

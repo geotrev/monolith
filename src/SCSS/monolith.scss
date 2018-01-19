@@ -1,14 +1,11 @@
 @import 'helpers/functions/base';
 @import 'config';
 @import 'helpers/mixins/base';
-  
-// Uncomment the scope wrapper below if 
-// you are using a scope in _config.scss!
+
+@import 'components/global/base';
 
 // .#{$scope} {
   @import 'helpers/classes/base';
-
-  @import 'components/global/base';
   @import 'components/grid/base';
   @import 'components/typography/base';
   @import 'components/link/base';

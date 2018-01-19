@@ -1,8 +1,3 @@
-// Visibility modifiers
-
-.is-visible { visibility: visible !important; }
-.is-visually-hidden { visibility: hidden !important; }
-
 // Display modifiers
 
 .is-block { display: block !important; }
@@ -16,7 +11,7 @@
 // @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
 // @link http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 
-.visually-hidden {
+.is-visually-hidden {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -28,12 +23,12 @@
     width: 1px;
 }
 
-// Extends the .screen-reader class to allow the element to be focusable when navigated to via the keyboard
+// Extends the .is-visually-hidden class to allow the element to be focusable when navigated to via the keyboard
 // @link https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css
 // @link https://www.drupal.org/node/897638
 
-.visually-hidden-focusable:active,
-.visually-hidden-focusable:focus {
+.is-visually-hidden-focusable:active,
+.is-visually-hidden-focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
