@@ -31,9 +31,64 @@ div {
   display: -ms-flexbox !important;
   display: flex !important; }
 
-.is-not-displayed {
+.is-hidden {
   display: none !important; }
 
+.show-flex-on-xsmall {
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important; }
+
+.show-block-on-xsmall {
+  display: block !important; }
+
+.hide-on-xsmall {
+  display: none !important; }
+
+@media screen and (min-width: 576px) {
+  .show-flex-on-small {
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important; }
+
+  .show-block-on-small {
+    display: block !important; }
+
+  .hide-on-small {
+    display: none !important; } }
+@media screen and (min-width: 768px) {
+  .show-flex-on-medium {
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important; }
+
+  .show-block-on-medium {
+    display: block !important; }
+
+  .hide-on-medium {
+    display: none !important; } }
+@media screen and (min-width: 992px) {
+  .show-flex-on-large {
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important; }
+
+  .show-block-on-large {
+    display: block !important; }
+
+  .hide-on-large {
+    display: none !important; } }
+@media screen and (min-width: 1200px) {
+  .show-flex-on-xlarge {
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important; }
+
+  .show-block-on-xlarge {
+    display: block !important; }
+
+  .hide-on-xlarge {
+    display: none !important; } }
 .is-visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -54,36 +109,6 @@ div {
   position: static;
   white-space: normal;
   width: auto; }
-
-.trim-margin {
-  margin: 0 !important; }
-
-.trim-padding {
-  padding: 0 !important; }
-
-.trim-margin-top {
-  margin-top: 0 !important; }
-
-.trim-margin-right {
-  margin-right: 0 !important; }
-
-.trim-margin-bottom {
-  margin-bottom: 0 !important; }
-
-.trim-margin-left {
-  margin-left: 0 !important; }
-
-.trim-padding-top {
-  padding-top: 0 !important; }
-
-.trim-padding-right {
-  padding-right: 0 !important; }
-
-.trim-padding-bottom {
-  padding-bottom: 0 !important; }
-
-.trim-padding-left {
-  padding-left: 0 !important; }
 
 .grid::before,
 .grid::after,
