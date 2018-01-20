@@ -1005,9 +1005,10 @@ div {
     -webkit-flex: 1 1 auto;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
-    -webkit-align-content: center;
-        -ms-flex-line-pack: center;
-            align-content: center; }
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center; }
   .grid.fullscreen .row.align-bottom {
     -webkit-align-content: flex-end;
         -ms-flex-line-pack: end;
