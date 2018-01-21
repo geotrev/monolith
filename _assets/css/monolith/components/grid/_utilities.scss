@@ -21,13 +21,16 @@
     .#{$row} {
       @include flex($grow: 1, $shrink: 1, $basis: auto);
       align-items: center;
+      align-content: center;
     }
 
     .#{$row} {
       &.align-bottom {
+        align-items: flex-end;
         align-content: flex-end;
       }
       &.align-top    {
+        align-items: flex-start;
         align-content: flex-start;
       }
     }
