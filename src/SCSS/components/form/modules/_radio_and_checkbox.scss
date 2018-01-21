@@ -1,6 +1,5 @@
 
-input[type=radio], input[type=checkbox],
-.radio, .checkbox {
+input[type=radio], input[type=checkbox] {
   cursor: pointer;
   font-family: $form-font;
   margin: $input-option-margin;
@@ -12,8 +11,7 @@ input[type=radio], input[type=checkbox],
   @include flex(flex);
   margin-top: $input-option-margin-top;
 
-  label,
-  .radio-label, .checkbox-label {
+  label {
     @include flex($direction: row);
     align-items: center;
     padding-right: $input-option-label-padding-right;
@@ -29,7 +27,7 @@ input[type=radio], input[type=checkbox],
   @include flex($direction: column);
   padding-bottom: $input-option-row-padding-bottom;
 
-  label, .checkbox-label, .radio-label {
+  label {
     padding-right: 0;
     padding-bottom: $input-option-label-padding-bottom;
   }
@@ -37,7 +35,7 @@ input[type=radio], input[type=checkbox],
   @include breakpoint-up($input-option-row-breakpoint) {
     @include flex($direction: row);
 
-    label, .checkbox-label, .radio-label {
+    label {
       padding-right: $input-option-label-padding-right;
       padding-bottom: 0;
     }
@@ -45,15 +43,11 @@ input[type=radio], input[type=checkbox],
 }
 
 .radio-row input[type=radio],
-.radio-row .radio,
-.checkbox-row input[type=checkbox],
-.checkbox-row .checkbox {
+.checkbox-row input[type=checkbox] {
   margin-right: $input-option-input-margin-right;
 }
 
 .radio-column label,
-.radio-column .radio-label,
-.checkbox-column label,
-.checkbox-column .checkbox-label {
+.checkbox-column label {
   padding-bottom: $input-option-label-padding-bottom;
 }

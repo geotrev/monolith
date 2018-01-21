@@ -5,9 +5,7 @@ input[type=date], input[type=datetime-local],
 input[type=month], input[type=number],
 input[type=tel], input[type=search],
 input[type=time], input[type=url],
-input[type=week],
-textarea,
-.text-field, .text-area {
+input[type=week], textarea {
   @include flex(flex);
   background: $input-background;
   border-radius: $input-border-radius;
@@ -19,7 +17,6 @@ textarea,
   padding: $input-padding;
 }
 
-textarea, input[type=text],
-.text-area {
+textarea, input[type=text] {
   resize: $input-resize;
 }

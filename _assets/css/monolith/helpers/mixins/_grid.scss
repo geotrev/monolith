@@ -1,3 +1,4 @@
+
 @mixin grid-classes($size) {
   @for $i from 1 through $columns {
     .#{$size}-#{$i} {

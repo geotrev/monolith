@@ -1,6 +1,5 @@
 
-fieldset,
-.fieldset {
+fieldset {
   @include flex(flex, column);
   background: $fieldset-background;
   border-radius: $fieldset-border-radius;
@@ -9,8 +8,7 @@ fieldset,
   margin: $fieldset-margin;
   padding: $fieldset-padding;
 
-  legend,
-  .legend {
+  legend {
     align-self: flex-start;
     background: $fieldset-legend-background;
     border-radius: $fieldset-legend-border-radius;
