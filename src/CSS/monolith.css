@@ -1234,6 +1234,16 @@ a,
   .link:active {
     color: goldenrod; }
 
+ul, .ul,
+ol, .ol {
+  padding: 0 0 0 18px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; }
+  ul li, .ul li,
+  ol li, .ol li {
+    margin: 0;
+    padding: 8px 0; }
+
 input[type=button], input[type=submit],
 input[type=file], input[type=reset],
 button, .button {

@@ -88,6 +88,7 @@
   list-style-type: none;
   border-bottom: 1px solid #efefef;
   margin: 20px auto 10px auto;
+  padding: 0;
 }
 
 .nav-item .nav-link {
@@ -100,7 +101,7 @@
   transition: 0.2s ease-out;
 
   &:hover {
-    border-color: dodgerblue;
-    color: dodgerblue;
+    border-color: $primary-color;
+    color: $primary-color;
   }
 }

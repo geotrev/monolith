@@ -1,0 +1,6 @@
+ul, .ul,
+ol, .ol {
+  @include list-style();
+
+  li { @include list-item-style(); }
+}

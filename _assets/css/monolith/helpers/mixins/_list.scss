@@ -1,0 +1,10 @@
+@mixin list-style {
+  padding: 0 0 0 18px;
+  margin: 0;
+  font-family: $global-font-sans;
+}
+
+@mixin list-item-style {
+  margin: 0;
+  padding: 8px 0;
+}
