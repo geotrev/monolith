@@ -1,6 +1,6 @@
 {
   "name": "monolith-css",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "The core of your next front-end project.",
   "main": "index.js",
   "scripts": {
