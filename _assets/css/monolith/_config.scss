@@ -4,8 +4,9 @@
 // 1. Globals
 // 2. Grid
 // 3. Typography
-// 4. Buttons
-// 5. Forms
+// 4. Lists
+// 5. Buttons
+// 6. Forms
 // --------------------------------------------------------
 
 // 1. Globals
@@ -26,6 +27,7 @@ $global-font-weight-normal: normal;
 $global-font-weight-bold: bold;
 $global-font-style-normal: normal;
 $global-font-style-italic: italic;
+$global-line-height: 1.5;
 
 $primary-color: goldenrod;
 $secondary-color: crimson;
@@ -215,13 +217,13 @@ $type-header-styles: (
   ),
 );
 
-$type-header-line-height: 1.3;
+$type-header-line-height: $global-line-height;
 
 $type-p-color: $gray200;
 $type-p-font-size: 16px;
 $type-p-font-style: normal;
 $type-p-font-weight: normal;
-$type-p-line-height: 1.5;
+$type-p-line-height: $global-line-height;
 $type-p-margin-bottom: 16px;
 
 $type-code-font: $global-monospace;
@@ -247,7 +249,17 @@ $type-mark-padding: 10px;
 $type-mark-color: $gray200;
 $type-mark-background: status(warning);
 
-// 4. Buttons
+// 4. Lists
+// --------
+
+$list-padding: 0 0 0 18px;
+$list-margin: 0;
+$list-font: $global-font-sans;
+
+$list-item-margin: 0;
+$list-item-padding: 8px 0;
+
+// 5. Buttons
 // ----------
 
 // Note: You can't add extra CSS properties here.
@@ -520,7 +532,7 @@ $link-font-size: $global-font-size;
 $link-hover: $primary-color;
 $link-active: $link-hover;
 
-// 5. Forms
+// 6. Forms
 // --------
 
 // Form tag

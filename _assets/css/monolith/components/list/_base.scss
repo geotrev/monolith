@@ -1,0 +1,9 @@
+ul, .ul,
+ol, .ol {
+  @include list-style();
+
+  li { @include list-item-style(); }
+}
+
+ul, .ul { list-style-type: disc; }
+ol, .ol { list-style-type: decimal; }

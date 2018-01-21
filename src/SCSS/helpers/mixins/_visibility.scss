@@ -1,0 +1,13 @@
+@mixin visibility($size) {
+  .show-flex-on-#{$size} {
+    display: flex !important;
+  }
+
+  .show-block-on-#{$size} {
+    display: block !important;
+  }
+
+  .hide-on-#{$size} {
+    display: none !important;
+  }
+}

@@ -1,5 +1,18 @@
 @import 'monolith/monolith';
 
+.trim-margin { margin: 0 !important; }
+.trim-padding { padding: 0 !important; }
+
+.trim-margin-top { margin-top: 0 !important; }
+.trim-margin-right { margin-right: 0 !important; }
+.trim-margin-bottom { margin-bottom: 0 !important; }
+.trim-margin-left { margin-left: 0 !important; }
+
+.trim-padding-top { padding-top: 0 !important; }
+.trim-padding-right { padding-right: 0 !important; }
+.trim-padding-bottom { padding-bottom: 0 !important; }
+.trim-padding-left { padding-left: 0 !important; }
+
 .content {
   padding: 16px 0;
   width: 100%;
@@ -75,6 +88,7 @@
   list-style-type: none;
   border-bottom: 1px solid #efefef;
   margin: 20px auto 10px auto;
+  padding: 0;
 }
 
 .nav-item .nav-link {
@@ -87,7 +101,7 @@
   transition: 0.2s ease-out;
 
   &:hover {
-    border-color: dodgerblue;
-    color: dodgerblue;
+    border-color: $primary-color;
+    color: $primary-color;
   }
 }
