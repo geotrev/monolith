@@ -1,3 +1,4 @@
+
 @mixin button-style(
   $box-shadow: $button-box-shadow,
   $border-color: $button-border-color,
@@ -23,8 +24,6 @@
   border-color: $border-color;
   color: $color;
   background: $background;
-
-  transition: $global-ease;
 
   &:visited {
     box-shadow: $box-shadow;

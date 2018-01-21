@@ -5,10 +5,9 @@ input[type=datetime-local], input[type=month],
 input[type=number], input[type=tel],
 input[type=search], input[type=time],
 input[type=url], input[type=week],
-input[type=submit], input[type=file], 
+input[type=submit], input[type=file],
 input[type=reset], input[type=button],
-textarea, button, a,
-.text-field, .text-area, .button {
+textarea, button, a, .button {
   &:disabled, &.disabled {
     background: $input-disabled-background !important;
     border: $input-disabled-border !important;
@@ -30,8 +29,7 @@ input[type=datetime-local], input[type=month],
 input[type=number], input[type=tel],
 input[type=search], input[type=time],
 input[type=url], input[type=week],
-textarea,
-.text-field, .text-area {
+textarea {
   transition: $global-ease;
 
   &:focus, &:active {
