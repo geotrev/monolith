@@ -1,15 +1,13 @@
-// .show-<$property>-for-<$size> modifiers
-
-.is-block { display: block !important; }
-.is-flex { display: flex !important; }
-.is-hidden { display: none !important; }
+// visibility class modifiers – by breakpoint.
 
 @each $breakpoint in $breakpoints {
   $break-name: nth($breakpoint, 1);
   $smallest-break-name: nth(nth($breakpoints, 1), 1);
 
   @if $break-name == $smallest-break-name {
-    @include visibility($break-name);
+    .is-flex { display: flex !important; }
+    .is-block { display: block !important; }
+    .is-hidden { display: none !important; }
   } @else {
     @include breakpoint-up($break-name) {
       @include visibility($break-name)

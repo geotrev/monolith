@@ -23,71 +23,60 @@ div {
 .has-right-text {
   text-align: right !important; }
 
-.is-block {
-  display: block !important; }
-
 .is-flex {
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important; }
 
+.is-block {
+  display: block !important; }
+
 .is-hidden {
   display: none !important; }
 
-.show-flex-on-xsmall {
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important; }
-
-.show-block-on-xsmall {
-  display: block !important; }
-
-.hide-on-xsmall {
-  display: none !important; }
-
 @media screen and (min-width: 576px) {
-  .show-flex-on-small {
+  .is-flex-on-small {
     display: -webkit-flex !important;
     display: -ms-flexbox !important;
     display: flex !important; }
 
-  .show-block-on-small {
+  .is-block-on-small {
     display: block !important; }
 
-  .hide-on-small {
+  .is-hidden-on-small {
     display: none !important; } }
 @media screen and (min-width: 768px) {
-  .show-flex-on-medium {
+  .is-flex-on-medium {
     display: -webkit-flex !important;
     display: -ms-flexbox !important;
     display: flex !important; }
 
-  .show-block-on-medium {
+  .is-block-on-medium {
     display: block !important; }
 
-  .hide-on-medium {
+  .is-hidden-on-medium {
     display: none !important; } }
 @media screen and (min-width: 992px) {
-  .show-flex-on-large {
+  .is-flex-on-large {
     display: -webkit-flex !important;
     display: -ms-flexbox !important;
     display: flex !important; }
 
-  .show-block-on-large {
+  .is-block-on-large {
     display: block !important; }
 
-  .hide-on-large {
+  .is-hidden-on-large {
     display: none !important; } }
 @media screen and (min-width: 1200px) {
-  .show-flex-on-xlarge {
+  .is-flex-on-xlarge {
     display: -webkit-flex !important;
     display: -ms-flexbox !important;
     display: flex !important; }
 
-  .show-block-on-xlarge {
+  .is-block-on-xlarge {
     display: block !important; }
 
-  .hide-on-xlarge {
+  .is-hidden-on-xlarge {
     display: none !important; } }
 .is-visually-hidden {
   border: 0;
