@@ -1244,6 +1244,7 @@ a {
 input[type=button], input[type=submit],
 input[type=file], input[type=reset],
 button, .button {
+  -webkit-appearance: none;
   -webkit-align-self: flex-start;
       -ms-flex-item-align: start;
           align-self: flex-start;

@@ -1,6 +1,7 @@
 input[type=button], input[type=submit],
 input[type=file], input[type=reset],
 button, .button {
+  -webkit-appearance: none;
   align-self: flex-start;
   border-radius: $button-border-radius;
   border-style: $button-border-style;
