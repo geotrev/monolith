@@ -14,6 +14,7 @@ textarea, button, a, .button {
     color: $input-disabled-color !important;
     cursor: not-allowed;
     resize: $input-disabled-resize !important;
+    opacity: 1;
 
     &:hover {
       background: $input-disabled-background !important;

@@ -1808,7 +1808,8 @@ textarea.disabled, button:disabled, button.disabled, a:disabled, a.disabled, .bu
   border: 2px solid #ddd !important;
   color: #444 !important;
   cursor: not-allowed;
-  resize: none !important; }
+  resize: none !important;
+  opacity: 1; }
   input[type=text]:disabled:hover, input[type=text].disabled:hover, input[type=password]:disabled:hover, input[type=password].disabled:hover,
   input[type=email]:disabled:hover,
   input[type=email].disabled:hover, input[type=date]:disabled:hover, input[type=date].disabled:hover,
