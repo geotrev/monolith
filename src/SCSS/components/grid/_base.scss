@@ -16,7 +16,8 @@ $column: map-get($grid-classes, column);
 }
 
 .#{$grid} {
-  @include flex(flex, column, nowrap);
+  @include flex(flex, column, nowrap, 1, 1, 0);
+
   box-sizing: border-box;
   margin: 0 auto;
   max-width: $grid-width;
@@ -28,7 +29,8 @@ $column: map-get($grid-classes, column);
 .#{$row} {
   @include flex(flex, row, wrap, 1, 1, auto);
   position: relative;
-  width: 100%;
+  max-width: 100%;
+  min-height: 1px;
 }
 
 .#{$column}s, .#{$column} {
@@ -51,7 +53,7 @@ $column: map-get($grid-classes, column);
 @each $breakpoint in $breakpoints {
   $break-name: nth($breakpoint, 1);
   $smallest-break-name: nth(nth($breakpoints, 1), 1);
-  
+
   @if $break-name == $smallest-break-name {
     @include grid-classes($break-name);
   } @else {
