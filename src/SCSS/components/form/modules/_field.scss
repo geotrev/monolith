@@ -6,8 +6,8 @@ input[type=month], input[type=number],
 input[type=tel], input[type=search],
 input[type=time], input[type=url],
 input[type=week], textarea {
-  @include flex(flex);
   background: $input-background;
+  appearance: none;
   border-radius: $input-border-radius;
   border: $input-border;
   box-shadow: $input-box-shadow;

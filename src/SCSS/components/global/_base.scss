@@ -16,6 +16,7 @@ legend,
 textarea,
 pre,
 iframe,
+div,
 hr,
 h1,
 h2,
@@ -88,9 +89,4 @@ html, body {
   padding: 0;
   box-sizing: border-box;
   line-height: $global-line-height;
-}
-
-div {
-  margin: 0;
-  padding: 0;
 }
