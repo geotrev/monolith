@@ -5,3 +5,5 @@ _site/
 .sass-cache
 .asset-cache
 debug/
+yarn-error.log*
+npm-error.log*

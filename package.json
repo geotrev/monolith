@@ -4,7 +4,10 @@
   "description": "The core of your next front-end project.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pack:scss": "cp -a _assets/css/monolith/. scss/SCSS/",
+    "pack:css": "cp _site/assets/monolith.css scss/CSS/",
+    "prepublish:css": "zip -r scss/SCSS/monolith-scss.zip scss/SCSS/ && zip -r scss/CSS/monolith-css.zip scss/CSS/monolith.css",
+    "prepublish": "yarn prepublish:css"
   },
   "repository": {
     "type": "git",
