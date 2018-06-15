@@ -1,3 +1,5 @@
+**NOTE:** The npm package, `monolith-css`, is depcreated. Instead, please use [`undernet`](https://undernet.io); it retains the best parts of monolith-css but includes more powerful tools, including javascript components.
+
 # Monolith
 
 noun – mono·lith – \ˈmä-nə-ˌlith\
